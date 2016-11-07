@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import edu.duke.cs.jflap.automata.event.*;
 
 /**
  * This is the controller for the useless panel. Bleh.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class UselessController {
 	/**
 	 * This instantiates a new useless controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the useless panel
 	 * @param grammar
@@ -213,7 +213,7 @@ public class UselessController {
 		while (step != FINISHED)
 			doStep();
 	}
-	
+
 	public Grammar getGrammar()
 	{
 		return pane.getGrammar();
@@ -245,7 +245,7 @@ public class UselessController {
 	/**
 	 * When a production is clicked in the grammar table, this method is told
 	 * about it.
-	 * 
+	 *
 	 * @param production
 	 *            the production clicked in the table
 	 * @param event
@@ -290,7 +290,7 @@ public class UselessController {
 	/**
 	 * When a production is chosen to be removed, this is told about it. This
 	 * happens before the deletion occurs.
-	 * 
+	 *
 	 * @param production
 	 *            the production chosen to be removed
 	 * @param row

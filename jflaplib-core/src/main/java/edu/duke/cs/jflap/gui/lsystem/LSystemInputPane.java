@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,7 +35,7 @@ import javax.swing.event.*;
 /**
  * The <CODE>LSystemInputPane</CODE> is a pane used to input and display the
  * textual representation of an L-system.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -49,7 +49,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Instantiates an <CODE>LSystemInputPane</CODE> for a given <CODE>LSystem</CODE>.
-	 * 
+	 *
 	 * @param lsystem
 	 *            the lsystem to display
 	 */
@@ -62,7 +62,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Initializes the data structures and the subviews.
-	 * 
+	 *
 	 * @param lsystem
 	 *            the L-system to initialize the views on
 	 */
@@ -178,7 +178,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Given a list of objects, this converts it to a space delimited string.
-	 * 
+	 *
 	 * @param list
 	 *            the list to convert to a string
 	 * @return a string containing the elements of the list
@@ -198,7 +198,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Returns the L-system this pane displays.
-	 * 
+	 *
 	 * @return the L-system this pane displays
 	 */
 	public LSystem getLSystem() {
@@ -222,7 +222,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Adds an L-system input listener.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to start sending change events to
 	 */
@@ -232,7 +232,7 @@ public class LSystemInputPane extends JPanel {
 
 	/**
 	 * Removes an L-system input listener.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to stop sending change events to
 	 */
@@ -254,7 +254,7 @@ public class LSystemInputPane extends JPanel {
 	 * This will edit the value for a particular parameter in the parameter
 	 * table. If no such value exists yet it shall be created. The value field
 	 * in the table shall be edited.
-	 * 
+	 *
 	 * @param item
 	 *            the key of the value we want to edit
 	 */

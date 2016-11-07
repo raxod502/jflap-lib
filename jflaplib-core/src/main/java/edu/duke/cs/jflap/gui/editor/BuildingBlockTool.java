@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,14 +39,14 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * @author Andrew
- * 
+ *
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
 public class BuildingBlockTool extends Tool {
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -63,7 +63,7 @@ public class BuildingBlockTool extends Tool {
 	/**
 	 * Instantiates a new transition tool. The transition creator is obtained
 	 * from whatever is returned from the transition creator factory.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.editor.TransitionCreator#creatorForAutomaton
 	 */
 	public BuildingBlockTool(AutomatonPane view, AutomatonDrawer drawer) {
@@ -72,7 +72,7 @@ public class BuildingBlockTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -81,7 +81,7 @@ public class BuildingBlockTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the transition tool icon
 	 */
 	protected Icon getIcon() {
@@ -91,7 +91,7 @@ public class BuildingBlockTool extends Tool {
 
 	/**
 	 * When the user clicks, one creates a state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -105,7 +105,7 @@ public class BuildingBlockTool extends Tool {
 	/**
 	 * When the mouse is dragged someplace, updates the "hover" point so the
 	 * line from the state to the mouse can be drawn.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -119,7 +119,7 @@ public class BuildingBlockTool extends Tool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -137,7 +137,7 @@ public class BuildingBlockTool extends Tool {
 	// }
 	/**
 	 * Returns the keystroke to switch to this tool, the B key.
-	 * 
+	 *
 	 * @return the keystroke to switch to this tool
 	 */
 	public KeyStroke getKey() {

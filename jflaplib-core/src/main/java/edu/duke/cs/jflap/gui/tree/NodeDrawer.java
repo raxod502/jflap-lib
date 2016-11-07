@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import javax.swing.tree.TreeNode;
 
 /**
  * A <CODE>NodeDrawer</CODE> handles the drawing of nodes in a tree.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -34,7 +34,7 @@ public interface NodeDrawer {
 	/**
 	 * Draws a passed in node with the "center" at location (0,0). The color of
 	 * the graphics passed must be the "main color" of the node drawn.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param node
@@ -45,7 +45,7 @@ public interface NodeDrawer {
 	/**
 	 * Returns the maximum size a node can take up. The point (0,0) in the
 	 * rectangle returned should be where the center of the node should be.
-	 * 
+	 *
 	 * @return the maximum space a node can take up when drawn
 	 * @see #nodeSize(javax.swing.tree.TreeNode)
 	 */
@@ -55,7 +55,7 @@ public interface NodeDrawer {
 	 * Returns the size of a particular node as drawn, given a node. The point
 	 * (0,0) in the rectangle returned should be where the center of the node
 	 * should be.
-	 * 
+	 *
 	 * @param node
 	 *            the node
 	 * @return the space this node will take when drawn
@@ -66,7 +66,7 @@ public interface NodeDrawer {
 	/**
 	 * Returns if a given point is "on" a given node, assuming that the node is
 	 * in the same position as the <CODE>draw</CODE> function would draw it.
-	 * 
+	 *
 	 * @param node
 	 *            the node to test for containment of a point
 	 * @param x

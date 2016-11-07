@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,7 +24,7 @@ package edu.duke.cs.jflap.file;
  * This error indicates that a structure could not be properly encoded with the
  * encoder. This should be thrown by {@link edu.duke.cs.jflap.file.Encoder} implementing objects
  * to indicate a problem writing the file.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public class EncodeException extends RuntimeException {
 
 	/**
 	 * Creates a encode exception with the given message.
-	 * 
+	 *
 	 * @param message
 	 *            the exception message
 	 */

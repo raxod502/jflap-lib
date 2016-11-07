@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.*;
 
 /**
  * This class generates {@link edu.duke.cs.jflap.grammar.parse.LLParseTable}s for grammars.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class LLParseTableGenerator {
 
 	/**
 	 * Generates a parse table for a particular grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar for which a complete parse table should be
 	 *            generated

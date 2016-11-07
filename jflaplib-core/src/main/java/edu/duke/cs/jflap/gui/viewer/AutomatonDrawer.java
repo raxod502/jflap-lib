@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -48,7 +48,7 @@ import java.util.HashSet;
  * This is the very basic class of an Automaton drawer. It has facilities to
  * draw the Automaton. Subclasses may be derived to have finer control over how
  * things are drawn.
- * 
+ *
  * @author Thomas Finley
  * @version 1.0
  */
@@ -56,7 +56,7 @@ import java.util.HashSet;
 public class AutomatonDrawer {
 	/**
 	 * Instantiates an object to draw an automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to handle
 	 */
@@ -65,7 +65,7 @@ public class AutomatonDrawer {
 		DrawerListener listener = new DrawerListener();
 		getAutomaton().addStateListener(listener);
 		getAutomaton().addTransitionListener(listener);
-        
+
         /*
          * Use a moore state drawer if it is a Moore machine.
          * This draws a little box that shows the output of the
@@ -77,7 +77,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Retrieves the <CODE>Automaton</CODE> handled by this drawer.
-	 * 
+	 *
 	 * @return the <CODE>Automaton</CODE> handled by this drawer
 	 */
 	public Automaton getAutomaton() {
@@ -93,7 +93,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Draws our automaton.
-	 * 
+	 *
 	 * @param g2
 	 *            the Graphics object to draw the automaton on
 	 */
@@ -129,26 +129,26 @@ public class AutomatonDrawer {
 //                }
 //            }
 //        }
-        
+
 
 //        //reverse again, to get the correct ordering for non-overlapping things
 //        for (int i = hs.size() - 1; i >= 0; i--)
 //			drawState(g, hs.get(i));
-        
+
         State[] states = automaton.getStates();
         for (int i = 0; i < states.length; i++){
             drawState(g, states[i]);
         }
-		
-		
+
+
 		this.drawSelectionBox(g);
 		g.dispose();
 	}
 
-	
+
 	/**
 	 * Returns the bounds for an individual state.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the bounds for
 	 * @return the rectangle that the state needs to be in to completely enclose
@@ -158,12 +158,12 @@ public class AutomatonDrawer {
 //		int radius = (int)(statedrawer.getRadius()*scaleBy);
 //		int radius = (int)(statedrawer.getRadius()*curTransform.getScaleX()); //getScaleX and Y should be same
 		int radius = statedrawer.getRadius(); //getScaleX and Y should be same
-		
-		
+
+
 		Point p = state.getPoint();
-		
-		
-		
+
+
+
 		int yAdd = state.getLabels().length * 15;
 		if (getAutomaton().getInitialState() == state)
 			return new Rectangle(p.x - radius * 2, p.y - radius, radius * 3,
@@ -175,7 +175,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Returns the bounds for an individual transition.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to get the bounds for
 	 * @return the rectangle that the transition needs to be in to completely
@@ -192,7 +192,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Returns the bounds that the automaton is drawn in.
-	 * 
+	 *
 	 * @return the bounds that the automaton is drawn in, or <CODE>null</CODE>
 	 *         if there is nothing to draw, i.e., the automaton has no states
 	 */
@@ -229,7 +229,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Draws a state on the automaton.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param state
@@ -245,7 +245,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Draws the transitions of the automaton.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
@@ -259,12 +259,12 @@ public class AutomatonDrawer {
                 arrow.drawHighlight(g2);
                 arrow.drawControlPoint(g2);
             }
-            else 
+            else
                 arrow.draw(g2);
 		}
 	}
 
-	
+
 
 	/**
 	 * draws selection box
@@ -299,7 +299,7 @@ public class AutomatonDrawer {
 				if (itoj.length + jtoi.length == 0)
 					continue;
 
-				
+
 				// Get where points should appear to emanate from.
 				double angle = angle(states[i], states[j]);
 				Point fromI = pointOnState(states[i], angle - ANGLE);
@@ -382,7 +382,7 @@ public class AutomatonDrawer {
 	 * states, at which point would that line intersect the outside of the first
 	 * state? In other words, the point on state1 closest to the point on
 	 * state2.
-	 * 
+	 *
 	 * @param state1
 	 *            the first state
 	 * @param state2
@@ -395,7 +395,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * What is the angle on state1 of the point closest to state2?
-	 * 
+	 *
 	 * @param state1
 	 *            the first state
 	 * @param state2
@@ -413,7 +413,7 @@ public class AutomatonDrawer {
 	/**
 	 * Given a state and an angle, if we treat the state as a circle, what point
 	 * does that angle represent?
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @param angle
@@ -448,7 +448,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Gets the state at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check
 	 * @return a <CODE>State</CODE> object at this particular point, or <CODE>null</CODE>
@@ -467,7 +467,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Gets the transition at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check
 	 * @return a <CODE>Transition</CODE> object at this particular point, or
@@ -485,11 +485,11 @@ public class AutomatonDrawer {
 		}
 		return null;
 	}
-	
+
 
 	/**
 	 * Returns the state drawer.
-	 * 
+	 *
 	 * @return the state drawer
 	 */
 	public StateDrawer getStateDrawer() {
@@ -500,7 +500,7 @@ public class AutomatonDrawer {
 	 * Listens for changes in transitions of our automaton. This method is
 	 * called by the internal automaton listener for this object, and while not
 	 * called directly by the automaton, is passed along the same event.
-	 * 
+	 *
 	 * @param event
 	 *            the transition event
 	 */
@@ -512,7 +512,7 @@ public class AutomatonDrawer {
 	 * Listens for changes in states of our automaton. This method is called by
 	 * the internal automaton listener for this object, and while not called
 	 * directly by the automaton, is passed along the same event.
-	 * 
+	 *
 	 * @param event
 	 *            the state event
 	 */
@@ -525,7 +525,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Returns the curved arrow object that represents a particular transition.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to find the arrow for
 	 * @return the curved arrow object that is used to draw this transition
@@ -536,7 +536,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Returns if state labels are drawn in the diagram.
-	 * 
+	 *
 	 * @return if state labels are drawn in the diagram
 	 */
 	public boolean doesDrawStateLabels() {
@@ -545,7 +545,7 @@ public class AutomatonDrawer {
 
 	/**
 	 * Sets if state labels should be drawn in the diagram or not.
-	 * 
+	 *
 	 * @param drawLabels
 	 *            <CODE>true</CODE> if state labels should be drawn in the
 	 *            state diagram, <CODE>false</CODE> if they should not be
@@ -564,24 +564,24 @@ public class AutomatonDrawer {
 		automaton = newAuto;
 		this.invalidate();
 	}
-	
+
 
 	public void setSelectionBounds(Rectangle bounds) {
 		mySelectionBounds = bounds;
-		
+
 	}
 	public Rectangle getSelectionBounds() {
 		return mySelectionBounds;
 	}
-	
+
 //	public void setScale(double scale){
-//	    scaleBy = scale;	
+//	    scaleBy = scale;
 //	    validBounds = false;
 //	}
 	public void setTransform(AffineTransform af){
 		curTransform = af;
 	}
-	
+
 	private Rectangle mySelectionBounds = new Rectangle(0, 0, -1, -1);
 
 	/** The automaton we're handling. */
@@ -609,12 +609,12 @@ public class AutomatonDrawer {
 
 	/** The cached bounds. */
 	private Rectangle cachedBounds = null;
-	
+
 	/**
 	 * A map of self transitions mapped to their angle of appearance.
 	 */
 	public HashMap<Transition, Double> selfTransitionMap = new HashMap();
-	
+
 	/**
 	 * Map of curvatures for transitions
 	 */
@@ -631,13 +631,13 @@ public class AutomatonDrawer {
 
 	/** The state drawer. */
 	public StateDrawer statedrawer = new StateDrawer();
-	
+
 //	/**Amount to scale by, purely for scroll calclulation*/
 //	private double scaleBy = 1;
-	
+
 	/**The transform instead*/
 	private AffineTransform curTransform = new AffineTransform();
-	
+
 
 	/**
 	 * This automaton listener takes care of responding to the events.
@@ -646,7 +646,7 @@ public class AutomatonDrawer {
 			AutomataTransitionListener {
 		/**
 		 * Listens for changes in transitions of our automaton.
-		 * 
+		 *
 		 * @param event
 		 *            the transition event
 		 */
@@ -656,7 +656,7 @@ public class AutomatonDrawer {
 
 		/**
 		 * Listens for changes in states of our automaton.
-		 * 
+		 *
 		 * @param event
 		 *            the state event
 		 */

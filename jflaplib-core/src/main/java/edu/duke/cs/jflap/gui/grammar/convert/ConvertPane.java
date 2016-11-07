@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import javax.swing.*;
 /**
  * This is a graphical component to aid in the conversion of a context free
  * grammar to some form of pushdown automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConvertPane extends JPanel {
 	/**
 	 * Instantiates a <CODE>ConvertPane</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to convert
 	 * @param automaton
@@ -90,7 +90,7 @@ public class ConvertPane extends JPanel {
 
 	/**
 	 * Initializes the control objects in the editor pane's tool bar.
-	 * 
+	 *
 	 * @param controller
 	 *            the controller object
 	 */
@@ -119,9 +119,9 @@ public class ConvertPane extends JPanel {
 	}
 
 	/**
-	 * 
+	 *
 	 * /** Returns the editor pane.
-	 * 
+	 *
 	 * @return the editor pane
 	 */
 	public EditorPane getEditorPane() {

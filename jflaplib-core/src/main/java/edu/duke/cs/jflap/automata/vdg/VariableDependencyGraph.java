@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import edu.duke.cs.jflap.automata.Automaton;
  * This subclass of <CODE>Automaton</CODE> is specifically for a variable
  * dependency graph used in the transformation of grammars (e.g. removing unit
  * productions).
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -41,7 +41,7 @@ public class VariableDependencyGraph extends Automaton {
 	/**
 	 * Returns the class of <CODE>Transition</CODE> this automaton must
 	 * accept.
-	 * 
+	 *
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.vdg.VDGTransition</CODE>
 	 */
 	protected Class getTransitionClass() {

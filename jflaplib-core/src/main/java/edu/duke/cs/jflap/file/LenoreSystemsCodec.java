@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.Map;
  * making any conversions necessary between the two formats. Lenore-Systems is
  * my name for the L-systems tool developed at Duke by Lenore Ramm. Its real
  * name is Lsys, and was never widely distributed.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class LenoreSystemsCodec extends Codec {
 	 * This method should always return a structure, or throw a
 	 * {@link ParseException} in the event of failure with a message detailing
 	 * the nature of why the decoder failed.
-	 * 
+	 *
 	 * @param file
 	 *            the file to decode into a structure
 	 * @param parameters
@@ -55,7 +55,7 @@ public class LenoreSystemsCodec extends Codec {
 
 	/**
 	 * This method does nothing at all.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to encode
 	 * @param file
@@ -73,7 +73,7 @@ public class LenoreSystemsCodec extends Codec {
 
 	/**
 	 * This encoder can encode nothing.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to check
 	 * @return if the structure, perhaps with minor changes, could possibly be
@@ -85,7 +85,7 @@ public class LenoreSystemsCodec extends Codec {
 
 	/**
 	 * Returns the description of this codec.
-	 * 
+	 *
 	 * @return the description of this codec
 	 */
 	public String getDescription() {

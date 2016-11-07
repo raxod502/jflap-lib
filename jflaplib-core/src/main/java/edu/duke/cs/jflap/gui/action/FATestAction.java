@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import edu.duke.cs.jflap.automata.Automaton;
 /**
 * The <CODE>TestTuringAction</CODE> is an action to load a structure from a file,
 * and create a new environment with that object.
-* 
+*
 * @author Stephen Reading
 */
 
@@ -40,14 +40,14 @@ public class FATestAction extends  TestAction{
      */
     public FATestAction() {
         //super("Test Turing Machines", null);
-        super("Test Finite Automata", KeyEvent.VK_A);       
+        super("Test Finite Automata", KeyEvent.VK_A);
 
     }
-    
+
     protected void displayMultipleRunPane(Environment env){
     		MultipleSimulateAction act = new MultipleSimulateAction((Automaton)myObjects.get(0),env);
     		act.performAction(env);
-   	
+
     }
 
 }

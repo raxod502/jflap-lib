@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,17 +24,17 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import java.util.ArrayList;
 
 /**
- * RestrictedUser Parser 
- * (This class is very similar to RestrictedBruteParser except for that this class extends UserParser) 
- * May be important in the future 
- * 
- * @author Kyung Min (Jason) Lee 
+ * RestrictedUser Parser
+ * (This class is very similar to RestrictedBruteParser except for that this class extends UserParser)
+ * May be important in the future
+ *
+ * @author Kyung Min (Jason) Lee
  */
 public class RestrictedUserParser extends UserParser{
-	
+
 	/**
 	 * Creates a new unrestricted brute parser.
-	 * 
+	 *
 	 * @param grammar
 	 *            the unrestricted grammar to parse
 	 * @param target

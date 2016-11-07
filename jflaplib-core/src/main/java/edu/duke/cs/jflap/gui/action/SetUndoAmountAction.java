@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import javax.swing.JOptionPane;
 
 /**
  * The <CODE>SetUndoAmount</CODE> is an action to set the amount of Undos that are stored for automaton construction.
- * 
+ *
  * @author Henry Qin
  */
 
 public class SetUndoAmountAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>SetUndoAmountAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that holds the serializable object
 	 */
@@ -46,12 +46,12 @@ public class SetUndoAmountAction extends RestrictedAction {
 	}
 
 	/**
-	 * If an Undo amount change was requested, then show a dialog and ask about it. 
+	 * If an Undo amount change was requested, then show a dialog and ask about it.
 	 * @param event
 	 *            the action event
 	 */
 	public void actionPerformed(ActionEvent event) {
-		String str; 
+		String str;
         int n;
         while (true){
 //            str = JOptionPane.showInputDialog(null, "Please type the number of Undos:", "How many undo?", ""+Universe.curProfile.undo_num,  JOptionPane.PLAIN_MESSAGE);
@@ -62,7 +62,7 @@ public class SetUndoAmountAction extends RestrictedAction {
             catch (NumberFormatException e){
                 if (str != null)
                     continue;
-                else 
+                else
                     return;
             }
                 break;
@@ -78,7 +78,7 @@ public class SetUndoAmountAction extends RestrictedAction {
 
 	/**
 	 * This action is restricted to those objects that are serializable.
-	 * 
+	 *
 	 * @param object
 	 *            the object to check for serializable-ness
 	 * @return <CODE>true</CODE> if the object is an instance of a

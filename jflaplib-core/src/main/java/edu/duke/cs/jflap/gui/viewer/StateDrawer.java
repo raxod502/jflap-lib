@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import java.awt.geom.Rectangle2D;
 /**
  * The <CODE>StateDrawer</CODE> class handles the drawing of individual
  * states.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -46,7 +46,7 @@ public class StateDrawer {
 	/**
 	 * Creates a <CODE>StateDrawer</CODE> with states drawn to a particular
 	 * radius.
-	 * 
+	 *
 	 * @param radius
 	 *            the radius of states drawn by this state drawer
 	 */
@@ -56,7 +56,7 @@ public class StateDrawer {
 
 	/**
 	 * Draws an individual state with all the default modes.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param automaton
@@ -71,7 +71,7 @@ public class StateDrawer {
 	/**
 	 * Draws an individual state, but at the point specified rather than at the
 	 * point of the state's <CODE>getPoint()</CODE> method.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param state
@@ -89,7 +89,7 @@ public class StateDrawer {
 	/**
 	 * Draws an individual state at the point specified with the color
 	 * specified.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param state
@@ -121,9 +121,9 @@ public class StateDrawer {
 		int dx = ((int) g.getFontMetrics().getStringBounds(state.getName(), g)
 				.getWidth()) >> 1;
 		int dy = ((int) g.getFontMetrics().getAscent()) >> 1;
-		
+
 		g.drawString(state.getName(), point.x - dx, point.y + dy);
-		
+
 		// Draw the outline.
 		// //System.out.println("State name:" + state.getInternalName());
 //		if (state.getInternalName() == null) {
@@ -167,7 +167,7 @@ public class StateDrawer {
 
 	/**
 	 * Draws the state label for a given state.
-	 * 
+	 *
 	 * @param state
 	 *            the state whose label we must draw
 	 * @param point
@@ -214,7 +214,7 @@ public class StateDrawer {
 
 	/**
 	 * Draws the background of the state.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param state
@@ -239,7 +239,7 @@ public class StateDrawer {
 
 	/**
 	 * Returns the radius of a state as drawn by this state drawer.
-	 * 
+	 *
 	 * @return the radius of a state
 	 */
 	public int getRadius() {

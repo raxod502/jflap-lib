@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 /**
  * This is the transducer for encoding and decoding
  * {@link edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton} objects.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSATransducer extends AutomatonTransducer {
 	/**
 	 * Creates and returns an empty FSA.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document that is being read
 	 * @return an empty FSA
@@ -53,7 +53,7 @@ public class FSATransducer extends AutomatonTransducer {
 
 	/**
 	 * Creates and returns a transition consistent with this node.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -76,7 +76,7 @@ public class FSATransducer extends AutomatonTransducer {
 	/**
 	 * Produces a DOM element that encodes a given transition. This adds the
 	 * string to read.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the state in
 	 * @param transition
@@ -96,7 +96,7 @@ public class FSATransducer extends AutomatonTransducer {
 
 	/**
 	 * Returns the type string for this transducer, "fa".
-	 * 
+	 *
 	 * @return the string "fa"
 	 */
 	public String getType() {

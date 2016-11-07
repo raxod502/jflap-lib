@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,7 +36,7 @@ import javax.swing.JSplitPane;
 /**
  * This <CODE>ConvertPane</CODE> exists for the user to convert an automaton
  * to a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -58,7 +58,7 @@ public class ConvertPane extends JPanel {
 
 	/**
 	 * Returns the <CODE>AutomatonPane</CODE> that does the drawing.
-	 * 
+	 *
 	 * @return the <CODE>AutomatonPane</CODE> that does the drawing
 	 */
 	public AutomatonPane getAutomatonPane() {
@@ -67,7 +67,7 @@ public class ConvertPane extends JPanel {
 
 	/**
 	 * Returns the <CODE>SelectionDrawer</CODE> for the automaton pane.
-	 * 
+	 *
 	 * @return the <CODE>SelectionDrawer</CODE>
 	 */
 	public SelectionDrawer getDrawer() {
@@ -76,7 +76,7 @@ public class ConvertPane extends JPanel {
 
 	/**
 	 * Returns the <CODE>GrammarTable</CODE> where the grammar is being built.
-	 * 
+	 *
 	 * @return the <CODE>GrammarTable</CODE>
 	 */
 	public GrammarTable getTable() {

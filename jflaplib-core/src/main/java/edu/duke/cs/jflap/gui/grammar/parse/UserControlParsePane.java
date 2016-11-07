@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,35 +40,35 @@ import javax.swing.*;
 /**
  * This class created GUI pane for UserControl Parsing.
  * This pane is similar to BruteParsePane, but it has more additional features
- * 
+ *
  * @author Kyung Min (Jason) Lee
  */
 public class UserControlParsePane extends BruteParsePane {
 
 	/** The parser that is going to be used **/
 	private UserParser myParser;
-	
+
 	/** Index of the selected production rule **/
 	private int mySelectedProductionIndex=-1;
-	
+
 	/** The action for the stepping control. */
 	private Action myPreviousAction;
 
 	/** Variable to store how many times Step button is clicked **/
 	private int myStepCount=0;
-	
+
 	/** Variable to store how many times Previous button is clicked **/
 	private int myPreviousCount=0;
-	
+
 	/** DefaultListModel to show current string at the bottom of the pane **/
 	private DefaultListModel myJListModel;
-	
+
 	/** JList to show the current string and allow user to click on the variables **/
 	private JList myStringJList;
-	
+
 	/** Target string that user is trying to derive **/
 	private String myTarget;
-	
+
 	/**
 	 * Constructor for User Control Parse Pane
 	 * calls the super class's constructor
@@ -79,7 +79,7 @@ public class UserControlParsePane extends BruteParsePane {
 		super(environment, grammar, null);
 		intializeGrammarTableSetting();
 	}
-	
+
 	/**
 	 * Initialize the view
 	 */
@@ -91,16 +91,16 @@ public class UserControlParsePane extends BruteParsePane {
 		JScrollPane parseTable = pt == null ? null : new JScrollPane(pt);
 		GrammarTable g = initGrammarTable(grammar);
 		JScrollPane grammarTable = new JScrollPane(g);
-		
+
 		myJListModel=new DefaultListModel();
 		myStringJList=new JList(myJListModel);
 		myStringJList.setLayoutOrientation(JList.HORIZONTAL_WRAP);
-		
+
 		addMultipleSelectionToJList();
 		myStringJList.setVisibleRowCount(1);
-		
+
 		JScrollPane scroll=new JScrollPane(myStringJList);
-		
+
 		treeDerivationPane.add(initTreePanel(), "0");
 		derivationPane = new JScrollPane(initDerivationTable());
 		treeDerivationPane.add(derivationPane, "1");
@@ -114,9 +114,9 @@ public class UserControlParsePane extends BruteParsePane {
 		add(mainSplit, BorderLayout.CENTER);
 		add(statusDisplay, BorderLayout.SOUTH);
 		add(new TableTextSizeSlider(g), BorderLayout.NORTH);
-		
+
 	}
-	
+
 	/**
 	 * Add multiple selection to be possible without clicking Ctrl or Shift button
 	 *
@@ -145,7 +145,7 @@ public class UserControlParsePane extends BruteParsePane {
 		grammarTable.addKeyListener(new KeyListener(){
 
 			public void keyPressed(KeyEvent e) {
-			}			
+			}
 			// when user realease a key that means user might or might not selected an item from the list
 			public void keyReleased(KeyEvent e) {
 				mySelectedProductionIndex=grammarTable.getSelectedRow();
@@ -157,7 +157,7 @@ public class UserControlParsePane extends BruteParsePane {
 			public void keyTyped(KeyEvent e) {
 			}
 		});
-		
+
 		grammarTable.addMouseListener(new MouseListener(){
 
 			public void mouseClicked(MouseEvent e) {
@@ -183,16 +183,16 @@ public class UserControlParsePane extends BruteParsePane {
 		});
 	}
 
-	
+
 	/**
 	 * This method is called when there is new input to parse.
-	 * 
+	 *
 	 * @param string
 	 *            a new input string
 	 */
 	public void input(String string) {
 		myTarget=string;
-		startParseInput(string, null);	
+		startParseInput(string, null);
 	}
 
 	/**
@@ -210,7 +210,7 @@ public class UserControlParsePane extends BruteParsePane {
 		else
 			statusDisplay.setText("");
 		myPreviousCount++;
-		
+
 		if (myStepCount==myPreviousCount)
 		{
 			myPreviousAction.setEnabled(false);
@@ -220,10 +220,10 @@ public class UserControlParsePane extends BruteParsePane {
 		stepAction.setEnabled(true);
 		progress.setText(null);
 	}
-	
+
 	/**
 	 * Returns the tool bar for the main user input panel.
-	 * 
+	 *
 	 * @return the tool bar for the main user input panel
 	 */
 	protected JToolBar initInputToolbar() {
@@ -238,7 +238,7 @@ public class UserControlParsePane extends BruteParsePane {
 		toolbar.add(myPreviousAction);
 		stepAction.setEnabled(false);
 		toolbar.add(stepAction);
-		
+
 		// Set up the view customizer controls.
 		toolbar.addSeparator();
 
@@ -253,7 +253,7 @@ public class UserControlParsePane extends BruteParsePane {
 		toolbar.add(box);
 		return toolbar;
 	}
-	
+
 	/**
 	 * This method is called when the step button is pressed.
 	 */
@@ -298,19 +298,19 @@ public class UserControlParsePane extends BruteParsePane {
         		        myStepCount++;
         		       	return true;
         			}
-        			
+
         			if (tempIndices.length!=length)
         			{
         				JOptionPane.showMessageDialog(this,"Multiple Variable Detected, Please click the Variable you want to continue", "Select Variable",
 		    					JOptionPane.ERROR_MESSAGE);
 	        			return false;
         			}
-        			
+
         			for (int i=0; i<length; i++)
         			{
         				temp=temp+myJListModel.getElementAt(myStringJList.getSelectedIndex()+i);
         			}
-        			
+
         			// Production's LHS does not match with what user had selected
         			if (!lhs.equals(temp))
 	        		{
@@ -324,7 +324,7 @@ public class UserControlParsePane extends BruteParsePane {
 	           		}
 	        	}
         	}
-	        
+
         	myParser.parse(index);
         	paintTree();
         	if (myParser.isFinished())
@@ -367,7 +367,7 @@ public class UserControlParsePane extends BruteParsePane {
 			stepAction.setEnabled(false);
 		}
 	}
-	
+
 	/**
 	 * Add current string to the JList to show to the user
 	 * @param answer the current String that is going to be displayed at the bottom of the pane
@@ -383,14 +383,14 @@ public class UserControlParsePane extends BruteParsePane {
 
 	/**
 	 * Inits a new tree panel.
-	 * 
+	 *
 	 * @return a new display for the parse tree
 	 */
 	protected JComponent initTreePanel() {
 		treePanel=new SelectableUnrestrictedTreePanel(this);
 		return treePanel;
 	}
-	
+
 	/**
 	 * Overriding the super-class's parseInput method
 	 * and intialize the view settings whenever user inptus new String

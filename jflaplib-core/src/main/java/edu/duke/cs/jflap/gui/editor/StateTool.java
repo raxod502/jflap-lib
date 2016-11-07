@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import javax.swing.KeyStroke;
 
 /**
  * A tool that handles the creation of states.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -46,7 +46,7 @@ public class StateTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -55,7 +55,7 @@ public class StateTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the state tool icon
 	 */
 	protected Icon getIcon() {
@@ -65,7 +65,7 @@ public class StateTool extends Tool {
 
 	/**
 	 * When the user clicks, one creates a state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -78,7 +78,7 @@ public class StateTool extends Tool {
 
 	/**
 	 * When the user drags, one moves the created state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -89,7 +89,7 @@ public class StateTool extends Tool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, S.
-	 * 
+	 *
 	 * @return the keystroke for this tool
 	 */
 	public KeyStroke getKey() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,13 +33,13 @@ import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.mealy.*;
 
 /**
- * This is the transducer for encoding and decoding 
+ * This is the transducer for encoding and decoding
  * {@link edu.duke.cs.jflap.automata.mealy.MealyMachine} objects.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class MealyTransducer extends AutomatonTransducer 
+public class MealyTransducer extends AutomatonTransducer
 {
     /**
      * The tag name for the read string transition elements.
@@ -49,21 +49,21 @@ public class MealyTransducer extends AutomatonTransducer
      * The tag name for the output string transition elements.
      */
     public static final String TRANSITION_OUTPUT_NAME = "transout";
-    
+
     /**
      * Creates and returns an empty Mealy machine.
-     * 
+     *
      * @param document the DOM document that is being red
      * @return an empty Mealy machine
      */
-    protected Automaton createEmptyAutomaton(Document document) 
+    protected Automaton createEmptyAutomaton(Document document)
     {
         return new MealyMachine();
     }
 
     /**
      * Creates and returns a transition consistent with this node.
-     *      
+     *
      * @param from the from state
      * @param to the to state
      * @param node the DOM node corresponding to the transition, which
@@ -73,7 +73,7 @@ public class MealyTransducer extends AutomatonTransducer
      * @param isBlock
      * @return the new transition
      */
-    protected Transition createTransition(State from, State to, Node node, Map e2t, boolean isBlock) 
+    protected Transition createTransition(State from, State to, Node node, Map e2t, boolean isBlock)
     {
         /*
          * The boolean isBlock seems to be ignored in FSATransducer.java, so I'm ignoring
@@ -87,11 +87,11 @@ public class MealyTransducer extends AutomatonTransducer
             output = "";
         return new MealyTransition(from, to, label, output);
     }
-    
+
     /**
      * Produces a DOM element that encodes a given transition. This adds
      * the strings to read and the output.
-     * 
+     *
      * @param document the document to create the state in
      * @param transition the transition to encode
      * @return the newly created element that encodes the transition
@@ -105,13 +105,13 @@ public class MealyTransducer extends AutomatonTransducer
         te.appendChild(createElement(document, TRANSITION_OUTPUT_NAME, null, t.getOutput()));
         return te;
     }
-    
+
     /**
      * Returns the type string for this transducer, "mealy".
-     * 
+     *
      * @return the string "mealy"
      */
-    public String getType() 
+    public String getType()
     {
         return "mealy";
     }

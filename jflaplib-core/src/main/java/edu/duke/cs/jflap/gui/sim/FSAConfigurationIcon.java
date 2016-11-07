@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import edu.duke.cs.jflap.automata.fsa.FSAConfiguration;
  * This is a configuration icon for configurations related to finite state
  * automata. These sorts of configurations are defined only by the state that
  * the automata is current in, plus the input left.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSAConfigurationIcon extends ConfigurationIcon {
 	/**
 	 * Instantiates a new <CODE>ConfigurationIcon</CODE>.
-	 * 
+	 *
 	 * @param configuration
 	 *            the FSA configuration that is represented
 	 */
@@ -48,7 +48,7 @@ public class FSAConfigurationIcon extends ConfigurationIcon {
 	/**
 	 * This will paint a sort of "torn tape" object that shows the rest of the
 	 * input.
-	 * 
+	 *
 	 * @param c
 	 *            the component this icon is drawn on
 	 * @param g

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * The PDA nondeterminism detector object can be used to find all the
  * nondeterministic states in a pushdown automaton (i.e. all states with
  * equivalent outward transitions).
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -41,7 +41,7 @@ public class PDANondeterminismDetector extends NondeterminismDetector {
 	/**
 	 * Returns true if either of the two strings is a prefix of the other
 	 * string.
-	 * 
+	 *
 	 * @return true if either of the two strings is a prefix of the other
 	 *         string.
 	 */
@@ -56,7 +56,7 @@ public class PDANondeterminismDetector extends NondeterminismDetector {
 	 * components of the labels are equivalent) or if the transitions introduce
 	 * nondeterminism (e.g. the labels of one transition could be a prefix of
 	 * the label of the other transition.)
-	 * 
+	 *
 	 * @param t1
 	 *            a transition
 	 * @param t2

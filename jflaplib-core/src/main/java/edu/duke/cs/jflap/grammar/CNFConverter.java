@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,14 +24,14 @@ import java.util.*;
 
 /**
  * Converts grammars to Chomsky normal form.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CNFConverter {
 	/**
 	 * Instantiates a new chomsky normal converter.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to convert
 	 */
@@ -43,7 +43,7 @@ public class CNFConverter {
 
 	/**
 	 * Breaks a string of symbols into separate symbols.
-	 * 
+	 *
 	 * @param string
 	 *            the string of symbols
 	 * @return the array of separate symbols
@@ -76,7 +76,7 @@ public class CNFConverter {
 	/**
 	 * Given a symbol string A, even a single symbol, this will return a LHS of
 	 * a productions where LHS->A is an okay production to map to A.
-	 * 
+	 *
 	 * @param string
 	 *            the symbol string
 	 * @return a valid left hand side for that string
@@ -97,7 +97,7 @@ public class CNFConverter {
 	/**
 	 * Given an array of productions, this returns the proper replacements of
 	 * the "()" rules.
-	 * 
+	 *
 	 * @param p
 	 *            the array of productions
 	 * @return an equivalent set of productions
@@ -151,7 +151,7 @@ public class CNFConverter {
 
 	/**
 	 * Returns the array of productions needed to replace a production.
-	 * 
+	 *
 	 * @param production
 	 *            the production to replace
 	 * @return the array of productions that will replace this production
@@ -191,7 +191,7 @@ public class CNFConverter {
 
 	/**
 	 * Returns if a production is in the proper Chomsky normal form.
-	 * 
+	 *
 	 * @param production
 	 *            the production to test
 	 * @return if the production maps to either two variables, or a single
@@ -212,7 +212,7 @@ public class CNFConverter {
 
 	/**
 	 * De-terminalizes a production.
-	 * 
+	 *
 	 * @param production
 	 *            a production to "determinalize"
 	 * @return the determinalized production
@@ -298,7 +298,7 @@ public class CNFConverter {
 		 * After the first initialization, this can be used to add productions.
 		 * The left hand side must not have been in any production added before,
 		 * or in the initializations.
-		 * 
+		 *
 		 * @param production
 		 *            the production to add
 		 */
@@ -320,7 +320,7 @@ public class CNFConverter {
 
 		/**
 		 * Returns an array of RHSes for a given LHS.
-		 * 
+		 *
 		 * @param lhs
 		 *            the LHS to check for
 		 * @return an array of RHSes, or an empty array if this LHS does not
@@ -333,7 +333,7 @@ public class CNFConverter {
 
 		/**
 		 * Returns a LHS for a given RHS, if that RHS is unique for a LHS.
-		 * 
+		 *
 		 * @param lhs
 		 *            the RHS to check for a unique representation of
 		 * @return a RHS that maps to this LHS uniquely, i.e., for LHS->RHS,

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import javax.swing.KeyStroke;
 
 /**
  * This action creates a new L-system renderer.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LSystemDisplay extends LSystemAction {
 	/**
 	 * Instantiates a new <CODE>BruteParseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

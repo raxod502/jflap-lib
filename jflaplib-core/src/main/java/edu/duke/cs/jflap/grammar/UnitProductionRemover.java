@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -67,7 +67,7 @@ import edu.duke.cs.jflap.automata.vdg.VariableDependencyGraph;
  * productions on said variable. This will return a list of new productions on
  * said variable that accounts for the removal of the unit production to its
  * dependent variable.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -81,7 +81,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Returns the variable dependency graph for the variables in <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return the variable dependency graph for the variables in <CODE>grammar</CODE>.
@@ -100,7 +100,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Returns all unit productions in <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return all unit productions in <CODE>grammar</CODE>.
@@ -120,7 +120,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Returns all non-unit productions in <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return all non-unit productions in <CODE>grammar</CODE>.
@@ -140,7 +140,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Adds a state for each variable in <CODE>grammar</CODE> to <CODE>graph</CODE>.
-	 * 
+	 *
 	 * @param graph
 	 *            the graph to add the states to.
 	 * @param grammar
@@ -164,7 +164,7 @@ public class UnitProductionRemover {
 	/**
 	 * Returns the state in <CODE>graph</CODE> that represents <CODE>variable</CODE>
 	 * (i.e. the state whose label is <CODE>variable</CODE>).
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param graph
@@ -185,7 +185,7 @@ public class UnitProductionRemover {
 	/**
 	 * Returns the transition for <CODE>graph</CODE> that represents the
 	 * dependency of the variables in the unit production <CODE>production</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the unit production
 	 * @param graph
@@ -207,7 +207,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Adds all non-unit productions in <CODE>oldGrammar</CODE> to <CODE>newGrammar</CODE>.
-	 * 
+	 *
 	 * @param oldGrammar
 	 *            a grammar
 	 * @param newGrammar
@@ -225,7 +225,7 @@ public class UnitProductionRemover {
 	 * Returns true if <CODE>variable1</CODE> is dependent on <CODE>variable2</CODE>.
 	 * (i.e. there is a path in <CODE>graph</CODE> from <CODE>variable1</CODE>
 	 * to <CODE>variable2</CODE>).
-	 * 
+	 *
 	 * @param variable1
 	 *            the first variable; the start of the path.
 	 * @param variable2
@@ -255,7 +255,7 @@ public class UnitProductionRemover {
 	 * Returns all variables that <CODE>variable</CODE> is dependent on (i.e.
 	 * all variables whose states can be reached from the state that represents
 	 * <CODE>variable</CODE> in <CODE>graph</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable whose dependencies are being found
 	 * @param grammar
@@ -284,7 +284,7 @@ public class UnitProductionRemover {
 	 * Returns a list of productions created by taking <CODE>variable</CODE>
 	 * as their left hand side, and the right hand side of a production in
 	 * <CODE>oldProductions</CODE> as their right hand sides.
-	 * 
+	 *
 	 * @param variable
 	 *            the left hand side of the created productions
 	 * @param oldProductions
@@ -306,7 +306,7 @@ public class UnitProductionRemover {
 	/**
 	 * Adds all productions to <CODE>newGrammar</CODE> required to account for
 	 * removing all unit productions from <CODE>oldGrammar</CODE>.
-	 * 
+	 *
 	 * @param oldGrammar
 	 *            the original grammar
 	 * @param newGrammar
@@ -331,7 +331,7 @@ public class UnitProductionRemover {
 
 	/**
 	 * Returns a unit production-less grammar equivalent to <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param graph

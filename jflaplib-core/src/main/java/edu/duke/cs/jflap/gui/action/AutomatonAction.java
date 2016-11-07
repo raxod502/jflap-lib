@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import edu.duke.cs.jflap.automata.Automaton;
  * controllers for operators on automatons should subclass. The only real change
  * from the <CODE>RestrictedAction</CODE> is that by default the <CODE>.isAcceptable</CODE>
  * method now only returns true if the object is an instance of <CODE>Automaton</CODE>.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class AutomatonAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>AutomatonAction</CODE>.
-	 * 
+	 *
 	 * @param string
 	 *            a string description
 	 * @param icon
@@ -51,7 +51,7 @@ public abstract class AutomatonAction extends RestrictedAction {
 	 * Given an object, determine if this automaton action is able to be applied
 	 * to that object based on its class. By default, this method returns <CODE>true</CODE>
 	 * if this object is an instance of <CODE>Automaton</CODE>.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for "applicability"
 	 * @return <CODE>true</CODE> if this action should be available to an

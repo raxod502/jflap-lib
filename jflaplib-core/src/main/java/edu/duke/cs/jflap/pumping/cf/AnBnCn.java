@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,23 +25,23 @@ import edu.duke.cs.jflap.pumping.*;
 /**
  * The context-free pumping lemma for <i>L</i> =
  * {<i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i> : <i>n</i> &#8805; 0}.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
-public class AnBnCn extends ContextFreePumpingLemma 
+public class AnBnCn extends ContextFreePumpingLemma
 {
-    public String getTitle() 
+    public String getTitle()
     {
         return "a^n b^n c^n";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
-        return "<i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i> : <i>n</i> " 
+        return "<i>a<sup>n</sup>b<sup>n</sup>c<sup>n</sup></i> : <i>n</i> "
             + GREATER_OR_EQ + " 0";
     }
-    
+
     public void setDescription()
     {
     	partitionIsValid = false;
@@ -51,22 +51,22 @@ public class AnBnCn extends ContextFreePumpingLemma
     			"<i>i</i> " + NOT_EQUAL + " 1, an inequality will be generated, meaning this is not a " +
     			"context-free language.";
     }
-    
-    protected void chooseW() 
+
+    protected void chooseW()
     {
         w = pumpString("a", m) + pumpString("b", m) + pumpString("c", m);
     }
 
-    public void chooseI() 
+    public void chooseI()
     {
         i = LemmaMath.flipCoin();
     }
-    
+
     protected void setRange()
     {
         myRange = new int[]{3, 11};
     }
-    
+
     protected void addCases()
     {
         /*
@@ -74,7 +74,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") == -1 && y.indexOf("c") == -1)
@@ -82,14 +82,14 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
-                    return new int[]{0, 1, 0, 1};                    
+                    return new int[]{0, 1, 0, 1};
                 }
             });
         /*
@@ -97,7 +97,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -105,11 +105,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s followed by \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{1, 1, 0, m-1};
@@ -120,7 +120,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -128,11 +128,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m - 1, 1, 0, 1};
@@ -143,7 +143,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -151,11 +151,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s followed by \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m - 1, 2, 0, 1};
@@ -166,7 +166,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -174,11 +174,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m, 1, 0, 1};
@@ -189,7 +189,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") > -1)
@@ -197,11 +197,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s followed by \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m - 2, 1, 0, 2};
@@ -212,7 +212,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -220,11 +220,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m - 1, 1, 0, 1};
@@ -235,7 +235,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") > -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -243,11 +243,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s followed by \"c\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m - 1, 2, 0, 1};
@@ -258,7 +258,7 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") == -1 && v.indexOf("c") > -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -266,11 +266,11 @@ public class AnBnCn extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"c\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 1, 0, 1};
@@ -281,18 +281,18 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() == 0 && y.length() > 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is an empty string and y is a non-empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 0, 1, 1};
@@ -303,32 +303,32 @@ public class AnBnCn extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() > 0 && y.length() == 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a non-empty string and y is an empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 1, 0, 0};
                 }
             });
     }
-    
+
     public boolean isInLang(String s)
     {
     	int a, b, c;
     	char[] list = new char[]{'a','b','c'};
     	if (LemmaMath.isMixture(s, list))
     		return false;
-    	
+
     	a = LemmaMath.countInstances(s, 'a');
     	b = LemmaMath.countInstances(s, 'b');
     	c = LemmaMath.countInstances(s, 'c');

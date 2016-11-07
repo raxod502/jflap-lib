@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,14 +39,14 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
  * as a transducer. This is almost identical to its superclass except for a few
  * different names, and this one does not remove the columns corresponding to
  * the output.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class MultipleOutputSimulateAction extends MultipleSimulateAction {
 	/**
 	 * Instantiates a new <CODE>MultipleOuptutSimulateAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -63,7 +63,7 @@ public class MultipleOutputSimulateAction extends MultipleSimulateAction {
 	/**
 	 * Returns the title for the type of compontent we will add to the
 	 * environment.
-	 * 
+	 *
 	 * @return in this base class, returns "Multiple Inputs"
 	 */
 	public String getComponentTitle() {
@@ -72,7 +72,7 @@ public class MultipleOutputSimulateAction extends MultipleSimulateAction {
 
 	/**
 	 * Provides an initialized multiple input table object.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to provide the multiple input table for
 	 * @return a table object for this automaton
@@ -94,15 +94,15 @@ public class MultipleOutputSimulateAction extends MultipleSimulateAction {
             if(autos.get(0) instanceof TuringMachine){
             	tapeNum = ((TuringMachine)autos.get(0)).tapes;
             	offset = offset/tapeNum;
-            }     
+            }
             int row = 0;
-            for(int m = 0; m < autos.size(); m++){      
+            for(int m = 0; m < autos.size(); m++){
                 for(int k = 0; k < strings.size(); k++){
                     row = k/tapeNum+offset*m;
-                    model.setValueAt(((Automaton)autos.get(m)).getFileName(), row, 0);  
+                    model.setValueAt(((Automaton)autos.get(m)).getFileName(), row, 0);
                     model.setValueAt((String)strings.get(k), row, k%tapeNum+1);
                 }
-                
+
             }
         }
 		return table;
@@ -111,7 +111,7 @@ public class MultipleOutputSimulateAction extends MultipleSimulateAction {
 	/**
 	 * This simulate action is only applicable to those types of automata that
 	 * can be considered to generate output, that is, Turing machines.
-	 * 
+	 *
 	 * @param object
 	 *            to object to test for applicability
 	 */

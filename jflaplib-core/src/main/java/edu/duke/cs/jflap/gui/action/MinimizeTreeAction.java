@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import edu.duke.cs.jflap.automata.fsa.Minimizer;
 /**
  * This action allows the user to manually minimize a DFA using a minimization
  * tree.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class MinimizeTreeAction extends FSAAction {
 	/**
 	 * Instantiates a new <CODE>MinimizeTreeAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that the tree will be shown for
 	 * @param environment
@@ -62,7 +62,7 @@ public class MinimizeTreeAction extends FSAAction {
 
 	/**
 	 * Puts the DFA form in another window.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */

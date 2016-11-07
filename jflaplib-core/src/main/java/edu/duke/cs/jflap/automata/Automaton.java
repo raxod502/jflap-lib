@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -55,10 +55,10 @@ import org.slf4j.LoggerFactory;
  * simulate the behavior of any of those machines; it simply maintains a
  * structure that holds and maintains the data necessary to represent such a
  * machine.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.State
  * @see edu.duke.cs.jflap.automata.Transition
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -78,7 +78,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Creates a clone of this automaton.
-	 * 
+	 *
 	 * @return a clone of this automaton, or <CODE>null</CODE> if the clone
 	 *         failed
 	 */
@@ -97,8 +97,8 @@ public class Automaton implements Serializable, Cloneable {
 			return null;
 		}
 		a.setEnvironmentFrame(this.getEnvironmentFrame());
-		
-		
+
+
 		// Copy over the states.
 		HashMap map = new HashMap(); // Old states to new states.
 		Iterator it = states.iterator();
@@ -144,10 +144,10 @@ public class Automaton implements Serializable, Cloneable {
 			}
 		}
 		for(int k = 0; k < this.getNotes().size(); k++){
-			Note curNote = (Note)this.getNotes().get(k);		
+			Note curNote = (Note)this.getNotes().get(k);
 			a.addNote(new Note(curNote.getAutoPoint(), curNote.getText()));
             ((Note)a.getNotes().get(k)).setView(curNote.getView());
-            
+
 
             //for undo, we must initialize the clone to our view
 
@@ -156,15 +156,15 @@ public class Automaton implements Serializable, Cloneable {
 		// Should be done now!
 		return a;
 	}
-	
+
 	/**
 	 * Turn a into b. This code is copied from the clone method and tweaked. If I am daring, I will remove it from clone and call this.
-	 * 
+	 *
 	 * @param dest
 	 * @param src
 	 */
 	public static void become(Automaton dest, Automaton src){
-		
+
 		dest.clear();
 		// Copy over the states.
 		HashMap map = new HashMap(); // Old states to new states.
@@ -210,7 +210,7 @@ public class Automaton implements Serializable, Cloneable {
 			}
 		}
 		for(int k = 0; k < src.getNotes().size(); k++){
-			Note curNote = (Note)src.getNotes().get(k);		
+			Note curNote = (Note)src.getNotes().get(k);
 			dest.addNote(new Note(curNote.getAutoPoint(), curNote.getText()));
             ((Note)dest.getNotes().get(k)).initializeForView(curNote.getView());
 		}
@@ -220,7 +220,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Retrieves all transitions that eminate from a state.
-	 * 
+	 *
 	 * @param from
 	 *            the <CODE>State</CODE> from which returned transitions
 	 *            should come from
@@ -240,7 +240,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Retrieves all transitions that travel from a state.
-	 * 
+	 *
 	 * @param to
 	 *            the <CODE>State</CODE> to which all returned transitions
 	 *            should go to
@@ -261,7 +261,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Retrieves all transitions going from one given state to another given
 	 * state.
-	 * 
+	 *
 	 * @param from
 	 *            the state all returned transitions should come from
 	 * @param to
@@ -280,7 +280,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Retrieves all transitions.
-	 * 
+	 *
 	 * @return an array containing all transitions for this automaton
 	 */
 	public Transition[] getTransitions() {
@@ -293,7 +293,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Adds a <CODE>Transition</CODE> to this automaton. This method may do
 	 * nothing if the transition is already in the automaton.
-	 * 
+	 *
 	 * @param trans
 	 *            the transition object to add to the automaton
 	 */
@@ -323,7 +323,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * Replaces a <CODE>Transition</CODE> in this automaton with another
 	 * transition with the same from and to states. This method will delete the
 	 * old if the transition is already in the automaton.
-	 * 
+	 *
 	 * @param oldTrans
 	 *            the transition object to add to the automaton
 	 * @param newTrans
@@ -358,7 +358,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Removes a <CODE>Transition</CODE> from this automaton.
-	 * 
+	 *
 	 * @param trans
 	 *            the transition object to remove from this automaton.
 	 */
@@ -377,14 +377,14 @@ public class Automaton implements Serializable, Cloneable {
 				false, false));
 	}
 
-	
-	
 
 
-	
+
+
+
 	/**
 	 * Moves objects from Array to List
-	 * 
+	 *
 	 * @param point
 	 * @return
 	 */
@@ -399,7 +399,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Creates a state, inserts it in this automaton, and returns that state.
 	 * The ID for the state is set appropriately.
-	 * 
+	 *
 	 * @param point
 	 *            the point to put the state at
 	 */
@@ -415,7 +415,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Creates a state, inserts it in this automaton, and returns that state.
 	 * The ID for the state is set appropriately.
-	 * 
+	 *
 	 * @param point
 	 *            the point to put the state at
 	 */
@@ -428,7 +428,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Adds a new state to this automata. Clients should use the <CODE>createState</CODE>
 	 * method instead.
-	 * 
+	 *
 	 * @param state
 	 *            the state to add
 	 */
@@ -444,7 +444,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Removes a state from the automaton. This will also remove all transitions
 	 * associated with this state.
-	 * 
+	 *
 	 * @param state
 	 *            the state to remove
 	 */
@@ -484,7 +484,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * Sets the new initial state to <CODE>initialState</CODE> and returns
 	 * what used to be the initial state, or <CODE>null</CODE> if there was no
 	 * initial state. The state specified should already exist in the automata.
-	 * 
+	 *
 	 * @param initialState
 	 *            the new initial state
 	 * @return the old initial state, or <CODE>null</CODE> if there was no
@@ -500,7 +500,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Returns the start state for this automaton.
-	 * 
+	 *
 	 * @return the start state for this automaton
 	 */
 	public State getInitialState() {
@@ -510,7 +510,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Returns an array that contains every state in this automaton. The array
 	 * is gauranteed to be in order of ascending state IDs.
-	 * 
+	 *
 	 * @return an array containing all the states in this automaton
 	 */
 	public State[] getStates() {
@@ -528,27 +528,27 @@ public class Automaton implements Serializable, Cloneable {
 		}
 		return cachedStates;
 	}
-	
+
 	public void selectStatesWithinBounds(Rectangle bounds){
 		State[] states = getStates();
 		for(int k = 0; k < states.length; k++){
 			states[k].setSelect(false);
-			if(bounds.contains(states[k].getPoint())){	
+			if(bounds.contains(states[k].getPoint())){
 				states[k].setSelect(true);
 			}
 		}
 	}
-	
+
 	public ArrayList getNotes() {
 		return myNotes;
 	}
-	
+
 
 	public void addNote(Note note){
 		myNotes.add(note);
         distributeNoteEvent(new AutomataNoteEvent(this, note, true, false));
 	}
-	
+
 
 	public void deleteNote(Note note){
 		for(int k = 0; k < myNotes.size(); k++){
@@ -561,7 +561,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * general automaton can have an unlimited number of final states, and
 	 * should have at least one. The state that is added should already be one
 	 * of the existing states.
-	 * 
+	 *
 	 * @param finalState
 	 *            a new final state to add to the collection of final states
 	 */
@@ -575,7 +575,7 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * Removes a state from the set of final states. This will not remove a
 	 * state from the list of states; it shall merely make it nonfinal.
-	 * 
+	 *
 	 * @param state
 	 *            the state to make not a final state
 	 */
@@ -590,7 +590,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * Returns an array that contains every state in this automaton that is a
 	 * final state. The array is not necessarily gauranteed to be in any
 	 * particular order.
-	 * 
+	 *
 	 * @return an array containing all final states of this automaton
 	 */
 	public State[] getFinalStates() {
@@ -601,7 +601,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Determines if the state passed in is in the set of final states.
-	 * 
+	 *
 	 * @param state
 	 *            the state to determine if is final
 	 * @return <CODE>true</CODE> if the state is a final state in this
@@ -622,10 +622,10 @@ public class Automaton implements Serializable, Cloneable {
 	public boolean isInitialState(State state) {
 		return (state.equals(initialState));
 	}
-	
+
 	/**
 	 * Returns the <CODE>State</CODE> in this automaton with this ID.
-	 * 
+	 *
 	 * @param id
 	 *            the ID to look for
 	 * @return the instance of <CODE>State</CODE> in this automaton with this
@@ -643,7 +643,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Tells if the passed in object is indeed a state in this automaton.
-	 * 
+	 *
 	 * @param state
 	 *            the state to check for membership in the automaton
 	 * @return <CODE>true</CODE> if this state is in the automaton, <CODE>false</CODE>otherwise
@@ -657,7 +657,7 @@ public class Automaton implements Serializable, Cloneable {
 	 * part of. Subclasses may wish to override in case they want to restrict
 	 * the type of transitions their automaton will respect. By default this
 	 * method simply returns the class object for the abstract class <CODE>automata.Transition</CODE>.
-	 * 
+	 *
 	 * @see #addTransition
 	 * @see edu.duke.cs.jflap.automata.Transition
 	 * @return the <CODE>Class</CODE> object that all added transitions should
@@ -695,7 +695,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Adds a <CODE>AutomataStateListener</CODE> to this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -705,7 +705,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Adds a <CODE>AutomataTransitionListener</CODE> to this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -715,7 +715,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Adds a <CODE>AutomataNoteListener</CODE> to this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -725,7 +725,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Gives an automata state change event to all state listeners.
-	 * 
+	 *
 	 * @param event
 	 *            the event to distribute
 	 */
@@ -741,7 +741,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Removes a <CODE>AutomataStateListener</CODE> from this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -751,7 +751,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Removes a <CODE>AutomataTransitionListener</CODE> from this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -761,7 +761,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Removes a <CODE>AutomataNoteListener</CODE> from this automata.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -771,7 +771,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Gives an automata transition change event to all transition listeners.
-	 * 
+	 *
 	 * @param event
 	 *            the event to distribute
 	 */
@@ -786,7 +786,7 @@ public class Automaton implements Serializable, Cloneable {
 
 	/**
 	 * Gives an automata note change event to all state listeners.
-	 * 
+	 *
 	 * @param event
 	 *            the event to distribute
 	 */
@@ -801,8 +801,8 @@ public class Automaton implements Serializable, Cloneable {
 	/**
 	 * This handles deserialization so that the listener sets are reset to avoid
 	 * null pointer exceptions when one tries to add listeners to the object.
-	 * 
-     * @deprecated 
+	 *
+     * @deprecated
 	 * @param in
 	 *            the input stream for the object
 	 */
@@ -879,25 +879,25 @@ public class Automaton implements Serializable, Cloneable {
 	public void setEnvironmentFrame(EnvironmentFrame frame) {
 		myEnvFrame = frame;
 	}
-	
+
 	public void setFilePath(String name){
 		fileName = name;
 	}
-	
+
 	public String getFileName(){
 		int last = fileName.lastIndexOf("\\");
 		if(last == -1) last = fileName.lastIndexOf("/");
-		
+
 		return fileName.substring(last+1);
 	}
-	
+
 	public String getFilePath(){
 		int last = fileName.lastIndexOf("\\");
 		if(last == -1) last = fileName.lastIndexOf("/");
-		
+
 		return fileName.substring(0, last+1);
 	}
-	
+
 	public int hashCode(){
 //        EDebug.print("The Hash is that is hashed, is truly hashed");
 		int ret = 0;
@@ -907,8 +907,8 @@ public class Automaton implements Serializable, Cloneable {
 			ret+=((Transition) o).specialHash();
 		for (Object o: myNotes)
 			ret+=((Note) o).specialHash();
-        ret+=finalStates.hashCode(); 
-        ret+=initialState == null? 0: (int)(initialState.specialHash()*Math.PI); 
+        ret+=finalStates.hashCode();
+        ret+=initialState == null? 0: (int)(initialState.specialHash()*Math.PI);
 
 //        EDebug.print(ret);
 		return ret;
@@ -973,10 +973,10 @@ public class Automaton implements Serializable, Cloneable {
 //	 * referencing the same automaton from multiple buliding blocks
 //	 */
 //	private HashMap blockMap = new HashMap();
-	
+
 
 	private ArrayList myNotes = new ArrayList();
-	
+
 	public Color myColor = new Color(255, 255, 150);
 
 	// LISTENER STUFF
@@ -988,56 +988,56 @@ public class Automaton implements Serializable, Cloneable {
 	private transient HashSet stateListeners = new HashSet();
 
 	private transient HashSet noteListeners = new HashSet();
-	
+
 	/**
 	 * Reset all non-transient data structures.
 	 */
     protected void clear(){
-    	
-    	
-    	
-		
-		
+
+
+
+
+
     	HashSet t = new HashSet(transitions);
 		for (Object o:t)
 			removeTransition((Transition)o);
 		transitions = new HashSet();
-		
-		
+
+
 		t = new HashSet(states);
 		for (Object o:t)
 			removeState((State)o);
 		states = new HashSet();
-		
-		
+
+
 		finalStates = new HashSet();
-		
-		
+
+
 		initialState = null;
-    
-    
+
+
     	cachedStates = null;
-    
+
     	 cachedTransitions = null;
-    
+
     	 cachedFinalStates = null;
-    
+
     	transitionFromStateMap = new HashMap();
     	transitionToStateMap = new HashMap();
-    
+
     	transitionArrayFromStateMap = new HashMap();
-    
+
     	transitionArrayToStateMap = new HashMap();
-    
-    	
-    
+
+
+
     	while (myNotes.size() != 0){
-            AutomatonPane ap = ((Note) myNotes.get(0)).getView();  
+            AutomatonPane ap = ((Note) myNotes.get(0)).getView();
             ap.remove((Note)myNotes.get(0));
             ap.repaint();
             deleteNote((Note)myNotes.get(0));
         }
-        
+
     }
 
 }

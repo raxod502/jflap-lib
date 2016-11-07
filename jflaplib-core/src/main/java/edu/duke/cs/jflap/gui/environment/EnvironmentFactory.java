@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -54,14 +54,14 @@ import edu.duke.cs.jflap.automata.mealy.MooreMachine;
  * customized trimmings, this sort of factory will be inappropriate. The
  * intended use is for <CODE>Environment</CODE>s opened in a file, or created
  * in a new file action, or some other such action.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EnvironmentFactory {
 	/**
 	 * Returns a new environment with an editor pane.
-	 * 
+	 *
 	 * @param object
 	 *            the object that this environment will edit
 	 * @return a new environment for the passed in object, ready to be edited,
@@ -69,7 +69,7 @@ public class EnvironmentFactory {
 	 *         this object
 	 */
 	public static Environment getEnvironment(Serializable object) {
-        
+
 		/*
          * For loading regular pumping lemmas.
          */
@@ -82,7 +82,7 @@ public class EnvironmentFactory {
             RegularPumpingLemma pl = (RegularPumpingLemma)object;
             PumpingLemmaInputPane inputPane;
             if (pl.getFirstPlayer().equals(PumpingLemma.COMPUTER))
-            	inputPane = new CompRegPumpingLemmaInputPane(pl);                    	
+            	inputPane = new CompRegPumpingLemmaInputPane(pl);
             else
             	inputPane = new HumanRegPumpingLemmaInputPane(pl);
             inputPane.update();
@@ -101,8 +101,8 @@ public class EnvironmentFactory {
             PumpingLemmaChooserPane pane = new PumpingLemmaChooserPane(plc, env);
             env.add(pane, "Select a Pumping Lemma", EDITOR_PERMANENT_TAG);
             ContextFreePumpingLemma pl = (ContextFreePumpingLemma)object;
-            PumpingLemmaInputPane inputPane;            
-            if (pl.getFirstPlayer().equals(PumpingLemma.COMPUTER))            	
+            PumpingLemmaInputPane inputPane;
+            if (pl.getFirstPlayer().equals(PumpingLemma.COMPUTER))
             	inputPane = new CompCFPumpingLemmaInputPane(pl);
             else
             	inputPane = new HumanCFPumpingLemmaInputPane(pl);
@@ -141,7 +141,7 @@ public class EnvironmentFactory {
             EditorPane editor = new EditorPane(aut, new MooreToolBox());
             env.add(editor, EDITOR_NAME, EDITOR_PERMANENT_TAG);
             return env;
-        } 
+        }
         if(object instanceof MealyMachine)
         {
             Automaton aut = (Automaton) object;
@@ -149,8 +149,8 @@ public class EnvironmentFactory {
             EditorPane editor = new EditorPane(aut, new MealyToolBox());
             env.add(editor, EDITOR_NAME, EDITOR_PERMANENT_TAG);
             return env;
-        } 
-        
+        }
+
 		if (object instanceof Automaton) {
 			Automaton aut = (Automaton) object;
 			Environment env = new AutomatonEnvironment(aut);
@@ -161,15 +161,15 @@ public class EnvironmentFactory {
 			if (object instanceof ConvertedUnrestrictedGrammar)
 			{
 				ConvertedUnrestrictedGrammar grammar = (ConvertedUnrestrictedGrammar) object;
-				
+
 				GrammarInputPane input = new GrammarInputPane(grammar);
-				
+
 				Environment env = new GrammarEnvironment(input);
 				// Set up the pane for the input pane.
-				
+
 				env.add(input, EDITOR_NAME, EDITOR_PERMANENT_TAG);
 				return env;
-			
+
 			}
 			else
 			{
@@ -199,7 +199,7 @@ public class EnvironmentFactory {
 			// Nothing else yet.
 			return null;
 		}
-		
+
 	}
 
 	/**

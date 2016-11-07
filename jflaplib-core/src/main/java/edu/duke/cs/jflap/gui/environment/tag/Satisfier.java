@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,17 +25,17 @@ package edu.duke.cs.jflap.gui.environment.tag;
  * returns whether or not it satisfies some general property. Usually the tagged
  * object should be enough to satisfy the requirements, but the object that is
  * tagged is passed along as well in case it is important.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.environment.tag.Tag
  * @see edu.duke.cs.jflap.gui.environment.Environment#add
- * 
+ *
  * @author Thomas Finley
  */
 
 public interface Satisfier {
 	/**
 	 * Checks to see if an object and its tag satisfy some properties
-	 * 
+	 *
 	 * @param object
 	 *            the object, in case it is useful
 	 * @param tag

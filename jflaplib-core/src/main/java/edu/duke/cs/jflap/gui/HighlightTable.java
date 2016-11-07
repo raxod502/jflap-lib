@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,7 +35,7 @@ import javax.swing.table.TableModel;
  * added convinience, and other variations for added customizability of the
  * highlighting (in case highlighted cells will not render properly with a
  * default cell renderer, for example).
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -49,7 +49,7 @@ public class HighlightTable extends JTable {
 
 	/**
 	 * Highlights a particular cell.
-	 * 
+	 *
 	 * @param row
 	 *            the row index of the cell to highlight
 	 * @param column
@@ -61,7 +61,7 @@ public class HighlightTable extends JTable {
 
 	/**
 	 * Converts a row and column index to an index.
-	 * 
+	 *
 	 * @param row
 	 *            the row to get
 	 * @param column
@@ -73,7 +73,7 @@ public class HighlightTable extends JTable {
 
 	/**
 	 * Dehighlights a particular cell.
-	 * 
+	 *
 	 * @param row
 	 *            the row index of the cell to dehighlight
 	 * @param column
@@ -87,7 +87,7 @@ public class HighlightTable extends JTable {
 	/**
 	 * This method is the highlight method but allows the specification of a
 	 * custom table cell renderer.
-	 * 
+	 *
 	 * @param rc
 	 *            the array of row and column entries, done in the model-space
 	 *            rather than view-space of the table
@@ -107,7 +107,7 @@ public class HighlightTable extends JTable {
 	/**
 	 * This method is the highlight method but allows the specification of a
 	 * custom table cell renderer. This will retain previous highlightings.
-	 * 
+	 *
 	 * @param row
 	 *            the row index of the cell to highlight
 	 * @param column
@@ -156,7 +156,7 @@ public class HighlightTable extends JTable {
 	public static interface TableHighlighterRendererGenerator {
 		/**
 		 * Returns a table cell renderer for this row and column.
-		 * 
+		 *
 		 * @param row
 		 *            the row index to get the table cell renderer for
 		 * @param column

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import javax.swing.tree.TreeNode;
 /**
  * A <CODE>LeafNodePlacer</CODE> places leaves so that they are evenly spaced
  * horizontally.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class LeafNodePlacer implements NodePlacer {
 	 * objects to <CODE>Point2D</CODE> points. This placer works according to
 	 * a rather simple algorithm that places all nodes at a particular depth in
 	 * a tree at regular intervals.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree model
 	 * @param drawer
@@ -60,7 +60,7 @@ public class LeafNodePlacer implements NodePlacer {
 
 	/**
 	 * This will place the nodes. Oooo.
-	 * 
+	 *
 	 * @param node
 	 *            the current node being placed
 	 * @param depth

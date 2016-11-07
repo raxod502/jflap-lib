@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import java.util.List;
  * that loads the <code>MooreArrowTool</code> and <code>
  * MooreStateTool</code> instead of the default <code>
  * ArrowTool</code> and <code>StateTool</code>.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.mealy.MooreMachine
  * @see MooreArrowTool
  * @see MooreStateTool
  * @author Jinghui Lim
- * 
+ *
  */
-public class MooreToolBox implements ToolBox 
+public class MooreToolBox implements ToolBox
 {
     /**
      * Returns a list of tools for Moore machines, similar to
@@ -45,13 +45,13 @@ public class MooreToolBox implements ToolBox
      * <code>MooreArrowTool</code>, <code>MooreStateTool</code>
      * <code>TransitionTool</code>, and <code>DeleteTool</code>
      * in that order.
-     * 
+     *
      * @param view the component that the automaton will be drawn in
      * @param drawer the drawer that will draw the automaton in the
      * view
      * @return a list of <CODE>Tool</CODE> objects.
      */
-    public List tools(AutomatonPane view, AutomatonDrawer drawer) 
+    public List tools(AutomatonPane view, AutomatonDrawer drawer)
     {
         List list = new java.util.ArrayList();
         list.add(new MooreArrowTool(view, drawer));

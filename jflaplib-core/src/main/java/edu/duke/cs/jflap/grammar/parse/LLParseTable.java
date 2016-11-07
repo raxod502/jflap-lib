@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import java.io.Serializable;
  * Variables are in the rows, lookahead terminals in the columns. In its
  * capacity as a <CODE>TableModel</CODE> the first row is taken up with the
  * names of the variables.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 		Cloneable {
 	/**
 	 * Instantiates a new <CODE>LLParseTable</CODE> for a given grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to create the table for
 	 */
@@ -57,7 +57,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Copy constructor for a LL parse table.
-	 * 
+	 *
 	 * @param table
 	 *            the table to copy
 	 */
@@ -72,7 +72,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Clone method for the LL parse table.
-	 * 
+	 *
 	 * @return a copy of this table
 	 */
 	public Object clone() {
@@ -81,7 +81,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns <CODE>true</CODE> if this object equals another.
-	 * 
+	 *
 	 * @param object
 	 *            the object to compare against
 	 */
@@ -103,7 +103,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns a hashcode for this table.
-	 * 
+	 *
 	 * @return the hashcode for this parse table
 	 */
 	public int hashCode() {
@@ -115,7 +115,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Returns a 2 integer array of the row and column of a variable and
 	 * lookahead, in that order.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable to look for
 	 * @param lookahead
@@ -133,7 +133,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the row location in the table model of the variable.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable to find the row for
 	 * @return the row where this variable is
@@ -149,7 +149,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the column location in the table model of the lookahead terminal.
-	 * 
+	 *
 	 * @throws IllegalArgumentException
 	 *             if either variable or lookahead is not a variable or terminal
 	 *             (or $) respectively in the grammar
@@ -168,7 +168,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	 * Given another parse table with the same variable and lookahead, return a
 	 * listing of those pairs of variables and terminals where there are
 	 * differences.
-	 * 
+	 *
 	 * @param table
 	 *            the other parse table
 	 * @return an array, each element of which is a 2-array of the variable and
@@ -198,7 +198,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Adds a new entry to the LL parse table
-	 * 
+	 *
 	 * @param variable
 	 *            the stack variable
 	 * @param lookahead
@@ -221,7 +221,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Removes an entry from the LL parse table
-	 * 
+	 *
 	 * @param variable
 	 *            the stack variable
 	 * @param lookahead
@@ -255,7 +255,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * This will clear the entry in the table for the given variable and
 	 * lookahead.
-	 * 
+	 *
 	 * @param variable
 	 *            the stack variable
 	 * @param lookahead
@@ -272,7 +272,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the set of mapping for a variable and lookahead.
-	 * 
+	 *
 	 * @param variable
 	 *            the stack variable
 	 * @param lookahead
@@ -288,7 +288,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Defines the set of mapping for a variable and lookahead.
-	 * 
+	 *
 	 * @param productions
 	 *            the new set for the entry
 	 * @param variable
@@ -309,7 +309,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the number of rows, equal to the number of variables.
-	 * 
+	 *
 	 * @return the number of rows
 	 */
 	public int getRowCount() {
@@ -326,7 +326,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the name of a column.
-	 * 
+	 *
 	 * @param column
 	 *            the index for a column
 	 */
@@ -341,7 +341,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Takes a set, and returns a string with the entries of that set space
 	 * delimited.
-	 * 
+	 *
 	 * @param set
 	 *            the set to put in a space delimited string
 	 */
@@ -362,7 +362,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Given a whitespace delimited string and a set, this clears the set and
 	 * adds all distinct tokens from the string to the set.
-	 * 
+	 *
 	 * @param string
 	 *            the string to process
 	 * @param set
@@ -383,7 +383,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the value for the table.
-	 * 
+	 *
 	 * @param row
 	 *            the row to get data for
 	 * @param column
@@ -400,7 +400,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Sets the value at a particular entry of the table.
-	 * 
+	 *
 	 * @param value
 	 *            the new value for an entry
 	 */
@@ -411,7 +411,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * All cells are editable except those of the first column.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -425,7 +425,7 @@ public class LLParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Sets whether any entries in this table should be editable.
-	 * 
+	 *
 	 * @param editable
 	 *            <CODE>true</CODE> if entries in this table should be
 	 *            editable, <CODE>false</CODE> if the entries should be frozen

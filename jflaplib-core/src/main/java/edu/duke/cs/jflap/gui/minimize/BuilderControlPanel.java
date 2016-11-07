@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import javax.swing.JToolBar;
 /**
  * This control panel is a set of GUI elements that, when invoked, call methods
  * on the <CODE>BuilderController</CODE> object.
- * 
+ *
  * @author Thomas Finley
  */
 
 class BuilderControlPanel extends JToolBar {
 	/**
 	 * Instantiates a new <CODE>BuilderControlPanel</CODE>.
-	 * 
+	 *
 	 * @param controller
 	 *            the builder controller to call methods of
 	 */
@@ -49,7 +49,7 @@ class BuilderControlPanel extends JToolBar {
 
 	/**
 	 * Initializes the GUI elements in the indicated toolbar.
-	 * 
+	 *
 	 * @param toolbar
 	 *            the tool bar
 	 * @param controller

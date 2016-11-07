@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import javax.swing.tree.*;
 class UnrestrictedTreeNode extends DefaultMutableTreeNode {
 	/**
 	 * Creates a new unrestricted tree node.
-	 * 
+	 *
 	 * @param text
 	 *            the label for this unrestricted tree node
 	 */
@@ -43,7 +43,7 @@ class UnrestrictedTreeNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns the text.
-	 * 
+	 *
 	 * @return the text
 	 */
 	public String getText() {
@@ -52,7 +52,7 @@ class UnrestrictedTreeNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns a string representation of the node.
-	 * 
+	 *
 	 * @return a string representation of the node
 	 */
 	public String toString() {

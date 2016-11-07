@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,20 +28,20 @@ import edu.duke.cs.jflap.automata.State;
  * This event is given to listeners of an automaton interested in events when a
  * state on an automaton is added or removed, or moved, or it's label was
  * changed, etc.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.Automaton
  * @see edu.duke.cs.jflap.automata.State
  * @see edu.duke.cs.jflap.automata.Automaton#addState
  * @see edu.duke.cs.jflap.automata.Automaton#removeState
  * @see edu.duke.cs.jflap.automata.event.AutomataStateListener
- * 
+ *
  * @author Thomas Finley
  */
 
 public class AutomataStateEvent extends EventObject {
 	/**
 	 * Instantiates a new <CODE>AutomataStateEvent</CODE>.
-	 * 
+	 *
 	 * @param auto
 	 *            the <CODE>Automaton</CODE> that generated the event
 	 * @param region
@@ -65,7 +65,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns the <CODE>Automaton</CODE> that generated this event.
-	 * 
+	 *
 	 * @return the <CODE>Automaton</CODE> that generated this event
 	 */
 	public Automaton getAutomaton() {
@@ -74,7 +74,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns the <CODE>State</CODE> that was added/removed.
-	 * 
+	 *
 	 * @return the <CODE>State</CODE> that was added/removed
 	 */
 	public State getState() {
@@ -83,7 +83,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns if this was an add.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event indicates the addition of a
 	 *         state, <CODE>false</CODE> otherwise
 	 */
@@ -93,7 +93,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns if this was a move.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event indicates the mere moving of a
 	 *         state, <CODE>false</CODE> otherwise
 	 */
@@ -103,7 +103,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns if this was a label change.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event indicates the mere relabeling
 	 *         of a state, <CODE>false</CODE> otherwise
 	 */
@@ -113,7 +113,7 @@ public class AutomataStateEvent extends EventObject {
 
 	/**
 	 * Returns if this was a delete of a state.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event was the deletion of a state,
 	 *         false otherwise
 	 */

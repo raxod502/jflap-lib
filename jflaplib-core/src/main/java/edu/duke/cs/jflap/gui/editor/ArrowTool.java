@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -59,14 +59,14 @@ import edu.duke.cs.jflap.debug.EDebug;
 
 /**
  * The arrow tool is used mostly for editing existing objects.
- * 
+ *
  * @author Thomas Finley, Henry Qin
  */
 
 public class ArrowTool extends Tool {
 	/**
 	 * Instantiates a new arrow tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -82,7 +82,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Instantiates a new arrow tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -96,7 +96,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -105,7 +105,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the arrow tool icon
 	 */
 	protected Icon getIcon() {
@@ -116,7 +116,7 @@ public class ArrowTool extends Tool {
 	/**
 	 * On a mouse click, if this is a double click over a transition edit the
 	 * transition. If this was a single click, then we select the transition.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -127,12 +127,12 @@ public class ArrowTool extends Tool {
                 if (trans.isSelected){
                     trans.isSelected = false;
                     selectedTransition = null;
-                } 
+                }
                 else{
                     if (selectedTransition != null) selectedTransition.isSelected = false;
                     trans.isSelected = true;
                     selectedTransition = trans;
-                     
+
                 }
                 return;
             }
@@ -152,7 +152,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Possibly show a popup menu.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -202,13 +202,13 @@ public class ArrowTool extends Tool {
 		}
 		else if (lastClickedTransition != null) {
 			initialPointClick.setLocation(event.getPoint());
-		}	
+		}
 		else {
 			ArrayList notes = getDrawer().getAutomaton().getNotes();
 			for(int k = 0; k < notes.size(); k++){
 				((Note)notes.get(k)).setEditable(false);
 				((Note)notes.get(k)).setEnabled(false);
-				((Note)notes.get(k)).setCaretColor(new Color(255, 255, 150));		
+				((Note)notes.get(k)).setCaretColor(new Color(255, 255, 150));
 			}
 
 			Rectangle bounds = new Rectangle(0, 0, -1, -1);
@@ -218,14 +218,14 @@ public class ArrowTool extends Tool {
 
         //reset the selectedTransition after an Undo has happened.
 
-        
+
         Transition[] trans = getAutomaton().getTransitions();
         for (int i = 0; i < trans.length; i++)
             if (trans[i].isSelected){
                 selectedTransition = trans[i];
                 return;
             }
-        
+
 
         selectedTransition = null;
 
@@ -236,7 +236,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Returns if the state popup menu should be shown whenever applicable.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the state menu should be popped up, <CODE>false</CODE>
 	 *         if it should not be... returns <CODE>true</CODE> by default
 	 */
@@ -255,7 +255,7 @@ public class ArrowTool extends Tool {
 			if (event.isPopupTrigger())
 				return;
 			Point p = event.getPoint();
-			
+
 			State[] states = getView().getDrawer().getAutomaton().getStates();
 			for(int k = 0; k < states.length; k++){
 				State curState = states[k];
@@ -263,7 +263,7 @@ public class ArrowTool extends Tool {
 					int x = curState.getPoint().x + p.x - initialPointClick.x;
 					int y = curState.getPoint().y + p.y - initialPointClick.y;
 					curState.getPoint().setLocation(x, y);
-					curState.setPoint(curState.getPoint());									
+					curState.setPoint(curState.getPoint());
 				}
 			}
 			initialPointClick = p;
@@ -287,7 +287,7 @@ public class ArrowTool extends Tool {
 				Point to = getView().getDrawer().pointOnState(f, angle-Math.PI*.166);
 
 				Transition[] trans = getAutomaton().getTransitionsFromStateToState(f, t);
-                
+
 				for (int n = 0; n < trans.length; n++) {
 					CurvedArrow arrow = (CurvedArrow) getView().getDrawer().transitionToArrowMap.get(trans[n]);
 //					arrow.setStart(from);
@@ -313,7 +313,7 @@ public class ArrowTool extends Tool {
 				for (int n = 0; n < trans.length; n++) {
 					CurvedArrow arrow = (CurvedArrow) getView().getDrawer().transitionToArrowMap.get(trans[n]);
 
-                    
+
 
                     //uncomment this code for Transitions movement
                     /*
@@ -345,7 +345,7 @@ public class ArrowTool extends Tool {
 					//}
 					//QuadCurve2D curve = arrow.getCurve();
 					//curve.setCurve(curve.getX1(), curve.getY1(), p.x, p.y, curve.getX2(), curve.getY2());
-					
+
 					getView().getDrawer().arrowToTransitionMap.put(arrow, trans[n]);
 					getView().getDrawer().transitionToArrowMap.put(trans[n], arrow);
 				}
@@ -371,7 +371,7 @@ public class ArrowTool extends Tool {
 
 			getView().repaint();
 		}
-        
+
         //Deal with transition dragging here
         if (selectedTransition != null){ //simply set ...but we need to get the initial point to be clever
             CurvedArrow ca = (CurvedArrow)getView().getDrawer().transitionToArrowMap.get(selectedTransition);
@@ -379,7 +379,7 @@ public class ArrowTool extends Tool {
             Point myClickP = event.getPoint();
             Point2D control = ca.getCurve().getCtrlPt();
 
-            if (transitionInFlux || Math.sqrt((control.getX() - myClickP.x)*(control.getX() - myClickP.x) 
+            if (transitionInFlux || Math.sqrt((control.getX() - myClickP.x)*(control.getX() - myClickP.x)
                         + (control.getY() - myClickP.y)*(control.getY() - myClickP.y)) < 15){
                             selectedTransition.setControl(myClickP);
         //                System.out.println("Move it damn it");
@@ -400,12 +400,12 @@ public class ArrowTool extends Tool {
         transitionInFlux = false;
 		if (event.isPopupTrigger())
 			showPopup(event);
-		
-		
+
+
 		State[] states = getView().getDrawer().getAutomaton().getStates();
 		int count = 0;
-		for(int k = 0; k < states.length; k++){			
-			if(states[k].isSelected()){	
+		for(int k = 0; k < states.length; k++){
+			if(states[k].isSelected()){
 				count++;
 			}
 		}
@@ -420,7 +420,7 @@ public class ArrowTool extends Tool {
 
 	/**
 	 * Returns the key stroke that will activate this tool.
-	 * 
+	 *
 	 * @return the key stroke that will activate this tool
 	 */
 	public KeyStroke getKey() {
@@ -439,7 +439,7 @@ public class ArrowTool extends Tool {
 	 * The contextual menu class for editing states.
 	 */
     /*
-     * I changed this from private class to protected class so I can 
+     * I changed this from private class to protected class so I can
      * remove the "Final State" option from Moore and Mealy machines.
      */
 	protected class StateMenu extends JPopupMenu implements ActionListener {
@@ -523,7 +523,7 @@ public class ArrowTool extends Tool {
 				for (int i = 0; i < states.length; i++)
 					states[i].setLabel(null);
 			} else if (item == editBlock) { //this implies that this was a TMState to begin with, because only TM states would have this menu option
-			
+
                 //not sure why need highest level automaton, but okay
 				TMState parent = (TMState) state;
 				while (((TuringMachine)parent.getAutomaton()).getParent() != null) {
@@ -552,8 +552,8 @@ public class ArrowTool extends Tool {
 					name = null;
 				state.setName(name);
 
-			}else if (item == copyBlock) { 
-                //MERLIN MERLIN MERLIN MERLIN MERLIN// 
+			}else if (item == copyBlock) {
+                //MERLIN MERLIN MERLIN MERLIN MERLIN//
 
 //				TMState buffer = ((TuringMachine) getAutomaton()).createTMState((Point)state.getPoint()); //again, we assume that the cast will work, since copyBlock hould never be there except with Turing.
 				TMState buffer = ((TuringMachine) getAutomaton()).createTMState(new Point(state.getPoint().x+4, state.getPoint().y)); //again, we assume that the cast will work, since copyBlock hould never be there except with Turing.
@@ -562,18 +562,18 @@ public class ArrowTool extends Tool {
 
 			}
             else if (item == replaceSymbol) {
-				
+
                 assert state instanceof TMState;
 
 				String replaceWith = null;
-				String toReplace = null;						
-				Object old = JOptionPane.showInputDialog(null, "Find");		
+				String toReplace = null;
+				Object old = JOptionPane.showInputDialog(null, "Find");
     			if (old == null)
     				return;
     			if(old instanceof String){
     				toReplace = (String)old;
     			}
-    				
+
     			Object newString = JOptionPane.showInputDialog(null, "Replace With");
     			if (newString == null)
     				return;
@@ -583,21 +583,21 @@ public class ArrowTool extends Tool {
 
                 replaceCharactersInBlock((TMState) state, toReplace, replaceWith);
 				}
-			
 
-    
+
+
 			getView().repaint();
 		}
-		
+
 		private void replaceCharactersInBlock(TMState start, String toReplace, String replaceWith){ //this shall be a recursive method, replacing the inside and then the out
 
             TuringMachine tm = start.getInnerTM();
-                
+
             for (int i = 0; i < tm.getStates().length; i++)
-                replaceCharactersInBlock((TMState)tm.getStates()[i], toReplace, replaceWith);      
-            
+                replaceCharactersInBlock((TMState)tm.getStates()[i], toReplace, replaceWith);
+
             Transition[] trans = tm.getTransitions();
-            
+
             for (int i = 0; i < trans.length; ++i){
                 TMTransition tmTrans = (TMTransition)trans[i];
                 for(int k = 0; k < tmTrans.tapes(); k++){
@@ -609,7 +609,7 @@ public class ArrowTool extends Tool {
 
             }
         }
-		
+
 
         private State state;
 
@@ -648,7 +648,7 @@ public class ArrowTool extends Tool {
 				renameStates.addActionListener(this);
 				this.add(renameStates);
 			}
-			
+
 			addNote = new JMenuItem("Add Note");
 			if (!(ArrowTool.this instanceof ArrowDisplayOnlyTool)) {
 				addNote.addActionListener(this);
@@ -663,7 +663,7 @@ public class ArrowTool extends Tool {
             }
 //          END SJK add
 
-            
+
 		}
 
 		public void show(Component comp, Point at) {
@@ -690,12 +690,12 @@ public class ArrowTool extends Tool {
             {
                 getView().setAdapt(item.isSelected());
             } else if (item == addNote)
-            {		 	
+            {
                 ((AutomatonEnvironment)getDrawer().getAutomaton().getEnvironmentFrame().getEnvironment()).saveStatus();
                 Note newNote = new Note(myPoint, "insert_text");
                 newNote.initializeForView(getView());
         		getView().getDrawer().getAutomaton().addNote(newNote);
-        		
+
             }
 			getView().repaint();
 			//boolean selected = adaptView.isSelected();
@@ -703,7 +703,7 @@ public class ArrowTool extends Tool {
 			//adaptView.setSelected(selected);
 		}
 		private Point myPoint;
-		
+
 		private JCheckBoxMenuItem stateLabels;
 		private Note curNote;
 		private JMenuItem layoutGraph;
@@ -719,7 +719,7 @@ public class ArrowTool extends Tool {
 
 	/** The transition that was last clicked. */
 	private Transition lastClickedTransition = null;
-	
+
 	/** The note that was last clicked. */
 	private Note lastClickedNote = null;
 

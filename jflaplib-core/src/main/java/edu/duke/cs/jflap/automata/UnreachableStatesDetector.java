@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,14 +26,14 @@ import java.util.*;
  * The unreachable states detector object can be used to find all unreachable
  * states in an automaton (i.e. all states for which there exists no path from
  * the initial state to that state).
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class UnreachableStatesDetector {
 	/**
 	 * Creates an instance of <CODE>UnreachableStatesDetector</CODE>
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to search for unreachable states.
 	 */
@@ -44,7 +44,7 @@ public class UnreachableStatesDetector {
 	/**
 	 * Initializes all nodes for DFS by creating a Node object for each State in
 	 * <CODE>states</CODE> and coloring them all white.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states to create Nodes for.
 	 */
@@ -62,7 +62,7 @@ public class UnreachableStatesDetector {
 	 * Returns all states in automaton that are unreachable from the initial
 	 * state. This method implements the standard depth first search algorithm
 	 * for directed graphs.
-	 * 
+	 *
 	 * @return all states in the automaton that are unreachable from the initial
 	 *         state.
 	 */
@@ -90,7 +90,7 @@ public class UnreachableStatesDetector {
 
 	/**
 	 * Returns Node object that contains <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @return Node object that contains <CODE>state</CODE>.

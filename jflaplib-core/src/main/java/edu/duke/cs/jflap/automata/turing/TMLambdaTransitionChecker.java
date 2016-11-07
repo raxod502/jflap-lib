@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,14 +26,14 @@ import edu.duke.cs.jflap.automata.Transition;
 /**
  * The tm lambda transition checker can be used to check if a one-tape Turing
  * machine's transition is a lambda transition
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class TMLambdaTransitionChecker extends LambdaTransitionChecker {
 	/**
 	 * Returns true if <CODE>transition</CODE> is a lambda transition
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @return true if <CODE>transition</CODE> is a lambda transition

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,31 +34,31 @@ import edu.duke.cs.jflap.automata.mealy.MooreTransition;
 /**
  * This is the transducer for encoding and decoding {@link
  * edu.duke.cs.jflap.automata.mealy.MooreMachine} objects.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class MooreTransducer extends MealyTransducer 
+public class MooreTransducer extends MealyTransducer
 {
     /**
      * The tag name for the state output string transition elements.
      */
     public static final String STATE_OUTPUT_NAME = "output";
-    
+
     /**
      * Creates and returns an empty Moore machine.
-     * 
+     *
      * @param document the DOM document that is being read
      * @return an empty Moore machine
      */
-    protected Automaton createEmptyAutomaton(Document document) 
+    protected Automaton createEmptyAutomaton(Document document)
     {
         return new MooreMachine();
     }
-    
+
     /**
      * Creates and returns a transition consistent with this node.
-     *      
+     *
      * @param from the from state
      * @param to the to state
      * @param node the DOM node corresponding to the transition, which
@@ -68,7 +68,7 @@ public class MooreTransducer extends MealyTransducer
      * @param isBlock
      * @return the new transition
      */
-    protected Transition createTransition(State from, State to, Node node, Map e2t, boolean isBlock) 
+    protected Transition createTransition(State from, State to, Node node, Map e2t, boolean isBlock)
     {
         /*
          * The boolean isBlock seems to be ignored in FSATransducer.java, so I'm ignoring
@@ -82,21 +82,21 @@ public class MooreTransducer extends MealyTransducer
             output = "";
         return new MooreTransition(from, to, label, output);
     }
-    
+
     /**
      * Returns the type string for this transducer, "moore".
-     * 
+     *
      * @return the string "moore"
      */
-    public String getType() 
+    public String getType()
     {
         return "moore";
     }
-    
+
     /**
      * Produces a DOM element that encodes a given state. This adds
      * the strings to read and the output.
-     * 
+     *
      * @param document the document to create the state in
      * @param state the state to encode
      * @return the newly created element that encodes the transition

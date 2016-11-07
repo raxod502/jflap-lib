@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,7 +40,7 @@ import edu.duke.cs.jflap.automata.pda.PDATransition;
  * automaton for each call to getTransitionForProduction. When you have done
  * this for every production in your grammar, you will have an equivalent
  * pushdown automaton.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -55,7 +55,7 @@ public class CFGToPDALRConverter extends GrammarToAutomatonConverter {
 	/**
 	 * Returns the reverse of <CODE>string</CODE> e.g. it would return "cba"
 	 * for "abc".
-	 * 
+	 *
 	 * @param string
 	 *            the string
 	 * @return the reverse of <CODE>string</CODE>
@@ -71,7 +71,7 @@ public class CFGToPDALRConverter extends GrammarToAutomatonConverter {
 	/**
 	 * Returns the transition created by converting <CODE>production</CODE> to
 	 * its equivalent transition.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return the equivalent transition.
@@ -91,7 +91,7 @@ public class CFGToPDALRConverter extends GrammarToAutomatonConverter {
 	 * states--an initial state, an intermediate state, and a final state. It
 	 * also adds transitions connecting the three states, and transitions for
 	 * each terminal in <CODE>grammar</CODE>
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar being converted.
 	 * @param automaton

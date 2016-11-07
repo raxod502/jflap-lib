@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,14 +26,14 @@ import edu.duke.cs.jflap.automata.State;
 /**
  * A <CODE>VDGTransition</CODE> is a <CODE>Transition</CODE> object used by
  * Variable Dependecy Graphs (VDGs). They have no labels.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class VDGTransition extends Transition {
 	/**
 	 * Instantiates a new <CODE>VDGTransition</CODE> object.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition comes from.
 	 * @param to
@@ -45,7 +45,7 @@ public class VDGTransition extends Transition {
 
 	/**
 	 * Produces a copy of this transition with new from and to states.
-	 * 
+	 *
 	 * @param from
 	 *            the new from state
 	 * @param to
@@ -59,7 +59,7 @@ public class VDGTransition extends Transition {
 	/**
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular transition object.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Transition#toString
 	 * @return a string representation of this object
 	 */

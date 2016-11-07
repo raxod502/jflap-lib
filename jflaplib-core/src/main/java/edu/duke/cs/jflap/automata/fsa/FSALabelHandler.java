@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * with transition labels of more than one character in length into an
  * equivalent finite state automaton with all transition labels exactly one
  * character in length.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -44,7 +44,7 @@ public class FSALabelHandler {
 	/**
 	 * Returns true if <CODE>automaton</CODE> has labels with multiple
 	 * characters, instead of single character labels.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return true if <CODE>automaton</CODE> has labels with multiple
@@ -65,7 +65,7 @@ public class FSALabelHandler {
 	 * Changes <CODE>transition</CODE> in <CODE>automaton</CODE> to several
 	 * transitions each with labels of one character in length. This algorithm
 	 * introduces new states in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to break up into several transitions of one
 	 *            character (in length) a piece.
@@ -77,9 +77,9 @@ public class FSALabelHandler {
 		 * FSATransition trans = (FSATransition) transition; String label =
 		 * trans.getLabel(); String firstChar = label.substring(0,1); String
 		 * restOfLabel = label.substring(1);
-		 * 
+		 *
 		 * StatePlacer sp = new StatePlacer();
-		 * 
+		 *
 		 * State newState =
 		 * automaton.createState(sp.getPointForState(automaton)); Transition
 		 * newTrans1 = new FSATransition(trans.getFromState(), newState,
@@ -110,7 +110,7 @@ public class FSALabelHandler {
 			from = going;
 		}
 	}
-	
+
 	public static void splitLabel(Transition transition, Automaton automaton){
 		FSATransition trans = (FSATransition) transition;
 		State from = transition.getFromState(), f = from, to = transition
@@ -122,13 +122,13 @@ public class FSALabelHandler {
 			automaton.addTransition(newTrans);
 		}
 	}
-		
+
 
 	/**
 	 * Changes all transitions in <CODE>automaton</CODE> into transitions with
 	 * at most one character per label. This could introduce more states into
 	 * <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */
@@ -150,7 +150,7 @@ public class FSALabelHandler {
 	 * Changes all transitions in <CODE>automaton</CODE> into transitions with
 	 * at most one character per label. This could introduce more states into
 	 * <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import edu.duke.cs.jflap.grammar.*;
  * The regular grammar object is a representation of a regular grammar. This
  * object is a data structure of sorts, maintaining the data pertinent to the
  * definition of a regular grammar.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -44,7 +44,7 @@ public class RegularGrammar extends Grammar {
 	/**
 	 * Sets the linearity of the regular grammar to the value represented by
 	 * <CODE>linearity</CODE>. (0 is left-linear, 1 is right-linear).
-	 * 
+	 *
 	 * @param linearity
 	 *            the linearity of the grammar.
 	 */
@@ -55,7 +55,7 @@ public class RegularGrammar extends Grammar {
 	/**
 	 * Returns the linearity of the grammar in the form of an int. 0 means
 	 * left-linear, 1 means right-linear.
-	 * 
+	 *
 	 * @return the linearity of the grammar.
 	 */
 	private int getLinearity() {
@@ -64,7 +64,7 @@ public class RegularGrammar extends Grammar {
 
 	/**
 	 * This checks the production.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @throws IllegalArgumentException
@@ -101,7 +101,7 @@ public class RegularGrammar extends Grammar {
 	/**
 	 * Adds a production to the grammar. After the production is added, this
 	 * method also sets the linearity of this grammar.
-	 * 
+	 *
 	 * @throws IllegalArgumentException
 	 *             if this production is somehow illegal for this grammar (i.e.,
 	 *             linearities don't match up)

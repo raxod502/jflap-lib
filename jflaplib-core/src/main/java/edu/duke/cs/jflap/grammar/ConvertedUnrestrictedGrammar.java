@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ public class ConvertedUnrestrictedGrammar extends Grammar {
 	/**
 	 * Every production is all right except those with lambda in the left hand
 	 * side of the production.
-	 * 
+	 *
 	 * @param production
 	 *            the production to check
 	 * @throws IllegalArgumentException
@@ -46,7 +46,7 @@ public class ConvertedUnrestrictedGrammar extends Grammar {
 
 	/**
 	 * This adds a production to the grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production to add
 	 * @throws IllegalArgumentException

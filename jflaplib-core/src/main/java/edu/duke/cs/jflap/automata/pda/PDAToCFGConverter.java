@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -46,9 +46,9 @@ import edu.duke.cs.jflap.automata.Transition;
  * repeatedly calling getProductionsForTransition on every transition in the pda
  * and adding all of the returned productions to your context free grammar. If
  * you do this for every transition in the pda, you will have an equivalent cfg.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.cfg.ContextFreeGrammar
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -72,7 +72,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns true if <CODE>automaton</CODE> has a single final state that is
 	 * entered if and only if the stack is empty.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return true if <CODE>automaton</CODE> has a single final state that is
@@ -103,7 +103,7 @@ public class PDAToCFGConverter {
 	 * Returns true if all transitions in <CODE>automaton</CODE> read a single
 	 * character from the input, pop a single character from the stack and push
 	 * either zero or two characters on to the stack.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return true if all transitions in <CODE>automaton</CODE> read a single
@@ -128,7 +128,7 @@ public class PDAToCFGConverter {
 	 * entered if and only if the stack is empty. 2. all transitions read a
 	 * single character from the input, pop a single character from the stack
 	 * and either push two or zero characters on to the stack.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return true if <CODE>automaton</CODE> is in the correct form to
@@ -146,7 +146,7 @@ public class PDAToCFGConverter {
 	 * Returns true if <CODE>transition</CODE> reads a single character from
 	 * the input tape, pops a single character from the stack, and writes TWO
 	 * characters to the stack.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @return true if <CODE>transition</CODE> reads a single character from
@@ -172,7 +172,7 @@ public class PDAToCFGConverter {
 	 * Returns true if <CODE>transition</CODE> reads a single character from
 	 * the input tape, pops a single character from the stack, and writes NO
 	 * characters to the stack.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @return true if <CODE>transition</CODE> reads a single character from
@@ -196,7 +196,7 @@ public class PDAToCFGConverter {
 
 	/**
 	 * Returns a unique variable.
-	 * 
+	 *
 	 * @return a unique variable.
 	 */
 	private String getUniqueVariable() {
@@ -211,7 +211,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns true if <CODE>variable</CODE> is the start symbol. (i.e.
 	 * "(q0Zqf)")
-	 * 
+	 *
 	 * @param variable
 	 *            the variable.
 	 * @param automaton
@@ -237,7 +237,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns a list of productions created for <CODE>transition</CODE>, a
 	 * transition that pushes TWO characters on the stack.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @param automaton
@@ -302,7 +302,7 @@ public class PDAToCFGConverter {
 	 * Returns a list of productions created for <CODE>transition</CODE>, a
 	 * transition that pushes NO characters on the stack. This list will always
 	 * contain a single production.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @return a list of productions created for <CODE>transition</CODE>, a
@@ -336,7 +336,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns a list of productions that represent the same functionality as
 	 * <CODE>transition</CODE> in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition
 	 * @param automaton
@@ -360,7 +360,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns an equivalent production to <CODE>production</CODE> but with
 	 * each variable (e.g. "q1Aq3") replaced by a unique variable (e.g. "B");
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return an equivalent production to <CODE>production</CODE> with a
@@ -385,7 +385,7 @@ public class PDAToCFGConverter {
 
 	/**
 	 * Returns the number of unique variables defined sofar in this conversion.
-	 * 
+	 *
 	 * @return the number of unique variables
 	 */
 	public int numberVariables() {
@@ -395,7 +395,7 @@ public class PDAToCFGConverter {
 	/**
 	 * Returns a ContextFreeGrammar object that represents a grammar equivalent
 	 * to <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return a cfg equivalent to <CODE>automaton</CODE>.
@@ -429,36 +429,36 @@ public class PDAToCFGConverter {
 
 		return grammar;
 	}
-	
-	
+
+
 	/**
 	 * Recursive function used by <code>purgeProductions()</code> to determine which productions should be
 	 * included in the grammar.  It takes a variable and recursively checks all productions that have it on
 	 * the left-hand side to determine whether each production should be accepted
-	 * 
-	 * @param lhs 
+	 *
+	 * @param lhs
 	 		     the variable on the left-hand side.  The initial variable is the initial state + 'Z' +
 	 * 			 the final state.
 	 * @param productions
 	 * 			 the current list of productions.
-	 * @param valid 
+	 * @param valid
 	 *           set of variables that potentially end in terminals
-	 * @param validProductions 
-	 *           an int array used to mark all productions that should not be removed.  The values that 
-	 *           can be in it are: <br><br> -1 - production should be removed <br> 0 - yet to be processed <br> 
+	 * @param validProductions
+	 *           an int array used to mark all productions that should not be removed.  The values that
+	 *           can be in it are: <br><br> -1 - production should be removed <br> 0 - yet to be processed <br>
 	 *           1 - currently being processed (helps prevent cycling) <br> 2 - production should be kept
 	 * @return true if one of the following three are true, false otherwise.<br><br> 1.  the lhs leads to a leaf node.
 	 * <br> 2.  the lhs leads to a cycle. <br> 3. All variables on the right side lead to a cycle or a leaf node.
 	 */
-	private void purgeProductionsHelper(String lhs, Production[] productions, HashSet valid, int[] validProductions){		
+	private void purgeProductionsHelper(String lhs, Production[] productions, HashSet valid, int[] validProductions){
 		ArrayList variables;
-		String rhs;			
+		String rhs;
 		for (int i=0; i<productions.length; i++)
-			if (productions[i].getLHS().equals(lhs) && validProductions[i] == 0) {				 
+			if (productions[i].getLHS().equals(lhs) && validProductions[i] == 0) {
 				validProductions[i] = 1;
 				variables = new ArrayList();
 				rhs = new String(productions[i].getRHS());
-				while (rhs.indexOf(LEFT_PAREN) > -1) {				
+				while (rhs.indexOf(LEFT_PAREN) > -1) {
 					variables.add(rhs.substring(rhs.indexOf(LEFT_PAREN), rhs.indexOf(RIGHT_PAREN)+1));
 					if (rhs.indexOf(RIGHT_PAREN) != rhs.length()-1)
 						rhs = rhs.substring(rhs.indexOf(RIGHT_PAREN) + 1);
@@ -467,26 +467,26 @@ public class PDAToCFGConverter {
 				}
 				for (int j=0; j<variables.size(); j++) {
 					if (validProductions[i] == 1 && !valid.contains(variables.get(j)))
-						validProductions[i] = -1;					
+						validProductions[i] = -1;
 				}
 				if (validProductions[i] == 1) {
-					validProductions[i] = 2;	
+					validProductions[i] = 2;
 					for (int j=0; j<variables.size(); j++)
 						purgeProductionsHelper((String) variables.get(j), productions, valid, validProductions);
 				}
 			}
 	}
-	
+
 	/**
 	 * Gets rid of superfluous productions in the table before transforming into a CFG.
-	 * 
+	 *
 	 * @param automaton
 	 *            the current automaton
-	 * @param model 
+	 * @param model
 	 *            the table of productions
 	 * @author Chris Morgan
 	 */
-	public void purgeProductions(Automaton automaton, GrammarTableModel model) {		
+	public void purgeProductions(Automaton automaton, GrammarTableModel model) {
 		Production[] productions = model.getProductions();
 		HashSet valid = new HashSet();
 		Stack variables, invalid;
@@ -494,40 +494,40 @@ public class PDAToCFGConverter {
 		int[] validProductions = new int[productions.length];
 		for (int i = 0; i < productions.length; i++)
 			validProductions[i] = 0;
-		
+
 		//After initializing variables, add all variables that can eventually end in terminals
 		//to a stack.
-		do {			
-			updated = false;						
+		do {
+			updated = false;
 			for (int i=0; i<validProductions.length; i++) {
 				variables = new Stack();
 				invalid = new Stack();
 				String rhs = productions[i].getRHS();
-				while (rhs.indexOf(LEFT_PAREN) > -1) {								
+				while (rhs.indexOf(LEFT_PAREN) > -1) {
 					variables.push(rhs.substring(rhs.indexOf(LEFT_PAREN), rhs.indexOf(RIGHT_PAREN)+1));
 					if (rhs.indexOf(RIGHT_PAREN) != rhs.length()-1)
 						rhs = rhs.substring(rhs.indexOf(RIGHT_PAREN) + 1);
 					else
 						rhs = "";
 				}
-				
+
 				while (variables.size() > 0)
-					if (!valid.contains((String) variables.peek()))						
-						invalid.push(variables.pop());					
+					if (!valid.contains((String) variables.peek()))
+						invalid.push(variables.pop());
 					else
 						variables.pop();
 				if (invalid.size() == 0 && !valid.contains(productions[i].getLHS())) {
 					updated = true;
 					valid.add(productions[i].getLHS());
-				}									
-			}			
+				}
+			}
 		} while (updated);
-		
+
 		//Then, trace a path from the initial variable to all terminals that it can reach.
-		String initVar = LEFT_PAREN + automaton.getInitialState().getName() + BOTTOM_OF_STACK + 
+		String initVar = LEFT_PAREN + automaton.getInitialState().getName() + BOTTOM_OF_STACK +
 					automaton.getFinalStates()[0].getName() + RIGHT_PAREN;
 		purgeProductionsHelper(initVar, productions, valid, validProductions);
-		
+
 		//Next, delete all superfluous rows and make note of those capital-letter variable
 		//assignments that are freed up in a new map.
 		HashMap newMap = new HashMap();
@@ -535,8 +535,8 @@ public class PDAToCFGConverter {
 		String key;
 		for (int i=0; i<26; i++)
 			freeValues.add("" + (char)('A' + i));
-		for (int i=validProductions.length-1; i>=0; i--)  
-			if (validProductions[i] < 2) 
+		for (int i=validProductions.length-1; i>=0; i--)
+			if (validProductions[i] < 2)
 				model.deleteRow(i);
 			else {
 				key = productions[i].getLHS();
@@ -544,15 +544,15 @@ public class PDAToCFGConverter {
 				if (((String)MAP.get(key)).charAt(0) <= 'Z')
 					freeValues.remove((String)MAP.get(key));
 			}
-		
-		//Finally, assign the new map to the old map, and assign one-letter variables to 
+
+		//Finally, assign the new map to the old map, and assign one-letter variables to
 		//any variables that need one.
 		MAP = newMap;
 		Iterator freeIter, mapIter;
 		freeIter = freeValues.iterator();
 		mapIter = newMap.keySet().iterator();
-		
-		while (mapIter.hasNext()) {			
+
+		while (mapIter.hasNext()) {
 			key = (String) mapIter.next();
 			if (((String)MAP.get(key)).charAt(0) > 'Z')
 				MAP.put(key, (String)freeIter.next());

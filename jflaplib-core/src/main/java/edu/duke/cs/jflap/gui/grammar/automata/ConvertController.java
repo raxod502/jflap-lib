@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import javax.swing.event.ListSelectionListener;
  * The <CODE>ConvertController</CODE> abstract class handles the operation to
  * convert an automaton to a PDA. At its most basic level, it simply maps
  * objects in the automaton to a set of productions in a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class ConvertController {
 	/**
 	 * Instantiates a <CODE>ConvertController</CODE> for an automaton.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -127,7 +127,7 @@ public abstract class ConvertController {
 
 	/**
 	 * Adds productions to the grammar pane, and makes them selected.
-	 * 
+	 *
 	 * @param productions
 	 *            the collection that holds productions to add
 	 */
@@ -149,7 +149,7 @@ public abstract class ConvertController {
 	/**
 	 * This method reveals the productions for a particular object, whether it
 	 * be a state or transition.
-	 * 
+	 *
 	 * @param object
 	 *            the object whose productions we should reveal
 	 * @return a non-empty array of productions revealed, <CODE>null</CODE> if
@@ -179,7 +179,7 @@ public abstract class ConvertController {
 	/**
 	 * This will reveal the productions for one object chosen at quasirandom
 	 * (i.e. whatever comes first).
-	 * 
+	 *
 	 * @return the object whose productions were revealed, or <CODE>null</CODE>
 	 *         if no object remains to have its productions revealed
 	 */
@@ -201,7 +201,7 @@ public abstract class ConvertController {
 	/**
 	 * This will reveal all the productions for all objects remaining to be
 	 * revealed.
-	 * 
+	 *
 	 * @return the number of objects revealed
 	 */
 	public int revealAllProductions() {
@@ -222,7 +222,7 @@ public abstract class ConvertController {
 	/**
 	 * This method sets all objects that may be tranformed to productions and as
 	 * yet have been unselected to be selected.
-	 * 
+	 *
 	 * @return an array of the objects which as yet have not been transformed
 	 */
 	public Object[] highlightUntransformed() {
@@ -242,7 +242,7 @@ public abstract class ConvertController {
 	/**
 	 * Returns the grammar that resulted from the conversion. This method should
 	 * only be called once the conversion has finished.
-	 * 
+	 *
 	 * @return the grammar that resulted from the conversion
 	 * @throws GrammarCreationException
 	 *             if there is some impediment to the creation of the grammar
@@ -252,7 +252,7 @@ public abstract class ConvertController {
 	/**
 	 * Exports the grammar defined to a new window, or fails if the grammar is
 	 * not yet converted.
-	 * 
+	 *
 	 * @return the grammar that was converted as returned by <CODE>getGrammar</CODE>;
 	 *         if there was an error in <CODE>getGrammar</CODE> or if the
 	 *         conversion is unfinished, <CODE>null</CODE> is returned
@@ -283,7 +283,7 @@ public abstract class ConvertController {
 
 	/**
 	 * Returns the <CODE>Automaton</CODE>.
-	 * 
+	 *
 	 * @return the <CODE>Automaton</CODE> for this controller
 	 */
 	protected Automaton getAutomaton() {
@@ -293,7 +293,7 @@ public abstract class ConvertController {
 	/**
 	 * Returns the productions for a particular state. This method will only be
 	 * called once.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -306,7 +306,7 @@ public abstract class ConvertController {
 	/**
 	 * Returns the productions for a particular transition. This method will
 	 * only be called once.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -318,7 +318,7 @@ public abstract class ConvertController {
 
 	/**
 	 * Returns the table model for the grammar table.
-	 * 
+	 *
 	 * @return the table model for the grammar table
 	 */
 	protected GrammarTableModel getModel() {

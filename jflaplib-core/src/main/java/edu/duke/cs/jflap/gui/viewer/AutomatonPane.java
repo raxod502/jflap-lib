@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,7 +38,7 @@ import javax.swing.*;
 
 /**
  * A simple view that draws an automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -46,7 +46,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	private final Logger logger = LoggerFactory.getLogger(AutomatonPane.class);
 	/**
 	 * Instantiates an AutomatonPane.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 */
@@ -58,7 +58,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	/**
 	 * Since labels support multiple lines, so too must the tool tips for this
 	 * component.
-	 * 
+	 *
 	 * @return a multiline tool tip
 	 */
 	public JToolTip createToolTip() {
@@ -67,7 +67,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Returns the location for a tool tip to display.
-	 * 
+	 *
 	 * @return the location for a tool tip
 	 */
 	public Point getToolTipLocation(MouseEvent event) {
@@ -81,7 +81,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Return the text for a tool tip.
-	 * 
+	 *
 	 * @return text for a tool tip
 	 */
 	public String getToolTipText(MouseEvent event) {
@@ -96,7 +96,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Instantiates an AutomatonPane.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 * @param adapt
@@ -118,7 +118,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	/**
 	 * Instantiates an AutomatonPane with the default automaton drawer as the
 	 * drawer for the passed in automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to draw
 	 */
@@ -128,13 +128,13 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Draws itself, and the automaton.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		
+
 		if (transformNeedsReform)
 			reformTransform(new Rectangle(getSize()));
 		g.setColor(java.awt.Color.white);
@@ -150,9 +150,9 @@ public class AutomatonPane extends JPanel implements Scrollable {
 		ArrayList notes = this.getDrawer().getAutomaton().getNotes();
 		for(int k = 0; k < notes.size(); k++){
 			Note curNote = (Note)notes.get(k);
-			curNote.updateView();	
+			curNote.updateView();
 		}
-		
+
 
 		//g2.translate(transform.getTranslateX(), transform.getTranslateY());
 		//g2.scale(transform.getScaleX(), transform.getScaleY());
@@ -160,7 +160,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Prints itself, with the automaton drawn so that it fills the space.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics interface for the printer device
 	 */
@@ -186,7 +186,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 			reformTransform(g.getClipBounds());
 		g.setColor(java.awt.Color.white);
 		g.fillRect(0, 0, g.getClipBounds().width, g.getClipBounds().height);
-        
+
 		Graphics2D g2 = (Graphics2D) g;
 		g2.transform(transform);
         drawer.invalidate();
@@ -195,7 +195,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 		ArrayList notes = this.getDrawer().getAutomaton().getNotes();
 		for(int k = 0; k < notes.size(); k++){
 			Note curNote = (Note)notes.get(k);
-			curNote.updateView();	
+			curNote.updateView();
 		}
 
 //		adapt = oldAdapt;
@@ -205,7 +205,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	/**
 	 * Returns a rectangle that roughly bounds the automaton, or the section of
 	 * the automaton that should be shown if not all should be shown.
-	 * 
+	 *
 	 * @return a rectangle that bounds the automaton
 	 */
 	protected Rectangle getAutomatonBounds() {
@@ -217,7 +217,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Reforms the transform.
-	 * 
+	 *
 	 * @param bounds
 	 *            the current bounds of the drawing area, which may be used if
 	 *            this component adapts it's size
@@ -225,14 +225,14 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	public void reformTransform(Rectangle viewBounds) {
 		//completely unrelated
 //		MouseListener[] k;
-//	    System.out.println((k = this.getListeners(MouseListener.class)).length);	
+//	    System.out.println((k = this.getListeners(MouseListener.class)).length);
 //	    for (int i = 0; i < k.length; i++)
 //	    	System.out.println(k[i]);
-		
+
 		//end completely unrelated
-	    
-	    
-	    
+
+
+
 		transformNeedsReform = false;
 //		System.out.print("hello\n");
 		Rectangle bounds = new Rectangle(getAutomatonBounds());
@@ -257,18 +257,18 @@ public class AutomatonPane extends JPanel implements Scrollable {
 		    //push to drawer
 			drawer.setTransform(transform);
 			drawer.invalidateBounds();
-			
+
 			transform.translate(-componentUpperLeft.x, -componentUpperLeft.y);
-			
-		    
+
+
 			//inserted by Henry
 //			if (scaleBy > 0){
 //                System.out.println("scaling now");
 			    transform.scale(scaleBy, scaleBy); 	 //always and forever, you should scale
 //				scaleBy = -1;
 //			}
-			
-			
+
+
 			// Set the size of the thing appropriately.
 			Dimension newSize = new Dimension(Math.max(bounds.width + bounds.x,
 					viewportUpperLeft.x + visible.width)
@@ -277,8 +277,8 @@ public class AutomatonPane extends JPanel implements Scrollable {
 					- componentUpperLeft.y);
 			if (newSize.equals(getPreferredSize()))
 				return;
-			
-			
+
+
 			setPreferredSize(newSize);
 			// Scroll to make viewportUpperLeft an "isopoint".
 			/*Rectangle scrollRect = new Rectangle(viewportUpperLeft.x
@@ -286,7 +286,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 					- componentUpperLeft.y, visible.width, visible.height);*/
 			revalidate();
 			scrollRectToVisible(visible);
-			
+
 			return;
 		}
 
@@ -316,7 +316,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 		logger.debug("reformTransform() {}", scale+"..."+(ourBounds.getX() - bounds.getX()));
 		transform.translate(ourBounds.getX() - bounds.getX(), ourBounds.getY()
 				- bounds.getY());
-		
+
 	}
 
 	/**
@@ -344,7 +344,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	/**
 	 * Transforms a mouse event to have its mouse click location reflect the
 	 * automaton space, not the view space.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event to transform
 	 */
@@ -363,7 +363,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Transforms a point from automaton space to view space.
-	 * 
+	 *
 	 * @param point
 	 *            the point, which will be modified
 	 */
@@ -373,7 +373,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Transforms a point from view space to automaton space.
-	 * 
+	 *
 	 * @param point
 	 *            the point, which will be modified
 	 */
@@ -388,7 +388,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Processes mouse events with a transformed mouse event.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -399,7 +399,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Processes mouse motion events with a transformed mouse event.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -410,7 +410,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/**
 	 * Returns the automaton drawer.
-	 * 
+	 *
 	 * @return the automaton drawer
 	 */
 	public AutomatonDrawer getDrawer() {
@@ -467,7 +467,7 @@ public class AutomatonPane extends JPanel implements Scrollable {
 	/**
 	 * This will edit the underlying automaton so that it fits within the bounds
 	 * of the view (at 1 to 1 scale).
-	 * 
+	 *
 	 * @param padding
 	 *            the amount of padding
 	 */
@@ -509,42 +509,42 @@ public class AutomatonPane extends JPanel implements Scrollable {
 			super.doLayout();
 		}
 	}
-    
+
     public void setAdapt(boolean newAdapt)
     {
         adapt = newAdapt;
         transformNeedsReform = true;
         repaint();
     }
-    
-    
+
+
     public boolean getAdapt()
     {
         return adapt;
-     
+
     }
-    
+
     public void setCreator(EditorPane pane) {
 		myCreator = pane;
 	}
-	
+
 	public EditorPane getCreator(){
 		return myCreator;
 	}
-	
+
 	public void setScale(double scale){
-	    scaleBy = scale;	
+	    scaleBy = scale;
 //	    drawer.setScale(scale);
 	}
 	public double getScale(){
 		return scaleBy;
 	}
-	
+
 	public void requestTransform(){
 		transformNeedsReform = true;
 		repaint();
 	}
-	
+
 
 	private EditorPane myCreator;
 
@@ -566,8 +566,8 @@ public class AutomatonPane extends JPanel implements Scrollable {
 
 	/** THe table... bleh. */
 	private JTable table;
-	
-	
+
+
 	/**Factor to scale everyone by, when we don't use auto-scale*/
 	private double scaleBy = 1;
 }

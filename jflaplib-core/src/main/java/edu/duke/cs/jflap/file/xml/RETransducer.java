@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import edu.duke.cs.jflap.regular.*;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.regular.RegularExpression} objects.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class RETransducer extends AbstractTransducer {
 	/**
 	 * Returns the type this transducer recognizes, "re".
-	 * 
+	 *
 	 * @return the string "re"
 	 */
 	public String getType() {
@@ -44,7 +44,7 @@ public class RETransducer extends AbstractTransducer {
 	/**
 	 * Given a document, this will return the corresponding regular expression
 	 * encoded in the DOM document.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to convert
 	 * @return the {@link edu.duke.cs.jflap.regular.RegularExpression} instance
@@ -64,7 +64,7 @@ public class RETransducer extends AbstractTransducer {
 	/**
 	 * Given a JFLAP regular expression, this will return the corresponding DOM
 	 * encoding of the structure.
-	 * 
+	 *
 	 * @param structure
 	 *            the regular expression to encode
 	 * @return a DOM document instance

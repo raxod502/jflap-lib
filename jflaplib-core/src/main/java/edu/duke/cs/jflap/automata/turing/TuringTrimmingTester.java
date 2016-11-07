@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -57,16 +57,16 @@ public class TuringTrimmingTester {
 			e.printStackTrace();
 		}
 		trim();
-		
+
 		System.out.println("New Productions");
-		
+
 		for (int i=0; i<prods.length; i++)
 		{
 			System.out.println(prods[i].getLHS()+"->"+prods[i].getRHS());
 		}
 
 	}
-	
+
 	private void trim()
 	{
 		char ch='A';
@@ -80,7 +80,7 @@ public class TuringTrimmingTester {
 			int aa=lhs.indexOf("V(");
 			while (aa>-1)
 			{
-			
+
 		//		System.out.println("in 1st "+lhs+"===>    ");
 				int bb=lhs.indexOf(")");
 				String var="";
@@ -96,13 +96,13 @@ public class TuringTrimmingTester {
 				}
 			//	System.out.println(var+ " and new lhs is = "+lhs);
 				aa=lhs.indexOf("V(");
-				
+
 				System.out.println(var+" converted to : "+ch);
-					
+
 				//	lhs.replaceAll("V"+aa[j], "A");
 				for (int k=0; k<prods.length; k++)
 				{
-					
+
 					String inner_lhs=prods[k].getLHS();
 					String inner_rhs=prods[k].getRHS();
 					int a=inner_lhs.indexOf(var);
@@ -116,20 +116,20 @@ public class TuringTrimmingTester {
 					if (a>-1)
 					{
 			//			System.out.println("in inner rhs   "+inner_rhs+"   ===>    ");
-						
+
 						inner_rhs=inner_rhs.substring(0, a)+""+ch+inner_rhs.substring(a+var.length());
 			//			System.out.println(inner_rhs);
-						
+
 					}
 					prods[k]=new Production(inner_lhs, inner_rhs);
 				}
 				ch=(char) (ch+1);
-		
+
 			//	System.out.println(lhs);
 			}
 		}
 	}
-	
+
 	public static void main(String[] args)
 	{
 		TuringTrimmingTester t=new TuringTrimmingTester("productions.txt");

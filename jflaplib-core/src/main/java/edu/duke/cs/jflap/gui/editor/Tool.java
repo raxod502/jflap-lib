@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,7 +37,7 @@ import javax.swing.KeyStroke;
 public abstract class Tool extends SuperMouseAdapter {
 	/**
 	 * Constructs a new tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view the tool is in, useful for calling <CODE>repaint</CODE>
 	 * @param drawer
@@ -52,7 +52,7 @@ public abstract class Tool extends SuperMouseAdapter {
 	/**
 	 * Returns the tool tip for this tool, modified to have the tool tip
 	 * shortcut highlighted.
-	 * 
+	 *
 	 * @return the string from <CODE>getToolTip</CODE> slightly modified
 	 */
 	public String getShortcutToolTip() {
@@ -69,7 +69,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Returns the tool tip for this tool.
-	 * 
+	 *
 	 * @return a string containing the tool tip
 	 */
 	public String getToolTip() {
@@ -78,7 +78,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Retrieves the view.
-	 * 
+	 *
 	 * @return the view the tool is in
 	 */
 	protected AutomatonPane getView() {
@@ -87,7 +87,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Returns the automaton drawer.
-	 * 
+	 *
 	 * @return the automaton drawer
 	 */
 	protected AutomatonDrawer getDrawer() {
@@ -96,7 +96,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the default tool icon
 	 */
 	protected Icon getIcon() {
@@ -108,7 +108,7 @@ public abstract class Tool extends SuperMouseAdapter {
 	 * The tool drawer, given a graphics context, draws for the tool. Most tools
 	 * will have no cause to use this, though some will have certain states that
 	 * they will express through some graphics.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
@@ -118,7 +118,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Returns the automaton.
-	 * 
+	 *
 	 * @return the automaton
 	 */
 	protected Automaton getAutomaton() {
@@ -127,7 +127,7 @@ public abstract class Tool extends SuperMouseAdapter {
 
 	/**
 	 * Returns the key stroke that will activate this tool.
-	 * 
+	 *
 	 * @return the key stroke that will activate this tool, or <CODE>null</CODE>
 	 *         if there is no shortcut keystroke for this tool
 	 */
@@ -141,7 +141,7 @@ public abstract class Tool extends SuperMouseAdapter {
 	 * automatically, given a tooltip and a key shortcut, find the key in the
 	 * string that should be highlighted as the shortcut for that particular
 	 * tool.
-	 * 
+	 *
 	 * @param string
 	 *            the string to search for a character
 	 * @param c

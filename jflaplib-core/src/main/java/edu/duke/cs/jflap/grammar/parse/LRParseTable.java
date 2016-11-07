@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,11 +30,11 @@ import javax.swing.table.AbstractTableModel;
  * The <CODE>LRParseTable</CODE> is an LR(1) parse table. It also has the
  * ability to function as a <CODE>TableModel</CODE> for a <CODE>javax.swing.JTable</CODE>.
  * <P>
- * 
+ *
  * In this table, entries are either of the form "", "s#", "r#", "acc", or "#",
  * where # is a number. If a user change is not parseable into one of those
  * forms, then the entry will be unchanged.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 		Cloneable {
 	/**
 	 * Instantiates a new LR parse table.
-	 * 
+	 *
 	 * @param grammar
 	 *            the augmented grammar
 	 * @param fsa
@@ -72,7 +72,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Instantiates a new LR parse table from another LR parse table.
-	 * 
+	 *
 	 * @param table
 	 *            the other LR parse table
 	 */
@@ -89,7 +89,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns a clone of this object.
-	 * 
+	 *
 	 * @return a copy of this object
 	 */
 	public Object clone() {
@@ -98,7 +98,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * This sets the table value for a state ID and a grammar symbol.
-	 * 
+	 *
 	 * @param value
 	 *            the value to put in the table
 	 * @param id
@@ -114,7 +114,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * This will return the value for a given state ID and grammar symbol.
-	 * 
+	 *
 	 * @param id
 	 *            the state ID
 	 * @param symbol
@@ -132,7 +132,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	 * items means that that configuration is considered an error (blank entry
 	 * in the table). A set with more than one item indicates ambiguity in the
 	 * parse table.
-	 * 
+	 *
 	 * @param id
 	 *            the state ID
 	 * @param symbol
@@ -147,7 +147,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Appends the parse table directive to existing parse table directives.
-	 * 
+	 *
 	 * @param directive
 	 *            the directive to add
 	 * @param id
@@ -163,7 +163,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the column for a particular grammar symbol.
-	 * 
+	 *
 	 * @param symbol
 	 *            the grammar symbol
 	 * @return the column index of the column corresponding to that grammar
@@ -185,7 +185,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Returns the number of rows, equal to the number of states in the original
 	 * DFA.
-	 * 
+	 *
 	 * @return the number of rows
 	 */
 	public int getRowCount() {
@@ -195,7 +195,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Returns the number of columns, equals to the number of terminals,
 	 * nonterminals, plus one column for displaying the numbers of states.
-	 * 
+	 *
 	 * @return the number of columns
 	 */
 	public int getColumnCount() {
@@ -204,7 +204,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the appropriate string for a value, and a column.
-	 * 
+	 *
 	 * @param value
 	 *            the value that was input into the table
 	 * @param column
@@ -252,7 +252,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	/**
 	 * Given an entry in the parse table, returns the strings for that entry. If
 	 * any entry is not a good entry, it is ignored.
-	 * 
+	 *
 	 * @param input
 	 *            the input in the table
 	 */
@@ -271,7 +271,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns the name of a particular column.
-	 * 
+	 *
 	 * @param column
 	 *            the column index
 	 * @return the name of the column
@@ -286,7 +286,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Sets the value at a particular row and column.
-	 * 
+	 *
 	 * @param value
 	 *            the new value
 	 * @param row
@@ -312,7 +312,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Appends the parse table directive to existing parse table directives.
-	 * 
+	 *
 	 * @param directive
 	 *            the directive to add
 	 * @param row
@@ -336,7 +336,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 	 * items means that that configuration is considered an error (blank entry
 	 * in the table). A set with more than one item indicates ambiguity in the
 	 * parse table.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -353,7 +353,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * All cells are editable except the first column.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -366,7 +366,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Returns an desciption of a particular entry in a parse table.
-	 * 
+	 *
 	 * @param entry
 	 *            the entry
 	 * @return the description of that entry
@@ -395,7 +395,7 @@ public class LRParseTable extends AbstractTableModel implements Serializable,
 
 	/**
 	 * Gets a plaintext user readable description of the contents of a cell.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column

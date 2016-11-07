@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.util.*;
  * cannot reach a final state. This does only naive checking for the existence
  * of edges. It cannot be used, for example, to solve the halting problem for a
  * Turing machine.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public class UselessStatesDetector {
 
 	/**
 	 * Returns a copy of an automaton that has all useless states removed.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton
 	 * @return a copy of the automaton with useless states removed
@@ -65,7 +65,7 @@ public class UselessStatesDetector {
 
 	/**
 	 * Returns all states in automaton that are useless.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton to find useless states
 	 * @return a set containing all states in the automaton that are unreachable
@@ -88,7 +88,7 @@ public class UselessStatesDetector {
 
 	/**
 	 * Find all states that can lead to a final state.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton
 	 * @return the set of state that can lead to a final state
@@ -109,7 +109,7 @@ public class UselessStatesDetector {
 
 	/**
 	 * Find all states reachable from an initial state.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton
 	 * @return the set of states reachable from an initial state

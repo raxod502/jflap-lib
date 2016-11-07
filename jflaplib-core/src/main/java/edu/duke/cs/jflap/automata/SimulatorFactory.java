@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,14 +23,14 @@ package edu.duke.cs.jflap.automata;
 /**
  * This simulator factory returns the simulator for the type of automaton passed
  * in.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class SimulatorFactory {
 	/**
 	 * Returns the automaton simulator for this type of automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get the simulator for
 	 * @return the appropriate automaton simulator for this automaton, or <CODE>null</CODE>

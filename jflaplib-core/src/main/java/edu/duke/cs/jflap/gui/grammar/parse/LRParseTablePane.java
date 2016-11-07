@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import javax.swing.table.*;
 
 /**
  * This holds a LR parse table.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LRParseTablePane extends LeftTable {
 	/**
 	 * Instantiates a new parse table pane for a parse table.
-	 * 
+	 *
 	 * @param table
 	 *            the table pane's parse table
 	 */
@@ -51,7 +51,7 @@ public class LRParseTablePane extends LeftTable {
 	 * Highlights a particular cell. Overridden to make sure that the
 	 * highlighted cells use the same special rendering components this table
 	 * uses for other entries.
-	 * 
+	 *
 	 * @param row
 	 *            the row index of the cell to highlight
 	 * @param column
@@ -63,7 +63,7 @@ public class LRParseTablePane extends LeftTable {
 
 	/**
 	 * Retrieves the parse table in this pane.
-	 * 
+	 *
 	 * @return the parse table in this pane
 	 */
 	public LRParseTable getParseTable() {
@@ -74,7 +74,7 @@ public class LRParseTablePane extends LeftTable {
 	 * Since there may be ambiguity in the LR parse table, each description for
 	 * each entry appears on a separate line, so the tool tips must have
 	 * seperate lines.
-	 * 
+	 *
 	 * @return the tool tip creation
 	 */
 	public JToolTip createToolTip() {

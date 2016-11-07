@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,20 +31,20 @@ import edu.duke.cs.jflap.automata.mealy.MealyTransition;
 
 /**
  * This is a transition creator for Mealy machines.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class MealyTransitionCreator extends TableTransitionCreator 
+public class MealyTransitionCreator extends TableTransitionCreator
 {
     /**
      * Table column names.
      */
     private static final String NAME[] = {"Label", "Output"};
-    
+
     /**
-     * Instantiates a new transition creator. 
-     * 
+     * Instantiates a new transition creator.
+     *
      * @param parent the parent object that any dialogs or windows
      * brought up by this creator should be the child of
      */
@@ -52,24 +52,24 @@ public class MealyTransitionCreator extends TableTransitionCreator
     {
         super(parent);
     }
-    
+
     /**
      * Initializes an empty transition.
-     * 
+     *
      * @param from the from state
      * @param to the to state
      */
-    protected Transition initTransition(State from, State to) 
+    protected Transition initTransition(State from, State to)
     {
         return new MealyTransition(from, to, "", "");
     }
 
     /**
      * Creates a new table model.
-     * 
+     *
      * @param transition the transition to create the model for
      */
-    protected TableModel createModel(Transition transition) 
+    protected TableModel createModel(Transition transition)
     {
         final MealyTransition t = (MealyTransition) transition;
         return new AbstractTableModel()
@@ -83,14 +83,14 @@ public class MealyTransitionCreator extends TableTransitionCreator
                 public String getColumnName(int c)              {return NAME[c];}
             };
     }
-    
+
     /**
      * Modifies a transition according to what is in the table.
-     * 
+     *
      * @param transition transition to modify
      * @param model table to get information from
      */
-    public Transition modifyTransition(Transition transition, TableModel model) 
+    public Transition modifyTransition(Transition transition, TableModel model)
     {
         String label = (String) model.getValueAt(0, 0);
         String output = (String) model.getValueAt(0, 1);

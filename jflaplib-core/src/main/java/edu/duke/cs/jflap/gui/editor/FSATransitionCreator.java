@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import edu.duke.cs.jflap.automata.fsa.FSATransition;
 
 /**
  * This is a transition creator for finite state automata.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSATransitionCreator extends TableTransitionCreator {
 	/**
 	 * Instantiates a transition creator.
-	 * 
+	 *
 	 * @param parent
 	 *            the parent object that any dialogs or windows brought up by
 	 *            this creator should be the child of
@@ -49,7 +49,7 @@ public class FSATransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Initializes a new empty transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -61,7 +61,7 @@ public class FSATransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Creates a new table model.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to create the model for
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import java.util.*;
 /**
  * This class generates {@link edu.duke.cs.jflap.grammar.parse.LRParseTable}s. The intention is
  * that this shall be used once the item goto graph is generated.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class LRParseTableGenerator {
 	/**
 	 * Generates an LR parse table.
-	 * 
+	 *
 	 * @param grammar
 	 *            the augmented grammar
 	 * @param gotoGraph

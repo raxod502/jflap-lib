@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,14 +25,14 @@ import java.util.EventObject;
 /**
  * The <CODE>SelectionEvent</CODE> is an event indicating that a selection has
  * changed in an object.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class SelectionEvent extends EventObject {
 	/**
 	 * Instantiates a new <CODE>SelectionEvent</CODE>.
-	 * 
+	 *
 	 * @param object
 	 *            the generating object, whose selection has changed
 	 */

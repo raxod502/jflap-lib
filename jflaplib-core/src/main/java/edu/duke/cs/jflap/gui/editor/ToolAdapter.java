@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 /**
  * This is a simple mouse adapter that simply forwards all mouse actions along
  * to another adapter set by the <CODE>setAdapter</CODE> method.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ToolAdapter extends SuperMouseAdapter {
 	/**
 	 * Instantiates a tool adapter.
-	 * 
+	 *
 	 * @param pane
 	 *            the automaton pane this tool adapter is listening to
 	 */
@@ -44,7 +44,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Sets a new adapter to be the adapter.
-	 * 
+	 *
 	 * @param adapter
 	 *            the new adapter
 	 */
@@ -54,7 +54,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when a mouse button is clicked on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -64,7 +64,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when the mouse enters a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -74,7 +74,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when the mouse exits a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -84,7 +84,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when a mouse button is held down on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -94,7 +94,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when a mouse button is released on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -104,7 +104,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when a mouse is dragged over this component with a button down.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -114,7 +114,7 @@ public class ToolAdapter extends SuperMouseAdapter {
 
 	/**
 	 * Invoked when a mouse is moved over this component with no buttons down.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */

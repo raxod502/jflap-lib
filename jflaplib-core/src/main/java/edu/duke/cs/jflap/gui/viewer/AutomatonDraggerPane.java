@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import edu.duke.cs.jflap.automata.Automaton;
  * states around. This is used particularly in situations where the placement of
  * states may not be to a users liking, i.e. displaying of DFAs with a random
  * placement of some states.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class AutomatonDraggerPane extends AutomatonPane {
 	/**
 	 * Instantiates the automaton dragger pane.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 */
@@ -46,7 +46,7 @@ public class AutomatonDraggerPane extends AutomatonPane {
 
 	/**
 	 * Instantiates the automaton dragger pane.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 * @param adapt
@@ -59,7 +59,7 @@ public class AutomatonDraggerPane extends AutomatonPane {
 
 	/**
 	 * Instantiates the automaton dragger pane.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to draw
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,14 +45,14 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 /**
  * This is the pane where the user defines all that is needed for the conversion
  * of an NFA to a DFA.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConversionPane extends JPanel {
 	/**
 	 * Instantiates a new <CODE>ConversionPane</CODE>.
-	 * 
+	 *
 	 * @param nfa
 	 *            the NFA we are converting to a DFA
 	 * @param environment
@@ -83,7 +83,7 @@ public class ConversionPane extends JPanel {
 
 	/**
 	 * Creates the editor pane for the DFA.
-	 * 
+	 *
 	 * @param dfa
 	 *            the dfa to create the editor pane for
 	 */
@@ -105,7 +105,7 @@ public class ConversionPane extends JPanel {
 
 	/**
 	 * Adds the extra controls to the toolbar for the editorpane.
-	 * 
+	 *
 	 * @param toolbar
 	 *            the tool bar to add crap to
 	 */

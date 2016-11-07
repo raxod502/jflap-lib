@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,11 +26,11 @@ import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.mealy.MealyConfiguration;
 
 /**
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class MealyConfigurationIcon extends ConfigurationIcon 
+public class MealyConfigurationIcon extends ConfigurationIcon
 {
     public MealyConfigurationIcon(Configuration configuration)
     {
@@ -44,7 +44,7 @@ public class MealyConfigurationIcon extends ConfigurationIcon
         // Draw the torn tape with the rest of the input.
         Torn.paintString((Graphics2D)g, config.getInput(),
                  RIGHT_STATE.x+5.0f,
-                 ((float)super.getIconHeight())*0.5f, 
+                 ((float)super.getIconHeight())*0.5f,
                  Torn.MIDDLE, width-RIGHT_STATE.x-5.0f,
                  false, true, config.getInput().length()-
                  config.getUnprocessedInput().length());

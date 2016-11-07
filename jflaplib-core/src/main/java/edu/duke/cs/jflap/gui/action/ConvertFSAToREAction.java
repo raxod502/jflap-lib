@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import javax.swing.JOptionPane;
 
 /**
  * This action handles the conversion of an FSA to a regular expression.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConvertFSAToREAction extends FSAAction {
 	/**
 	 * Instantiates a new <CODE>ConvertFSAToREAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment
 	 */
@@ -51,7 +51,7 @@ public class ConvertFSAToREAction extends FSAAction {
 	/**
 	 * This method begins the process of converting an automaton to a regular
 	 * expression.
-	 * 
+	 *
 	 * @param event
 	 *            the action event
 	 */

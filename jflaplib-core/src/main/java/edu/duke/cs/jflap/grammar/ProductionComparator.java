@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.Comparator;
  * This is a comparator for productions that sorts productions lexigraphically,
  * with the exception that the start variable is always ordered first on the
  * LHS.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -34,7 +34,7 @@ public class ProductionComparator implements Comparator {
 	/**
 	 * Instantiates a comparator, getting the start variable from a given
 	 * grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @throws IllegalArgumentException
@@ -47,7 +47,7 @@ public class ProductionComparator implements Comparator {
 	/**
 	 * Instantiates a comparator, with the start variable is passed in
 	 * explicitly.
-	 * 
+	 *
 	 * @param variable
 	 *            the start variable
 	 */
@@ -75,7 +75,7 @@ public class ProductionComparator implements Comparator {
 
 	/**
 	 * Returns the start variable this comparator keys on.
-	 * 
+	 *
 	 * @return the start variable
 	 */
 	public String getStartVariable() {
@@ -84,7 +84,7 @@ public class ProductionComparator implements Comparator {
 
 	/**
 	 * Included to ensure compatibility with equals.
-	 * 
+	 *
 	 * @return a hash code for this object
 	 */
 	public int hashCode() {
@@ -94,7 +94,7 @@ public class ProductionComparator implements Comparator {
 	/**
 	 * Two production comparators are equal if they have the same start
 	 * variable.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for equality
 	 * @return if the two objects are equal

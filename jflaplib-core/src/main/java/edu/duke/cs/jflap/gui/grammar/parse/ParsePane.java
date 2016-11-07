@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,7 +36,7 @@ import javax.swing.tree.*;
 /**
  * The parse pane is an abstract class that defines the interface common between
  * parsing panes.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -44,7 +44,7 @@ abstract class ParsePane extends JPanel {
 	/**
 	 * Instantiates a new parse pane. This will not place components. A call to
 	 * {@link #initView} by a subclass is necessary.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar that is being parsed
 	 */
@@ -82,7 +82,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Initializes a table for the grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return a table to display the grammar
@@ -152,7 +152,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Returns the choices for the view.
-	 * 
+	 *
 	 * @return an array of strings for the choice of view
 	 */
 	protected String[] getViewChoices() {
@@ -162,7 +162,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Returns the tool bar for the main user input panel.
-	 * 
+	 *
 	 * @return the tool bar for the main user input panel
 	 */
 	protected JToolBar initInputToolbar() {
@@ -188,7 +188,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Changes the view.
-	 * 
+	 *
 	 * @param name
 	 *            the view button name that was pressed
 	 */
@@ -208,14 +208,14 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Inits a parse table.
-	 * 
+	 *
 	 * @return a table to hold the parse table
 	 */
 	protected abstract JTable initParseTable();
 
 	/**
 	 * Inits a new tree panel.
-	 * 
+	 *
 	 * @return a new display for a parse tree
 	 */
 	protected JComponent initTreePanel() {
@@ -226,7 +226,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Inits a new derivation table.
-	 * 
+	 *
 	 * @return a new display for the derivation of the parse
 	 */
 	protected JTable initDerivationTable() {
@@ -237,7 +237,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * This method is called when there is new input to parse.
-	 * 
+	 *
 	 * @param string
 	 *            a new input string
 	 */
@@ -251,7 +251,7 @@ abstract class ParsePane extends JPanel {
 	/**
 	 * Prints this component. This will print only the tree section of the
 	 * component.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to print to
 	 */
@@ -261,7 +261,7 @@ abstract class ParsePane extends JPanel {
 
 	/**
 	 * Children are not painted here.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint to
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.util.WeakHashMap;
 /**
  * Adding this to a drawer allows one to select nodes, and have them appear to
  * be selected.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -36,7 +36,7 @@ public class SelectNodeDrawer extends DefaultNodeDrawer {
 	/**
 	 * This draws a node. The fill color is the color of the graphics object
 	 * before this method was called.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw the node on
 	 * @param node
@@ -52,7 +52,7 @@ public class SelectNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Determines if a node is selected.
-	 * 
+	 *
 	 * @param node
 	 *            the node to check for selectedness
 	 * @return <CODE>true</CODE> if the node is selected, <CODE>false</CODE>
@@ -64,7 +64,7 @@ public class SelectNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Sets the selectedness of a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to select or deselect
 	 * @param select
@@ -79,7 +79,7 @@ public class SelectNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Returns an array containing the list of all selected nodes.
-	 * 
+	 *
 	 * @return an array containing the list of all selected nodes
 	 */
 	public TreeNode[] getSelected() {

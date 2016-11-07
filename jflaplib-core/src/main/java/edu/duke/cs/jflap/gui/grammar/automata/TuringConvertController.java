@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -41,13 +41,13 @@ import edu.duke.cs.jflap.automata.turing.TuringToGrammarConverter;
  *
  */
 public class TuringConvertController extends ConvertController {
-	
+
 	private TuringToGrammarConverter converter;
 	private TuringMachine myTuringMachine;
-	
+
 	/**
 	 * Instantiates a <CODE>PDAConvertController</CODE> for an automaton.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -73,7 +73,7 @@ public class TuringConvertController extends ConvertController {
 	/**
 	 * Returns the productions for a particular state. This method will only be
 	 * called once.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -91,7 +91,7 @@ public class TuringConvertController extends ConvertController {
 	/**
 	 * Returns the productions for a particular transition. This method will
 	 * only be called once.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -103,14 +103,14 @@ public class TuringConvertController extends ConvertController {
 */
 		return converter.createProductionsForTransition(transition, myTuringMachine.getFinalStates());
 	}
-	
-	
+
+
 	@Override
 	protected ConvertedUnrestrictedGrammar getGrammar() {
 		// TODO Auto-generated method stub
-		
+
 		//Put error check here
-		
+
 		int rows = getModel().getRowCount();
 		ConvertedUnrestrictedGrammar grammar = new ConvertedUnrestrictedGrammar();
 		grammar.setStartVariable("S");
@@ -147,10 +147,10 @@ public class TuringConvertController extends ConvertController {
 		}
 
 	/*	UselessProductionRemover remover = new UselessProductionRemover();
-		
+
 		Grammar g2 = UselessProductionRemover
 				.getUselessProductionlessGrammar(grammar);
-		
+
 		if (g2.getTerminals().length==0)
 		{
 			System.out.println("Error : This grammar does not accept any Strings. ");
@@ -166,7 +166,7 @@ public class TuringConvertController extends ConvertController {
 		return grammar;
 
 	}
-	
+
 	/**
 	 * Called by when export grammar button is clicked
 	 */
@@ -188,7 +188,7 @@ public class TuringConvertController extends ConvertController {
 			Production[] temp=g.getProductions();
 			for (int i=0; i<temp.length; i++)
 				prods.add(temp[i]);
-			
+
 			Collections.sort(prods, new Comparator<Production>(){
 		            public int compare(Production o1, Production o2) {
 		            	if (o1.getLHS().equals("S"))
@@ -209,10 +209,10 @@ public class TuringConvertController extends ConvertController {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Trimming the grammar. Gets rid of variable V(aa) to regular variable "A" or "B"
-	 * NOTE: It is no longer used in this class 
+	 * NOTE: It is no longer used in this class
 	 * @param prods
 	 * @return
 	 */
@@ -229,7 +229,7 @@ public class TuringConvertController extends ConvertController {
 			int aa=lhs.indexOf("V(");
 			while (aa>-1)
 			{
-			
+
 		//		System.out.println("in 1st "+lhs+"===>    ");
 				int bb=lhs.indexOf(")");
 				String var="";
@@ -245,13 +245,13 @@ public class TuringConvertController extends ConvertController {
 				}
 			//	System.out.println(var+ " and new lhs is = "+lhs);
 				aa=lhs.indexOf("V(");
-				
+
 			//	System.out.println(var+" converted to : "+ch);
-					
+
 				//	lhs.replaceAll("V"+aa[j], "A");
 				for (int k=0; k<prods.length; k++)
 				{
-					
+
 					String inner_lhs=prods[k].getLHS();
 					String inner_rhs=prods[k].getRHS();
 					int a=inner_lhs.indexOf(var);
@@ -265,15 +265,15 @@ public class TuringConvertController extends ConvertController {
 					if (a>-1)
 					{
 			//			System.out.println("in inner rhs   "+inner_rhs+"   ===>    ");
-						
+
 						inner_rhs=inner_rhs.substring(0, a)+""+ch+inner_rhs.substring(a+var.length());
 			//			System.out.println(inner_rhs);
-						
+
 					}
 					prods[k]=new Production(inner_lhs, inner_rhs);
 				}
 				ch=(char) (ch+1);
-		
+
 			//	System.out.println(lhs);
 			}
 		}

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -41,14 +41,14 @@ import edu.duke.cs.jflap.automata.Automaton;
  * This class exists as the base class for the conversion of an automaton to a
  * grammar. Subclasses should override <CODE>checkAutomaton</CODE> to detect
  * if the automaton is in the correct form, as well as <CODE>initializeController</CODE>.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 	/**
 	 * Instantiates a <CODE>ConvertAutomatonToGrammarAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment which is home to the automaton to convert
 	 */
@@ -57,7 +57,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 		this.environment = environment;
 		this.automaton = environment.getAutomaton();
 	}
-	
+
 	/**
 	 * Modified for 6.3
 	 * @param title
@@ -71,7 +71,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 
 	/**
 	 * This begins the process of converting an automaton to a grammar.
-	 * 
+	 *
 	 * @param e
 	 *            the event to process
 	 */
@@ -113,7 +113,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 
 	/**
 	 * This helper initializes a toolbar to do stuff with the automaton.
-	 * 
+	 *
 	 * @param controller
 	 *            the converter controller
 	 */
@@ -152,7 +152,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 	 * this checker will fail must be output to the user. If the automaton is
 	 * okay, there should be no output to the user and the method should simply
 	 * return <CODE>true</CODE>.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the automaton is okay, <CODE>false</CODE>
 	 *         if it is not
 	 */
@@ -161,7 +161,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 	/**
 	 * This method should be overridden to get the <CODE>ConvertController</CODE>
 	 * that handles the transition of the automaton to the grammar.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -177,7 +177,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 
 	/**
 	 * Returns the automaton to convert.
-	 * 
+	 *
 	 * @return the automaton to convert
 	 */
 	protected Automaton getAutomaton() {
@@ -186,7 +186,7 @@ public abstract class ConvertAutomatonToGrammarAction extends AutomatonAction {
 
 	/**
 	 * Returns the environment this action should modify.
-	 * 
+	 *
 	 * @return the home environment for the automaton
 	 */
 	protected AutomatonEnvironment getEnvironment() {

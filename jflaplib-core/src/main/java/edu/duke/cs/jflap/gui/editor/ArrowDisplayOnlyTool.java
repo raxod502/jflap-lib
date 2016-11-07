@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import java.awt.event.MouseEvent;
  * This extension of the arrow tool does not allow the editing of an automaton,
  * even for moving states, but does allow for the changing of certain view
  * options (displaying of labels and things of that nature).
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ArrowDisplayOnlyTool extends ArrowNontransitionTool {
 	/**
 	 * Instantiates a new <CODE>ArrowDisplayOnlyTool</CODE>.
-	 * 
+	 *
 	 * @param view
 	 *            the view the automaton is drawn in
 	 * @param drawer
@@ -49,7 +49,7 @@ public class ArrowDisplayOnlyTool extends ArrowNontransitionTool {
 	/**
 	 * We don't want anything happening when the mouse is dragged. This method
 	 * simply returns without doing anything.
-	 * 
+	 *
 	 * @param event
 	 *            the dragging mouse event
 	 */

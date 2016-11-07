@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import javax.swing.*;
 
 /**
  * This is the controller for the lambda panel.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LambdaController {
 	/**
 	 * This instantiates a new lambda controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the lambda panel
 	 * @param grammar
@@ -103,7 +103,7 @@ public class LambdaController {
 			break;
 		}
 	}
-	
+
 	public Map getExpansionMap()
 	{
 		return productionsToExpansion;
@@ -112,7 +112,7 @@ public class LambdaController {
 	/**
 	 * Does the expansion of the production in the given row of the left grammar
 	 * panel.
-	 * 
+	 *
 	 * @param row
 	 *            the row of the production to expand
 	 */
@@ -171,7 +171,7 @@ public class LambdaController {
 		while (step != FINISHED)
 			doStep();
 	}
-	
+
 	public Grammar getGrammar()
 	{
 		return pane.getGrammar();
@@ -198,7 +198,7 @@ public class LambdaController {
 	/**
 	 * When a production is clicked in the grammar table, this method is told
 	 * about it.
-	 * 
+	 *
 	 * @param production
 	 *            the production clicked in the table
 	 * @param event
@@ -243,7 +243,7 @@ public class LambdaController {
 
 	/**
 	 * When a production is added manually by the user, this is told about it.
-	 * 
+	 *
 	 * @param production
 	 *            the production added
 	 * @param row
@@ -274,7 +274,7 @@ public class LambdaController {
 	/**
 	 * When a production is chosen to be removed, this is told about it. This
 	 * happens before the deletion occurs.
-	 * 
+	 *
 	 * @param production
 	 *            the production chosen to be removed
 	 * @param row

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,13 +33,13 @@ import edu.duke.cs.jflap.automata.State;
  *
  */
 public class TrapTransitionTool extends TransitionTool{
-	
+
 	/** The adding trap state controller. */
 	private AddTrapStateController myController;
 
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -56,7 +56,7 @@ public class TrapTransitionTool extends TransitionTool{
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

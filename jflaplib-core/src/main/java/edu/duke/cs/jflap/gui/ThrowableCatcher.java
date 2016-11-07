@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import javax.swing.*;
  * made to give information of somewhat better quality than "it doesn't work!"
  * This will bring up a dialog box with the stack trace and any other relevant
  * information.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ThrowableCatcher {
 	/**
 	 * Handles an exception uncaught by our code.
-	 * 
+	 *
 	 * @param throwable
 	 *            the throwable we are trying to catch
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,17 +32,17 @@ import javax.swing.event.ListSelectionEvent;
  * states of the automaton are being removed one by one. A
  * {@link edu.duke.cs.jflap.gui.regular.FSAToREController} object is reported back to when certain
  * actions happen in the window.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController#finalizeStateRemove
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController#finalize
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TransitionWindow extends JFrame {
 	/**
 	 * Instantiates a new <CODE>TransitionWindow</CODE>.
-	 * 
+	 *
 	 * @param controller
 	 *            the FSA to RE controller object
 	 */
@@ -80,7 +80,7 @@ public class TransitionWindow extends JFrame {
 
 	/**
 	 * Returns the transition this transition window displays.
-	 * 
+	 *
 	 * @return the array of transitions displayed by this window
 	 */
 	public Transition[] getTransitions() {
@@ -90,7 +90,7 @@ public class TransitionWindow extends JFrame {
 	/**
 	 * Sets the array of transitions the table in this window displays, and
 	 * shows the window.
-	 * 
+	 *
 	 * @param transitions
 	 *            the new array of transitions
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import java.util.Comparator;
  * This can be used to order colors in such a way that they have a nice
  * "rainbowness" to them, but also so that less vivid colors are segregated from
  * the more vivid colors.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class ColorComparator implements Comparator {
 	/**
 	 * Imposes the ordering on colors, first by alpha, then by saturation, then
 	 * by brightness, then by hue.
-	 * 
+	 *
 	 * @param o1
 	 *            the first color
 	 * @param o2
@@ -75,7 +75,7 @@ public class ColorComparator implements Comparator {
 
 	/**
 	 * Small utility for making comparing floats easier.
-	 * 
+	 *
 	 * @param float1
 	 *            the first float
 	 * @param float2
@@ -93,7 +93,7 @@ public class ColorComparator implements Comparator {
 
 	/**
 	 * Compares this comparator against another for equality.
-	 * 
+	 *
 	 * @return <TT>true</TT>> if the passed in object is equal to this
 	 *         comparator.
 	 */

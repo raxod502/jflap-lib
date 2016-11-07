@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import java.util.TreeSet;
 /**
  * A Production object is a simple abstract class that represents a production
  * rule in a grammar.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class Production implements Serializable {
 	/**
 	 * Creates an instance of <CODE>Production</CODE>.
-	 * 
+	 *
 	 * @param lhs
 	 *            the left hand side of the production rule.
 	 * @param rhs
@@ -53,7 +53,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Sets the right hand side of production to <CODE>rhs</CODE>.
-	 * 
+	 *
 	 * @param rhs
 	 *            the right hand side
 	 */
@@ -63,7 +63,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Sets the left hand side of production to <CODE>lhs</CODE>.
-	 * 
+	 *
 	 * @param lhs
 	 *            the left hand side
 	 */
@@ -74,7 +74,7 @@ public class Production implements Serializable {
 	/**
 	 * Returns a string representation of the left hand side of the production
 	 * rule.
-	 * 
+	 *
 	 * @return a string representation of the lhs.
 	 */
 	public String getLHS() {
@@ -84,7 +84,7 @@ public class Production implements Serializable {
 	/**
 	 * Returns a string representation of the right hand side of the production
 	 * rule.
-	 * 
+	 *
 	 * @return a string representation of the rhs.
 	 */
 	public String getRHS() {
@@ -93,7 +93,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all symbols (both variables in terminals) in a production.
-	 * 
+	 *
 	 * @return all symbols in a production
 	 */
 	public String[] getSymbols() {
@@ -105,7 +105,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all variables in the production.
-	 * 
+	 *
 	 * @return all variables in the production.
 	 */
 	public String[] getVariables() {
@@ -130,7 +130,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all variables on the left hand side of the production.
-	 * 
+	 *
 	 * @return all variables on the left hand side of the production.
 	 */
 	public String[] getVariablesOnLHS() {
@@ -146,7 +146,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all variables on the right hand side of the production.
-	 * 
+	 *
 	 * @return all variables on the right hand side of the production.
 	 */
 	public String[] getVariablesOnRHS() {
@@ -162,7 +162,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all terminals in the production.
-	 * 
+	 *
 	 * @return all terminals in the production.
 	 */
 	public String[] getTerminals() {
@@ -186,7 +186,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all terminals on the right hand side of the production.
-	 * 
+	 *
 	 * @return all terminals on the right hand side of the production.
 	 */
 	public String[] getTerminalsOnRHS() {
@@ -203,7 +203,7 @@ public class Production implements Serializable {
 	/**
 	 * Returns true if <CODE>production</CODE> is equivalent to this
 	 * production (i.e. they have identical left and right hand sides).
-	 * 
+	 *
 	 * @param production
 	 *            the production being compared to this production
 	 * @return true if <CODE>production</CODE> is equivalent to this
@@ -219,7 +219,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns a hashcode for this production.
-	 * 
+	 *
 	 * @return the hashcode for this production
 	 */
 	public int hashCode() {
@@ -228,7 +228,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns all terminals on the left hand side of the production.
-	 * 
+	 *
 	 * @return all terminals on the left hand side of the production.
 	 */
 	public String[] getTerminalsOnLHS() {
@@ -243,7 +243,7 @@ public class Production implements Serializable {
 
 	/**
 	 * Returns a string representation of the production object.
-	 * 
+	 *
 	 * @return a string representation of the production object.
 	 */
 	public String toString() {

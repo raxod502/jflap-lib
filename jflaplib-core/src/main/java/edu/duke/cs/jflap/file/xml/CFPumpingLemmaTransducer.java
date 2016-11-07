@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import org.w3c.dom.*;
 import edu.duke.cs.jflap.pumping.*;
 
 /**
- * This is the transducer for encoding and decoding 
+ * This is the transducer for encoding and decoding
  * {@link edu.duke.cs.jflap.pumping.ContextFreePumpingLemma} objects.
- * 
+ *
  * @author Jinghui Lim
  * @see edu.duke.cs.jflap.gui.pumping.PumpingLemmaChooser
  *
  */
-public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer 
+public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
 {
     /**
      * The type of pumping lemma.
@@ -81,8 +81,8 @@ public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
      * The tag for the length of <i>y</i> of a case.
      */
     public static String CASE_Y_NAME = "caseYLength";
-    
-    public Serializable fromDOM(Document document) 
+
+    public Serializable fromDOM(Document document)
     {
         ContextFreePumpingLemma pl = (ContextFreePumpingLemma)PumpingLemmaFactory.createPumpingLemma
             (TYPE, document.getElementsByTagName(LEMMA_NAME).item(0).getTextContent());
@@ -91,38 +91,38 @@ public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
          */
         pl.setM(Integer.parseInt(document.getElementsByTagName(M_NAME).item(0).getTextContent()));
         pl.setW(document.getElementsByTagName(W_NAME).item(0).getTextContent());
-        pl.setI(Integer.parseInt(document.getElementsByTagName(I_NAME).item(0).getTextContent()));       
+        pl.setI(Integer.parseInt(document.getElementsByTagName(I_NAME).item(0).getTextContent()));
 
         /*
-         * Decode cases. 
-         * 
-         * Must decode cases before decoding the decomposition, otherwise 
+         * Decode cases.
+         *
+         * Must decode cases before decoding the decomposition, otherwise
          * the decomposition will be that of the last case. This is because,
          * when add case is called, the pumping lemma chooses the decomposition
-         * to check if it's legal. 
+         * to check if it's legal.
          */
         readCases(document, pl);
 
         //Decode the attempts
         NodeList attempts = document.getDocumentElement().getElementsByTagName(ATTEMPT);
         for(int i = 0; i < attempts.getLength(); i++)
-            pl.addAttempt(attempts.item(i).getTextContent());        
-        
-        //Decode the first player.         
+            pl.addAttempt(attempts.item(i).getTextContent());
+
+        //Decode the first player.
         pl.setFirstPlayer(document.getElementsByTagName(FIRST_PLAYER).item(0).getTextContent());
-             
+
         // Decode the decomposition.
         int uLength = Integer.parseInt(document.getElementsByTagName(U_NAME).item(0).getTextContent());
         int vLength = Integer.parseInt(document.getElementsByTagName(V_NAME).item(0).getTextContent());
         int xLength = Integer.parseInt(document.getElementsByTagName(X_NAME).item(0).getTextContent());
         int yLength = Integer.parseInt(document.getElementsByTagName(Y_NAME).item(0).getTextContent());
-        
+
         pl.setDecomposition(new int[]{uLength, vLength, xLength, yLength});
-        
+
         //Return!
         return pl;
     }
-    
+
     protected void readCases(Document doc, ContextFreePumpingLemma pl)
     {
         NodeList caseNodes = doc.getDocumentElement().getElementsByTagName(CASE_NAME);
@@ -140,7 +140,7 @@ public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
         }
     }
 
-    public Document toDOM(Serializable structure) 
+    public Document toDOM(Serializable structure)
     {
         ContextFreePumpingLemma pl = (ContextFreePumpingLemma)structure;
         Document doc = newEmptyDocument();
@@ -154,26 +154,26 @@ public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
         elem.appendChild(createElement(doc, V_NAME, null, "" + pl.getV().length()));
         elem.appendChild(createElement(doc, X_NAME, null, "" + pl.getX().length()));
         elem.appendChild(createElement(doc, Y_NAME, null, "" + pl.getY().length()));
-        
+
         //Encode the list of attempts.
         ArrayList attempts = pl.getAttempts();
-        if(attempts != null && attempts.size() > 0)        
+        if(attempts != null && attempts.size() > 0)
             for(int i = 0; i < attempts.size(); i++)
                 elem.appendChild(createElement(doc, ATTEMPT, null, (String)attempts.get(i)));
-                
+
         //Encode the list of attempts.
         ArrayList cases = pl.getDoneCases();
         if(cases != null && cases.size() > 0)
             for(int i = 0; i < cases.size(); i++)
                 elem.appendChild(createCaseElement(doc, (Case)cases.get(i)));
-        
+
         return doc;
     }
-    
+
     protected Element createCaseElement(Document doc, Case c)
     {
         Element elem = createElement(doc, CASE_NAME, null, null);
-        
+
         int[] decomposition = c.getInput();
         elem.appendChild(createElement(doc, CASE_U_NAME, null, "" + decomposition[0]));
         elem.appendChild(createElement(doc, CASE_V_NAME, null, "" + decomposition[1]));
@@ -183,7 +183,7 @@ public class CFPumpingLemmaTransducer extends PumpingLemmaTransducer
         return elem;
     }
 
-    public String getType() 
+    public String getType()
     {
         return TYPE;
     }

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,9 +25,9 @@ import java.io.Serializable;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
 /**
- * A <code>ContextFreePumpingLemma</code> is a <code>PumpingLemma</code> that 
+ * A <code>ContextFreePumpingLemma</code> is a <code>PumpingLemma</code> that
  * handles the five string segments that <i>w</i> is broken into, <i>uvxyz</i>.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
@@ -52,61 +52,61 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
     /**
      * The <i>z</i> segment of the <i>w</i>.
      */
-    protected String z;        
-    
+    protected String z;
+
     /**
      * Returns segment <i>u</i> of the decomposition.
-     * 
+     *
      * @return <i>u</i> of the decomposition
      */
-    public String getU() 
+    public String getU()
     {
         return u;
     }
 
     /**
      * Returns segment <i>v</i> of the decomposition.
-     * 
+     *
      * @return <i>v</i> of the decomposition
      */
-    public String getV() 
+    public String getV()
     {
         return v;
     }
 
     /**
      * Returns segment <i>x</i> of the decomposition.
-     * 
+     *
      * @return <i>x</i> of the decomposition
      */
-    public String getX() 
+    public String getX()
     {
         return x;
     }
 
     /**
      * Returns segment <i>y</i> of the decomposition.
-     * 
+     *
      * @return <i>y</i> of the decomposition
      */
-    public String getY() 
+    public String getY()
     {
         return y;
     }
 
     /**
      * Returns segment <i>z</i> of the decomposition.
-     * 
+     *
      * @return <i>z</i> of the decomposition
      */
-    public String getZ() 
+    public String getZ()
     {
         return z;
     }
-    
-    
+
+
     public String getDecompositionAsString()
-    {		
+    {
 		String[] s = new String[5];
 		int counter = 0;
 		for (int i=0; i<=3; i++) {
@@ -114,18 +114,18 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
 			counter += myDecomposition[i];
 		}
 		s[4] = w.substring(counter);
-		
+
 		for (int i=0; i<s.length; i++)
 			if (s[i].length() == 0)
 				s[i] = Universe.curProfile.getEmptyString();    //lower case lambda
-		
-		return "U = " + s[0] + ";   V = " + s[1] + ";   X = " + s[2] + 
+
+		return "U = " + s[0] + ";   V = " + s[1] + ";   X = " + s[2] +
 		       ";   Y = " + s[3] + ";   Z = " + s[4];
     }
-    
+
     /**
      * Clears the information the user and program have set for  <i>m</i>, <i>w</i>,
-     * <i>i</i>, <i>u</i>, <i>v</i>, <i>x</i>, <i>y</i>, and <i>z</i>. 
+     * <i>i</i>, <i>u</i>, <i>v</i>, <i>x</i>, <i>y</i>, and <i>z</i>.
      */
     public void reset()
     {
@@ -138,12 +138,12 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
         y = "";
         z = "";
     }
-    
+
     /**
-     * Chooses the decomposition, with the length of each part of the 
-     * decomposition in the corresponding space of the input array, 
+     * Chooses the decomposition, with the length of each part of the
+     * decomposition in the corresponding space of the input array,
      * then chooses an acceptable <i>i</i>.
-     * 
+     *
      * @see #setDecomposition(int[], int)
      * @param decomposition the array that contains the length of each part of the decomposition
      * @return <code>true</code> if this deocmposition is legal, <code>false</code> otherwise
@@ -157,24 +157,24 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
         int yLength = decomposition[3];
         if(vLength + xLength + yLength > m || vLength + yLength < 1)
             return false;
-        
+
         u = w.substring(0, uLength);
         v = w.substring(uLength, uLength + vLength);
         x = w.substring(uLength + vLength, uLength + vLength + xLength);
         y = w.substring(uLength + vLength + xLength, uLength + vLength + xLength + yLength);
         z = w.substring(uLength + vLength + xLength + yLength);
-        
+
         return true;
     }
-    
+
     /**
-     * Sets <i>i</i> and chooses the decomposition, with the length of 
-     * each part of the decomposition in the corresponding space of the 
-     * input array. That is, |<i>u</i>| = <code>decomposition[0]</code>, 
+     * Sets <i>i</i> and chooses the decomposition, with the length of
+     * each part of the decomposition in the corresponding space of the
+     * input array. That is, |<i>u</i>| = <code>decomposition[0]</code>,
      * |<i>v</i>| = <code>decomposition[1]</code>,
-     * |<i>x</i>| = <code>decomposition[2]</code>, 
-     * |<i>y</i>| = <code>decomposition[3]</code>. 
-     * 
+     * |<i>x</i>| = <code>decomposition[2]</code>,
+     * |<i>y</i>| = <code>decomposition[3]</code>.
+     *
      * @param decomposition the array that contains the length of each part of the decomposition
      * @param num the number to set <i>i</i> to
      * @return <code>true</code> if this decomposition is legal and has not been tried
@@ -185,35 +185,35 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
         i = num;
         return setDecomposition(decomposition);
     }
-    
+
     /**
-     * Returns the pumped string <i>uv<sup>i</sup>xy<sup>i</sup>z</i> 
+     * Returns the pumped string <i>uv<sup>i</sup>xy<sup>i</sup>z</i>
      * according the the decomposition and choice of <i>i</i>.
-     * 
+     *
      * @return the pumped string, <i>uv<sup>i</sup>xy<sup>i</sup>z</i>
      */
     public String createPumpedString()
     {
         return u + pumpString(v, getI()) + x + pumpString(y, getI()) + z;
     }
-    
+
     /**
      * Adds the decomposition to the list that the user has done. If the case is not
      * a legal decomposition, the it returns <code>-1</code>. If the case has already
      * been done, it returns the index of the case. If it hasn't been done, it moves
      * the case to the "done" list and returns its position in the done list.
-     * 
+     *
      * @param decomposition the decomposition we wish to add
      * @return <code>-1</code> if it is an illegal decomposition, the index of the
      * decomposition if it has already been done, or a number greater than or equal
-     * to the total number of cases, which can be found by calling 
-     * {@link PumpingLemma#numCasesTotal()}. 
+     * to the total number of cases, which can be found by calling
+     * {@link PumpingLemma#numCasesTotal()}.
      */
     public int addCase(int[] decomposition, int num)
     {
         /*
-         * addCase(int[]) should only be called after chooseDecomposition(int[]), 
-         * so it should be a legal decomposition and uvxyz should have been set. 
+         * addCase(int[]) should only be called after chooseDecomposition(int[]),
+         * so it should be a legal decomposition and uvxyz should have been set.
          * Nonetheless, we check here.
          */
         if(!setDecomposition(decomposition))
@@ -244,8 +244,8 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
         System.err.println("BUG FOUND: ContextFreePumpingLemma.addCase(int[], int)");
         return -1;
     }
-    
-    
+
+
     public boolean replaceCase(int[] decomposition, int num, int index)
     {
         Case c = (Case)myDoneCases.get(index);
@@ -257,11 +257,11 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
         }
         return false;
     }
-    
+
     /**
      * Checks to see whether a given v,y decomposition matches a case currently
      * in <code>myDoneCases</code>.
-     * 
+     *
      * @param v segment <i>v</i> of the decomposition
      * @param y segment <i>y</i> of the decomposition
      */
@@ -269,28 +269,28 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
     	Case cAll, cDone;
     	Iterator iAll, iDone;
     	boolean alreadyDone, toReturn;
-    
+
     	toReturn = false;
     	iAll = myAllCases.iterator();
 		while (iAll.hasNext()) {
 			alreadyDone = false;
 			cAll = (Case) iAll.next();
-			if (cAll.isCase(v, y)) {				
-				
-				iDone = myDoneCases.iterator();				
+			if (cAll.isCase(v, y)) {
+
+				iDone = myDoneCases.iterator();
 				while (iDone.hasNext()) {
 					cDone = (Case) iDone.next();
-					if (cDone.isCase(v, y)) 
+					if (cDone.isCase(v, y))
 						alreadyDone = true;
 				}
-				
+
 				if (!alreadyDone)
-					toReturn = true;					
+					toReturn = true;
 			}
 		}
 		return toReturn;
     }*/
-    
+
     /**
      * For values with cases, chooses a decomposition that corresponds to the first case that
      * hasn't currently been added to the casePanel
@@ -298,9 +298,9 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
   /*  protected void chooseDecompositionWithCases() {
     	String v, x, y;
     	int[] decomp;
-    	boolean matchesUnusedCase;    	
+    	boolean matchesUnusedCase;
     	int size = w.length();
-    	
+
     	for (int a=0; a<size; a++)
     		for (int b=a; b<size; b++)
     			for (int c=b; c<size; c++)
@@ -308,19 +308,19 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
     					v = getW().substring(a, b);
     					x = getW().substring(b, c);
     					y = getW().substring(c, d);
-    			
+
     					if (v.length() + x.length() + y.length() <= m &&
     						v.length() + y.length() >= 1) {
     						matchesUnusedCase = decompMatchesUnusedCase(v, y);
-    						if (matchesUnusedCase) {    						
+    						if (matchesUnusedCase) {
     							decomp = new int[] {a, b-a, c-b, d-c};
     							setDecomposition(decomp);
     							return;
-    						}    						
+    						}
     					}
     				}
     }*/
-    
+
     /**
      * Chooses a random decomposition, with it randomly spread over the string.
      * |vy| >= 1 && |vxy| <= m;
@@ -330,7 +330,7 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
 		int[] decomp = new int[4];
 		counter = 0;
 		temp = 0;
-		
+
 		//Some ugly code...
 		decomp[0] = LemmaMath.fetchRandInt(0, w.length() - 1);
 		counter += decomp[0];
@@ -338,30 +338,30 @@ public abstract class ContextFreePumpingLemma extends PumpingLemma implements Se
 		decomp[1] = LemmaMath.fetchRandInt(0, temp);
 		if (decomp[1] == w.length() - counter) {
 			decomp[2] = 0;
-			decomp[3] = 0; 
+			decomp[3] = 0;
 		}
-		else {			
+		else {
 			counter += decomp[1];
 			temp = Math.min(w.length() - counter - 1, m-1);
 			decomp[2] = LemmaMath.fetchRandInt(0, temp);
 			counter += decomp[2];
-			temp = Math.min(w.length() - counter, m - decomp[2]);			
+			temp = Math.min(w.length() - counter, m - decomp[2]);
 			if (decomp[1] > 0)
 				decomp[3] = LemmaMath.fetchRandInt(0, temp);
 			else
 				decomp[3] = LemmaMath.fetchRandInt(1, temp);
 		}
-		
+
 		setDecomposition(decomp);
     }
-    
+
     /**
      * Chooses a random context-free decomposition, ignoring cases.
      */
     public void chooseDecomposition()
     {
-    	// Currently just chooses a decomposition without cases.  The code for choosing it 
+    	// Currently just chooses a decomposition without cases.  The code for choosing it
     	// with cases is currently commented out, but can be added if desired.
-    	chooseDecompositionWithoutCases();  	
-    }    	
+    	chooseDecompositionWithoutCases();
+    }
 }

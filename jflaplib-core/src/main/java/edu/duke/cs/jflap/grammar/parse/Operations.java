@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import javax.swing.JOptionPane;
 /**
  * This is a utility class for finding out things about a grammar for purposes
  * of parsing.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -49,7 +49,7 @@ public class Operations {
 
 	/**
 	 * Calculate the first sets of a grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to calculate first sets for
 	 * @return a map of symbols in the grammar to the first sets of that symbol
@@ -93,7 +93,7 @@ public class Operations {
 	/**
 	 * Given a first map as returned by {@link #first(Grammar)} and a string
 	 * containing some sequence of symbols, return the first for that sequence.
-	 * 
+	 *
 	 * @param firstSets
 	 *            the map of single symbols to a map
 	 * @param sequence
@@ -125,7 +125,7 @@ public class Operations {
 	/**
 	 * Given a grammar, this will return the follow mappings. This returns a map
 	 * from the non-terminals in the grammar to the follow sets.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to calculate follow sets for
 	 * @return the map of non-terminals to the follow sets
@@ -181,7 +181,7 @@ public class Operations {
 
 	/**
 	 * This returns if a grammar is LL(1).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to test
 	 * @return if the grammar is LL(1)
@@ -235,7 +235,7 @@ public class Operations {
 
 	/**
 	 * This will return an augmented grammar, given a grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to augment
 	 * @return the grammar augmented
@@ -260,7 +260,7 @@ public class Operations {
 
 	/**
 	 * Given a set of items, this produces the closure of that set.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar for which this production is taking place
 	 * @param items
@@ -305,7 +305,7 @@ public class Operations {
 	/**
 	 * Given a grammar, a set of items, and a grammar symbol, return the goto of
 	 * this set on that symbol for this grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to calculate goto on
 	 * @param items
@@ -338,7 +338,7 @@ public class Operations {
 	/**
 	 * Given a grammar, returns a mapping of variables in the grammar to a set
 	 * of productions on that variable.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to get a map for
 	 * @return the map of variables to productions
@@ -361,7 +361,7 @@ public class Operations {
 	 * Given a production, this returns the list of productions with the various
 	 * permutations of items, with the item position indicator in every
 	 * position.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return an array of productions, each indicating an item
@@ -381,7 +381,7 @@ public class Operations {
 	/**
 	 * Returns all the symbols possible to do a goto for on a particular set of
 	 * items.
-	 * 
+	 *
 	 * @param items
 	 *            the set of items
 	 * @return an array containing all the symbols one can do a goto on for this

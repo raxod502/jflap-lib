@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import edu.duke.cs.jflap.automata.turing.Tape;
  * This is a configuration icon for configurations related to finite state
  * automata. These sorts of configurations are defined only by the state that
  * the automata is current in, plus the input left.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class TMConfigurationIcon extends ConfigurationIcon implements
 		TuringConstants {
 	/**
 	 * Instantiates a new <CODE>TMConfigurationIcon</CODE>.
-	 * 
+	 *
 	 * @param configuration
 	 *            the TM configuration that is represented
 	 */
@@ -51,7 +51,7 @@ public class TMConfigurationIcon extends ConfigurationIcon implements
 
 	/**
 	 * Returns the height of this icon.
-	 * 
+	 *
 	 * @return the height of this icon
 	 */
 	public int getIconHeight() {
@@ -62,7 +62,7 @@ public class TMConfigurationIcon extends ConfigurationIcon implements
 	/**
 	 * This will paint a sort of "torn tape" object that shows the current
 	 * contents and position of the tape.
-	 * 
+	 *
 	 * @param c
 	 *            the component this icon is drawn on
 	 * @param g

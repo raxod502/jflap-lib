@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import edu.duke.cs.jflap.automata.fsa.*;
  * state names) have exactly the same automaton looking back at you from the
  * screen. This does not compare two DFAs to see if they accept the same
  * language!
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public class DFAEqualityChecker {
 	/**
 	 * "Hypothesize" that two states are equal in the graph isomorphism for this
 	 * automaton. This function tests to see if that assumption is justifiable.
-	 * 
+	 *
 	 * @param state1
 	 *            the state in the first automaton
 	 * @param state2
@@ -95,7 +95,7 @@ public class DFAEqualityChecker {
 	 * instances of <CODE>FiniteStateAutomaton</CODE>, both are
 	 * deterministic, and both have an initial state. Results are undefined
 	 * otherwise.
-	 * 
+	 *
 	 * @param one
 	 *            the first dfa
 	 * @param two

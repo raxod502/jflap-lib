@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import edu.duke.cs.jflap.automata.Note;
 /**
  * This is a view that holds a tool bar and the canvas where the automaton is
  * displayed.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EditorPane extends JComponent {
 	/**
 	 * Instantiates a new editor pane for the given automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to create the editor pane for
 	 */
@@ -62,7 +62,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Instantiates a new editor pane with a given automaton drawer.
-	 * 
+	 *
 	 * @param drawer
 	 *            the special automaton drawer for this editor
 	 */
@@ -72,7 +72,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Instantiates a new editor pane with a given automaton drawer.
-	 * 
+	 *
 	 * @param drawer
 	 *            the special automaton drawer for this editor
 	 * @param box
@@ -84,7 +84,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Instantiates a new editor pane with a given automaton drawer.
-	 * 
+	 *
 	 * @param drawer
 	 *            the special automaton drawer for this editor
 	 * @param box
@@ -123,7 +123,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Returns the toolbar for this editor pane.
-	 * 
+	 *
 	 * @return the toolbar of this editor pane
 	 */
 	public edu.duke.cs.jflap.gui.editor.ToolBar getToolBar() {
@@ -132,7 +132,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Returns the automaton drawer for the editor pane canvas.
-	 * 
+	 *
 	 * @return the drawer that draws the automaton being edited
 	 */
 	public AutomatonDrawer getDrawer() {
@@ -141,7 +141,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Returns the automaton pane.
-	 * 
+	 *
 	 * @return the automaton pane
 	 */
 	public EditCanvas getAutomatonPane() {
@@ -151,7 +151,7 @@ public class EditorPane extends JComponent {
 	/**
 	 * Prints this component. This will print only the automaton section of the
 	 * component.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint to
 	 */
@@ -161,7 +161,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Children are not painted here.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint to
 	 */
@@ -171,7 +171,7 @@ public class EditorPane extends JComponent {
 
 	/**
 	 * Returns the automaton pane.
-	 * 
+	 *
 	 * @return the automaton pane
 	 */
 	public Automaton getAutomaton() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import edu.duke.cs.jflap.automata.pda.PDAConfiguration;
  * This is a configuration icon for configurations related to finite state
  * automata. These sorts of configurations are defined only by the state that
  * the automata is current in, plus the input left.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class PDAConfigurationIcon extends ConfigurationIcon {
 	/**
 	 * Instantiates a new <CODE>PDAConfigurationIcon</CODE>.
-	 * 
+	 *
 	 * @param configuration
 	 *            the PDA configuration that is represented
 	 */
@@ -47,7 +47,7 @@ public class PDAConfigurationIcon extends ConfigurationIcon {
 
 	/**
 	 * Returns the height of this icon.
-	 * 
+	 *
 	 * @return the height of this icon
 	 */
 	public int getIconHeight() {
@@ -58,7 +58,7 @@ public class PDAConfigurationIcon extends ConfigurationIcon {
 	/**
 	 * This will paint a sort of "torn tape" object that shows the rest of the
 	 * input, as well as the stack.
-	 * 
+	 *
 	 * @param c
 	 *            the component this icon is drawn on
 	 * @param g

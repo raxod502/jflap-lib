@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,10 +36,10 @@ import javax.swing.JOptionPane;
  */
 
 public class MultipleCYKParseAction extends CYKParseAction{
-	
+
 	/**
 	 * Instantiates a new <CODE>BruteParseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -49,7 +49,7 @@ public class MultipleCYKParseAction extends CYKParseAction{
 		this.frame = Universe.frameForEnvironment(environment);
 	}
 
-	
+
 	/**
 	 * Performs the action.
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import java.util.*;
 /**
  * This controls the conversion of a push down automaton to a context free
  * grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class PDAConvertController extends ConvertController {
 	/**
 	 * Instantiates a <CODE>PDAConvertController</CODE> for an automaton.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -61,21 +61,21 @@ public class PDAConvertController extends ConvertController {
 	/**
 	 * Returns the productions for a particular state. This method will only be
 	 * called once.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the productions for
 	 * @return an array containing the productions that correspond to a
 	 *         particular state
 	 */
 	protected Production[] getProductions(State state) {
-		
+
 		return new Production[0];
 	}
 
 	/**
 	 * Returns the productions for a particular transition. This method will
 	 * only be called once.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -88,7 +88,7 @@ public class PDAConvertController extends ConvertController {
 
 	/**
 	 * Returns the grammar that's the result of this conversion.
-	 * 
+	 *
 	 * @return the grammar that's the result of this conversion
 	 * @throws GrammarCreationException
 	 *             if there are not enough variables to uniquely identify every
@@ -96,8 +96,8 @@ public class PDAConvertController extends ConvertController {
 	 */
 	protected Grammar getGrammar() {
 		int oldNumProductions = getModel().getProductions().length;
-		converter.purgeProductions(getAutomaton(), getModel());		
-		if (oldNumProductions != getModel().getProductions().length && converter.numberVariables() > 26)			
+		converter.purgeProductions(getAutomaton(), getModel());
+		if (oldNumProductions != getModel().getProductions().length && converter.numberVariables() > 26)
 			throw new GrammarCreationException(
 					"Your list of rules has been trimmed, but there are still more variables than " +
 					"can be uniquely represented.");
@@ -105,7 +105,7 @@ public class PDAConvertController extends ConvertController {
 			throw new GrammarCreationException("There are more variables than can be uniquely represented.");
 		else if (oldNumProductions != getModel().getProductions().length)
 			javax.swing.JOptionPane.showMessageDialog(null, "Your list of rules has been trimmed.");
-		
+
 		int rows = getModel().getRowCount();
 		ContextFreeGrammar grammar = new ContextFreeGrammar();
 		grammar.setStartVariable("S");

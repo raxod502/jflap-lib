@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -52,14 +52,14 @@ import edu.duke.cs.jflap.debug.EDebug;
 
 /**
  * This is the class that controls the conversion of an NFA to a DFA.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConversionController {
 	/**
 	 * Instantiates a <CODE>ConversionController</CODE>.
-	 * 
+	 *
 	 * @param nfa
 	 *            the NFA we're converting to a DFA
 	 * @param dfa
@@ -126,7 +126,7 @@ public class ConversionController {
 
 	/**
 	 * Registers that a state has been added to the DFA.
-	 * 
+	 *
 	 * @param state
 	 *            the state that was added
 	 * @throws IllegalArgumentException
@@ -142,9 +142,9 @@ public class ConversionController {
 
 //        EDebug.print(setToState.size());
 //        EDebug.print(state.getLabel());
-        for (Object o: setToState.keySet())  
+        for (Object o: setToState.keySet())
         	EDebug.print(o.toString());
-        
+
 		if (inMap != null && inMap != state)
 			throw new IllegalArgumentException("This set is in the DFA!");
 		setToState.put(set, state);
@@ -154,7 +154,7 @@ public class ConversionController {
 	/**
 	 * Expands all the transitions for a state. This will add all of the
 	 * transitions of a state with no user interaction.
-	 * 
+	 *
 	 * @param state
 	 *            the state to expand
 	 */
@@ -182,7 +182,7 @@ public class ConversionController {
 
 	/**
 	 * Asks the user for input regarding a new state.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.deterministic.TransitionExpanderTool
 	 * @param start
 	 *            the initial state we're expanding on a terminal

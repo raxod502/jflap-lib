@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.awt.Point;
  * The state placer object can be used to determine the location (on the canvas)
  * to place a State. Currently, the placement algorithm is simply choosing
  * random x and y coordinates in the range of 0 to X_MAX and Y_MAX respectively.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -41,7 +41,7 @@ public class StatePlacer {
 	/**
 	 * Returns a Point object that represents where to place the State on the
 	 * canvas.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return a Point object that represents where to place the State on the

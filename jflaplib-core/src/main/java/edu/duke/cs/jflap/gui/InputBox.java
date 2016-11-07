@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -42,24 +42,24 @@ public class InputBox extends JFrame{
 	private final Logger logger = LoggerFactory.getLogger(InputBox.class);
 
 	private String myInputString;
-	
+
 	private final Component myComponent;
-	
+
 	private String myTitle;
-	
+
 	private AutomatonSimulator mySimulator;
-	
+
 	private SimulateAction myAction;
-	
+
 	private boolean myIsTuringMachine;
-	
+
 	private Automaton myAutomaton;
-	
+
 	public InputBox(SimulateAction simulateAction, Component component, String string) {
 		myAction=simulateAction;
 		myComponent=component;
 		myTitle=string;
-		
+
 		JPanel panel = new JPanel(new GridLayout(3, 2));
 		JTextField[] fields = new JTextField[1];
 		for (int i = 0; i < 1; i++) {
@@ -78,7 +78,7 @@ public class InputBox extends JFrame{
 			input[i] = fields[i].getText();
 
 		logger.debug("InputBox value: {}", input[0]);
-/*		
+/*
 		JButton j=new JButton("Click to Open Input File");
 		j.setSize(150,50);
 		j.addActionListener(new ActionListener(){
@@ -100,11 +100,11 @@ public class InputBox extends JFrame{
 						JOptionPane.showConfirmDialog(myComponent, "Error", "Error in the file!", JOptionPane.ERROR_MESSAGE);
 						e1.printStackTrace();
 					}
-					
+
 				}
-				
+
 			}
-			
+
 		});
 		JButton jb=new JButton();
 		jb.setText("or Type Input Manually");
@@ -115,8 +115,8 @@ public class InputBox extends JFrame{
 		top.setSize(300,50);
 		top.add(j, BorderLayout.WEST);
 		top.add(jb, BorderLayout.EAST);
-	
-		
+
+
 		JPanel bottom=new JPanel();
 		final JTextField jt=new JTextField(20);
 		jt.addActionListener(new ActionListener(){
@@ -126,7 +126,7 @@ public class InputBox extends JFrame{
 				myInputString=jt.getText();
 				exit();
 			}
-			
+
 		});
 		bottom.add(jt);
 		JButton jbb=new JButton("OK");
@@ -137,7 +137,7 @@ public class InputBox extends JFrame{
 				myInputString=jt.getText();
 				exit();
 			}
-			
+
 		});
 		bottom.add(jbb);
 		this.setTitle(myTitle);
@@ -146,7 +146,7 @@ public class InputBox extends JFrame{
 		this.setLocation(300, 300);
 		this.add(top, BorderLayout.NORTH);
 		this.add(bottom, BorderLayout.CENTER);
-		
+
 		*/
 	}
 
@@ -155,7 +155,7 @@ public class InputBox extends JFrame{
 
 		return myInputString;
 	}
-	
+
 	public void exit()
 	{
 		System.out.println(myInputString);
@@ -167,7 +167,7 @@ public class InputBox extends JFrame{
 		}
 		this.dispose();
 	}
-	
+
 
 	public void addSimulator(Automaton atm, AutomatonSimulator simulator, boolean isTuring) {
 		// TODO Auto-generated method stub
@@ -175,10 +175,10 @@ public class InputBox extends JFrame{
 		mySimulator=simulator;
 		myIsTuringMachine=isTuring;
 	}
-	
+
 	public static void main(String[] args)
 	{
 		InputBox ib=new InputBox(null, null, "input");
-		
+
 	}
 }

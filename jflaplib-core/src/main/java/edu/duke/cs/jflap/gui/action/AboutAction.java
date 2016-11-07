@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.awt.event.ActionEvent;
 /**
  * This action will display a small about box that lists the tool version
  * number, and other version.
- * 
+ *
  * @author Thomas Finley
  */
 

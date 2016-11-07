@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,14 +23,14 @@ import edu.duke.cs.jflap.grammar.Grammar;
 
 /**
  * UnrestrictedUser Parser that is going to be used for parsing performed by user.
- * 
+ *
  * @author Kyung Min (Jason) Lee
  */
 public class UnrestrictedUserParser extends UserParser{
 
 	/**
 	 * Creates a new unrestricted user parser.
-	 * 
+	 *
 	 * @param grammar
 	 *            the unrestricted grammar to parse
 	 * @param target

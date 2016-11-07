@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import edu.duke.cs.jflap.automata.fsa.*;
 /**
  * The Automaton checker can be used to determine certain properties about
  * automata.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -40,7 +40,7 @@ public class AutomatonChecker {
 	/**
 	 * Returns true if <CODE>automaton</CODE> is a non-deterministic finite
 	 * state automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return true if <CODE>automaton</CODE> is a non-deterministic finite

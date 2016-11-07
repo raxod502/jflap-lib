@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -56,17 +56,17 @@ public class CYKParseAction extends GrammarAction{
 
 	/** The frame for the grammar environment. */
 	protected EnvironmentFrame frame;
-	
+
 	/** The Grammar that is going to be transformed into CNF */
 	protected Grammar myGrammar;
-	
+
 	/** Boolean variable that would tell whehter or not error has occured during transformation */
 	protected boolean myErrorInTransform;
 
 	private ArrayList <Production> myTempCNF;
 	/**
 	 * Instantiates a new <CODE>CYKParse Action</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -75,7 +75,7 @@ public class CYKParseAction extends GrammarAction{
 		this.environment = environment;
 		this.frame = Universe.frameForEnvironment(environment);
 	}
-	
+
 	/**
 	 * Another Constructor that is going to be called by its subclasses
 	 */
@@ -134,7 +134,7 @@ public class CYKParseAction extends GrammarAction{
 	    }
 	    hypothesizeUnit(env, g);
 	}
-	
+
 	/**
 	 * Method for getting rid of unit productions
 	 * @param env Our grammar environment
@@ -158,10 +158,10 @@ public class CYKParseAction extends GrammarAction{
 	 */
 	protected void hypothesizeUseless(GrammarEnvironment env, Grammar g) {
 		UselessProductionRemover remover = new UselessProductionRemover();
-		
+
 		Grammar g2 = UselessProductionRemover
 				.getUselessProductionlessGrammar(g);
-		
+
 		if (g2.getTerminals().length==0)
 		{
 			JOptionPane.showMessageDialog(env,
@@ -188,7 +188,7 @@ public class CYKParseAction extends GrammarAction{
 	 */
 	protected void hypothesizeChomsky(GrammarEnvironment env, Grammar g) {
 		//System.out.println("Chomsky TIME");
-		
+
 		CNFConverter converter = null;
 		try {
 			converter = new CNFConverter(g);
@@ -201,7 +201,7 @@ public class CYKParseAction extends GrammarAction{
 		boolean chomsky = true;
 		for (int i = 0; i < p.length; i++)
 			chomsky &= converter.isChomsky(p[i]);
-		
+
 		if (!chomsky) {
 			ArrayList <Production> resultList=new ArrayList <Production>();
 			for (int i=0; i<p.length; i++)
@@ -221,11 +221,11 @@ public class CYKParseAction extends GrammarAction{
 			g=new UnrestrictedGrammar();
 			g.addProductions(pp);
 			g.setStartVariable(var);
-			
+
 		}
 		myGrammar=g;
 	}
-	
+
 	private void convertToCNF(CNFConverter converter, Production p)
 	{
 		if (!converter.isChomsky(p))
@@ -236,7 +236,7 @@ public class CYKParseAction extends GrammarAction{
 				p=temp[j];
 				convertToCNF(converter, p);
 			}
-		}	
+		}
 		else
 			myTempCNF.add(p);
 	}

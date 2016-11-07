@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,16 +25,16 @@ import java.util.EventObject;
 /**
  * This is an event that is thrown from a brute parser whenever it starts,
  * pauses, accepts, or rejects a string.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.parse.BruteParser#addBruteParserListener
- * 
+ *
  * @author Thomas Finley
  */
 
 public class BruteParserEvent extends EventObject {
 	/**
 	 * Instantiates a new brute parser event.
-	 * 
+	 *
 	 * @param parser
 	 *            the parser that generated this event
 	 * @param type
@@ -47,7 +47,7 @@ public class BruteParserEvent extends EventObject {
 
 	/**
 	 * Returns the brute parser object that generated this event
-	 * 
+	 *
 	 * @return the brute parser object
 	 */
 	public BruteParser getParser() {
@@ -57,7 +57,7 @@ public class BruteParserEvent extends EventObject {
 	/**
 	 * Returns true if this event indicates the start (or resumption) of
 	 * parsing.
-	 * 
+	 *
 	 * @return if this event is of type start
 	 */
 	public boolean isStart() {
@@ -66,7 +66,7 @@ public class BruteParserEvent extends EventObject {
 
 	/**
 	 * Returns true if this event indicates the parser is paused.
-	 * 
+	 *
 	 * @return if this event is of type pause
 	 */
 	public boolean isPause() {
@@ -75,7 +75,7 @@ public class BruteParserEvent extends EventObject {
 
 	/**
 	 * Returns true if this event indicates a parse was found.
-	 * 
+	 *
 	 * @return if this event is of type accept
 	 */
 	public boolean isAccept() {
@@ -84,7 +84,7 @@ public class BruteParserEvent extends EventObject {
 
 	/**
 	 * Returns true if this event indicates the string was rejected.
-	 * 
+	 *
 	 * @return if this event is of type reject
 	 */
 	public boolean isReject() {

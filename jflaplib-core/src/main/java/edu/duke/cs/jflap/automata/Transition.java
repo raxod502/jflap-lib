@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,17 +28,17 @@ import java.awt.Point;
  * transition between two state objects in an automaton. Subclasses of this
  * transition class will have additional fields containing the particulars
  * necessary for their transition.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.State
  * @see edu.duke.cs.jflap.automata.Automaton
- * 
+ *
  * @author Thomas Finley, Henry Qin
  */
 
 public abstract class Transition implements Serializable, Cloneable {
 	/**
 	 * Instantiates a new <CODE>Transition</CODE>.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition is from
 	 * @param to
@@ -52,7 +52,7 @@ public abstract class Transition implements Serializable, Cloneable {
 	/**
 	 * Returns a copy of this transition, except for a new <CODE>from</CODE>
 	 * and <CODE>to</CODE> state.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition goes to
 	 * @param to
@@ -64,7 +64,7 @@ public abstract class Transition implements Serializable, Cloneable {
 	/**
 	 * Returns a copy of this transition with the same <CODE>from</CODE> and
 	 * <CODE>to</CODE> state.
-	 * 
+	 *
 	 * @return a copy of this transition as described
 	 */
 	public Object clone() {
@@ -76,7 +76,7 @@ public abstract class Transition implements Serializable, Cloneable {
 
 	/**
 	 * Returns the state this transition eminates from.
-	 * 
+	 *
 	 * @return the state this transition eminates from
 	 */
 	public State getFromState() {
@@ -85,7 +85,7 @@ public abstract class Transition implements Serializable, Cloneable {
 
 	/**
 	 * Returns the state this transition travels to.
-	 * 
+	 *
 	 * @return the state this transition travels to
 	 */
 	public State getToState() {
@@ -109,7 +109,7 @@ public abstract class Transition implements Serializable, Cloneable {
 
 	/**
 	 * Returns the automaton this transition is over.
-	 * 
+	 *
 	 * @return the automaton this transition is over
 	 */
 	public Automaton getAutomaton() {
@@ -119,7 +119,7 @@ public abstract class Transition implements Serializable, Cloneable {
 	/**
 	 * Gets the description for a Transition. This defaults to nothing.
 	 * Subclasses should override.
-	 * 
+	 *
 	 * @return an empty string
 	 */
 	public String getDescription() {
@@ -130,7 +130,7 @@ public abstract class Transition implements Serializable, Cloneable {
 	 * Returns a string representation of this object. The string returned is
 	 * the string representation of the first state, and the string
 	 * representation of the second state.
-	 * 
+	 *
 	 * @return a string representation of this object
 	 */
 	public String toString() {
@@ -140,7 +140,7 @@ public abstract class Transition implements Serializable, Cloneable {
 
 	/**
 	 * Returns if this transition equals another object.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test against
 	 * @return <CODE>true</CODE> if the two are equal, <CODE>false</CODE>
@@ -157,13 +157,13 @@ public abstract class Transition implements Serializable, Cloneable {
 
 	/**
 	 * Returns the hash code for this transition.
-	 * 
+	 *
 	 * @return the hash code for this transition
 	 */
 	public int hashCode() {
 		return from.hashCode() ^ to.hashCode();
 	}
-	
+
     /**
       *This hash code is specifically for dealing with clone matching.
     */
@@ -179,7 +179,7 @@ public abstract class Transition implements Serializable, Cloneable {
     }
 
     public void setControl(Point p){
-        myControlPoint = p; 
+        myControlPoint = p;
     }
 
 

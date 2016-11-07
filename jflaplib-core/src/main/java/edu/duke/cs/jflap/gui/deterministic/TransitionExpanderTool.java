@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import edu.duke.cs.jflap.automata.State;
  * state's set of NFA states, or to empty space. The user is then prompted for
  * the terminal to expand on, and then asked to specify those states which are
  * to appear.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TransitionExpanderTool extends TransitionTool {
 	/**
 	 * Instantiates a new <CODE>TransitionExpanderTool</CODE>.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -62,7 +62,7 @@ public class TransitionExpanderTool extends TransitionTool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -78,7 +78,7 @@ public class TransitionExpanderTool extends TransitionTool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the group expander tool icon
 	 */
 	protected Icon getIcon() {
@@ -88,7 +88,7 @@ public class TransitionExpanderTool extends TransitionTool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {

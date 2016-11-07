@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.*;
  * parts. For example, if "a+be+(c+d)" is passed in to the method {@link #or},
  * then that will be "discretized" into the subexpressions "a", "be", and
  * "(c+d)".
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -43,7 +43,7 @@ public class Discretizer {
 	/**
 	 * Given a regular expression, this will return the subexpressions that,
 	 * when or-ed together, result in the expression.
-	 * 
+	 *
 	 * @param expression
 	 *            the regular expression
 	 * @return an array of the subexpressions
@@ -72,7 +72,7 @@ public class Discretizer {
 	/**
 	 * Given a regular expression, this will return the subexpressions that,
 	 * when concatenated together, will result in the expression.
-	 * 
+	 *
 	 * @param expression
 	 *            the regular expression
 	 * @return an array of the subexpressions
@@ -118,7 +118,7 @@ public class Discretizer {
 	/**
 	 * Given a string, returns the string, or the empty string if the string is
 	 * the lambda string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to possibly replace
 	 * @return the string, or the empty string if the string is the lambda

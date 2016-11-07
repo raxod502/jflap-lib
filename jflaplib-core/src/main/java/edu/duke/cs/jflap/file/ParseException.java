@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ package edu.duke.cs.jflap.file;
  * prevent the interpreter from working correctly. This should be thrown by
  * {@link edu.duke.cs.jflap.file.Decoder} implementing objects to indicate a problem processing
  * the file that could indicate that it is not the target type of file at all.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class ParseException extends RuntimeException {
 
 	/**
 	 * Creates a parse exception with the given message.
-	 * 
+	 *
 	 * @param message
 	 *            the exception message
 	 */

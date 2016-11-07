@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,21 +31,21 @@ import edu.duke.cs.jflap.automata.State;
  * <code>MealyMachine</code> which restricts the output of
  * all transitions to one state to be the same output
  * defined in the state. This is done with a map of outputs
- * to states, and is implemented through {@link 
- * #getOutput(State)} and {@link #setOutput(State, String)}. 
- * 
+ * to states, and is implemented through {@link
+ * #getOutput(State)} and {@link #setOutput(State, String)}.
+ *
  * @see MealyMachine
  * @see MooreTransition
  * @author Jinghui Lim
  *
  */
-public class MooreMachine extends MealyMachine 
+public class MooreMachine extends MealyMachine
 {
     /**
      * Map of states (keys) to output (values).
      */
     private Map myMap;
-    
+
     /**
      * Creates a Moore machine with no states or transitions.
      *
@@ -55,11 +55,11 @@ public class MooreMachine extends MealyMachine
         super();
         myMap = new HashMap();
     }
-    
+
     /**
      * Returns the class of <code>Transition</code> this automaton
      * must accept.
-     * 
+     *
      * @return the <code>Class</code> object for the <code>
      * MooreTransition</code>
      */
@@ -67,11 +67,11 @@ public class MooreMachine extends MealyMachine
     {
         return MooreTransition.class;
     }
-    
+
     /**
      * Sets the output for a state to be the given string, <code>
      * output</code>.
-     * 
+     *
      * @param state state to set the output for
      * @param output value to set the state output to
      */
@@ -86,10 +86,10 @@ public class MooreMachine extends MealyMachine
         else
             myMap.put(state, output);
     }
-    
+
     /**
      * Returns the output a state produces.
-     * 
+     *
      * @param state the state whose output value we want
      * @return the output of the state
      */
@@ -100,13 +100,13 @@ public class MooreMachine extends MealyMachine
         else
             return (String) myMap.get(state);
     }
-    
+
     /**
      * Returns a description of a state. If the output is the
      * empty string, it returns <code>MealyTransition.LAMBDA</code>
      * otherwise, it returns the output of the state. Called by
      * {@link edu.duke.cs.jflap.gui.viewer.MooreStateDrawer#drawState(Graphics, Automaton, State, Point, Color)}.
-     * 
+     *
      * @param state the state whose description we want
      * @return a description of the state
      */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.*;
  * if there are no transitions from one set to the other. Also, given a state,
  * the disjoint sets detector can return the set of states that are connected to
  * that state.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -44,7 +44,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Adds the states in the set <CODE>states</CODE> to the set of states
 	 * accounted for in the determination of the disjoint sets.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states to account for
 	 */
@@ -61,7 +61,7 @@ public class DisjointSetsDetector {
 	 * Returns true if <CODE>s1</CODE> and <CODE>s2</CODE> from <CODE>automaton</CODE>
 	 * are directly connected. (i.e. there is either a transition from <CODE>s1</CODE>
 	 * to <CODE>s2</CODE> or a transition from <CODE>s2</CODE> to <CODE>s1</CODE>.
-	 * 
+	 *
 	 * @param s1
 	 *            a state
 	 * @param s2
@@ -85,7 +85,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Returns a list of states in <CODE>automaton</CODE> that are connected
 	 * directly to <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @param automaton
@@ -107,7 +107,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Adds all contents of <CODE>toAdd</CODE> that are not in <CODE>set</CODE>
 	 * to <CODE>list</CODE>.
-	 * 
+	 *
 	 * @param toAdd
 	 *            a list of states
 	 * @param set
@@ -128,7 +128,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Returns a set containing all states in <CODE>automaton</CODE>,
 	 * including <CODE>state</CODE>, that are connected to <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @param automaton
@@ -158,7 +158,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Returns true if <CODE>state</CODE> has been accounted for in the
 	 * determination of disjoint sets
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 */
@@ -171,7 +171,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Returns true if all states in <CODE>automaton</CODE> have been
 	 * accounted for in the determination of disjoint sets.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return true if all states in <CODE>automaton</CODE> have been
@@ -186,7 +186,7 @@ public class DisjointSetsDetector {
 	/**
 	 * Returns a state in <CODE>automaton</CODE> that has not yet been
 	 * accounted for in the determination of disjoint sets.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return a state in <CODE>automaton</CODE> that has not yet been
@@ -203,7 +203,7 @@ public class DisjointSetsDetector {
 
 	/**
 	 * Returns an array of all the disjoint sets of states in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return an array of all the disjoint sets of states in <CODE>automaton</CODE>.

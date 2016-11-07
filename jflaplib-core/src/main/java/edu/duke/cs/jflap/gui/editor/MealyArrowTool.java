@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,9 +23,9 @@ package edu.duke.cs.jflap.gui.editor;
 import edu.duke.cs.jflap.gui.viewer.*;
 
 /**
- * This is a subclass of an <code>ArrowTool</code> for Mealy 
+ * This is a subclass of an <code>ArrowTool</code> for Mealy
  * machines that removes the "final state" checkbox in the
- * right-click popup menu. It is otherwise identical in every 
+ * right-click popup menu. It is otherwise identical in every
  * way.
  *
  * @see edu.duke.cs.jflap.automata.mealy.MealyMachine
@@ -33,11 +33,11 @@ import edu.duke.cs.jflap.gui.viewer.*;
  * @author Jinghui Lim
  *
  */
-public class MealyArrowTool extends ArrowTool 
+public class MealyArrowTool extends ArrowTool
 {
     /**
      * Instantiates a new arrow tool.
-     * 
+     *
      * @param view the view where the automaton is drawn
      * @param drawer the object that draws the automaton
      * @param creator the transition creator used for editing transitions
@@ -49,14 +49,14 @@ public class MealyArrowTool extends ArrowTool
 //        stateMenu.makeFinal.setEnabled(false);
         stateMenu.remove(stateMenu.makeFinal);
     }
-    
+
     /**
      * Instantiates a new arrow tool.
-     * 
+     *
      * @param view the view where the automaton is drawn
      * @param drawer the object that draws the automaton
-     */            
-    public MealyArrowTool(AutomatonPane view, AutomatonDrawer drawer) 
+     */
+    public MealyArrowTool(AutomatonPane view, AutomatonDrawer drawer)
     {
         super(view, drawer);
 //        stateMenu.makeFinal.setEnabled(false);

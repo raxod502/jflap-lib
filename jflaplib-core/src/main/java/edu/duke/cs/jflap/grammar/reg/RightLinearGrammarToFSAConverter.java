@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -43,7 +43,7 @@ import edu.duke.cs.jflap.automata.fsa.FSATransition;
  * Production rule in the grammar, you can call getTransitionForProduction and
  * add the returned transition to the fsa that you are building. Once you do
  * this for each production in the grammar, you will have the equivalent fsa.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -59,7 +59,7 @@ public class RightLinearGrammarToFSAConverter extends
 	/**
 	 * Returns the transition created by converting <CODE>production</CODE> to
 	 * its equivalent transition.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return the equivalent transition.
@@ -95,7 +95,7 @@ public class RightLinearGrammarToFSAConverter extends
 	 * of <CODE>grammar</CODE> to its equivalent automaton. This creates a
 	 * state for each variable in <CODE>grammar</CODE> and maps each created
 	 * state to the variable it was created for by calling mapStateToVariable.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar being converted.
 	 * @param automaton

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,16 +32,16 @@ import edu.duke.cs.jflap.automata.State;
  * A tool that handles the creation of transitions for the FSA to regular
  * expression conversion. This simply calls the appropriate <CODE>FSAToREController</CODE>
  * method.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController#transitionCreate
- * 
+ *
  * @author Thomas Finley
  */
 
 public class RegularTransitionTool extends TransitionTool {
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -58,7 +58,7 @@ public class RegularTransitionTool extends TransitionTool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

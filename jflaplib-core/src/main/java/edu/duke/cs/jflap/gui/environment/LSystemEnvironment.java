@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import java.io.Serializable;
  * up as a non-editable object (inherited from the grammar), what is passed into
  * the environment is a <CODE>LSystemInputPane</CODE> which is then used to
  * retrieve the current L-system.
- * 
+ *
  * Unlike, for example, the automaton environment, the <CODE>LSystem</CODE>
  * returned by the <CODE>.getObject</CODE> method will not point to the same
  * object throughout the environment's execution.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.lsystem.LSystem
  * @see edu.duke.cs.jflap.gui.lsystem.LSystemInputPane
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -47,7 +47,7 @@ public class LSystemEnvironment extends Environment {
 	/**
 	 * Instantiates a new <CODE>GrammarEnvironment</CODE> with the given
 	 * <CODE>GrammarInputPane</CODE>.
-	 * 
+	 *
 	 * @param input
 	 *            the <CODE>GrammarInputPane</CODE>
 	 */
@@ -65,7 +65,7 @@ public class LSystemEnvironment extends Environment {
 	 * Returns the L-system of this <CODE>LSystemEnvironment</CODE>, which is
 	 * retrieved from the <CODE>LSystemInputPane</CODE>'s <CODE>.getLSystem</CODE>
 	 * method.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.lsystem.LSystemInputPane#getLSystem
 	 * @return the <CODE>LSystem</CODE> for this environment
 	 */
@@ -75,7 +75,7 @@ public class LSystemEnvironment extends Environment {
 
 	/**
 	 * Returns the L-system.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.grammar.GrammarInputPane#getGrammar()
 	 * @return the <CODE>ContextFreeGrammar</CODE> for this environment
 	 */

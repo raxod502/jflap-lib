@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -60,14 +60,14 @@ import javax.swing.event.ListSelectionListener;
 
 /**
  * This is the pane where the removal of useless productions takes place.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class UselessPane extends JPanel {
 	/**
 	 * Instantiates a new useless production removing pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment this pane will belong to
 	 * @param grammar
@@ -149,7 +149,7 @@ public class UselessPane extends JPanel {
 
 	/**
 	 * Initializes a table for the grammar.
-	 * 
+	 *
 	 * @return a table to display the grammar
 	 */
 	private GrammarTable initGrammarTable() {

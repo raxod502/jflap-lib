@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -48,7 +48,7 @@ import java.awt.Point;
 /**
  * This is an abstract implementation of a transducer that has methods common to
  * all automaton transducers.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -57,7 +57,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/**
 	 * Returns an empty automaton of the correct type. This method is used by
 	 * {@link #fromDOM}.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document that is being read
 	 * @return an empty automaton
@@ -68,7 +68,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	 * Reads the states from the document and adds them to the automaton. Note
 	 * that in the event of error, the automaton may have been changed up until
 	 * the point where the error was encountered.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to read states from
 	 * @param automaton
@@ -112,7 +112,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 		// i2s = addBlocks(document, automaton, locatedStates, i2s);
 		return i2s;
 	}
-	
+
 	//Creates a state node
 	protected void createState(ArrayList stateNodes, Map i2sn,
 			Automaton automaton, Set locatedStates, Map i2s, boolean isBlock,
@@ -185,7 +185,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
                             id.intValue());
                 }
                 else{
-                     state = ((TuringMachine) automaton).createTMStateWithID(p, id.intValue());   
+                     state = ((TuringMachine) automaton).createTMStateWithID(p, id.intValue());
                 }
 			}
 			if (hasLocation && locatedStates != null)
@@ -194,7 +194,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 			String name = ((Element) stateNode).getAttribute(STATE_NAME_NAME);
 			if(name.equals("")) state.setName("q"+id.intValue());
             else state.setName(name);
-             
+
 			// Add various attributes.
 			if (e2t.containsKey(STATE_NAME_NAME))
 				state.setName((String) e2t.get(STATE_NAME_NAME));
@@ -245,7 +245,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/**
 	 * Used by the {@link #readTransitions}method. This should be overridden by
 	 * subclasses.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -264,7 +264,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	 * Reads the transitions from the document and adds them to the automaton.
 	 * Note that in the event of error, the automaton may have been changed up
 	 * until the point where the error was encountered.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to read transitions from
 	 * @param automaton
@@ -288,7 +288,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 				tNodes.add(allNodes.item(k));
 			}
 		}
-		
+
 		// Create the transitions.
 		for (int i = 0; i < tNodes.size(); i++) {
 			Node tNode = (Node) tNodes.get(i);
@@ -338,7 +338,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/**
 	 * Used to map a string means to encode a state ID to some unique identifier
 	 * object.
-	 * 
+	 *
 	 * @param string
 	 *            a string that encodes a state ID
 	 * @return an object that is unique for this state
@@ -358,7 +358,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	 * Perform graph layout on the automaton if necessary. This is performed for
 	 * those XML files with states that do not have their x and y tags
 	 * specified.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to lay out
 	 * @param locStates
@@ -388,7 +388,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/**
 	 * Given a document, this will return the corresponding automaton encoded in
 	 * the DOM document.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to convert
 	 * @return the {@link edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton}instance
@@ -400,8 +400,8 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
         .getElementsByTagName(AUTOMATON_NAME).item(0);
         if(parent == null) parent = document.getDocumentElement();
         return readAutomaton(parent, document);
-      
-        
+
+
 	}
 
 	public java.io.Serializable readAutomaton(Node parent, Document document) {
@@ -433,7 +433,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 			Node noteNode = (Node) noteNodes.get(i);
 			if (noteNode.getNodeType() != Node.ELEMENT_NODE)
 				continue;
-			
+
 			Map e2t = elementsToText(noteNode);
 
 			java.awt.Point p = new java.awt.Point();
@@ -441,7 +441,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
             Object obj = (e2t).get(NOTE_TEXT_NAME);
             if(obj == null) continue;
 			String textString = obj.toString();
-			
+
 			// Try to get the X coord.
 			double x = 0, y = 0;
 			try {
@@ -464,12 +464,12 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 						+ " could not be read for the note with text " + textString + ".");
 			}
 			p.setLocation(x, y);
-			
-			
+
+
 			root.addNote(new Note(p, textString));
 		}
-		
-		
+
+
 	}
 
 	/**
@@ -485,7 +485,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 
 	/**
 	 * Produces a DOM element that encodes a given state.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the state in
 	 * @param state
@@ -541,7 +541,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	 * elements inserted. The intention is that subclasses will use this to get
 	 * the minimal transition element, and fill in whatever else is required
 	 * themselves.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the state in
 	 * @param transition
@@ -630,7 +630,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/**
 	 * Given a JFLAP automaton, this will return the corresponding DOM encoding
 	 * of the structure.
-	 * 
+	 *
 	 * @param structure
 	 *            the JFLAP automaton to encode
 	 * @return a DOM document instance
@@ -667,13 +667,13 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 			se.appendChild(createTransitionElement(doc, transitions[i]));
 
 
-        
+
 		// Add the Automatons the blocks refer to as sub elements of the
 		// structure element.
-        
+
         //only really need an internal name and a full TuringMachine
         //MERLIN MERLIN MERLIN MERLIN MERLIN//
-        if (auto instanceof TuringMachine){ //there should not be building blocks in non-Turing Machines 
+        if (auto instanceof TuringMachine){ //there should not be building blocks in non-Turing Machines
             Map references = ((TuringMachine)auto).getBlockMap();
             Iterator refer = references.keySet().iterator();
             if (refer.hasNext())
@@ -687,12 +687,12 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
                 }
             }
         }
-		
+
 		//Add the sticky notes at the very end
 		ArrayList notes = auto.getNotes();
 		for(int k = 0; k < notes.size(); k++){
 			se.appendChild(createNoteElement(doc, (Note)notes.get(k)));
-			
+
 		}
 		return se;
 	}
@@ -771,7 +771,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 
 	/** The comment for the list of transitions. */
 	private static final String COMMENT_TRANSITIONS = "The list of transitions.";
-	
+
 
 	/** The tag name for the individual note elements. */
 	public static final String NOTE_NAME = "note";
@@ -779,7 +779,7 @@ public abstract class AutomatonTransducer extends AbstractTransducer {
 	/** The tag name for the text of the note elements. */
 	public static final String NOTE_TEXT_NAME = "text";
 
-	
+
 	/**The tag name for the block transition */
 	private static final String IS_BLOCK = "block";
 }

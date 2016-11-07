@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import org.w3c.dom.*;
  * text tags are inserted every so often to create at most one element per line,
  * where everything is properly indented, just as one would see in an XML
  * document formated by hand.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class DOMPrettier {
 	/**
 	 * Recursive private helper method that inserts indenting text nodes.
-	 * 
+	 *
 	 * @param dom
 	 *            the DOM document
 	 * @param indent
@@ -71,7 +71,7 @@ public class DOMPrettier {
 	/**
 	 * Pretty-fies a DOM by inserting whitespace text nodes at appropriate
 	 * places. This modifies the DOM itself.
-	 * 
+	 *
 	 * @param dom
 	 *            the DOM document to make pretty
 	 */

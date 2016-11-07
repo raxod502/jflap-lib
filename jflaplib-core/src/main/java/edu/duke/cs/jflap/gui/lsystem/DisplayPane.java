@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -49,14 +49,14 @@ import javax.swing.event.ChangeListener;
 
 /**
  * The L-system display pane has the interface to display an L-system.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class DisplayPane extends JPanel {
 	/**
 	 * Implements a display pane.
-	 * 
+	 *
 	 * @param lsystem
 	 *            the L-system to display
 	 */
@@ -86,7 +86,7 @@ public class DisplayPane extends JPanel {
 		pitchModel.addChangeListener(c);
 		rollModel.addChangeListener(c);
 		yawModel.addChangeListener(c);
-		
+
 		// Lay out the component.
 		JPanel topPanel = new JPanel(new BorderLayout());
 		topPanel.add(spinner, BorderLayout.EAST);
@@ -161,7 +161,7 @@ public class DisplayPane extends JPanel {
 
 	/**
 	 * Prints the current displayed L-system.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics interface for the printer device
 	 */
@@ -182,7 +182,7 @@ public class DisplayPane extends JPanel {
 
 	/**
 	 * Children are not painted here.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint to
 	 */

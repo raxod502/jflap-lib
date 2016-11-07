@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import edu.duke.cs.jflap.automata.graph.Graph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 
 /**
- * This class contains a few simple vertex movement options that do not individually need a 
+ * This class contains a few simple vertex movement options that do not individually need a
  * separate class.
  */
 public class VertexMover extends LayoutAlgorithm {
@@ -62,40 +62,40 @@ public class VertexMover extends LayoutAlgorithm {
 	 * Represents which of the commands this class will process.
 	 */
 	private int command;
-	
+
 	/**
 	 * Assigns some default values.  To have different values, use the other constructor.
 	 */
 	public VertexMover(int c) {
 		super();
-		command = c;	
+		command = c;
 	}
-	
+
 	/**
 	 * Constructor allowing the user to customize certain values.
-	 * 
-	 * @param pSize 
+	 *
+	 * @param pSize
 	 *     value for <code>size</code>.
-	 * @param vDim 
+	 * @param vDim
 	 *     value for <code>vertexDim</code>.
-	 * @param vBuffer 
+	 * @param vBuffer
 	 *     value for <code>vertexBuffer</code>.
 	 */
 	public VertexMover(Dimension pSize, Dimension vDim, double vBuffer, int c) {
 		super(pSize, vDim, vBuffer);
-		command = c;	
-	}	
-	
-	public void layout(Graph graph, Set notMoving) {  
+		command = c;
+	}
+
+	public void layout(Graph graph, Set notMoving) {
 		ArrayList vertices = getMovableVertices(graph, notMoving);
-		
+
 		//Check whether to fill the screen first, because other commands will call the other
 		//shiftOntoScreen method.
 		if (command == FILL) {
 			shiftOntoScreen(graph, size, vertexDim, false);
 			return;
 		}
-		
+
 		Point2D point;
 		//Reflecting across the given line
 		if (command == HORIZONTAL_CENTER)
@@ -118,7 +118,7 @@ public class VertexMover extends LayoutAlgorithm {
 				point = graph.pointForVertex(vertices.get(i));
 				graph.moveVertex(vertices.get(i), new Point2D.Double(
 					size.getWidth() - point.getY(), size.getHeight() - point.getX()));
-			}		
+			}
 		//Rotating the graph
 		else if (command == ROTATE) {
 			double theta = 0;
@@ -128,7 +128,7 @@ public class VertexMover extends LayoutAlgorithm {
 					"(positive - clockwise, negative - counterclockwise)", new String("180"));
 				theta = Double.parseDouble(input);
 			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(null, "That is not a valid degree value.", 
+				JOptionPane.showMessageDialog(null, "That is not a valid degree value.",
 					"Invalid Input", JOptionPane.ERROR_MESSAGE);
 				return;
 			} catch (NullPointerException e) {
@@ -137,8 +137,8 @@ public class VertexMover extends LayoutAlgorithm {
 			cartesianToPolar(graph, vertices);
 
 			for (int i=0; i<vertices.size(); i++) {
-				point = graph.pointForVertex(vertices.get(i));				
-				graph.moveVertex(vertices.get(i), 
+				point = graph.pointForVertex(vertices.get(i));
+				graph.moveVertex(vertices.get(i),
 					new Point2D.Double(point.getX(), point.getY() + theta / -180 * Math.PI));
 			}
 			polarToCartesian(graph, vertices);

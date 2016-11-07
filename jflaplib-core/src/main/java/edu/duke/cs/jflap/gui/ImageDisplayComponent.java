@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import javax.swing.*;
 /**
  * The <CODE>ImageDisplayComponent</CODE> is a single component that displays
  * an image within itself, and sets its size to match that of the image.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Instantiates a new <CODE>ImageDisplayComponent</CODE>.
-	 * 
+	 *
 	 * @param image
 	 *            the new image for this component
 	 */
@@ -52,7 +52,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Instantiates a new <CODE>ImageDisplayComponent</CODE>.
-	 * 
+	 *
 	 * @param url
 	 *            the new image for this component
 	 */
@@ -62,7 +62,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Instantiates a new <CODE>ImageDisplayComponent</CODE>.
-	 * 
+	 *
 	 * @param filename
 	 *            the path where to find the new image for this component
 	 */
@@ -72,7 +72,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Returns the image associated with this component.
-	 * 
+	 *
 	 * @return the image associated with this component
 	 */
 	public Image getImage() {
@@ -81,7 +81,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Sets the image associated with this component.
-	 * 
+	 *
 	 * @param image
 	 *            the new image for this component
 	 * @param origin
@@ -98,7 +98,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 	/**
 	 * Sets the image associated with this component, with (0,0) set as the
 	 * origin.
-	 * 
+	 *
 	 * @param image
 	 *            the new image for this component
 	 */
@@ -108,7 +108,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Returns an untracked unloaded base image based on a path name.
-	 * 
+	 *
 	 * @param path
 	 *            the path name
 	 */
@@ -118,7 +118,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Returns an untracked unloaded base image based on a URL.
-	 * 
+	 *
 	 * @param url
 	 *            the url for the image
 	 */
@@ -128,7 +128,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * When this method returns, the image is sure to be fully loaded.
-	 * 
+	 *
 	 * @param image
 	 *            the image to make sure is loaded
 	 * @return <TT>true</TT> if the tracking succeeded, <TT>false</TT> if it
@@ -162,7 +162,7 @@ public class ImageDisplayComponent extends JComponent implements Scrollable {
 
 	/**
 	 * Paints this component.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint upon
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import java.util.*;
  * The <CODE>Trees</CODE> class contains method for doing basic calculations
  * with trees. Many of the operations assume that the <CODE>TreeModel</CODE>
  * holds <CODE>TreeNode</CODE> objects.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class Trees {
 
 	/**
 	 * Returns an array containing the children of a treenode.
-	 * 
+	 *
 	 * @param node
 	 *            the treenode to return the children for
 	 * @return an array containing the children in the order retrieved from the
@@ -60,7 +60,7 @@ public class Trees {
 	/**
 	 * Exhaustively calculates the "widths" of levels of the tree. The width of
 	 * the level is defined as the number of nodes with that particular depth.
-	 * 
+	 *
 	 * @return the widths of the tree, where the array returned is of length
 	 *         <CODE>depth()+1</CODE>, and index 0 is always 1 (since only
 	 *         the root can be at level 0).
@@ -75,7 +75,7 @@ public class Trees {
 	/**
 	 * Helper function for width. This visits each node, and for its depth adds
 	 * one to its depth field.
-	 * 
+	 *
 	 * @param node
 	 *            the node that we are currently visiting
 	 * @param depth
@@ -94,7 +94,7 @@ public class Trees {
 
 	/**
 	 * Exhaustively calculates the depth of the tree.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree to get the depth of
 	 * @return the maximum distance from a leaf to the root
@@ -105,7 +105,7 @@ public class Trees {
 
 	/**
 	 * Returns the depth of a subtree rooted at the indicated node.
-	 * 
+	 *
 	 * @param node
 	 *            a node in the tree
 	 * @return the depth of the subtree rooted at this node, e.g. 0 if this node
@@ -121,7 +121,7 @@ public class Trees {
 
 	/**
 	 * Returns an array containing all the leaves of a tree.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree to get leaves of
 	 * @return an array with the leaves of the tree
@@ -133,7 +133,7 @@ public class Trees {
 	/**
 	 * Returns an array containing all the leaves of a subtree rooted at the
 	 * indicated node.
-	 * 
+	 *
 	 * @param node
 	 *            the node in the tree
 	 * @return an array of all children in the tree

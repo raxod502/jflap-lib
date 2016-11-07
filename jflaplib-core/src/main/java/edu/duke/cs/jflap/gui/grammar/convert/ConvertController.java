@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,19 +35,19 @@ import java.util.*;
  * grammar and the automaton being built, as well as their respective views. It
  * intervenes as necessary, and as it is a controller object moderates between
  * the views, and the automaton and grammar.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.Grammar
  * @see automaton.Automaton
  * @see edu.duke.cs.jflap.gui.grammar.GrammarView
  * @see edu.duke.cs.jflap.gui.viewer.SelectionDrawer
- * 
+ *
  * @author Thomas Finley
  */
 
 class ConvertController {
 	/**
 	 * Instantiates a <CODE>ConvertController</CODE> object.
-	 * 
+	 *
 	 * @param grammarView
 	 *            the grammar view
 	 * @param drawer
@@ -74,7 +74,7 @@ class ConvertController {
 
 	/**
 	 * Returns a map containing the inverse of the passed in map.
-	 * 
+	 *
 	 * @param map
 	 *            the map, which should be one to one
 	 * @return the inverse of the passed in map, or <CODE>null</CODE> if an
@@ -163,7 +163,7 @@ class ConvertController {
 
 	/**
 	 * Displays and returns if the automaton is done yet.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the automaton is done, <CODE>false</CODE>
 	 *         if it is not
 	 */

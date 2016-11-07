@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import edu.duke.cs.jflap.grammar.ProductionChecker;
 /**
  * This <CODE>RightLinearGrammar</CODE> is a regular grammar with the
  * additional restriction that the grammar cannot be a left linear grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -34,7 +34,7 @@ public class RightLinearGrammar extends RegularGrammar {
 	/**
 	 * The production checker makes sure that the production added is a proper
 	 * right linear production.
-	 * 
+	 *
 	 * @param production
 	 *            the production to check
 	 * @throws IllegalArgumentException

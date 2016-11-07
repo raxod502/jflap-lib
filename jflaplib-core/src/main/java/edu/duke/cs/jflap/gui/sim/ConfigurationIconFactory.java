@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import edu.duke.cs.jflap.automata.turing.TMConfiguration;
 /**
  * This is a configuration icon factory. Given a configuration, it returns the
  * appropriate icon.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -36,7 +36,7 @@ public class ConfigurationIconFactory {
 	/**
 	 * Returns an instance of an appropriate subclass of the configuration icon
 	 * for this sort of configuration.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration to return the icon for
 	 * @return some instance of a subclass of <CODE>ConfigurationIcon</CODE>,

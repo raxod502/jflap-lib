@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import javax.swing.filechooser.FileFilter;
 /**
  * The <CODE>SaveGraphBMPAction</CODE> is an action to save the graph in window
  * to a BMP image file always using a dialog box.
- * 
+ *
  * @author Jonathan Su, Henry Qin
  */
 
@@ -40,10 +40,10 @@ public class SaveGraphBMPAction extends RestrictedAction{
 	/** The environment that this save action gets it's object from. */
 	protected Environment environment;
 	protected JMenu myMenu;
-	
+
 	/**
 	 * Instantiates a new <CODE>SaveGraphBMPAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that holds the action
 	 * @param menu
@@ -57,7 +57,7 @@ public class SaveGraphBMPAction extends RestrictedAction{
 
 	/**
 	 * Displays JFileChooser for location to save the graph canvas as bmp image.
-	 * 
+	 *
 	 * @param arg0
 	 *            the action event
 	 */
@@ -66,11 +66,11 @@ public class SaveGraphBMPAction extends RestrictedAction{
 
                JComponent c=(JComponent)environment.getActive();
 
-               SaveGraphUtility.saveGraph(apane, c,"BMP files", "bmp"); 
+               SaveGraphUtility.saveGraph(apane, c,"BMP files", "bmp");
 
 
-		
-	}  
+
+	}
 }
 class BMPFileFilter extends FileFilter{
     public boolean accept(File f){

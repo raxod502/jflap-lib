@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,19 +28,19 @@ import java.awt.event.ActionEvent;
  * that, whenever an action is received, determines what should be displayed
  * based on the currently active pane in the environment. Basically, it simply
  * calls <CODE>HelpAction.displayHelp</CODE> on <CODE>Environment.getActive</CODE>.
- * 
+ *
  * Any components in an environment that wish to have help should register
  * themselves, or preferably their <CODE>Class</CODE> objects (so that it only
  * happens once), with whatever particular webpage they wish to display whenever
  * help is activated.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EnvironmentHelpAction extends HelpAction {
 	/**
 	 * Instantiates an <CODE>EnvironmentHelpAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that this help action will get the current
 	 *            panel from
@@ -51,7 +51,7 @@ public class EnvironmentHelpAction extends HelpAction {
 
 	/**
 	 * Displays help according to the current display of the automaton.
-	 * 
+	 *
 	 * @param event
 	 *            the action event
 	 */

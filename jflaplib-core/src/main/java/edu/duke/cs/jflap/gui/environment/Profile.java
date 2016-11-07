@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -54,7 +54,7 @@ public class Profile {
 	public String epsilonText = "u03B5";
 	private String emptyString = lambda;
 	public int undo_num = 50;
-	
+
 	/** The tag bane for the empty string preference. */
 	public String EMPTY_STRING_NAME = "empty_string";
 
@@ -63,10 +63,10 @@ public class Profile {
 
 	/** The tag name for the type of structure this is. */
 	public static final String STRUCTURE_TYPE_NAME = "type";
-	
+
 	/** The tag name for the out from final state preference. */
 	public static final String TURING_FINAL_NAME = "turing_final";
-	
+
 	/** The tag name for the Undo amount preference. */
 	public static final String UNDO_AMOUNT_NAME = "undo_amount";
 
@@ -83,7 +83,7 @@ public class Profile {
 	/**
 	 * Determines whether transitions can be issued from the final
 	 * state of a Turing machine.
-	 * 
+	 *
 	 * @author Chris Morgan
 	 */
 	private boolean transTuringFinal;
@@ -97,19 +97,19 @@ public class Profile {
 	/**
 	 * A JCheckBoxMenuItem that displays and allows one to change transTuringFinal.
 	 */
-	private JCheckBoxMenuItem transTuringFinalCheckBox; 
+	private JCheckBoxMenuItem transTuringFinalCheckBox;
 
-	private JCheckBoxMenuItem turingAcceptByFinalStateCheckBox; 
-	private JCheckBoxMenuItem turingAcceptByHaltingCheckBox; 
-	private JCheckBoxMenuItem turingAllowStayCheckBox; 
+	private JCheckBoxMenuItem turingAcceptByFinalStateCheckBox;
+	private JCheckBoxMenuItem turingAcceptByHaltingCheckBox;
+	private JCheckBoxMenuItem turingAllowStayCheckBox;
 
-	
-	public String pathToFile = "";		
-	
+
+	public String pathToFile = "";
+
     public void setNumUndo(int nn){
     	undo_num = nn;
     }
-	
+
 	public Profile(){
 		emptyString = lambda;
 		transTuringFinal = false;
@@ -135,8 +135,8 @@ public class Profile {
         });
 
         turingAcceptByHalting = false; //defaults to false, since it was not in previous JFLAP
-        turingAcceptByHaltingCheckBox = new JCheckBoxMenuItem("Accept by Halting"); 
-        turingAcceptByHaltingCheckBox.setSelected(turingAcceptByHalting); 
+        turingAcceptByHaltingCheckBox = new JCheckBoxMenuItem("Accept by Halting");
+        turingAcceptByHaltingCheckBox.setSelected(turingAcceptByHalting);
 		turingAcceptByHaltingCheckBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
@@ -146,7 +146,7 @@ public class Profile {
         });
 
         turingAllowStay = false; //defaults to false temporarily since that's how it was before
-        turingAllowStayCheckBox = new JCheckBoxMenuItem("Allow stay for tape head on transition"); 
+        turingAllowStayCheckBox = new JCheckBoxMenuItem("Allow stay for tape head on transition");
         turingAllowStayCheckBox.setSelected(turingAllowStay);
 		turingAllowStayCheckBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
@@ -158,38 +158,38 @@ public class Profile {
 
 
 	}
-	
+
 	/**
 	 * Sets the empty string.
-	 * 
+	 *
 	 * @param empty the empty string
 	 */
 	public void setEmptyString(String empty){
 		emptyString = empty;
 	}
-	
+
 	/**
 	 * Returns the empty string.
-	 * 
+	 *
 	 * @return the empty string
 	 */
 	public String getEmptyString(){
 		return emptyString;
 	}
-	
+
 	/**
 	 * Sets whether transitions leading from Turing machine final states are allowed.
-	 * 
+	 *
 	 * @param t whether the transitions are allowed
 	 */
 	public void setTransitionsFromTuringFinalStateAllowed(boolean t) {
 		transTuringFinal = t;
 		transTuringFinalCheckBox.setSelected(t);
 	}
-	
+
 	/**
 	 * Sets whether Turing machines will accept by final state.
-	 * 
+	 *
 	 * @param t yes or no
 	 */
 	public void setAcceptByFinalState(boolean t) {
@@ -198,7 +198,7 @@ public class Profile {
 	}
 	/**
 	 * Sets whether Turing machines will accept by halting.
-	 * 
+	 *
 	 * @param t yes or no
 	 */
 	public void setAcceptByHalting(boolean t) {
@@ -208,7 +208,7 @@ public class Profile {
 
 	/**
 	 * Sets whether Turing machines will accept by halting.
-	 * 
+	 *
 	 * @param t yes or no
 	 */
 	public void setAllowStay(boolean t) {
@@ -219,13 +219,13 @@ public class Profile {
 
 	/**
 	 * Returns whether transitions from Turing machine final states are allowed.
-	 * 
+	 *
 	 * @return whether the transitions are allowed from final states
 	 */
 	public boolean transitionsFromTuringFinalStateAllowed() {
 		return transTuringFinal;
 	}
-	
+
     public boolean getAcceptByFinalState(){
         return turingAcceptByFinalState;
     }
@@ -259,13 +259,13 @@ public class Profile {
 		String empty = "";
 		if(emptyString.equals(lambda)) empty = lambdaText;
 	    else if(emptyString.equals(epsilon)) empty = epsilonText;
-		
+
 		DocumentBuilderFactory factory = DocumentBuilderFactory
 		.newInstance();
 		DocumentBuilder builder;
 		try {
 			File file = new File(pathToFile);
-			
+
 			builder = factory.newDocumentBuilder();
 			Document doc = builder.newDocument();
 			doc.appendChild(doc.createComment("Created with JFLAP "
@@ -274,7 +274,7 @@ public class Profile {
 			Element structureElement = createElement(doc, STRUCTURE_NAME, null,
 					null);
 			doc.appendChild(structureElement);
-			Element se = doc.getDocumentElement();		
+			Element se = doc.getDocumentElement();
 			Element element = createElement(doc, EMPTY_STRING_NAME, null, ""+empty);
 			se.appendChild(element);
 			element = createElement(doc, TURING_FINAL_NAME, null, ""+transTuringFinal);
@@ -287,7 +287,7 @@ public class Profile {
 			se.appendChild(element);
 			element = createElement(doc, ALLOW_STAY, null, "" + turingAllowStay);
 			se.appendChild(element);
-			
+
 			DOMPrettier.makePretty(doc);
 			Source s = new DOMSource(doc);
 			Result r = new StreamResult(file);
@@ -307,19 +307,19 @@ public class Profile {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			
-			
+
+
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
+
 	protected static Element createElement(Document document, String tagname,
 			Map attributes, String text) {
 		// Create the new element.
 		Element element = document.createElement(tagname);
-		
+
 		// Add the text element.
 		if (text != null)
 			element.appendChild(document.createTextNode(text));

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,14 +25,14 @@ import java.util.EventListener;
 /**
  * The expression change listener should be implemented by objects that wish to
  * be notified when a regular expression changes.
- * 
+ *
  * @author Thomas Finley
  */
 
 public interface ExpressionChangeListener extends EventListener {
 	/**
 	 * This method is called when a regular expression changes.
-	 * 
+	 *
 	 * @param event
 	 *            the event object that was changed
 	 */

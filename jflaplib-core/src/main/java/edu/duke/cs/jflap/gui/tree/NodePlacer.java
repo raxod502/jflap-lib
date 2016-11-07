@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * A <CODE>NodePlacer</CODE> object is used to assign locations to nodes in a
  * tree.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public interface NodePlacer {
 	 * ([0,1],[0,1]), where (0,0) is the upper left corner and (1,0) the upper
 	 * right. A node placer may optionally not place an entry for each node if a
 	 * particular node should not be drawn.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree model
 	 * @param drawer

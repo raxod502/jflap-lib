@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import java.awt.event.ActionEvent;
 
 /**
  * Action for User Controlling Parsing
- * 
+ *
  * @author Kyung Min (Jason) Lee
  *
  */
@@ -44,10 +44,10 @@ public class UserControlParseAction extends GrammarAction {
 
 	/** The frame for the grammar environment. */
 	private EnvironmentFrame frame;
-	
+
 	/**
 	 * Instantiates a new <CODE>BruteParseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

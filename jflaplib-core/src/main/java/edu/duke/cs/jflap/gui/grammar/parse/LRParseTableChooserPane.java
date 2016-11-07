@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import javax.swing.table.*;
  * This is a regular LR parse table pane, except with the added ability that it
  * can shift into a mode where those elements which represent different elements
  * of the table are selectable.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LRParseTableChooserPane extends LRParseTablePane {
 	/**
 	 * Instantiates a new parse table pane.
-	 * 
+	 *
 	 * @param table
 	 *            the table model
 	 */
@@ -67,7 +67,7 @@ public class LRParseTableChooserPane extends LRParseTablePane {
 
 	/**
 	 * Returns if a cell is editable.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -83,7 +83,7 @@ public class LRParseTableChooserPane extends LRParseTablePane {
 
 	/**
 	 * Returns a renderer for a table cell.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -100,7 +100,7 @@ public class LRParseTableChooserPane extends LRParseTablePane {
 
 	/**
 	 * Returns the editor for a table cell.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column

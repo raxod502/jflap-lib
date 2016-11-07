@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,7 +40,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * createStatesForConversion method. Then you can call the
  * getTransitionsForProduction method for each production in the grammar and add
  * them to your automaton.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -61,7 +61,7 @@ public abstract class GrammarToAutomatonConverter {
 
 	/**
 	 * Returns the State object mapped to <CODE>variable</CODE>
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @return the State object mapped to <CODE>variable</CODE>
@@ -72,7 +72,7 @@ public abstract class GrammarToAutomatonConverter {
 
 	/**
 	 * Maps <CODE>state</CODE> to <CODE>variable</CODE>
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @param variable
@@ -85,7 +85,7 @@ public abstract class GrammarToAutomatonConverter {
 	/**
 	 * Returns the transition created by converting <CODE>production</CODE> to
 	 * its equivalent transition.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return the equivalent transition.
@@ -95,7 +95,7 @@ public abstract class GrammarToAutomatonConverter {
 	/**
 	 * Returns an automaton that is equivalent to <CODE>grammar</CODE> in that
 	 * they will accept the same language.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return an automaton that is equivalent to <CODE>grammar</CODE> in that
@@ -123,7 +123,7 @@ public abstract class GrammarToAutomatonConverter {
 	 * of <CODE>grammar</CODE> to its equivalent automaton. This creates a
 	 * state for each variable in <CODE>grammar</CODE> and maps each created
 	 * state to the variable it was created for by calling mapStateToVariable.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar being converted.
 	 * @param automaton

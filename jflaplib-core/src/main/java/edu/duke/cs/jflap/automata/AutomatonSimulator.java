@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import java.util.*;
  * takes an automaton object and an input string and runs the machine on the
  * given input. This is the root class for the simulators of all forms of
  * automata, including FSA, PDA, and Turing machines.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -44,7 +44,7 @@ public abstract class AutomatonSimulator {
 	 * Returns an array of Configuration objects that represent the possible
 	 * initial configuration of the automaton, before any input has been
 	 * processed.
-	 * 
+	 *
 	 * @param input
 	 *            the input string.
 	 */
@@ -53,7 +53,7 @@ public abstract class AutomatonSimulator {
 	/**
 	 * Simulates one step for a particular configuration, adding all possible
 	 * configurations reachable in one step to set of possible configurations.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to simulate the one step on
 	 * @param blockStep
@@ -64,7 +64,7 @@ public abstract class AutomatonSimulator {
 	 * Returns true if the simulation of the input string on the automaton left
 	 * the machine in an accept state (the criteria for "accept" is defined
 	 * differently for the different automata).
-	 * 
+	 *
 	 * @return true if the simulation of the input string on the automaton left
 	 *         the machine in an "accept" state.
 	 */
@@ -72,13 +72,13 @@ public abstract class AutomatonSimulator {
 
 	/**
 	 * Runs the automaton on the input string.
-	 * 
+	 *
 	 * @param input
 	 *            the input string to be run on the automaton
 	 * @return true if the automaton accepts the input
 	 */
 	public abstract boolean simulateInput(String input);
-	
+
 	/**The default constructor */
 	public Automaton getAutomaton() {
 		return myAutomaton;

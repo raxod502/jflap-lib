@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,9 +33,9 @@ import javax.swing.JComponent;
 /**
  * The <CODE>TreePanel</CODE> is a graphical component that draws a tree using
  * a <CODE>TreeDrawer</CODE> object.
- * 
+ *
  * @see javax.swing.tree.TreeModel
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -43,7 +43,7 @@ public class TreePanel extends JComponent {
 	/**
 	 * Instantiates a <CODE>TreePanel</CODE> to draws the specified tree with
 	 * a default <CODE>TreeDrawer</CODE> object.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree to draw
 	 */
@@ -54,7 +54,7 @@ public class TreePanel extends JComponent {
 	/**
 	 * Instantiates a <CODE>TreePanel</CODE> to draws a tree with a given
 	 * <CODE>TreeDrawer</CODE>.
-	 * 
+	 *
 	 * @param drawer
 	 *            the tree drawer to draw a tree with
 	 */
@@ -64,7 +64,7 @@ public class TreePanel extends JComponent {
 
 	/**
 	 * Returns the <CODE>TreeDrawer</CODE> for this treepanel.
-	 * 
+	 *
 	 * @return the <CODE>TreeDrawer</CODE> for this treepanel
 	 */
 	public TreeDrawer getTreeDrawer() {
@@ -73,7 +73,7 @@ public class TreePanel extends JComponent {
 
 	/**
 	 * Sets a new <CODE>TreeDrawer</CODE> for this treepanel.
-	 * 
+	 *
 	 * @param drawer
 	 *            the new treedrawer
 	 */
@@ -84,7 +84,7 @@ public class TreePanel extends JComponent {
 
 	/**
 	 * Paints the component.
-	 * 
+	 *
 	 * @param gr
 	 *            the graphics object to draw on
 	 */
@@ -102,7 +102,7 @@ public class TreePanel extends JComponent {
 
 	/**
 	 * Prints the component.
-	 * 
+	 *
 	 * @param gr
 	 *            the graphics interface for the printer device
 	 */
@@ -115,7 +115,7 @@ public class TreePanel extends JComponent {
 
 	/**
 	 * Returns the node at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check for nodeness
 	 * @return the treenode at a particular point, or <CODE>null</CODE> if

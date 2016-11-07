@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.io.Serializable;
 /**
  * A tape for a Turing machine. The tape head can move across the tape, reading
  * and writing individual characters.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -40,7 +40,7 @@ public class Tape implements Serializable {
 	/**
 	 * Instantiates a tape object with the tape head pointing to the first
 	 * character of <CODE>input</CODE>.
-	 * 
+	 *
 	 * @param input
 	 *            the input string to write to the tape
 	 */
@@ -54,7 +54,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Instantiates a tape that is a copy of a given tape.
-	 * 
+	 *
 	 * @param tape
 	 *            the tape to copy
 	 */
@@ -66,7 +66,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Writes <CODE>character</CODE> to the tape.
-	 * 
+	 *
 	 * @param character
 	 *            the character to write to the tape.
 	 */
@@ -78,7 +78,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Writes <CODE>symbol</CODE> to the tape.
-	 * 
+	 *
 	 * @param symbol
 	 *            the symbol to write to the tape.
 	 */
@@ -90,7 +90,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Returns the character pointed to by the tape head.
-	 * 
+	 *
 	 * @return the character pointed to by the tape head.
 	 */
 	public char readChar() {
@@ -101,7 +101,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Returns the character pointed to by the tape head in a string.
-	 * 
+	 *
 	 * @return a string representation of the character pointed to by the tape
 	 *         head.
 	 */
@@ -113,7 +113,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Moves the tape head in <CODE>direction</CODE>.
-	 * 
+	 *
 	 * @param direction
 	 *            the direction to move the tape head.
 	 * @throws IllegalArgumentException
@@ -166,7 +166,7 @@ public class Tape implements Serializable {
 	/**
 	 * Returns the contents of the tape, from tape index 0 till the end of the
 	 * tape.
-	 * 
+	 *
 	 * @return the contents of the tape as a string
 	 */
 	public String getContents() {
@@ -179,7 +179,7 @@ public class Tape implements Serializable {
 	 * all symbols to the right of the tape head in order until a blank is
 	 * encountered. In the event that the tape head is on a blank the empty
 	 * string is returned.
-	 * 
+	 *
 	 * @return the output of the tape
 	 */
 	public String getOutput() {
@@ -192,7 +192,7 @@ public class Tape implements Serializable {
 	/**
 	 * Returns the index in the buffer that the tape head is currently pointing
 	 * to.
-	 * 
+	 *
 	 * @return the index in the buffer that the tape head is currently pointing
 	 *         to.
 	 */
@@ -202,7 +202,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Returns a string representation of the tape object.
-	 * 
+	 *
 	 * @return a string representation of the tape object.
 	 */
 	public String toString() {
@@ -213,7 +213,7 @@ public class Tape implements Serializable {
 	 * Retrieves the "non-trivial" section of the tape. What is meant by
 	 * non-trivial is the section of tape modulo a prefix and suffix of blank
 	 * tape symbols.
-	 * 
+	 *
 	 * @param section
 	 *            an array of two intergers, which will hold, when finished, the
 	 *            index of the first non-blank character in the first entry, and
@@ -237,7 +237,7 @@ public class Tape implements Serializable {
 	 * Compares two tapes for equality. Two tapes are equal if they contain the
 	 * same characters and are at the same position in the tape, modulo a prefix
 	 * of some blank characters.
-	 * 
+	 *
 	 * @param tape
 	 *            the tape to compare against for equality
 	 * @return <CODE>true</CODE> if the tapes are equal, <CODE>false</CODE>
@@ -274,7 +274,7 @@ public class Tape implements Serializable {
 
 	/**
 	 * Returns a hash code for this tape.
-	 * 
+	 *
 	 * @return a hash code for this tape
 	 */
 	public int hashCode() {

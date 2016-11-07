@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -43,7 +43,7 @@ public class CYKTester {
 		productions[7]=new Production("S","SS");
 		productions[8]=new Production("S","b");
 		productions[9]=new Production("B","CC");
-		
+
 		Grammar g=new UnrestrictedGrammar();
 		g.addProductions(productions);
 		g.setStartVariable("S");

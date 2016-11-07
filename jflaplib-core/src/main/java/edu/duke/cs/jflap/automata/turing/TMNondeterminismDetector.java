@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * The TTM nondeterminism detector object can be used to find all the
  * nondeterministic states in a Turing machine (i.e. all states with transitions
  * that read the same symbols on each tape).
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public class TMNondeterminismDetector extends NondeterminismDetector {
 	 * Returns true if the transitions introduce nondeterminism (e.g. the input
 	 * to read from tapes one and two portions of the transition labels are
 	 * identical).
-	 * 
+	 *
 	 * @param t1
 	 *            a transition
 	 * @param t2

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import javax.swing.tree.*;
 /**
  * The <CODE>TreeDrawer</CODE> object is used to draw a <CODE>TreeModel</CODE>
  * in a given space.
- * 
+ *
  * @author Thomas Finley
  */
 
 public interface TreeDrawer {
 	/**
 	 * Draws the tree in the indicated amount of space.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param size
@@ -47,7 +47,7 @@ public interface TreeDrawer {
 	/**
 	 * Returns the <CODE>TreeModel</CODE> that this <CODE>TreeDrawer</CODE>
 	 * draws.
-	 * 
+	 *
 	 * @return the tree model this drawer draws
 	 */
 	public TreeModel getModel();
@@ -66,7 +66,7 @@ public interface TreeDrawer {
 
 	/**
 	 * Returns the node at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check for the presence of a node
 	 * @param size
@@ -76,7 +76,7 @@ public interface TreeDrawer {
 
 	/**
 	 * Sets the node placer for this drawer.
-	 * 
+	 *
 	 * @param placer
 	 *            the new node placer
 	 */
@@ -84,14 +84,14 @@ public interface TreeDrawer {
 
 	/**
 	 * Returns the node placer for this drawer.
-	 * 
+	 *
 	 * @return the node placer for this drawer
 	 */
 	public NodePlacer getNodePlacer();
 
 	/**
 	 * Sets the node drawer for this drawer.
-	 * 
+	 *
 	 * @param drawer
 	 *            the new node drawer
 	 */
@@ -99,7 +99,7 @@ public interface TreeDrawer {
 
 	/**
 	 * Returns the node drawer for this drawer
-	 * 
+	 *
 	 * @return the node drawer for this drawer
 	 */
 	public NodeDrawer getNodeDrawer();

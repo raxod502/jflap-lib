@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import java.awt.Graphics2D;
 /**
  * An <CODE>EditCanvas</CODE> is an extension of <CODE>AutomatonPane</CODE>
  * more suitable for use as a place where automatons may be edited.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EditCanvas extends AutomatonPane {
 	/**
 	 * Instantiates a new <CODE>EditCanvas</CODE>.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 */
@@ -47,7 +47,7 @@ public class EditCanvas extends AutomatonPane {
 
 	/**
 	 * Instantiates a new <CODE>EditCanvas</CODE>.
-	 * 
+	 *
 	 * @param drawer
 	 *            the automaton drawer
 	 * @param fit
@@ -60,27 +60,27 @@ public class EditCanvas extends AutomatonPane {
 
 	/**
 	 * Sets the toolbar for this edit canvas.
-	 * 
+	 *
 	 * @param toolbar
 	 *            the toolbar for this edit canvas
 	 */
 	public void setToolBar(ToolBar toolbar) {
 		this.toolbar = toolbar;
 	}
-	
 
-	
+
+
 
 	/**
 	 * Paints the component. In addition to what the automaton pane does, this
 	 * also calls the current tool's draw method.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
 	public void paintComponent(Graphics g) {
 		if (getCreator().automaton.getEnvironmentFrame() !=null)
-		if (!((AutomatonEnvironment)(getCreator().automaton.getEnvironmentFrame().getEnvironment())).shouldPaint()) 
+		if (!((AutomatonEnvironment)(getCreator().automaton.getEnvironmentFrame().getEnvironment())).shouldPaint())
 			return;
 //		EDebug.print(Thread.currentThread().getName());
 		super.paintComponent(g);
@@ -94,5 +94,5 @@ public class EditCanvas extends AutomatonPane {
 
 	/** The toolbar that is used for this edit canvas. */
 	private ToolBar toolbar;
-	
+
 }

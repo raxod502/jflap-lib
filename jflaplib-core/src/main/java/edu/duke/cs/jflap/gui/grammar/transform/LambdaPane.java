@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import javax.swing.event.*;
 
 /**
  * This is the pane where the removal of lambda productions takes place.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LambdaPane extends JPanel {
 	/**
 	 * Instantiates a new lambda pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment this pane will belong to
 	 * @param grammar
@@ -108,7 +108,7 @@ public class LambdaPane extends JPanel {
 
 	/**
 	 * Initializes a table for the grammar.
-	 * 
+	 *
 	 * @return a table to display the grammar
 	 */
 	private GrammarTable initGrammarTable() {
@@ -227,7 +227,7 @@ public class LambdaPane extends JPanel {
 
 	/**
 	 * Returns the grammar that results.
-	 * 
+	 *
 	 * @return the grammar that results
 	 */
 	public Grammar getGrammar() {

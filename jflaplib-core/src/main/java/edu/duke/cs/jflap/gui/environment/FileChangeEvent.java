@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,19 +26,19 @@ import java.io.File;
 /**
  * This is an event that registers with a listener that an environment has
  * changed its file.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.environment.FileChangeListener
  * @see edu.duke.cs.jflap.gui.environment.Environment
  * @see edu.duke.cs.jflap.gui.environment.Environment#setFile
  * @see edu.duke.cs.jflap.gui.environment.Environment#getFile
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FileChangeEvent extends EventObject {
 	/**
 	 * Instantiates a new <CODE>FileChangeEvent</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that threw this event
 	 * @param oldFile
@@ -51,7 +51,7 @@ public class FileChangeEvent extends EventObject {
 
 	/**
 	 * Returns the native file for the environment before the change.
-	 * 
+	 *
 	 * @return the native file for the environment before the change
 	 */
 	public File getOldFile() {

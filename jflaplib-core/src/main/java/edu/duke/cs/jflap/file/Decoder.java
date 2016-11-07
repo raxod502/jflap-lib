@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.Map;
  * produce a corresponding structure. Ideally the <CODE>toString</CODE> method
  * should be implemented with a brief description of the format of file this can
  * decode.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public interface Decoder {
 	 * file. This method should always return a structure, or throw a
 	 * {@link ParseException} in the event of failure with a message detailing
 	 * the nature of why the decoder failed.
-	 * 
+	 *
 	 * @param file
 	 *            the file to decode into a structure
 	 * @param parameters
@@ -54,7 +54,7 @@ public interface Decoder {
 	/**
 	 * Returns an instance of a corresponding encoder. In many cases the
 	 * returned will be <CODE>this</CODE>.
-	 * 
+	 *
 	 * @return an encoder that encodes in the same format this decodes in, or
 	 *         <CODE>null</CODE> if there is no such encoder
 	 */

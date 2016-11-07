@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,14 +37,14 @@ import java.util.*;
 
 /**
  * A tool bar for editing and manipulating an automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ToolBar extends JToolBar implements ActionListener {
 	/**
 	 * Instantiates a new tool bar.
-	 * 
+	 *
 	 * @param view
 	 *            the view the automaton is displayed in
 	 * @param drawer
@@ -65,7 +65,7 @@ public class ToolBar extends JToolBar implements ActionListener {
 
 	/**
 	 * Returns the view that the automaton is drawn in.
-	 * 
+	 *
 	 * @return the view that the automaton is drawn in
 	 */
 	protected Component getView() {
@@ -74,7 +74,7 @@ public class ToolBar extends JToolBar implements ActionListener {
 
 	/**
 	 * Returns the automaton drawer for the automaton.
-	 * 
+	 *
 	 * @return the automaton drawer for the automaton
 	 */
 	protected AutomatonDrawer getDrawer() {
@@ -120,12 +120,12 @@ public class ToolBar extends JToolBar implements ActionListener {
 			view.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 		}
 		if(tool instanceof DeleteTool){
-			   Toolkit toolkit = Toolkit.getDefaultToolkit();  
-			   //Image image = toolkit.getImage("/JFLAP09CVS/ICON/deletecursor.gif");   
+			   Toolkit toolkit = Toolkit.getDefaultToolkit();
+			   //Image image = toolkit.getImage("/JFLAP09CVS/ICON/deletecursor.gif");
 			   URL url = getClass().getResource("/ICON/deletecursor.gif");
 			   Image image = getToolkit().getImage(url);
-			   Point hotSpot = new Point(5,5);  
-			   Cursor cursor = toolkit.createCustomCursor(image, hotSpot, "Delete");  
+			   Point hotSpot = new Point(5,5);
+			   Cursor cursor = toolkit.createCustomCursor(image, hotSpot, "Delete");
 			   view.setCursor(cursor);
 			   //Cursor hourglassCursor = new Cursor(Cursor.CROSSHAIR_CURSOR);
 			   //view.setCursor(hourglassCursor);
@@ -134,7 +134,7 @@ public class ToolBar extends JToolBar implements ActionListener {
 
 	/**
 	 * Draws the tool view.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
@@ -143,7 +143,7 @@ public class ToolBar extends JToolBar implements ActionListener {
 			return;
 		currentTool.draw(g);
 	}
-	
+
 	public Tool getCurrentTool(){
 		return currentTool;
 	}

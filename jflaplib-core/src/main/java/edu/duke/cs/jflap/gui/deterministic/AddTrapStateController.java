@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -69,17 +69,17 @@ public class AddTrapStateController{
 	 * Tree Set of readable alphabets in DFA
 	 */
 	private TreeSet <String> myReadSets;
-	
+
 	/**
 	 * Hash Map that consists of key of state number and value as transitions
 	 */
 	private HashMap <Integer, ArrayList<String>> myTransitionsMap;
-	
+
 	/**
 	 * Hash Map of transitions that needed to complete DFA
 	 */
 	private HashMap <Integer, ArrayList<String>> myNeededTransitionMap;
-	
+
 	/**
 	 * Map holds state ID as key and actual state object as value
 	 */
@@ -88,17 +88,17 @@ public class AddTrapStateController{
 	 * Trap State
 	 */
 	private State myTrapState;
-	
+
 	/**
 	 * The state IDs of each of the steps.
 	 */
 	private static final int CREATE_SINGLE_TRAPSTATE = 0,
 			TRANSITIONS_TO_TRAPSTATE = 1, FINISHED = 200;
-	
-	
+
+
 	/**
 	 * Instantiates a new <CODE>AddTrapStateController</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that is in the process of being converted
 	 * @param drawer
@@ -112,7 +112,7 @@ public class AddTrapStateController{
 	 *            the window that this is all happening in
 	 */
 	public AddTrapStateController(FiniteStateAutomaton automaton,SelectionDrawer drawer, JLabel mainStep, JLabel detailStep,
-			JFrame frame) 
+			JFrame frame)
 	{
 		this.automaton = automaton;
 		this.drawer = drawer;
@@ -122,13 +122,13 @@ public class AddTrapStateController{
 		currentStep=CREATE_SINGLE_TRAPSTATE;
 		nextStep();
 	}
-	
+
 	/**
 	 * Proceed the next step
 	 */
 	private void nextStep()
 	{
-		switch (currentStep) 
+		switch (currentStep)
 		{
 		case CREATE_SINGLE_TRAPSTATE:
 			currentStep = CREATE_SINGLE_TRAPSTATE;
@@ -177,7 +177,7 @@ public class AddTrapStateController{
 			myTransitionsMap.put(s[i].getID(), new ArrayList <String>());
 			myStateMap.put(s[i].getID(), s[i]);
 		}
-		
+
 		Transition[] t=automaton.getTransitions();
 		for (int i=0; i<t.length; i++)
 		{
@@ -187,7 +187,7 @@ public class AddTrapStateController{
 			temp.add(t[i].getDescription());
 			myTransitionsMap.put(id, temp);
 		}
-		
+
 		for (Integer key : myTransitionsMap.keySet())
 		{
 			ArrayList <String> temp=new ArrayList <String>();
@@ -201,11 +201,11 @@ public class AddTrapStateController{
 			}
 			myNeededTransitionMap.put(key, temp);
 		}
-		
+
 	/*	System.out.println("Read Sets = "+myReadSets);
 		System.out.println("MAP = "+myTransitionsMap);
 		System.out.println("NEEDED MAP = "+myNeededTransitionMap);
-	*/	
+	*/
 	}
 
 	/**
@@ -276,7 +276,7 @@ public class AddTrapStateController{
 	/*	Transition t = new FSATransition(from, to, "");
 		automaton.addTransition(t);
 		frame.repaint();*/
-	
+
 		String terminal = JOptionPane.showInputDialog(frame, "Transition on what terminal?");
 		if (terminal==null)
 			return;
@@ -304,7 +304,7 @@ public class AddTrapStateController{
 			}
 			detailStep
 			.setText("Put transitions from all states to the trap state.   "+remaining+" transitions must be added");
-			
+
 			return;
 		}
 		else

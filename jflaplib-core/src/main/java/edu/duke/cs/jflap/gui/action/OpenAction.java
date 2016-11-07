@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,7 +45,7 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 /**
  * The <CODE>OpenAction</CODE> is an action to load a structure from a file,
  * and create a new environment with that object.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -64,7 +64,7 @@ public class OpenAction extends RestrictedAction {
 	/**
 	 * If an open is attempted, call the methods that handle the retrieving of
 	 * an object, then create a new frame for the environment.
-	 * 
+	 *
 	 * @param event
 	 *            the action event
 	 */
@@ -79,7 +79,7 @@ public class OpenAction extends RestrictedAction {
 		}
 
 		// Apple is so stupid.
-		
+
 		File tempFile = fileChooser.getCurrentDirectory();
 		fileChooser.setCurrentDirectory(tempFile.getParentFile());
 		fileChooser.setCurrentDirectory(tempFile);
@@ -94,7 +94,7 @@ public class OpenAction extends RestrictedAction {
 			return;
 		File[] files = fileChooser.getSelectedFiles();
 		for(int k = 0; k < files.length; k++){
-		    File file = files[k];           
+		    File file = files[k];
     		if (!openOrRead) {
     			// Is this file already open?
     			if (Universe.frameForFile(file) != null) {
@@ -104,7 +104,7 @@ public class OpenAction extends RestrictedAction {
     		}
     		try {
     			openFile(file, codecs);
-    			
+
     		} catch (ParseException e) {
     			JOptionPane.showMessageDialog(source, e.getMessage(), "Read Error",
     					JOptionPane.ERROR_MESSAGE);
@@ -145,14 +145,14 @@ public class OpenAction extends RestrictedAction {
 			codecs = new Codec[1];
 			codecs[0] = (Codec) filter;
 		}
-		
+
 
 		return codecs;
 	}
 
 	/**
 	 * Attempts to open a specified file with a set of codecs.
-	 * 
+	 *
 	 * @param file
 	 *            the file to attempt to open
 	 * @param codecs
@@ -170,7 +170,7 @@ public class OpenAction extends RestrictedAction {
                             "Only Turing Machine files can be added as building blocks.", "Wrong File Type",
                             JOptionPane.ERROR_MESSAGE);
                     return;
-					
+
 				}
 				lastObject = object;
 				lastFile = file;
@@ -195,7 +195,7 @@ public class OpenAction extends RestrictedAction {
 
 	/**
 	 * The open action is completely environment independent.
-	 * 
+	 *
 	 * @param object
 	 *            some object, which is ignored
 	 * @return always returns <CODE>true</CODE>
@@ -206,7 +206,7 @@ public class OpenAction extends RestrictedAction {
 
 	/**
 	 * Returns the last object opened by the filebrowswer.
-	 * 
+	 *
 	 * @return
 	 */
 	public static Serializable getLastObjectOpened() {
@@ -215,13 +215,13 @@ public class OpenAction extends RestrictedAction {
 
 	/**
 	 * Returns the last file opened by the filebrowswer.
-	 * 
+	 *
 	 * @return
 	 */
 	public static File getLastFileOpened() {
 		return lastFile;
 	}
-	
+
 	public static boolean isOpened()	{
 		return lastFileOpened;
 	}
@@ -243,14 +243,14 @@ public class OpenAction extends RestrictedAction {
 	private static Serializable lastObject = null;
 
 	private static File lastFile = null;
-	
+
 	private static boolean lastFileOpened = false;
 
 	/** The exception class for when a file could not be read properly. */
 	protected static class FileReadException extends RuntimeException {
 		/**
 		 * Instantiates a file read exception with a given message.
-		 * 
+		 *
 		 * @param message
 		 *            the specific message for why the read failed
 		 */

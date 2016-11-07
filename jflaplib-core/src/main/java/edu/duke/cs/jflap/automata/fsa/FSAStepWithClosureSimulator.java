@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,7 +38,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * state at a time, then taking the closure of each state reached by one step of
  * the machine to find out all possible configurations of the machine at any
  * given point in the simulation.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -54,7 +54,7 @@ public class FSAStepWithClosureSimulator extends FSAStepByStateSimulator {
 	 * Returns an array of FSAConfiguration objects that represent the possible
 	 * initial configurations of the FSA, before any input has been processed,
 	 * calculated by taking the closure of the initial state.
-	 * 
+	 *
 	 * @param input
 	 *            the input string.
 	 */
@@ -71,7 +71,7 @@ public class FSAStepWithClosureSimulator extends FSAStepByStateSimulator {
 	/**
 	 * Simulates one step for a particular configuration, adding all possible
 	 * configurations reachable in one step to set of possible configurations.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to simulate the one step on.
 	 */

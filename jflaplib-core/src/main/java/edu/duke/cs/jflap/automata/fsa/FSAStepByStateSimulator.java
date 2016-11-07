@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import edu.duke.cs.jflap.automata.Transition;
  * machine on the input. It simulates the machine's behavior by stepping one
  * state at a time, even if there are surrounding lambda transitions that the
  * path could explore without reading more input.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class FSAStepByStateSimulator extends AutomatonSimulator {
 	/**
 	 * Creates an FSA step by state simulator for the given automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the machine to simulate
 	 */
@@ -58,7 +58,7 @@ public class FSAStepByStateSimulator extends AutomatonSimulator {
 	 * configuration of the FSA, before any input has been processed. This
 	 * method returns an array of length one, since the closure of the initial
 	 * state is not taken.
-	 * 
+	 *
 	 * @param input
 	 *            the input string.
 	 */
@@ -72,7 +72,7 @@ public class FSAStepByStateSimulator extends AutomatonSimulator {
 	/**
 	 * Simulates one step for a particular configuration, adding all possible
 	 * configurations reachable in one step to set of possible configurations.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to simulate the one step on.
 	 */
@@ -126,7 +126,7 @@ public class FSAStepByStateSimulator extends AutomatonSimulator {
 	 * Returns true if the simulation of the input string on the automaton left
 	 * the machine in a final state. If the entire input string is processed and
 	 * the machine is in a final state, return true.
-	 * 
+	 *
 	 * @return true if the simulation of the input string on the automaton left
 	 *         the machine in a final state.
 	 */
@@ -145,7 +145,7 @@ public class FSAStepByStateSimulator extends AutomatonSimulator {
 
 	/**
 	 * Runs the automaton on the input string.
-	 * 
+	 *
 	 * @param input
 	 *            the input string to be run on the automaton
 	 * @return true if the automaton accepts the input

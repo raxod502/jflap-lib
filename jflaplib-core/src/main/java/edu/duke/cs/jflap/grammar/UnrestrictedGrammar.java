@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,7 +24,7 @@ package edu.duke.cs.jflap.grammar;
  * The unrestricted grammar is a grammar that can have any production added to
  * it, save for the initial production, which must be restricted since the first
  * production specifies the initial variable in JFLAP.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -34,7 +34,7 @@ public class UnrestrictedGrammar extends Grammar {
 	/**
 	 * Every production is all right except those with lambda in the left hand
 	 * side of the production.
-	 * 
+	 *
 	 * @param production
 	 *            the production to check
 	 * @throws IllegalArgumentException
@@ -49,7 +49,7 @@ public class UnrestrictedGrammar extends Grammar {
 
 	/**
 	 * This adds a production to the grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production to add
 	 * @throws IllegalArgumentException

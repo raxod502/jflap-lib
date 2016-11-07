@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,14 +26,14 @@ import java.util.*;
 /**
  * This is the brute parser for an restricted grammar. It has additional tests
  * for whether a derivation is possible.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class RestrictedBruteParser extends BruteParser {
 	/**
 	 * Creates a new unrestricted brute parser.
-	 * 
+	 *
 	 * @param grammar
 	 *            the unrestricted grammar to parse
 	 * @param target

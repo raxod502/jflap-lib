@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import javax.swing.JScrollPane;
 /**
  * A class that epitomizes the ultimate in bad design: a fusion of model, view,
  * and controller. Look upon my works, ye mighty, and despair.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TraceWindow extends JFrame {
 	/**
 	 * Instantiates a new step window with the given configuration.
-	 * 
+	 *
 	 * @param last
 	 *            the last configuration that we are tracing; we display it
 	 *            along with all its ancestors
@@ -60,7 +60,7 @@ public class TraceWindow extends JFrame {
 
 	/**
 	 * Returns a component that displays the ancestry of a configuration.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration whose ancestry we want to display
 	 * @return a component with the ancestry of the configuration contained
@@ -79,7 +79,7 @@ public class TraceWindow extends JFrame {
 
 	/**
 	 * Returns a component that displays the ancestry of a configuration.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration whose ancestry we want to display
 	 * @return a component with the ancestry of the configuration, not contained

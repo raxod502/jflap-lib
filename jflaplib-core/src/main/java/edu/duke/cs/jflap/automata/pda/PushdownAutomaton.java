@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,13 +25,13 @@ import edu.duke.cs.jflap.automata.Automaton;
 /**
  * This subclass of <CODE>Automaton</CODE> is specifically for a definition of
  * a Pushdown Automaton.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class PushdownAutomaton extends Automaton {
 	public boolean singleInputPDA = false;
-	
+
 	/**
 	 * Creates a pushdown automaton with no states and no transitions.
 	 */
@@ -39,7 +39,7 @@ public class PushdownAutomaton extends Automaton {
 		super();
 		singleInputPDA = singleinput;
 	}
-	
+
 	public PushdownAutomaton(){
 		super();
 	}
@@ -47,7 +47,7 @@ public class PushdownAutomaton extends Automaton {
 	/**
 	 * Returns the class of <CODE>Transition</CODE> this automaton must
 	 * accept.
-	 * 
+	 *
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.pda.PDATransition</CODE>
 	 */
 	protected Class getTransitionClass() {

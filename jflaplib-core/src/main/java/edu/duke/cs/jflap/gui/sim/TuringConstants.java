@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.gui.sim;
 /**
  * This interface holds constants necessary for the drawing of configuration
  * icons for Turing machines.
- * 
+ *
  * @author Thomas Finley
  */
 

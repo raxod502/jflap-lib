@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import edu.duke.cs.jflap.automata.Transition;
 /**
  * Converter for turing to unrestricted grammar
  * NEEDS to make abstraction (super class for both TuringToGrammar and PDAtoCFGconverter)
- * 
+ *
  * @author Kyung Min (Jason) Lee
  *
  */
@@ -41,13 +41,13 @@ public class TuringToGrammarConverter {
 	private static final String SQUARE="=";
 	private static final String VAR_START="V(";
 	private static final String VAR_END=")";
-	
+
 	// Z
 	private HashSet <String> myAllReadableString;
-	
+
 	// |- finite set of symbols in the tape alphabet
 	private HashSet <String> myAllWritableString;
-	
+
 	/**
 	 * Constructor for converting TM to Unrestrcited grammar
 	 */
@@ -67,7 +67,7 @@ public class TuringToGrammarConverter {
 		init.add(new Production("S", "S"+VAR_START+SQUARE+SQUARE+VAR_END));
 		init.add(new Production("S", "T"));
 		myAllReadableString.add(SQUARE);
-		
+
 		for (int i=0; i<tm.length; i++)
 		{
 			TMTransition trans=(TMTransition)tm[i];
@@ -92,7 +92,7 @@ public class TuringToGrammarConverter {
 			}
 		}
 		init.add(new Production(SQUARE, null));
-		
+
 		Production[] answer=new Production[init.size()];
 		for (int i=0; i<answer.length; i++)
 		{
@@ -129,12 +129,12 @@ public class TuringToGrammarConverter {
 				read=SQUARE;
 			if (write.equals(SQUARE_SYMBOL))
 				write=SQUARE;
-			
+
 			for (String p : myAllReadableString)
 			{
 				for (String a : myAllReadableString)
 				{
-				
+
 					for (String q : myAllWritableString)
 					{
 						if (direction.equals("R"))
@@ -143,11 +143,11 @@ public class TuringToGrammarConverter {
 							String lhs_var2=VAR_START+p+q+VAR_END;
 							String rhs_var1=VAR_START+a+write+VAR_END;
 							String rhs_var2=VAR_START+p+toState+q+VAR_END;
-					
-							
+
+
 							Production prod=new Production(lhs_var1+lhs_var2, rhs_var1+rhs_var2);
 							list.add(prod);
-						
+
 							if (finalStateMap.containsKey(toState))
 							{
 								String lhs=VAR_START+p+toState+q+VAR_END;
@@ -155,10 +155,10 @@ public class TuringToGrammarConverter {
 								list.add(new Production(lhs, rhs));
 								String lhs2=VAR_START+a+q+VAR_END+p;
 								list.add(new Production(lhs2, a+rhs));
-								
+
 								String lhs3=p+VAR_START+a+q+VAR_END;
 								list.add(new Production(lhs3, p+a));
-								
+
 							}
 
 						}
@@ -166,13 +166,13 @@ public class TuringToGrammarConverter {
 						{
 							String lhs_var1=VAR_START+p+q+VAR_END;
 							String lhs_var2=VAR_START+a+fromState+read+VAR_END;
-							
+
 							String rhs_var1=VAR_START+p+toState+q+VAR_END;
 							String rhs_var2=VAR_START+a+write+VAR_END;
-							
-							
+
+
 							Production prod=new Production(lhs_var1+lhs_var2, rhs_var1+rhs_var2);
-							
+
 							list.add(prod);
 
 							if (finalStateMap.containsKey(toState))
@@ -182,9 +182,9 @@ public class TuringToGrammarConverter {
 								String lhs2=p+VAR_START+a+q+VAR_END;
 								list.add(new Production(lhs, rhs));
 								list.add(new Production(lhs2, p+a));
-								
+
 								//TODO: Change this later
-						
+
 								String lhs3=VAR_START+a+q+VAR_END+p;
 								list.add(new Production(lhs3, a+rhs));
 							}
@@ -193,13 +193,13 @@ public class TuringToGrammarConverter {
 						{
 							//what to do? : DO nothing standard TM only has left and right
 						}
-						
+
 					}
 				}
 			}
 		}
-		
-		
+
+
 		Production[] answer=new Production[list.size()];
 		for (int i=0; i<answer.length; i++)
 		{

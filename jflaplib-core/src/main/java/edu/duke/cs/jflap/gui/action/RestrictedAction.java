@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import javax.swing.Icon;
  * usual <CODE>Action</CODE> nicities, the <CODE>RestrictedAction</CODE>
  * also provides facilities for determining which types of objects it may be
  * applied to.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class RestrictedAction extends AbstractAction {
 	/**
 	 * Instantiates a new <CODE>RestrictedAction</CODE>.
-	 * 
+	 *
 	 * @param string
 	 *            a string description
 	 * @param icon
@@ -51,7 +51,7 @@ public abstract class RestrictedAction extends AbstractAction {
 	 * Given an object, determine if this action is able to be applied to that
 	 * object based on its class. By default, this method simply returns <CODE>true</CODE>
 	 * to indicate that any sort of object is acceptable.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for "applicability"
 	 * @return <CODE>true</CODE> if this action should be available to an

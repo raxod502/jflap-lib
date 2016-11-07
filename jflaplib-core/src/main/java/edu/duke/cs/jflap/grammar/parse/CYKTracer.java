@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -47,8 +47,8 @@ import java.util.*;
  */
 
 public class CYKTracer {
-	
-	private Grammar myOriginalGrammar; 
+
+	private Grammar myOriginalGrammar;
 	private ArrayList <Production> myTrace;
 	private ArrayList <Production> myAnswer;
 	private Production[] myOriginalProductions;
@@ -56,7 +56,7 @@ public class CYKTracer {
 	private HashMap <ArrayList <Production>, Production> myUnitStepMap;
 	private ArrayList <Production> myTempCNF;
 	private HashMap <Production, ArrayList <Production>> myCNFMap;
-	
+
 	public CYKTracer(Grammar grammar, ArrayList<Production> trace) {
 		myOriginalGrammar=grammar;
 		myTrace=trace;
@@ -64,7 +64,7 @@ public class CYKTracer {
 		myOriginalProductions=myOriginalGrammar.getProductions();
 		initializeLambdaStepMap();
 	}
-	
+
 	private void initializeLambdaStepMap()
 	{
 		LambdaProductionRemover remover = new LambdaProductionRemover();
@@ -72,22 +72,22 @@ public class CYKTracer {
 		Grammar g=myOriginalGrammar;
 	    //System.out.println("LD = "+lambdaDerivers);
 		if (lambdaDerivers.size() > 0) {
-			
+
 			myLambdaStepMap=new HashMap<ArrayList <Production>, Production>();
 			HashMap <String, Production> directLambdaProductions=new HashMap <String, Production>();
 			HashMap <String, ArrayList <Production>> indirectLambdaProductions=new HashMap <String, ArrayList<Production>>();
-			
+
 			GrammarEnvironment env=new GrammarEnvironment(new GrammarInputPane(myOriginalGrammar));
 			LambdaPane lp = new LambdaPane(env, myOriginalGrammar);
 	    	LambdaController controller = new LambdaController(lp, myOriginalGrammar);
-	    
+
 	    	controller.doStep();
-	    	
+
 	    	for (Production production : (HashSet<Production>)controller.getLambdaSet())
 	    	{
 	    		directLambdaProductions.put(production.getLHS(), production);
 	    	}
-	    	
+
 	    //	//System.out.println("DIRECT = "+directLambdaProductions);
 	    	Production[] p=lp.getGrammar().getProductions();
 
@@ -102,10 +102,10 @@ public class CYKTracer {
 	    		    	temp.add(directLambdaProductions.get(key));
 		    			indirectLambdaProductions.put(p[i].getLHS(), temp);
 		    		}
-				}	
+				}
 	    	}
 	    //	//System.out.println("INDIRECT = "+indirectLambdaProductions);
-	    	
+
 	    	for (int i=0; i<p.length; i++)
 	    	{
 	    		Production[] p2 = remover.getProductionsToAddForProduction(
@@ -114,7 +114,7 @@ public class CYKTracer {
 	    		for (int j=0; j<p2.length; j++)
 	    		{
 	    			ArrayList <Production> temp=new ArrayList <Production>();
-	    	    	
+
 	    			if (!p2[j].equals(p[i]))
 	    			{
 	    				temp.add(p[i]);
@@ -145,28 +145,28 @@ public class CYKTracer {
 	    }
 	//	System.out.println("LAMBDA step Map = "+myLambdaStepMap);
 		intializeUnitStepMap(g);
-		
+
 	}
 
 	private void intializeUnitStepMap(Grammar g) {
 		UnitProductionRemover remover = new UnitProductionRemover();
 		if (remover.getUnitProductions(g).length > 0) {
-			
+
 			myUnitStepMap=new HashMap <ArrayList <Production>, Production>();
-			
+
 			GrammarEnvironment env=new GrammarEnvironment(new GrammarInputPane(g));
 			UnitPane up = new UnitPane(env, g);
 			UnitController controller=new UnitController(up, g);
 			controller.doStep();
 			Production[] units=remover.getUnitProductions(g);
 			HashMap <String, Production> removedUnitProductions=new HashMap <String, Production>();
-			
+
 			for (int i=0; i<units.length; i++)
 			{
 				removedUnitProductions.put(units[i].getLHS(), units[i]);
 			}
 			//System.out.println("UNIT = "+removedUnitProductions);
-			
+
 			Grammar unitless=remover.getUnitProductionlessGrammar(controller.getGrammar(), remover.getVariableDependencyGraph(g));
 			Production[] temp=unitless.getProductions();
 			ArrayList <Production> productionsToAdd=new ArrayList <Production>();
@@ -181,7 +181,7 @@ public class CYKTracer {
 					productionsToAdd.remove(p[i]);
 			}
 			//System.out.println(productionsToAdd);
-			
+
 			for (int i=0; i<productionsToAdd.size(); i++)
 			{
 				ArrayList <Production> tempToAdd=new ArrayList <Production>();
@@ -193,7 +193,7 @@ public class CYKTracer {
 					tempToAdd.add(removedUnitProductions.get(var1));
 					String var2=removedUnitProductions.get(var1).getRHS();
 					boolean isDone=false;
-					
+
 					for (int pp=0; pp<p.length; pp++)
 					{
 						if (p[pp].getLHS().equals(var2))
@@ -235,17 +235,17 @@ public class CYKTracer {
 		removeUseless(g);
 	}
 
-	private void removeUseless(Grammar g) 
+	private void removeUseless(Grammar g)
 	{
 		UselessProductionRemover remover = new UselessProductionRemover();
-		
+
 		Grammar g2 = UselessProductionRemover
 				.getUselessProductionlessGrammar(g);
-		
+
 		Production[] p1 = g.getProductions();
 		Production[] p2 = g2.getProductions();
 		if (p1.length > p2.length) {
-			
+
 			GrammarEnvironment env=new GrammarEnvironment(new GrammarInputPane(g));
 			UselessPane up = new UselessPane(env, g);
 			UselessController controller=new UselessController(up, g);
@@ -258,14 +258,14 @@ public class CYKTracer {
 	private void initializeChomskyMap(Grammar g) {
 	//	//System.out.println("Chomsky = "+g);
 		CNFConverter converter = new CNFConverter(g);
-		
+
 		Production[] p = g.getProductions();
 		boolean chomsky = true;
 		for (int i = 0; i < p.length; i++)
 			chomsky &= converter.isChomsky(p[i]);
-		
+
 		if (!chomsky) {
-			
+
 			myCNFMap=new HashMap <Production, ArrayList <Production>>();
 			GrammarEnvironment env=new GrammarEnvironment(new GrammarInputPane(g));
 			ChomskyPane cp = new ChomskyPane(env, g);
@@ -275,7 +275,7 @@ public class CYKTracer {
 			{
 				myTempCNF=new ArrayList <Production>();
 				CNFConverter cv = new CNFConverter(g);
-				
+
 				convertToCNF(cv, p[i]);
 				myCNFMap.put(p[i], myTempCNF);
 				resultList.addAll(myCNFMap.get(p[i]));
@@ -298,9 +298,9 @@ public class CYKTracer {
 		//	System.out.println("ORiginal = "+originalToCNF);
 			finalizeCNFMap(originalToCNF);
 			g=cp.getGrammar();
-			
+
 		//	System.out.println("FINAL CNF Map = "+myCNFMap);
-			
+
 		}
 	//	System.out.println(g);
 	}
@@ -317,7 +317,7 @@ public class CYKTracer {
 			myCNFMap.put(p, temp);
 		}
 	}
-	
+
 	private void convertToCNF(CNFConverter converter, Production p)
 	{
 		if (!converter.isChomsky(p))
@@ -329,17 +329,17 @@ public class CYKTracer {
 				p=temp[j];
 				convertToCNF(converter, p);
 			}
-		}	
+		}
 		else
 			myTempCNF.add(p);
 	}
-	// always str1's length is longer than str2. (Assumption) 
+	// always str1's length is longer than str2. (Assumption)
 	private ArrayList<String> getDifferentVariable(String str1, String str2) {
 
 		ArrayList <String> result=new ArrayList <String>();
 		char[] char1=str1.toCharArray();
 		char[] char2=str2.toCharArray();
-		
+
 		int index=0;
 		boolean breakOut=false;
 		for (int i=0; i<char1.length; i++)
@@ -351,7 +351,7 @@ public class CYKTracer {
 				break;
 			}
 		//	//System.out.println(char1[i]+" and "+char2[index]);
-			
+
 			if (char1[i]!=char2[index])
 			{
 				result.add(""+char1[i]);
@@ -376,7 +376,7 @@ public class CYKTracer {
 		backTrackToCNF();
 		backTrackToUnit();
 		backTrackToLambda();
-		
+
 		//System.out.println("size is = "+myAnswer.size());
 		if (myAnswer.size()==0)
 			myAnswer.addAll(myTrace);
@@ -389,9 +389,9 @@ public class CYKTracer {
 		if (myCNFMap==null)
 		{
 			backTrackToUnit();
-			return; 
+			return;
 		}
-		
+
 	//	System.out.println("MAP : "+myCNFMap);
 		int[] visited=new int[myTrace.size()];
 		for (int i=0; i<myTrace.size(); i++)
@@ -418,10 +418,10 @@ public class CYKTracer {
 			}
 		}
 	//	System.out.println("After Backtracking CNF = "+myAnswer);
-		
+
 	}
-	
-	private int[] searchForRest(ArrayList<Production> list, Production p, int[] visited) 
+
+	private int[] searchForRest(ArrayList<Production> list, Production p, int[] visited)
 	{
 		HashSet <Production> visitedProd=new HashSet <Production>();
 	//	System.out.println("Searching through "+list);
@@ -435,7 +435,7 @@ public class CYKTracer {
 				visited[i]=1;
 				visitedProd.add(myTrace.get(i));
 				count++;
-				
+
 			}
 		}
 		if (count==list.size())
@@ -472,9 +472,9 @@ public class CYKTracer {
 			index++;
 		}
 		//System.out.println("After Backtracking Unit Step = "+myAnswer);
-		
+
 	}
-	
+
 	private void backTrackToLambda()
 	{
 		if (myLambdaStepMap==null)
@@ -499,14 +499,14 @@ public class CYKTracer {
 				}
 			}
 			index++;
-		}	
+		}
 	//	System.out.println("After Backtracking Lambda = "+myAnswer);
-		
+
 	}
-	
+
 	public Production[] getAnswer()
 	{
-	
+
 	/*	Collections.sort(myAnswer, new Comparator<Production>(){
             public int compare(Production o1, Production o2) {
             	return (o2.getRHS().length()-o1.getRHS().length());
@@ -519,8 +519,8 @@ public class CYKTracer {
 			answer[i]=myAnswer.get(i);
 		}
 		return answer;
-	}	
-	
+	}
+
 	private void reportError()
 	{
 		//System.out.println("ERROR ~ ERROR!");

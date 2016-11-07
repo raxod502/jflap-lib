@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,10 +45,10 @@ public class GrammarTypeTestAction extends GrammarAction {
 
 	/** The frame for the grammar environment. */
 	private EnvironmentFrame frame;
-	
+
 	/**
 	 * Instantiates a new <CODE>GrammarTypeTestAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -57,7 +57,7 @@ public class GrammarTypeTestAction extends GrammarAction {
 		this.environment = environment;
 		this.frame = Universe.frameForEnvironment(environment);
 	}
-	
+
 	/**
 	 * Performs the action.
 	 */
@@ -82,7 +82,7 @@ public class GrammarTypeTestAction extends GrammarAction {
 	 * @param p Production to check for
 	 */
 	private void checkForSpecialUnrestrictedGrammar(Production[] p) {
-		// primitive, but it's not that bad. 
+		// primitive, but it's not that bad.
 		//Check to see if production contains three special productions that indicates, it is converted from TM\
 		Production[] sp=new Production[3];
 		sp[0]=new Production("S", "V(==)S");
@@ -122,7 +122,7 @@ public class GrammarTypeTestAction extends GrammarAction {
 			{
 				JOptionPane.showMessageDialog(environment.getComponent(0), "This is a Context-Sensitive Grammar (also Unrestricted Grammar)", "Grammar Type"
 						, JOptionPane.INFORMATION_MESSAGE);
-					
+
 			}
 			else
 			{
@@ -182,13 +182,13 @@ public class GrammarTypeTestAction extends GrammarAction {
 					else
 						isGNF=false;
 				}
-				
+
 			}
 			if (isGNF)
 			{
 				JOptionPane.showMessageDialog(environment.getComponent(0), "This is a GNF Grammar (also Context-Free Grammar)", "Grammar Type"
 						, JOptionPane.INFORMATION_MESSAGE);
-					
+
 			}
 			else
 			{

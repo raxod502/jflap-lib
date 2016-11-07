@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,21 +35,21 @@ import edu.duke.cs.jflap.automata.Transition;
  * The PDA simulator object simulates the behavior of a pushdown automaton.
  * Given a PDA object and an input string, it can determine whether the machine
  * accepts the input or not.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class PDAStepByStateSimulator extends AutomatonSimulator {
 	/**
 	 * Creates a PDA simulator for the given automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the machine to simulate
 	 */
 	public PDAStepByStateSimulator(Automaton automaton) {
 		super(automaton);
 		/** default acceptance is by final state. */
-		
+
 		Object[] possibleValues = {"Final State", "Empty Stack"};
 		Object selectedValue = JOptionPane.showInputDialog(null,
 		            "Accept by", "Input",
@@ -70,7 +70,7 @@ public class PDAStepByStateSimulator extends AutomatonSimulator {
 	 * Returns a PDAConfiguration array that represents the initial
 	 * configuration of the PDA, before any input has been processed. It returns
 	 * an array of length one.
-	 * 
+	 *
 	 * @param input
 	 *            the input string.
 	 */
@@ -87,7 +87,7 @@ public class PDAStepByStateSimulator extends AutomatonSimulator {
 	/**
 	 * Simulates one step for a particular configuration, adding all possible
 	 * configurations reachable in one step to set of possible configurations.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to simulate the one step on
 	 */
@@ -144,7 +144,7 @@ public class PDAStepByStateSimulator extends AutomatonSimulator {
 	 * Returns true if the simulation of the input string on the automaton left
 	 * the machine in a final state. If the entire input string is processed and
 	 * the machine is in a final state, return true.
-	 * 
+	 *
 	 * @return true if the simulation of the input string on the automaton left
 	 *         the machine in a final state.
 	 */
@@ -171,7 +171,7 @@ public class PDAStepByStateSimulator extends AutomatonSimulator {
 
 	/**
 	 * Runs the automaton on the input string.
-	 * 
+	 *
 	 * @param input
 	 *            the input string to be run on the automaton
 	 * @return true if the automaton accepts the input

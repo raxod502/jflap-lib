@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -49,9 +49,9 @@ import org.slf4j.LoggerFactory;
  * every transition in the automaton and adding the returned productions to the
  * grammar. If you do this for every Transition in the fsa, you will have an
  * equivalent regular grammar.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.reg.RegularGrammar
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -67,7 +67,7 @@ public class FSAToRegularGrammarConverter {
 	/**
 	 * Maps the states in <CODE>automaton</CODE> to the variables in the
 	 * grammar the converter will produce.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */
@@ -105,7 +105,7 @@ public class FSAToRegularGrammarConverter {
 
 	/**
 	 * Returns a production object that is equivalent to <CODE>transition</CODE>.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition.
 	 * @return a produciton object that is equivalent to <CODE>transition</CODE>.
@@ -126,7 +126,7 @@ public class FSAToRegularGrammarConverter {
 	/**
 	 * Returns a lambda production on the variable mapped to <CODE>state</CODE>
 	 * in <CODE>map</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that <CODE>state</CODE> is in.
 	 * @param state
@@ -150,7 +150,7 @@ public class FSAToRegularGrammarConverter {
 	/**
 	 * Returns a RegularGrammar object that represents a grammar equivalent to
 	 * <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return a regular grammar equivalent to <CODE>automaton</CODE>
@@ -190,7 +190,7 @@ public class FSAToRegularGrammarConverter {
 
 	/**
 	 * Returns the variable in the grammar corresponding to the state.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the variable for
 	 * @return the variable in the grammar corresponding to the state, or <CODE>null</CODE>

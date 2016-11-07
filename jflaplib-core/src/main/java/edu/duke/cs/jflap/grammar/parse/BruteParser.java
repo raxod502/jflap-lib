@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import java.util.*;
 /**
  * The <CODE>BruteParser</CODE> is an abstract class that will perform a brute
  * force parse of a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -50,7 +50,7 @@ public abstract class BruteParser {
 	/**
 	 * This factory method will return a brute force parser appropriate for the
 	 * grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to get a brute force parser for
 	 * @param target
@@ -83,7 +83,7 @@ public abstract class BruteParser {
 
 		smaller = Collections.unmodifiableSet(Unrestricted
 				.smallerSymbols(grammar));
-		
+
 		this.grammar = grammar;
 		productions = grammar.getProductions();
 		this.target = target;
@@ -93,7 +93,7 @@ public abstract class BruteParser {
 	 * This will start the parsing. This method will return immediately. The
 	 * parsing is done in a separate thread since the potential for the parsing
 	 * to take forever on some brute force parses exists.
-	 * 
+	 *
 	 * @return if the starting of the parsing was successful, which will not be
 	 *         successful if the parsing is already underway, or if the parser
 	 *         is finished
@@ -123,7 +123,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Returns if the parser is currently in the process of parsing.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the parser thread is currently active, or
 	 *         <CODE>false</CODE> if the parser thread is inactive
 	 */
@@ -133,7 +133,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Returns if the parser has finished, with success or otherwise.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the
 	 */
 	public synchronized boolean isFinished() {
@@ -142,7 +142,7 @@ public abstract class BruteParser {
 
 	/**
 	 * This returns the answer node for the parser.
-	 * 
+	 *
 	 * @return the answer node for the parse, or <CODE>null</CODE> if there
 	 *         was no answer, or one has not been discovered yet
 	 */
@@ -228,7 +228,7 @@ public abstract class BruteParser {
 	 * removing futile nodes, this allows recursion to proceed much deeper. If
 	 * the node passed in has no children, it is removed from the parent, and we
 	 * recurse on the parent.
-	 * 
+	 *
 	 * @param node
 	 *            a possibly futile node
 	 */
@@ -246,7 +246,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Returns the number of nodes currently in the tree.
-	 * 
+	 *
 	 * @return number of nodes in the tree whose paths have not been ruled out
 	 */
 	public int getCurrentNodeCount() {
@@ -255,7 +255,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Returns the number of nodes generated.
-	 * 
+	 *
 	 * @return number of nodes in the tree, even those that have been ruled out
 	 *         by now
 	 */
@@ -277,7 +277,7 @@ public abstract class BruteParser {
 	 * <CODE>true</CODE> does not mean that this derivation can actually
 	 * result in the target, just that it has not been firmly ruled out. This
 	 * method is used for optimization purposes by the parser.
-	 * 
+	 *
 	 * @param derivation
 	 */
 	public boolean isPossibleDerivation(String derivation) {
@@ -329,7 +329,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Adds a brute parser listener to this parser.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -339,7 +339,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Removes a brute parser listener from this parser.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -349,7 +349,7 @@ public abstract class BruteParser {
 
 	/**
 	 * Distributes a brute parser event to all listeners.
-	 * 
+	 *
 	 * @param event
 	 *            the brute parser event to distribute
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,7 +35,7 @@ import javax.xml.transform.stream.StreamResult;
 
 /**
  * This is the codec for reading and writing JFLAP structures as XML documents.
- * 
+ *
  * @author Thomas Finley, Henry Qin
  */
 
@@ -44,7 +44,7 @@ public class XMLCodec extends Codec {
 	private final Logger logger = LoggerFactory.getLogger(XMLCodec.class);
     /**
       * Determines which files this FileFilter will allow. We are only allowing files with extension XML and jff.
-      * 
+      *
       */
     @Override
     public boolean accept(File f){
@@ -76,7 +76,7 @@ public class XMLCodec extends Codec {
 	/**
 	 * Given a file, this will return a JFLAP structure associated with that
 	 * file.
-	 * 
+	 *
 	 * @param file
 	 *            the file to decode into a structure
 	 * @param parameters
@@ -96,7 +96,7 @@ public class XMLCodec extends Codec {
 	/**
 	 * Given a structure, this will attempt to write the structure as a
 	 * serialized object to a file.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to encode
 	 * @param file
@@ -112,7 +112,7 @@ public class XMLCodec extends Codec {
 		Transducer transducer = null;
 		try {
 			transducer = TransducerFactory.getTransducer(structure);
-            
+
             /*
              * If we are saving a pumping lemma, the associated structure would
              * actually be a pumping lemma chooser. Thus, we have to get the
@@ -123,9 +123,9 @@ public class XMLCodec extends Codec {
                 dom = transducer.toDOM(((edu.duke.cs.jflap.gui.pumping.PumpingLemmaChooser)structure).getCurrent());
             else
                 dom = transducer.toDOM(structure);
-            
+
 //			Document dom = transducer.toDOM(structure);    // original line
-            
+
 			DOMPrettier.makePretty(dom);
 			Source s = new DOMSource(dom);
 			Result r = new StreamResult(file);
@@ -147,7 +147,7 @@ public class XMLCodec extends Codec {
 	 * should not perform a detailed check of the structure, since the user will
 	 * have no idea why it will not be encoded correctly if the {@link #encode}
 	 * method does not throw a {@link ParseException}.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to check
 	 * @return if the structure, perhaps with minor changes, could possibly be
@@ -159,7 +159,7 @@ public class XMLCodec extends Codec {
 
 	/**
 	 * Returns the description of this codec.
-	 * 
+	 *
 	 * @return the description of this codec
 	 */
 	public String getDescription() {
@@ -169,7 +169,7 @@ public class XMLCodec extends Codec {
 	/**
 	 * Given a proposed filename, returns a new suggested filename. JFLAP 4
 	 * saved files have the suffix <CODE>.jf4</CODE> appended to them.
-	 * 
+	 *
 	 * @param filename
 	 *            the proposed name
 	 * @param structure

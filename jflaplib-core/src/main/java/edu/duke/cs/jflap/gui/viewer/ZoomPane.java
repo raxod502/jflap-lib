@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import javax.swing.event.ChangeListener;
  * This variant of automaton pane is meant to draw the automaton only with a
  * <CODE>SelectionDrawer</CODE> that restricts the display to what is selected
  * (plus a little extra for padding).
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ZoomPane extends AutomatonPane {
 	/**
 	 * Instantiates a <CODE>ZoomPane</CODE> for a given <CODE>SelectionDrawer</CODE>.
-	 * 
+	 *
 	 * @param drawer
 	 *            the selection drawer
 	 */
@@ -55,7 +55,7 @@ public class ZoomPane extends AutomatonPane {
 	 * In the case of this object this will be restricted to those objects which
 	 * are restricted. If no objects are selected, then the default superclass
 	 * bounds are returned
-	 * 
+	 *
 	 * @return the bounds for this zoom pane
 	 */
 	protected Rectangle getAutomatonBounds() {

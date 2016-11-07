@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,13 +28,13 @@ import java.awt.geom.*;
 /**
  * A <code>Canvas</code> is an area where strings, {@link edu.duke.cs.jflap.gui.pumping.Text},
  * are animated as {@link edu.duke.cs.jflap.gui.pumping.MovingText} and will move
- * to construct the pumped string. 
- * 
+ * to construct the pumped string.
+ *
  * @author Jinghui Lim
  * @see edu.duke.cs.jflap.gui.pumping.PumpingLemmaInputPane
  *
  */
-public class Canvas extends JPanel 
+public class Canvas extends JPanel
 {
     /**
      * A list of labels.
@@ -76,15 +76,15 @@ public class Canvas extends JPanel
      * A variable that tells us whether the animation should be running.
      */
     private boolean wait;
-    
+
     /**
      * Constructs a canvas.
      *
      */
     public Canvas()
     {
-        super(new BorderLayout()); 
-        
+        super(new BorderLayout());
+
         myLabelText = new ArrayList();
         myInitialText = new ArrayList();
         myMovingText = new ArrayList();
@@ -93,17 +93,17 @@ public class Canvas extends JPanel
         this.setMinimumSize(MIN_SIZE);
         this.setPreferredSize(MIN_SIZE);
     }
-    
+
     /**
      * Sets the "enabled-ness" of the restart button.
-     * 
+     *
      * @param b "enabled-ness" of the restart button
      */
     public void setRestartEnabled(boolean b)
     {
         myRestartButton.setEnabled(b);
     }
-    
+
     /**
      * Starts the animation. This should be first called when the
      * decomposition of w is set.
@@ -114,7 +114,7 @@ public class Canvas extends JPanel
         wait = false;
         this.getRootPane().repaint();
     }
-    
+
     /**
      * Halts the animation.
      *
@@ -123,27 +123,27 @@ public class Canvas extends JPanel
     {
         wait = true;
     }
-    
+
     /**
      * Sets the step animation button of this canvas.
-     * 
+     *
      * @param b the button to set it to
      */
     public void setStepButton(JButton b)
     {
         myStepButton = b;
     }
-    
+
     /**
      * Sets the restart animation button of this canvas.
-     * 
+     *
      * @param b the button to set it to
      */
     public void setRestartButton(JButton b)
     {
         myRestartButton = b;
     }
-    
+
     /**
      * Resets the canvas for new input.
      *
@@ -158,10 +158,10 @@ public class Canvas extends JPanel
         myStepButton.setEnabled(false);
         myRestartButton.setEnabled(false);
     }
-    
+
     /**
      * Add a string to the initial text of this canvas that has a label.
-     *  
+     *
      * @param s string to add
      * @param label label of the string
      * @return the new <code>Text</code> object of the string just added
@@ -175,7 +175,7 @@ public class Canvas extends JPanel
 
     /**
      * Add a string to the initial text of this canvas.
-     * 
+     *
      * @param s string to add
      * @return the new <code>Text</code> object of the string just added
      */
@@ -190,7 +190,7 @@ public class Canvas extends JPanel
         {
             Text t = (Text)myInitialText.get(myInitialText.size() - 1);
             Point2D q = t.getPos();
-            p = new Point2D.Double(q.getX() + t.getWidth(this.getGraphics()) + 
+            p = new Point2D.Double(q.getX() + t.getWidth(this.getGraphics()) +
                     Text.SPACE.getWidth(this.getGraphics()), q.getY());
         }
         Text u = new Text(s, p);
@@ -199,14 +199,14 @@ public class Canvas extends JPanel
         myInitialText.add(u);
         return u;
     }
-    
+
     /**
      * Creates a set of moves for the initial text to the final position. The
-     * position of the final text calculated. Array <code>n</code> states how 
+     * position of the final text calculated. Array <code>n</code> states how
      * many copies of each string, previously placed with {@link #addText(String)}
      * or {@link #addText(String, String)} the final text should be. The numbers
      * in the array should be the order that the text was added in.
-     * 
+     *
      * @param n the number of copies of final text
      */
     public void moveText(int[] n)
@@ -220,7 +220,7 @@ public class Canvas extends JPanel
             {
                 if(s.toString().length() == 0 || s.toString().equals(Text.SPACE.toString()))
                     continue;
-                
+
                 if(myMovingText.isEmpty())
                     p = SECOND_ROW;
                 else
@@ -231,11 +231,11 @@ public class Canvas extends JPanel
             }
         }
     }
-    
+
     /**
      * Paints all the text on the canvas and executes a move if the animation
      * has been started.
-     * 
+     *
      * @see #start()
      * @see #stop()
      */
@@ -251,7 +251,7 @@ public class Canvas extends JPanel
             Text t = (Text)(myInitialText.get(i));
             t.paint(pen);
         }
-        
+
         for(int i = 0; i < myFinalText.size(); i++)
         {
             Text t = (Text)(myFinalText.get(i));
@@ -262,7 +262,7 @@ public class Canvas extends JPanel
             return;
         else
             myRestartButton.setEnabled(true);
-        
+
         if(!myMovingText.isEmpty())
         {
             MovingText m = (MovingText) myMovingText.get(0);
@@ -281,7 +281,7 @@ public class Canvas extends JPanel
             }
             m.paint(pen);
         }
-        
+
         this.getRootPane().repaint();
     }
 }

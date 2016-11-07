@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import edu.duke.cs.jflap.grammar.Production;
 
 /**
  * Similar to BruteParser abstract class, UserParser abstract class is created to deal with User Parsing
- * 
+ *
  * NOTE: This code is very similar to BruteParser and it would be better to combine two classes and extract hiearchy.
  *       However, since Brute Parser is fully functional, I did not want to mess wtih BruteParser class.
- *       
+ *
  * @author Kyung Min (Jason) Lee
  *
  */
-public abstract class UserParser 
+public abstract class UserParser
 {
 	/** Stuff for the possibilities. **/
 	private static final Production[] P = new Production[0];
@@ -66,28 +66,28 @@ public abstract class UserParser
 
 	/** The Production rule that the User has set to apply to the String **/
 	private Production myCurrentProduction;
-	
+
 	/** Integer variable that shows how many times the derivation has occured **/
 	private int myCount=0;
-	
+
 	/** This holds the list of nodes for the BFS. */
 	private LinkedList myQueue = new LinkedList();
-	
+
 	/**
 	 * Constructor for UserParser abstract class.
 	 * This is intialized by sub-classes of UserParser class.
-	 * 
+	 *
 	 * @param grammar The grammar that is going to be used for parsing
 	 * @param target The target string that user is trying to derive
 	 */
 	public UserParser(Grammar grammar, String target) {
 		initialize(grammar, target);
 	}
-	
+
 	/**
 	 * Intialize all the variables before starting Parser.
 	 * This method is called from the constructor.
-	 * 
+	 *
 	 * @param grammar The grammar that is going to be used for parsing
 	 * @param target The target string that user is trying to derive
 	 */
@@ -114,7 +114,7 @@ public abstract class UserParser
 	/**
 	 * This factory method will return a user parser appropriate for the
 	 * grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to get a brute force parser for
 	 * @param target
@@ -124,16 +124,16 @@ public abstract class UserParser
 		if (Unrestricted.isUnrestricted(grammar))
 		{
 			return new UnrestrictedUserParser(grammar, target);
-			
+
 		}
 		return new RestrictedUserParser(grammar, target);
 	}
-	
+
 	/**
 	 * Given an index of Productino rule array,
-	 * this method finds LHS variable of chosen production rule and 
-	 * count how many of LHS variable is present in our current String. 
-	 * 
+	 * this method finds LHS variable of chosen production rule and
+	 * count how many of LHS variable is present in our current String.
+	 *
 	 * @param index Index of our production rule that is selected by user.
 	 * @return Return the count of LHS variables present in the String.
 	 */
@@ -143,7 +143,7 @@ public abstract class UserParser
 		{
 			System.out.println(" index : "+i+ "  production = "+myProductions[i]);
 		}*/
-		
+
 		myCurrentProduction=myProductions[index];
 		int length=myCurrentProduction.getLHS().length();
 		int count=0;
@@ -159,11 +159,11 @@ public abstract class UserParser
 		return count;
 	}
 
-	
+
 	/**
-	 * Returns a Next possible one step parse for a given string. 
+	 * Returns a Next possible one step parse for a given string.
 	 * The first entry is always the identity.
-	 * 
+	 *
 	 * @param c the current String
 	 * @param index the index of String where we are going to apply the production rule
 	 */
@@ -171,16 +171,16 @@ public abstract class UserParser
 		if (c.length() == 0) {
 			return E;
 		}
-		
+
 		// Find the start of the production.
 		int start=0;
-		
+
 		if (index<0)
 			index=c.indexOf(myCurrentProduction.getLHS());
 		//System.out.println("MY Current Production = "+myCurrentProduction);
-		
+
 		//System.out.println("MY RHS = "+myCurrentProduction.getRHS());
-		
+
 		start=index;
 		String prepend = c.substring(0, start) + myCurrentProduction.getRHS()+c.substring(start+myCurrentProduction.getLHS().length());
 		Production[] singleProductionArray=new Production[1];
@@ -199,7 +199,7 @@ public abstract class UserParser
 		return Unrestricted.minimumLength(derivation, mySmallerSet) <= myTarget
 				.length();
 	}
-	
+
 	/**
 	 * The parsing method.
 	 */
@@ -208,7 +208,7 @@ public abstract class UserParser
 			myCount++;
 			return;
 		}
-		
+
 		ParseNode node=(ParseNode) myQueue.removeFirst();
 		ParseNode pNode=getNextResult(myAnswer.getDerivation(), index);
 		pNode = new ParseNode(pNode);
@@ -222,13 +222,13 @@ public abstract class UserParser
 		}
 		isDone=false;
 	}
-	
-	
+
+
 	/**
 	 * This will start the parsing. This method will return immediately. The
 	 * parsing is done in a separate thread since the potential for the parsing
 	 * to take forever on some brute force parses exists.
-	 * 
+	 *
 	 * @return if the starting of the parsing was successful, which will not be
 	 *         successful if the parsing is already underway, or if the parser
 	 *         is finished
@@ -242,7 +242,7 @@ public abstract class UserParser
 
 	/**
 	 * Returns if the parser has finished, with success or otherwise.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the
 	 */
 	public synchronized boolean isFinished() {
@@ -251,14 +251,14 @@ public abstract class UserParser
 
 	/**
 	 * This returns the answer node for the parser.
-	 * 
+	 *
 	 * @return the answer node for the parse, or <CODE>null</CODE> if there
 	 *         was no answer, or one has not been discovered yet
 	 */
 	public synchronized ParseNode getAnswer() {
 		return myAnswer;
 	}
-	
+
 	/**
 	 * This method retrieves the previous step performed by the user
 	 * @return
@@ -284,7 +284,7 @@ public abstract class UserParser
 	/**
 	 * This method is similar to parse method.
 	 * However, this method is called whenever more than two variables are going to be applied with same production
-	 * at same time 
+	 * at same time
 	 * @param tempIndices Indices of where the substitution will occur
 	 */
 	public void subsitute(int[] tempIndices) {
@@ -292,11 +292,11 @@ public abstract class UserParser
 		ParseNode pNode=getNextSubstitution(myAnswer.getDerivation(), tempIndices);
 
 		pNode = new ParseNode(pNode);
-	
+
 		node.add(pNode);
 		myQueue.add(pNode);
 		myAnswer=pNode;
-			
+
 		if (pNode.getDerivation().equals(myTarget)) {
 			isDone = true;
 			return;
@@ -308,7 +308,7 @@ public abstract class UserParser
 	 * This method is called when one production is applied to multiple variable.
 	 * It is similar to getNextResult method.
 	 * However, unlike getNextResult method, this one creates multiple production and substituion array.
-	 * 
+	 *
 	 * @param c Current String
 	 * @param tempIndices Indices of where the substitution will occur
 	 * @return The next parseNode derived from this production
@@ -316,7 +316,7 @@ public abstract class UserParser
 	private ParseNode getNextSubstitution(String c, int[] tempIndices) {
 		// Find the start of the production.
 		int[] multipleSubstitutionArray=tempIndices;
-		
+
 		int start=0;
 		String prepend="";
 		Production[] multipleProductionArray=new Production[multipleSubstitutionArray.length];
@@ -337,7 +337,7 @@ public abstract class UserParser
 
 	/**
 	 * This method whether the user have reached the final step regardless of the acceptance of the String.
-	 * In other words, if there is no more variable to apply the production rule, 
+	 * In other words, if there is no more variable to apply the production rule,
 	 * this method returns false
 	 * @param finalString current String that user have derived
 	 * @return True is more production is possible, false is there are no variables left.

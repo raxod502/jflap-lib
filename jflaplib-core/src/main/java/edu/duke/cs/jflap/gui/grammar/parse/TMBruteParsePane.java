@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,16 +34,16 @@ import javax.swing.tree.*;
 
 /**
  * This is a brute force parse pane.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TMBruteParsePane extends BruteParsePane {
-	
+
 	private Grammar myTrimmedGrammar;
 	/**
 	 * Instantiates a new brute force parse pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 * @param grammar
@@ -58,10 +58,10 @@ public class TMBruteParsePane extends BruteParsePane {
 		myModel = model;
 	}
 
-	
+
 	/**
 	 * Inits a parse table.
-	 * 
+	 *
 	 * @return a table to hold the parse table
 	 */
 	protected JTable initParseTable() {
@@ -99,7 +99,7 @@ public class TMBruteParsePane extends BruteParsePane {
 		return bigger;
 	}
 
-	
+
 	/**
 	 * Parse multiple strings
 	 */
@@ -110,18 +110,18 @@ public class TMBruteParsePane extends BruteParsePane {
 		int uniqueInputs = inputs.length/size;
 		Grammar currentGram = grammar;
 		if(environment.myObjects != null) currentGram = (Grammar)environment.myObjects.get(0);
-		if(row < (inputs.length-1)) {		
-			row++;			
+		if(row < (inputs.length-1)) {
+			row++;
 				if(row%uniqueInputs==0 && environment.myObjects != null){
 					currentGram = (Grammar)environment.myObjects.get(row/uniqueInputs);
-					this.grammar = currentGram;        
+					this.grammar = currentGram;
 				}
-			
+
 			parser = BruteParser.get(myTrimmedGrammar, inputs[row][0]);
 			parseInput(inputs[row][0], parser);
 		}
 	}
-	
+
 	/**
 	 * Parse one input string
 	 */
@@ -169,7 +169,7 @@ public class TMBruteParsePane extends BruteParsePane {
                             String[][] inputs = myModel.getInputs();
                             int size = 1;
                             if(environment.myObjects != null) size = environment.myObjects.size();
-                            int uniqueInputs = inputs.length/size;                          
+                            int uniqueInputs = inputs.length/size;
 							myModel.setResult(row, "Reject", null, environment.myTransducerStrings, (row%uniqueInputs)*2);
 							parseMultiple();
 						}
@@ -186,7 +186,7 @@ public class TMBruteParsePane extends BruteParsePane {
 						stepAction.setEnabled(true);
 						timer.stop();
 						status = "String accepted!";
-						if(myModel != null){ 
+						if(myModel != null){
 							myModel.setResult(row, "Accept", null, environment.myTransducerStrings, row);
 							parseMultiple();
 						}
@@ -222,20 +222,20 @@ public class TMBruteParsePane extends BruteParsePane {
 
 	/**
 	 * This method is called when there is new input to parse.
-	 * 
+	 *
 	 * @param string
 	 *            a new input string
 	 */
 	public void input(String string) {
 		if (parser != null) {
-			parser.pause();	
+			parser.pause();
 		}
-		parseInput(string, null);	
+		parseInput(string, null);
 	}
 
 	/**
 	 * Returns the choices for the view.
-	 * 
+	 *
 	 * @return an array of strings for the choice of view
 	 */
 	protected String[] getViewChoices() {
@@ -252,7 +252,7 @@ public class TMBruteParsePane extends BruteParsePane {
             stepAction.setEnabled(false);
             worked = true;
         }
-			
+
 		treePanel.repaint();
         return worked;
 	}
@@ -260,7 +260,7 @@ public class TMBruteParsePane extends BruteParsePane {
 	/**
 	 * Inits a new tree panel. This overriding adds a selection node drawer so
 	 * certain nodes can be highlighted.
-	 * 
+	 *
 	 * @return a new display for the parse tree
 	 */
 	protected JComponent initTreePanel() {

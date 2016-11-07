@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import edu.duke.cs.jflap.regular.RegularExpression;
 /**
  * This is the codec for reading JFLAP structures in the JFLAP 3 saved file
  * format.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -41,7 +41,7 @@ public class JFLAP3Codec extends Codec {
 	 * file. This method should always return a structure, or throw a
 	 * {@link ParseException} in the event of failure with a message detailing
 	 * the nature of why the decoder failed.
-	 * 
+	 *
 	 * @param file
 	 *            the file to decode into a structure
 	 * @param parameters
@@ -61,7 +61,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the file as a regular expression.
-	 * 
+	 *
 	 * @param file
 	 *            the file to read
 	 * @return the regular expression associated with this document
@@ -90,7 +90,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the file as a grammar.
-	 * 
+	 *
 	 * @param file
 	 *            the file to read
 	 * @return the grammar associated with this document
@@ -128,7 +128,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the file as an automaton.
-	 * 
+	 *
 	 * @param file
 	 *            the file to read
 	 * @return the automaton associated with this document
@@ -157,7 +157,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the lines in the reader as a finite automaton.
-	 * 
+	 *
 	 * @param reader
 	 *            the source of lines in the file
 	 */
@@ -184,7 +184,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the lines in the reader as a pushdown automaton.
-	 * 
+	 *
 	 * @param reader
 	 *            the source of lines in the file
 	 */
@@ -225,7 +225,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the lines in the reader as a Turing machine.
-	 * 
+	 *
 	 * @param reader
 	 *            the source of lines in the file
 	 */
@@ -282,7 +282,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the number of states for the automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @param reader
@@ -344,7 +344,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Reads the state positions and moves the states.
-	 * 
+	 *
 	 * @param states
 	 *            the array of states
 	 * @param reader
@@ -371,7 +371,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Read the string sequences for each transition.
-	 * 
+	 *
 	 * @param groupSize
 	 *            the number of tokens for each transition
 	 * @param idPosition
@@ -414,7 +414,7 @@ public class JFLAP3Codec extends Codec {
 	/**
 	 * Given a structure, this will attempt to write the structure as a JFLAP 3
 	 * saved file.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to encode
 	 * @param file
@@ -434,7 +434,7 @@ public class JFLAP3Codec extends Codec {
 	 * should not perform a detailed check of the structure, since the user will
 	 * have no idea why it will not be encoded correctly if the {@link #encode}
 	 * method does not throw a {@link ParseException}.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to check
 	 * @return if the structure, perhaps with minor changes, could possibly be
@@ -446,7 +446,7 @@ public class JFLAP3Codec extends Codec {
 
 	/**
 	 * Returns the description of this codec.
-	 * 
+	 *
 	 * @return the description of this codec
 	 */
 	public String getDescription() {

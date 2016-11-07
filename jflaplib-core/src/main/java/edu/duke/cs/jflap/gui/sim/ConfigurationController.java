@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -44,14 +44,14 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 /**
  * This is an intermediary object between the simulator GUI and the automaton
  * simulators.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConfigurationController implements ConfigurationSelectionListener {
 	/**
 	 * Instantiates a new configuration controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the pane from which we retrieve configurations
 	 * @param simulator
@@ -125,7 +125,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 	/**
 	 * The step method takes all configurations from the configuration pane, and
 	 * replaces them with "successor" transitions.
-	 * 
+	 *
 	 * @param blockStep
 	 */
 	public void step(boolean blockStep) {
@@ -157,7 +157,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
             assert simulator instanceof TMSimulator;
 
             if (configs.length == 0) break; //bit of a hack, but not much time to debug right now.
-            
+
             List next = ((TMSimulator) simulator).stepBlock((TMConfiguration)configs[0]);
             //MERLIN MERLIN MERLIN MERLIN MERLIN//
             if (next.size() == 0) { //crucial check for rejection
@@ -166,7 +166,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
                 list.add(configs[0]);
             } else
                 list.addAll(next);
-            
+
             }while(false);
         }
 
@@ -200,7 +200,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 		} catch (Throwable e) {
 
 		}
-		
+
 //		State current = null;
 //		Iterator iter = list.iterator();
 //		int count = 0;
@@ -287,7 +287,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 
 		Configuration toFocus = configs[0];
 		configurations.setFocused(toFocus);
-		toFocus.setFocused(true); 
+		toFocus.setFocused(true);
 
 //		State block = toFocus.getCurrentState().getParentBlock();
 //		State parent = block;
@@ -347,14 +347,14 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 		for (int i = 0; i < configs.length; i++) {
 			Configuration current = configs[i];
 			foundFocused = setFocusIfNeeded(current, foundFocused);
-            
+
             if (current instanceof TMConfiguration){
                 //then blocks become relevant
                 TMState cur = (TMState) current.getCurrentState();
                 while (((TuringMachine) cur.getAutomaton()).getParent() != null) cur = ((TuringMachine) cur.getAutomaton()).getParent();
                 drawer.addSelected(cur);
             }
-            
+
 //			Stack blocks = (Stack) configs[i].getBlockStack().clone();
 //			if (!blocks.empty()) {
 //				State parent = (State) configs[i].getBlockStack().peek();
@@ -446,11 +446,11 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 			}
 		}
 	}
-    
+
     /**
      * This method is used to find out if we need the <b>Focus</b> and
      * <b>Defocus</b> buttons in the simulator.
-     * 
+     *
      * @return <code>true</code> if the automaton is a turing machine,
      * <code>false</code> otherwise
      * @author Jinghui Lim
@@ -465,7 +465,7 @@ public class ConfigurationController implements ConfigurationSelectionListener {
 
 	/**
 	 * Listens for configuration selection events.
-	 * 
+	 *
 	 * @param event
 	 *            the selection event
 	 */

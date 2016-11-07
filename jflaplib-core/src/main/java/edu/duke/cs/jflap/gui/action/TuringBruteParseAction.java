@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,28 +37,28 @@ import java.util.HashMap;
  *
  */
 public class TuringBruteParseAction extends GrammarAction {
-	
+
 	/** The grammar environment. */
 	private GrammarEnvironment environment;
 
 	/** The frame for the grammar environment. */
 	private EnvironmentFrame frame;
-	
+
 	private HashMap <String, String> myVariableMap;
-	
+
 	/**
 	 * Instantiates a new <CODE>BruteParseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
-	
+
 	public TuringBruteParseAction(GrammarEnvironment environment) {
 		super("Parser for Converted Grammar from TM", null);
 		this.environment = environment;
 		this.frame = Universe.frameForEnvironment(environment);
 	}
-	
+
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		Grammar g = environment.getGrammar(UnrestrictedGrammar.class);
@@ -93,7 +93,7 @@ public class TuringBruteParseAction extends GrammarAction {
 			int aa=lhs.indexOf("V(");
 			while (aa>-1)
 			{
-			
+
 		//		System.out.println("in 1st "+lhs+"===>    ");
 				int bb=lhs.indexOf(")");
 				String var="";
@@ -109,14 +109,14 @@ public class TuringBruteParseAction extends GrammarAction {
 				}
 			//	System.out.println(var+ " and new lhs is = "+lhs);
 				aa=lhs.indexOf("V(");
-				
+
 				myVariableMap.put(""+ch, var);
 			//	System.out.println(var+" converted to : "+ch);
-					
+
 				//	lhs.replaceAll("V"+aa[j], "A");
 				for (int k=0; k<prods.length; k++)
 				{
-					
+
 					String inner_lhs=prods[k].getLHS();
 					String inner_rhs=prods[k].getRHS();
 					int a=inner_lhs.indexOf(var);
@@ -130,15 +130,15 @@ public class TuringBruteParseAction extends GrammarAction {
 					if (a>-1)
 					{
 			//			System.out.println("in inner rhs   "+inner_rhs+"   ===>    ");
-						
+
 						inner_rhs=inner_rhs.substring(0, a)+""+ch+inner_rhs.substring(a+var.length());
 			//			System.out.println(inner_rhs);
-						
+
 					}
 					prods[k]=new Production(inner_lhs, inner_rhs);
 				}
 				ch=(char) (ch+1);
-		
+
 			//	System.out.println(lhs);
 			}
 		}

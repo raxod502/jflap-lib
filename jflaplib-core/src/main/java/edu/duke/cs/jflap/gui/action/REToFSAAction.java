@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import javax.swing.JOptionPane;
 /**
  * This class initiates the conversion of a regular expression to a
  * nondeterministic finite state automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class REToFSAAction extends RegularAction {
 	/**
 	 * Instantiates a <CODE>REToFSAAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment which is home to the regular expression to
 	 *            convert
@@ -47,7 +47,7 @@ public class REToFSAAction extends RegularAction {
 
 	/**
 	 * This begins the process of converting a regular expression to an NFA.
-	 * 
+	 *
 	 * @param event
 	 *            the event to process
 	 */

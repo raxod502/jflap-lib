@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,14 +29,14 @@ import java.util.*;
 
 /**
  * This is the parse controller for an LL parse pane.
- * 
+ *
  * @author Thomas Finley
  */
 
 class LLParseController {
 	/**
 	 * Instantiates a new LL parse controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the LL parse pane
 	 */
@@ -47,7 +47,7 @@ class LLParseController {
 
 	/**
 	 * Sets up for new input.
-	 * 
+	 *
 	 * @param string
 	 *            the new string to parse
 	 */
@@ -216,7 +216,7 @@ class LLParseController {
 	/**
 	 * Hightlights the cell in the parse table indexed by a variable and
 	 * terminal.
-	 * 
+	 *
 	 * @param id
 	 *            the state id
 	 * @param symbol
@@ -232,7 +232,7 @@ class LLParseController {
 
 	/**
 	 * Highlights a row in the grammar table.
-	 * 
+	 *
 	 * @param row
 	 *            the row to highlight
 	 */
@@ -257,7 +257,7 @@ class LLParseController {
 	/**
 	 * Returns the rule for a particular lookahead and variable of the LL parse
 	 * table.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable to look under
 	 * @param lookahead
@@ -277,7 +277,7 @@ class LLParseController {
 
 	/**
 	 * This action will perform parsing of a string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to parse
 	 * @param grammar

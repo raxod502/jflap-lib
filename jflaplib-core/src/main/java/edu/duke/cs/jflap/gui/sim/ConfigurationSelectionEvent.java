@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,17 +27,17 @@ import java.util.EventObject;
  * whenever a transition is selected or deselected in that pane. Because many
  * transitions may be selected or deselected at once, this merely registers that
  * a change has happened without registering exactly which have been changed.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.sim.ConfigurationSelectionListener
  * @see edu.duke.cs.jflap.gui.sim.ConfigurationPane
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConfigurationSelectionEvent extends EventObject {
 	/**
 	 * Instantiates a new <CODE>ConfigurationSelectionEvent</CODE> object.
-	 * 
+	 *
 	 * @param configurationPane
 	 *            the configuration pane where the selection state has changed
 	 */
@@ -47,7 +47,7 @@ public class ConfigurationSelectionEvent extends EventObject {
 
 	/**
 	 * Returns the configuration pane that generated this event.
-	 * 
+	 *
 	 * @return the configuration pane that generated this event
 	 */
 	public ConfigurationPane getPane() {

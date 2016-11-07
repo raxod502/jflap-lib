@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.*;
 
 /**
  * A mapping of parameters to values.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class ParameterTableModel extends GrowableTableModel {
 
 	/**
 	 * Constructs a parameter table model out of the map.
-	 * 
+	 *
 	 * @param parameters
 	 *            the mapping of parameter names to parameter objects
 	 */
@@ -57,7 +57,7 @@ public class ParameterTableModel extends GrowableTableModel {
 
 	/**
 	 * Initializes a row. In this object, a row is two empty strings.
-	 * 
+	 *
 	 * @return an array with two empty strings
 	 */
 	public Object[] initializeRow(int row) {
@@ -66,7 +66,7 @@ public class ParameterTableModel extends GrowableTableModel {
 
 	/**
 	 * Returns the mapping of names of parameters.
-	 * 
+	 *
 	 * @return the mapping from parameter names to parameters (i.e., map of
 	 *         contents of the left column to contents of the right column)
 	 */
@@ -83,7 +83,7 @@ public class ParameterTableModel extends GrowableTableModel {
 
 	/**
 	 * Values in the table are editable.
-	 * 
+	 *
 	 * @param row
 	 *            the row index
 	 * @param column
@@ -96,7 +96,7 @@ public class ParameterTableModel extends GrowableTableModel {
 
 	/**
 	 * Returns the column name.
-	 * 
+	 *
 	 * @param column
 	 *            the index of the column
 	 * @return the name of a particular column

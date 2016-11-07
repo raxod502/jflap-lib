@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import javax.swing.tree.TreeNode;
 
 /**
  * A very simple <CODE>DefaultNodeDrawer</CODE> object.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 	/**
 	 * This draws a node. The fill color is the color of the graphics object
 	 * before this method was called.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw the node on
 	 * @param node
@@ -64,7 +64,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 		// Restore the color.
 		g.setColor(c);
 	}
-	
+
 	public void draw(Graphics2D g, TreeNode node, boolean dummy)
 	{
 		g.fill(new Ellipse2D.Float(-NODE_RADIUS,
@@ -90,7 +90,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 
 	/**
 	 * Returns the bounds for a string.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to use for the string bounds
 	 * @param string
@@ -103,7 +103,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 
 	/**
 	 * Returns the size of a node.
-	 * 
+	 *
 	 * @return the space any node takes up
 	 */
 	public Rectangle2D nodeSize() {
@@ -113,7 +113,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 	/**
 	 * Returns the size of a node. This method returns the same as the nodeless
 	 * size method.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the size for
 	 * @return the space any node takes up
@@ -125,7 +125,7 @@ public class DefaultNodeDrawer implements NodeDrawer {
 	/**
 	 * Returns if a given point is "on" a given node, assuming that the node is
 	 * in the same position as the <CODE>draw</CODE> function would draw it.
-	 * 
+	 *
 	 * @param node
 	 *            the node to test for containment of a point
 	 * @param x

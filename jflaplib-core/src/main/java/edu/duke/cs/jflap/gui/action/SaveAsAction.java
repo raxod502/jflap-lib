@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,14 +34,14 @@ import javax.swing.KeyStroke;
 /**
  * The <CODE>SaveAsAction</CODE> is an action to save a serializable object
  * contained in an environment to file always using a dialog box.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class SaveAsAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>SaveAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that holds the serializable object
 	 */
@@ -56,7 +56,7 @@ public class SaveAsAction extends RestrictedAction {
 	/**
 	 * If a save was attempted, call the methods that handle the saving of the
 	 * serializable object to a file.
-	 * 
+	 *
 	 * @param event
 	 *            the action event
 	 */
@@ -66,7 +66,7 @@ public class SaveAsAction extends RestrictedAction {
 
 	/**
 	 * This action is restricted to those objects that are serializable.
-	 * 
+	 *
 	 * @param object
 	 *            the object to check for serializable-ness
 	 * @return <CODE>true</CODE> if the object is an instance of a

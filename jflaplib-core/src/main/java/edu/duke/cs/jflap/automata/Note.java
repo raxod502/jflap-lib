@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -47,18 +47,18 @@ public class Note extends JTextArea{
 		setLocationManually(p);
 		this.setText(message);
 	}
-	
+
 	/**
 	 * Creates an instance of <CODE>Note</CODE> with a specified message.
 	 */
 	public Note(String message){
 		this.setText(message);
 	}
-	
+
 	public Note(Point point) {
 		setLocationManually(point);
 	}
-	
+
     /*
        For the undo part of cloning, we need a way to store the view without becoming visible / active.
      */
@@ -78,8 +78,8 @@ public class Note extends JTextArea{
 			public void mouseDragged(MouseEvent e) {
 				if (e.isPopupTrigger())
 					return;
-				if(!((Note)e.getSource()).isEditable()){					
-					int diffX = e.getPoint().x - initialPointClick.x; 
+				if(!((Note)e.getSource()).isEditable()){
+					int diffX = e.getPoint().x - initialPointClick.x;
 					int diffY = e.getPoint().y - initialPointClick.y;
 
 					int nowAtX = initialPointState.x+ diffX;
@@ -94,8 +94,8 @@ public class Note extends JTextArea{
 			}
 			public void mouseMoved(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
-			}				
+
+			}
 		});
 		this.addMouseListener(new MouseListener(){
 
@@ -115,7 +115,7 @@ public class Note extends JTextArea{
 
 				initialPointState = new Point(((Note)e.getSource()).getAutoPoint());
 				initialPointClick = new Point(e.getPoint().x, e.getPoint().y);
-				
+
 				//delete the text box
 				EditorPane pane = myView.getCreator();
 				Tool curTool = pane.getToolBar().getCurrentTool();
@@ -124,25 +124,25 @@ public class Note extends JTextArea{
 					myView.getDrawer().getAutomaton().deleteNote((Note)e.getSource());
 					myView.repaint();
 				}
-				
+
 			}
 
 
 			public void mouseReleased(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
 
 			public void mouseEntered(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
 
 			public void mouseExited(MouseEvent e) {
 				// TODO Auto-generated method stub
-				
+
 			}
-			
+
 		});
         myView.add(this);
 		setEnabled(true);
@@ -156,7 +156,7 @@ public class Note extends JTextArea{
 	public Point getAutoPoint(){
 		return myAutoPoint;
 	}
-	
+
 	/**
 	 * Gets the AutomatonPane that the Note belongs to.
 	 * @return the AutomatonPane that the Note belongs to.
@@ -167,25 +167,25 @@ public class Note extends JTextArea{
 
     /**
      * Sets the Note manually to a specified Point.
-     * @param point 
+     * @param point
      */
 	public void setLocationManually(Point point) {
 		moving = true;
 		myAutoPoint = point;
 		if(myView != null){
-			setLocation(myView.transformFromAutomatonToView(point));	
+			setLocation(myView.transformFromAutomatonToView(point));
 		}
 	}
-	
+
 	public void setLocation(Point p){
-		if(moving){		
+		if(moving){
 			if(myView!=null){
 				myViewPoint = p;
 				super.setLocation(p);
 			}
 		}
 	}
-	
+
 	public void setLocation(int x, int y){
 		if(moving){
 			super.setLocation(x, y);
@@ -196,15 +196,15 @@ public class Note extends JTextArea{
 
 	public void updateView() {
 		setLocationManually(myAutoPoint);
-		
+
 	}
-	
+
 	public int specialHash(){
 //        EDebug.print(myAutoPoint.hashCode() + getText().hashCode());
         return myAutoPoint == null? -1 : myAutoPoint.hashCode() + this.getText().hashCode();
 	}
 
 
-	
-	
+
+
 }

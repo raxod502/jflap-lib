@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,9 +32,9 @@ import java.util.*;
  * help web frame for the various subclasses that will implement this action.
  * The idea is that an object can store its help page in the <CODE>HelpAction</CODE>
  * via <CODE>setURL</CODE>
- * 
+ *
  * @see edu.duke.cs.jflap.gui.WebFrame
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -53,7 +53,7 @@ public abstract class HelpAction extends RestrictedAction {
 	 * particular instance (in which case when this instance gets its help it
 	 * gets it immediately) or a Class object holding the class or superclass of
 	 * the instance.
-	 * 
+	 *
 	 * @param object
 	 *            the key which will map to a URL
 	 * @param url
@@ -71,7 +71,7 @@ public abstract class HelpAction extends RestrictedAction {
 	 * class to a URL is attempted. If <i>that</i> yields nothing, then a
 	 * mapping from the object's superclass to a URL is attempted. If no
 	 * superclass yields a URL, then <CODE>null</CODE> is returned.
-	 * 
+	 *
 	 * @param object
 	 *            the object to get help for
 	 * @return a URL of help for this object, or <CODE>null</CODE> if no help
@@ -99,7 +99,7 @@ public abstract class HelpAction extends RestrictedAction {
 	 * Displays help for this object. If there is no particular help for this
 	 * object available according to <CODE>getURL</CODE>, then the URL
 	 * indicated by <CODE>DEFAULT_HELP</CODE> will be displayed in a <CODE>WebFrame</CODE>.
-	 * 
+	 *
 	 * @param object
 	 *            the object to display help for
 	 * @see #getURL(Object)

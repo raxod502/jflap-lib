@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.awt.event.InputEvent;
 /**
  * The <TT>MenuConstants</TT> class is a simple class for retrieving
  * information universally important to menu items.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public class MenuConstants {
 	 * platform to platform. On Windows it's the control key, and on everything
 	 * else (presumably either Mac OS or some other Unix based system) it's meta
 	 * (on the MacOS this is interpreted as the command key).
-	 * 
+	 *
 	 * @return the main modifier for menu items
 	 */
 	public static int getMainMenuMask() {

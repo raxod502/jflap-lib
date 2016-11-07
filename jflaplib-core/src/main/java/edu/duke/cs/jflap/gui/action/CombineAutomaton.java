@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import javax.swing.*;
 
 /**
  * This combines two automatons into a new automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CombineAutomaton extends AutomatonAction {
 	/**
 	 * Instantiates a new action to combine automatons.
-	 * 
+	 *
 	 * @param environment
 	 *            the automaton environment
 	 */
@@ -51,7 +51,7 @@ public class CombineAutomaton extends AutomatonAction {
 
 	/**
 	 * Creates a new automaton.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */
@@ -101,7 +101,7 @@ public class CombineAutomaton extends AutomatonAction {
 
 	/**
 	 * Appends other to the <CODE>newOne</CODE> automaton.
-	 * 
+	 *
 	 * @param newOne
 	 */
 	private void add(Automaton newOne, Automaton other) {
@@ -122,7 +122,7 @@ public class CombineAutomaton extends AutomatonAction {
 			if (other.isFinalState(s))
 				newOne.addFinalState(s2);
 			s2.setLabel(s.getLabel());
-            
+
             /*
              * To maintain Moore machine state output.
              */
@@ -132,7 +132,7 @@ public class CombineAutomaton extends AutomatonAction {
                 MooreMachine n = (MooreMachine) other;
                 m.setOutput(s2, n.getOutput(s));
             }
-            
+
 			otherToNew.put(s, s2);
 		}
 		Transition[] otherTransitions = other.getTransitions();

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -50,7 +50,7 @@ import edu.duke.cs.jflap.automata.turing.TMSimulator;
 /**
  * This is the action used for the stepwise simulation of data. This method can
  * operate on any automaton. It uses a special exception for the two tape case.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -59,7 +59,7 @@ public class SimulateAction extends AutomatonAction {
 
 	/**
 	 * Instantiates a new <CODE>SimulateAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -74,7 +74,7 @@ public class SimulateAction extends AutomatonAction {
 		this.automaton = automaton;
 		this.environment = environment;
 	}
-	
+
 	public SimulateAction(Grammar gram, Environment environment) {
 		super("Step...", null);
 		if (SimulateNoClosureAction.isApplicable(automaton))
@@ -87,7 +87,7 @@ public class SimulateAction extends AutomatonAction {
 
 	/**
 	 * Returns the simulator for this automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get the simulator for
 	 * @return a simulator for this automaton
@@ -100,7 +100,7 @@ public class SimulateAction extends AutomatonAction {
 	 * Given initial configurations, the simulator, and the automaton, takes any
 	 * further action that may be necessary. In the case of stepwise operation,
 	 * which is the default, an additional tab is added to the environment
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton input is simulated on
 	 * @param simulator
@@ -131,7 +131,7 @@ public class SimulateAction extends AutomatonAction {
 	 * a multiple tape Turing machine. This method will probably involve some
 	 * prompt to the user. By default this method prompts the user using a
 	 * dialog box and returns the result from that dialog.
-	 * 
+	 *
 	 * @param component
 	 *            a parent for whatever dialogs are brought up
 	 * @return the object that represents the initial input to the machine, or
@@ -141,7 +141,7 @@ public class SimulateAction extends AutomatonAction {
         if(title.equals("")) title = "Input";
         if(getObject() instanceof TuringMachine){
     		// Do the multitape stuff.
-    		TuringMachine tm = (TuringMachine) getObject();       
+    		TuringMachine tm = (TuringMachine) getObject();
     		int tapes = tm.tapes();
             if(title.equals("Expected Result? (Accept or Reject)")){
                 title = "Result";
@@ -156,7 +156,7 @@ public class SimulateAction extends AutomatonAction {
             if (title.equals("")){
             	return openInputGUI(component, "Input?", 0);
                 //return JOptionPane.showInputDialog(component, "Input?");
-                
+
             }
             else
             {
@@ -176,7 +176,7 @@ public class SimulateAction extends AutomatonAction {
 		// TODO Auto-generated method stub
 		JPanel panel;
 		JTextField[] fields;
-		
+
 		//for FA, PDA
 		if (tapes==0)
 		{
@@ -232,16 +232,16 @@ public class SimulateAction extends AutomatonAction {
 							JOptionPane.getFrameForComponent(component).dispose();
 							handleInputFile(tt);
 						}
-						
+
 					} catch (FileNotFoundException e1) {
 						// TODO Auto-generate catch block
 						e1.printStackTrace();
 					}
-					
+
 				}
-				
+
 			}
-			
+
 		});
 		panel.add(jb);
 		int result = JOptionPane.showOptionDialog(component, panel, title,
@@ -262,7 +262,7 @@ public class SimulateAction extends AutomatonAction {
     		return input;
 		}
 	}
-	
+
 	private void handleInputFile(Object input)
 	{
 		Configuration[] configs = null;
@@ -278,14 +278,14 @@ public class SimulateAction extends AutomatonAction {
 		}*/
 		if (input == null)
 			return;
-		
+
 		// Get the initial configurations.
 		if (getObject() instanceof TuringMachine) {
 			String[] s = (String[]) input;
 			configs = ((TMSimulator) simulator).getInitialConfigurations(s);
 		} else {
 			String s = (String) input;
-			configs = simulator.getInitialConfigurations(s); 
+			configs = simulator.getInitialConfigurations(s);
 		}
 		handleInteraction(automaton, simulator, configs, input);
 
@@ -317,22 +317,22 @@ public class SimulateAction extends AutomatonAction {
 		}*/
 		if (input == null)
 			return;
-		
+
 		// Get the initial configurations.
 		if (getObject() instanceof TuringMachine) {
 			String[] s = (String[]) input;
 			configs = ((TMSimulator) simulator).getInitialConfigurations(s);
 		} else {
 			String s = (String) input;
-			configs = simulator.getInitialConfigurations(s); 
+			configs = simulator.getInitialConfigurations(s);
 		}
 		handleInteraction(automaton, simulator, configs, input);
 	}
-	
+
 	/**
 	 * Returns whether the current automaton can legally be simulated.  If not,
 	 * a dialog pops up.  Will true if <code>automaton</code> = <i>null</i>.
-	 * 
+	 *
 	 * @param source
 	 * 		the source of this action
 	 * @return whether the current automaton can legally be simulated
@@ -366,7 +366,7 @@ public class SimulateAction extends AutomatonAction {
         }
         /*
          * If it is a Turing machine, there are transitions from the final state, and that preference
-         * hasn't been enabled, give a warning and return. 
+         * hasn't been enabled, give a warning and return.
          */
         else if (automaton instanceof TuringMachine &&
         	!Universe.curProfile.transitionsFromTuringFinalStateAllowed()) {
@@ -380,7 +380,7 @@ public class SimulateAction extends AutomatonAction {
                             "\nthe preference in the \"Preferences\" menu in the JFLAP main menu.",
                             "Transitions From Final States", JOptionPane.ERROR_MESSAGE);
         			return false;
-        		}        	
+        		}
         }
         return true;
 	}
@@ -389,7 +389,7 @@ public class SimulateAction extends AutomatonAction {
 	 * Simulate actions are applicable to every automaton which accepts a single
 	 * string of input, i.e., every automaton except for dual tape turing
 	 * machines.
-	 * 
+	 *
 	 * @param object
 	 *            to object to test for applicability
 	 */
@@ -399,7 +399,7 @@ public class SimulateAction extends AutomatonAction {
 
 	/**
 	 * Returns the automaton.
-	 * 
+	 *
 	 * @return the automaton
 	 */
 	protected Object getObject() {
@@ -409,13 +409,13 @@ public class SimulateAction extends AutomatonAction {
 
 	/**
 	 * Returns the environment.
-	 * 
+	 *
 	 * @return the environment
 	 */
 	protected Environment getEnvironment() {
 		return environment;
 	}
-	
+
 	protected void setEnvironment(Environment newEnv) {
 		environment = newEnv;
 	}
@@ -425,5 +425,5 @@ public class SimulateAction extends AutomatonAction {
 
 	/** The environment that the simulation pane will be put in. */
 	private Environment environment;
-	
+
 }

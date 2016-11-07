@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import edu.duke.cs.jflap.regular.*;
 /**
  * The editor pane for a regular expression allows the user to change the
  * regular expression.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EditorPane extends JPanel {
 	/**
 	 * Instantiates a new editor pane for a given regular expression.
-	 * 
+	 *
 	 * @param expression
 	 *            the regular expression
 	 */

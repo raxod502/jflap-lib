@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.Map;
  * produce a corresponding structure. Ideally the <CODE>toString</CODE> method
  * should be implemented with a brief description of the format of file this can
  * encode.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public interface Encoder {
 	 * This method should always return a file, or throw an
 	 * {@link EncodeException} in the event of failure with a message detailing
 	 * the nature of why the encoding failed.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to encode
 	 * @param file
@@ -58,7 +58,7 @@ public interface Encoder {
 	 * should not perform a detailed check of the structure, since the user will
 	 * have no idea why it will not be encoded correctly if the {@link #encode}
 	 * method does not throw a {@link ParseException}.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to check
 	 * @return if the structure, perhaps with minor changes, could possibly be
@@ -74,7 +74,7 @@ public interface Encoder {
 	 * <code>x.proposeFilename(x.proposeFilename(name,S),S)</code> should
 	 * always equal <code>x.proposeFilename(name,S)</code>, where
 	 * <code>S</code> is any structure.
-	 * 
+	 *
 	 * @param filename
 	 *            the proposed file name
 	 * @param structure

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import javax.swing.JOptionPane;
 /**
  * This controller handles user actions for the building of an LR grammar parse
  * table.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LRParseDerivationController extends LLParseDerivationController {
 	/**
 	 * Instantiates a new parse derivation controller.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param augmented
@@ -75,7 +75,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 
 	/**
 	 * For the grammar, return the initial goto item set.
-	 * 
+	 *
 	 * @return the initial goto item set
 	 */
 	private Set initialGotoSet() {
@@ -91,7 +91,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 
 	/**
 	 * Return the set of variables that have $ in their follow set.
-	 * 
+	 *
 	 * @return the set of variables that have $ in their follow set
 	 */
 	private Set variablesWithEndFollow() {
@@ -120,7 +120,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 	/**
 	 * If the current step has not been completed, this method will report back
 	 * to the user what remains to be done.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the current step is finished, <CODE>false</CODE>
 	 *         plus some user output if the current step is unfinished
 	 */
@@ -355,7 +355,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 	 * wants to evaluate the Goto(<I>I, S</I>). <I>I</I> is a set of items
 	 * represented by the <CODE>first</CODE> parameter. <I>S</I> is a symbol
 	 * that the user shall input.
-	 * 
+	 *
 	 * @param first
 	 *            the state that represents the group of items goto takes as an
 	 *            argument
@@ -412,7 +412,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 
 	/**
 	 * Moves the controller to the next step of the building of the parse table.
-	 * 
+	 *
 	 * @return if the controller could be advanced to the next step
 	 */
 	public boolean nextStep() {
@@ -502,7 +502,7 @@ public class LRParseDerivationController extends LLParseDerivationController {
 
 	/**
 	 * Assigns items to a particular state.
-	 * 
+	 *
 	 * @param items
 	 *            the items to assign to a state
 	 * @param state

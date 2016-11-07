@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.util.*;
  * automatically whenever the last line is edited. Basically, whenever the
  * <CODE>setValueAt</CODE> method is called on the last row, the table grows
  * itself by one line.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -36,19 +36,19 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 		Cloneable {
 	/**
 	 * This instantiates a <CODE>GrowableTableModel</CODE>.
-	 * 
+	 *
 	 * @param columns
 	 *            the number of columns for this model
 	 */
 	public GrowableTableModel(int columns) {
 		this.columns = columns;
-		clear();       
+		clear();
 	}
 
 	/**
 	 * The copy constructor for this table model. This will do a shallow copy of
 	 * all elements in the data.
-	 * 
+	 *
 	 * @param model
 	 *            the model to copy
 	 */
@@ -69,7 +69,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 	/**
 	 * This is a copy method to copy all of the data for a given table model to
 	 * this table model.
-	 * 
+	 *
 	 * @param model
 	 *            the model to copy
 	 */
@@ -90,7 +90,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 	/**
 	 * Initializes a new row. This should not modify any data or any state
 	 * whatsoever, but should simply return an initialized row.
-	 * 
+	 *
 	 * @param row
 	 *            the number of the row that's being initialized
 	 * @return an object array that will hold, in column order, the contents of
@@ -106,7 +106,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 
 	/**
 	 * Returns the number of columns in this table.
-	 * 
+	 *
 	 * @return the number of columns in this table
 	 */
 	public final int getColumnCount() {
@@ -115,7 +115,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 
 	/**
 	 * Returns the number of rows currently in this table.
-	 * 
+	 *
 	 * @return the number of rows currently in this table
 	 */
 	public final int getRowCount() {
@@ -124,7 +124,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 
 	/**
 	 * Deletes a particular row.
-	 * 
+	 *
 	 * @param row
 	 *            the row index to delete
 	 * @return if the row was able to be deleted
@@ -139,7 +139,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 
 	/**
 	 * Inserts data at a particular row.
-	 * 
+	 *
 	 * @param newData
 	 *            the array of new data for a row
 	 * @param row
@@ -157,7 +157,7 @@ public abstract class GrowableTableModel extends AbstractTableModel implements
 
 	/**
 	 * Returns the object at a particular location in the model.
-	 * 
+	 *
 	 * @param row
 	 *            the row of the object to retrieve
 	 * @param column

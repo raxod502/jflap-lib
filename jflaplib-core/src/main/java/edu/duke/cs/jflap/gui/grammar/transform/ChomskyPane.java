@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import javax.swing.*;
 
 /**
  * The pane for converting a grammar to Chomsky normal form.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ChomskyPane extends JPanel {
 	/**
 	 * Instantiates a Chomsky pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that this pane will become a part of
 	 * @param grammar
@@ -74,7 +74,7 @@ public class ChomskyPane extends JPanel {
 
 	/**
 	 * Initializes the right panel.
-	 * 
+	 *
 	 * @return an initialized right panel
 	 */
 	private JPanel initRightPanel() {
@@ -119,7 +119,7 @@ public class ChomskyPane extends JPanel {
 
 	/**
 	 * Returns the array of rows that need further reduction.
-	 * 
+	 *
 	 * @return an array of row indices that need reduction
 	 */
 	private int[] getWhatNeedsDone() {
@@ -184,7 +184,7 @@ public class ChomskyPane extends JPanel {
 			System.err.println(e);
 		}
 	}
-	
+
 	public Grammar getGrammar()
 	{
 		Production[] p = editingGrammarModel.getProductions();
@@ -216,7 +216,7 @@ public class ChomskyPane extends JPanel {
 		int unneeded = 0;
 		ArrayList list = new ArrayList();
 		editingGrammarView.dehighlight();
-		
+
 		for (int i = r.length - 1; i >= 0; i--) {
 			Production p = editingGrammarModel.getProduction(r[i]);
 			if (p == null)
@@ -275,7 +275,7 @@ public class ChomskyPane extends JPanel {
 
 	/**
 	 * Initializes a table for the grammar.
-	 * 
+	 *
 	 * @return a table to display the grammar
 	 */
 	private GrammarTable initGrammarTable() {

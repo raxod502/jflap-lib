@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.*;
  * The nondeterminism detector object can be used to find all the
  * nondeterministic states in an automaton (i.e. all states with equal outward
  * transitions).
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -40,7 +40,7 @@ public abstract class NondeterminismDetector {
 	/**
 	 * Returns true if the transitions are identical (i.e. all components of the
 	 * label are equivalent) or if the transitions introduce nondeterminism
-	 * 
+	 *
 	 * @param t1
 	 *            a transition
 	 * @param t2
@@ -51,7 +51,7 @@ public abstract class NondeterminismDetector {
 
 	/**
 	 * Returns an array of states that have nondeterminism.
-	 * 
+	 *
 	 * @return an array of states that have nondeterminism.
 	 */
 

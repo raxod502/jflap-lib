@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import edu.duke.cs.jflap.automata.pda.PDATransition;
 
 /**
  * This is the creator of transitions in push down automata.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class PDATransitionCreator extends TableTransitionCreator {
 	/**
 	 * Instantiates a new <CODE>PDATransitionCreator</CODE>.
-	 * 
+	 *
 	 * @param parent
 	 *            the parent of whatever dialogs/windows get brought up by this
 	 *            creator
@@ -49,7 +49,7 @@ public class PDATransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Initializes a new empty transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -61,7 +61,7 @@ public class PDATransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Creates a new table model.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to create the model for
 	 * @return a table model for the transition

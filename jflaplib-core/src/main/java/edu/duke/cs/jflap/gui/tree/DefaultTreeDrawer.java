@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import java.util.*;
 /**
  * The <CODE>DefaultTreeDrawer</CODE> object is used to draw a <CODE>TreeModel</CODE>
  * in a given space with some built in basic functionality.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Instantiates a <CODE>DefaultTreeDrawer</CODE> for a given tree.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree to draw, assumed to have all nodes as <CODE>javax.swing.tree.TreeNode</CODE>
 	 *            objects.
@@ -51,7 +51,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * This method returns the color for a particular node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to color
 	 * @return the color for this node, which by default is always yellow
@@ -62,7 +62,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Draws the tree in the indicated amount of space.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param size
@@ -83,7 +83,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Given a point and a size, returns the point scaled to the size.
-	 * 
+	 *
 	 * @param point
 	 *            a point in ([0,1], [0,1])
 	 * @param size
@@ -111,7 +111,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Draws the given node, as well as its subnodes.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param node
@@ -147,7 +147,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Returns the <CODE>TreeModel</CODE> that this <CODE>TreeDrawer</CODE>
 	 * draws.
-	 * 
+	 *
 	 * @return the tree model this drawer draws
 	 */
 	public TreeModel getModel() {
@@ -157,7 +157,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Sets the <CODE>TreeModel</CODE> that this <CODE>TreeDrawer</CODE>
 	 * draws.
-	 * 
+	 *
 	 * @param model
 	 *            the new tree model
 	 */
@@ -184,7 +184,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Shows a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to set as visible
 	 */
@@ -197,7 +197,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Hides a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to set as invisible
 	 */
@@ -210,7 +210,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Returns if a node is visible. This function is undefined if the node in
 	 * question is not in the tree.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get visibility of
 	 * @return the node is visible
@@ -237,7 +237,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Returns the node at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check for the presence of a node
 	 * @param size
@@ -246,7 +246,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	public TreeNode nodeAtPoint(Point2D point, Dimension2D size) {
 		Iterator it = nodeToPoint.entrySet().iterator();
 		while (it.hasNext()) {
-		
+
 			Map.Entry entry = (Map.Entry) it.next();
 			Point2D p = scalePoint((Point2D) entry.getValue(), size);
 			TreeNode node = (TreeNode) entry.getKey();
@@ -259,7 +259,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Recursively sets the points of the tree.
-	 * 
+	 *
 	 * @param node
 	 *            the current node in the tree
 	 * @param depth
@@ -317,7 +317,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Sets the node placer for this drawer. By default this is set to an
 	 * instance of <CODE>DefaultNodePlacer</CODE>.
-	 * 
+	 *
 	 * @param placer
 	 *            the new node placer
 	 * @see edu.duke.cs.jflap.gui.tree.DefaultNodePlacer
@@ -329,7 +329,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Returns the node placer for this drawer.
-	 * 
+	 *
 	 * @return the node placer for this drawer
 	 */
 	public NodePlacer getNodePlacer() {
@@ -339,7 +339,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 	/**
 	 * Sets the node drawer for this drawer. By default this is set to an
 	 * instance of <CODE>DefaultNodeDrawer</CODE>.
-	 * 
+	 *
 	 * @param drawer
 	 *            the new node drawer
 	 * @see edu.duke.cs.jflap.gui.tree.DefaultNodeDrawer
@@ -350,7 +350,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Returns the node drawer for this drawer.
-	 * 
+	 *
 	 * @return the node drawer for this drawer
 	 */
 	public NodeDrawer getNodeDrawer() {
@@ -359,7 +359,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Sets the display of the tree to inverted or uninverted.
-	 * 
+	 *
 	 * @param inverted
 	 *            <CODE>true</CODE> if the root should be at the base, <CODE>false</CODE>
 	 *            if the root should be at the top
@@ -370,7 +370,7 @@ public class DefaultTreeDrawer implements TreeDrawer, TreeModelListener {
 
 	/**
 	 * Returns if the display of the tree is inverted.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the root is at the base, <CODE>false</CODE>
 	 *         if the root is at the top
 	 */

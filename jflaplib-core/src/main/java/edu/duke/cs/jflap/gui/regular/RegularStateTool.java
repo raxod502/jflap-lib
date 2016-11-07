@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,16 +31,16 @@ import edu.duke.cs.jflap.automata.State;
 /**
  * A tool that handles the creation of the final state for the FSA to regular
  * expression conversion.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController
- * 
+ *
  * @author Thomas Finley
  */
 
 public class RegularStateTool extends StateTool {
 	/**
 	 * Instantiates a new regular state tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view that the automaton is drawn in
 	 * @param drawer
@@ -56,7 +56,7 @@ public class RegularStateTool extends StateTool {
 
 	/**
 	 * When the user clicks, one creates a state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -68,7 +68,7 @@ public class RegularStateTool extends StateTool {
 
 	/**
 	 * When the user drags, one moves the created state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

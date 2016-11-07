@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,16 +35,16 @@ import edu.duke.cs.jflap.automata.State;
 /**
  * A tool that handles the removal of states. This calls the {@link
  * FSAToREController#stateCollapse} method on the clicked state.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController#transitionCreate
- * 
+ *
  * @author Thomas Finley
  */
 
 public class StateCollapseTool extends Tool {
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -60,7 +60,7 @@ public class StateCollapseTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -69,7 +69,7 @@ public class StateCollapseTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the state tool icon
 	 */
 	protected Icon getIcon() {
@@ -79,7 +79,7 @@ public class StateCollapseTool extends Tool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, C.
-	 * 
+	 *
 	 * @return the keystroke for this tool
 	 */
 	public KeyStroke getKey() {
@@ -89,7 +89,7 @@ public class StateCollapseTool extends Tool {
 	/**
 	 * When we press the mouse, the convert controller should be told that
 	 * transitions are done.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -84,7 +84,7 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 /**
  * This is the action used for the simulation of multiple inputs on an automaton
  * with no interaction. This method can operate on any automaton.
- * 
+ *
  * @author Thomas Finley
  * @modified by Kyung Min (Jason) Lee
  */
@@ -92,7 +92,7 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 public class MultipleSimulateAction extends NoInteractionSimulateAction {
 	/**
 	 * Instantiates a new <CODE>MultipleSimulateAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -111,11 +111,11 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_M,
                 MAIN_MENU_MASK));
 	}
-	
+
 	/**
 	 * Returns the title for the type of compontent we will add to the
 	 * environment.
-	 * 
+	 *
 	 * @return in this base class, returns "Multiple Inputs"
 	 */
 	public String getComponentTitle() {
@@ -124,7 +124,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 
 	/**
 	 * This will search configurations for an accepting configuration.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton input is simulated on
 	 * @param simulator
@@ -181,7 +181,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 
 	/**
 	 * Provides an initialized multiple input table object.
-	 * 
+	 *
 	 * @param obj
 	 *            the automaton to provide the multiple input table for
 	 * @return a table object for this automaton
@@ -205,7 +205,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 		// In this regular multiple simulate pane, we don't care about
 		// the outputs, so get rid of them.
 		TableColumnModel tcmodel = table.getColumnModel();
-		
+
 		inputCount += model.getInputCount();
 		for (int i = model.getInputCount(); i > 0; i--) {
 			tcmodel.removeColumn(tcmodel.getColumn(inputCount));
@@ -216,20 +216,20 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             ArrayList strings = this.getEnvironment().myTestStrings;
             int offset = strings.size();
             int row = 0;
-            for(int m = 0; m < autos.size(); m++){      
+            for(int m = 0; m < autos.size(); m++){
                 for(int k = 0; k < strings.size(); k++){
                     row = k+offset*m;
                     Object currentObj = autos.get(m);
                     if(currentObj instanceof Automaton){
-                    	model.setValueAt(((Automaton)currentObj).getFileName(), row, 0); 
-                    	 model.setValueAt((String)strings.get(k), row, 1);                    	
+                    	model.setValueAt(((Automaton)currentObj).getFileName(), row, 0);
+                    	 model.setValueAt((String)strings.get(k), row, 1);
                     }
                     else if(currentObj instanceof Grammar){
-                    	model.setValueAt(((Grammar)currentObj).getFileName(), row, 0); 
+                    	model.setValueAt(((Grammar)currentObj).getFileName(), row, 0);
                     	 model.setValueAt((String)strings.get(k), row, 1);
-                    }                  
+                    }
                 }
-                
+
             }
             while((model.getRowCount()-1) > (autos.size()*strings.size())){
             	model.deleteRow(model.getRowCount()-2);
@@ -240,7 +240,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 		table.setGridColor(Color.lightGray);
 		return table;
 	}
-	
+
 	public void performAction(Component source){
 		if(getObject() instanceof Automaton){
 			if (((Automaton)getObject()).getInitialState() == null) {
@@ -259,7 +259,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             NondeterminismDetector d = NondeterminismDetectorFactory.getDetector(a);
             State[] nd = d.getNondeterministicStates(a);
             if(nd.length > 0){
-                JOptionPane.showMessageDialog(source, 
+                JOptionPane.showMessageDialog(source,
                     "Please remove nondeterminism for simulation.\n" +
                     "Select menu item Test : Highlight Nondeterminism\n" +
                     "to see nondeterministic states.",
@@ -267,8 +267,8 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                 return;
             }
         }
-		
-        
+
+
 		//System.out.println("In performAction");
         table = initializeTable(getObject());
 //		if(table==null){
@@ -280,17 +280,17 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 //            System.out.println("got here");
 //            table = newTable;
 //        }
-        
+
 		if(((InputTableModel)table.getModel()).isMultiple){
 			getEnvironment().remove(getEnvironment().getActive());
 		}
-		
+
 		JPanel panel = new JPanel(new BorderLayout());
 		JToolBar bar = new JToolBar();
 		panel.add(new JScrollPane(table), BorderLayout.CENTER);
 		panel.add(bar, BorderLayout.SOUTH);
 		panel.add(new TableTextSizeSlider(table), BorderLayout.NORTH);
-	
+
 		//Load inputs
 		bar.add(new AbstractAction("Load Inputs"){
 
@@ -309,7 +309,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 				if (retval==JFileChooser.APPROVE_OPTION)
 				{
 					f=ourChooser.getSelectedFile();
-					try 
+					try
 					{
 						Scanner sc=new Scanner(f);
 						int last=model.getRowCount()-1;
@@ -330,7 +330,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 							String temp=sc.next();
 							model.setValueAt(temp, last, 0);
 							last++;
-						}		
+						}
 					}
 					catch (FileNotFoundException e1) {
 						// TODO Auto-generate catch block
@@ -338,7 +338,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 					}
 				}
 			}
-			
+
 		});
 		// Add the running input thing.
 		bar.add(new AbstractAction("Run Inputs") {
@@ -350,7 +350,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 					// We weren't editing anything, so we're OK.
 				}
 				InputTableModel model = (InputTableModel) table.getModel();
-				
+
 				if(getObject() instanceof Automaton){
 	                Automaton currentAuto = (Automaton)getObject();
 					AutomatonSimulator simulator = SimulatorFactory
@@ -368,15 +368,15 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 	                    if(r>0){
 	                        if(r%uniqueInputs==0){
 	                            currentAuto = (Automaton)getEnvironment().myObjects.get(r/uniqueInputs);
-	                           
-	                            simulator = SimulatorFactory.getSimulator(currentAuto);                         
+
+	                            simulator = SimulatorFactory.getSimulator(currentAuto);
 	                        }
 	                    }
 						Configuration[] configs = null;
 						Object input = null;
 						// Is this a Turing machine?
 						if (currentAuto instanceof TuringMachine) {
-							 
+
 							configs = ((TMSimulator) simulator)
 									.getInitialConfigurations(inputs[r]);
 							input = inputs[r];
@@ -391,7 +391,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 						Configuration c = null;
 						if (associated.size() != 0)
 							c = (Configuration) associated.get(0);
-                        
+
                         /*
                          * If it's a Moore or Mealy machine, the output should be
                          * the string not accept/reject.
@@ -400,7 +400,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                         if(getObject() instanceof MealyMachine)
                         {
                             MealyConfiguration con = (MealyConfiguration) c;
-                            model.setResult(r, con.getOutput(), con, 
+                            model.setResult(r, con.getOutput(), con,
                                 getEnvironment().myTransducerStrings, (r%(uniqueInputs))*(tapes+1));
                         }
 						//currentCompare.add()
@@ -413,7 +413,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 					int uniqueInputs = inputs.length;
 					Grammar currentGram = (Grammar)getObject();
 					BruteParsePane parsePane = new BruteParsePane((GrammarEnvironment)getEnvironment(), currentGram, model);
-					parsePane.inputField.setEditable(false);    
+					parsePane.inputField.setEditable(false);
                     parsePane.row = -1;
 					parsePane.parseMultiple();
 //						while(parsePane.pauseResumeAction.isEnabled()){
@@ -421,15 +421,15 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 //							while(timer.isRunning()){
 //								//wait
 //							}
-						
+
 //						}
 //						if(parsePane.stepAction.isEnabled()) model.setResult(r, "Accept", null, getEnvironment().myTransducerStrings, (r%uniqueInputs));
-						
-								
-					
+
+
+
 				}
 			}
-			
+
 		});
 		if(!((InputTableModel)table.getModel()).isMultiple){
 		// Add the clear button.
@@ -441,15 +441,15 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 				} catch (NullPointerException exception) {
 					// We weren't editing anything, so we're OK.
 				}
-				InputTableModel model = (InputTableModel) table.getModel();              
+				InputTableModel model = (InputTableModel) table.getModel();
 				model.clear();
 			}
 		});
-		
+
         /*
          * So that it will show up as Lambday or Epsilon, depending on the
-         * profile. Sorry about the cheap hack. 
-         * 
+         * profile. Sorry about the cheap hack.
+         *
          * Jinghui Lim
          */
         String empty = "Lambda";
@@ -515,9 +515,9 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 		});
 		}
 		if(((InputTableModel)table.getModel()).isMultiple){
-		    
+
 		    bar.add(new AbstractAction("Edit File"){
-		        public void actionPerformed(ActionEvent arg0) {		            
+		        public void actionPerformed(ActionEvent arg0) {
 		            int k = getMachineIndexBySelectedRow(table);
 		            if(k>=0 && k < getEnvironment().myObjects.size()){
 		                if(getObject() instanceof Automaton){
@@ -526,31 +526,31 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 		                    ep.setName(cur.getFileName());
 		                    getEnvironment().add(ep, "Edit", new CriticalTag() {
 		                    });
-		                    getEnvironment().setActive(ep);          
+		                    getEnvironment().setActive(ep);
 		                }
-		                
+
 		                else if(getObject() instanceof Grammar){
 		                    Grammar cur = (Grammar)getEnvironment().myObjects.get(k);
-		                    GrammarInputPane ep = new GrammarInputPane(cur);      
+		                    GrammarInputPane ep = new GrammarInputPane(cur);
 		                    ep.setName(cur.getFileName());
 		                    getEnvironment().add(ep, "Edit", new CriticalTag() {
 		                    });
 		                    getEnvironment().setActive(ep);
 		                }
-                    }	            
+                    }
 		        }
 		    });
-		    
+
         	bar.add(new AbstractAction("Add input string"){
         		public void actionPerformed(ActionEvent arg0) {
                     //add input
                     int inputsNeeded = 1;
                     boolean turing = false;
-        			if(getEnvironment().myObjects.get(0) instanceof TuringMachine){      			 
+        			if(getEnvironment().myObjects.get(0) instanceof TuringMachine){
                         turing = true;
                     }
                         Object input = initialInput((Component) getEnvironment().getActive(), "Input");
-    
+
             			if(input instanceof String){
             				String s = (String)input;
             				((ArrayList)getEnvironment().myTestStrings).add(s);
@@ -562,12 +562,12 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                             }
             			}
                         else return;
-                    
+
                     //add expected output
                     if(turing){
                             Object output = initialInput((Component) getEnvironment().getActive(), "Expected Output?");
-        
-    
+
+
                             if(output instanceof String){
                                 String s = (String)output;
                                 ((ArrayList)getEnvironment().myTransducerStrings).add(s);
@@ -582,7 +582,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                                 getEnvironment().myTestStrings.remove(getEnvironment().myTestStrings.size()-1);
                                 return;
                             }
-                        
+
                     }
                     //add expected result
                     Object result = initialInput((Component) getEnvironment().getActive(), "Expected Result? (Accept or Reject)");
@@ -600,13 +600,13 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                         getEnvironment().myTransducerStrings.remove(getEnvironment().myTestStrings.size()-1);
                         return;
                     }
-                    
+
         			getEnvironment().remove(getEnvironment().getActive());
                     performAction(getEnvironment().getActive());
-                    
+
                 }
             	});
-        	
+
         	bar.add(new AbstractAction("Add file"){
         		public void actionPerformed(ActionEvent arg0) {
         			TestAction test = new TestAction();
@@ -615,33 +615,33 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
                     performAction(getEnvironment().getActive());
                 }
             });
-        	
+
         	bar.add(new AbstractAction("Remove file"){
         		public void actionPerformed(ActionEvent arg0) {
         			int k = getMachineIndexBySelectedRow(table);
                     if(k>=0 && k < getEnvironment().myObjects.size()){
             			getEnvironment().myObjects.remove(k);
             			int row = table.getSelectedRow();
-       			
+
             			int objSize = getEnvironment().myObjects.size();
             			int stringSize = getEnvironment().myTestStrings.size();
-            			
+
             			int beginOffset = row%stringSize;
             			int begin = (row-beginOffset);
-            			
+
             			for(int i = 0; i < (stringSize); i++){
-            				((InputTableModel)table.getModel()).deleteRow(begin);      				
-            		 }  
+            				((InputTableModel)table.getModel()).deleteRow(begin);
+            		 }
             			table.changeSelection(0,0, false, false);
                     }
                 }
             	});
-        	
+
         	bar.add(new AbstractAction("Save Results"){
         	    public void actionPerformed(ActionEvent arg0) {
         	        final JFrame frame = new JFrame("Save Location");
-        	        
-        	        
+
+
         	        final JRadioButton defaultLocation = new JRadioButton("Save Results with Original File");
         	        defaultLocation.setMnemonic(KeyEvent.VK_B);
         	        defaultLocation.setActionCommand("Save Results with Original File");
@@ -660,13 +660,13 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         	        ButtonGroup group = new ButtonGroup();
         	        group.add(defaultLocation);
         	        group.add(specifyLocation);
-        	        
-        	        
+
+
         	        JPanel panel = new JPanel();
         	        panel.add(defaultLocation);
         	        panel.add(specifyLocation);
         	        frame.getContentPane().add(panel, BorderLayout.CENTER);
-        	        
+
         	        JButton accept = new JButton("Accept");
         	        accept.addActionListener(new ActionListener() {
         	            public void actionPerformed(ActionEvent event) {
@@ -686,14 +686,14 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         	                            if (result != JFileChooser.APPROVE_OPTION)
         	                                break;
         	                            file = Universe.CHOOSER.getSelectedFile();
-        	                            
+
         	                            try {
         	                                // Get the suggested file name.
         	                                filepath = file.getCanonicalPath();
                                             int last = filepath.lastIndexOf("\\");
                                             if(last == -1) filepath = filepath+"/";
                                             else filepath = filepath+"\\";
-        	                                
+
         	                            }
         	                            catch (IOException e) {
         	                                // TODO Auto-generated catch block
@@ -718,22 +718,22 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         	                else if(machine instanceof Grammar){
         	                    if(failedSave) base = ((Grammar)machine).getFilePath();
         	                }
-        	                
-        	                
+
+
         	                try{
-            	                FileWriter writer = new FileWriter(base+"results"+fileName+".txt");   
+            	                FileWriter writer = new FileWriter(base+"results"+fileName+".txt");
             	                BufferedWriter bwriter = new BufferedWriter(writer);
             	                PrintWriter out = new PrintWriter(bwriter);;
             	                for(int r = 0; r<model.getRowCount(); r++){
-            	                    fileName = (String)model.getValueAt(r, 0);                      
+            	                    fileName = (String)model.getValueAt(r, 0);
             	                    if(!fileName.equals(oldfileName)){
-            	                        oldfileName = fileName;  
+            	                        oldfileName = fileName;
             	                        out.flush();
             	                        out.close();
             	                        if(fileName.equals("")) break;
             	                        int index = getMachineIndexByName(fileName);
             	                        machine = getEnvironment().myObjects.get(index);
-            	                        if(machine instanceof Automaton){                                 
+            	                        if(machine instanceof Automaton){
             	                            if(!specifyLocation.isSelected() || failedSave) base = ((Automaton)machine).getFilePath();
             	                        }
             	                        else if(machine instanceof Grammar){
@@ -745,8 +745,8 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             	                    boolean input = false;
             	                    boolean end = false;
             	                    boolean output = false;
-            	                    
-            	                    for(int c = 1; c < model.getColumnCount(); c++){   
+
+            	                    for(int c = 1; c < model.getColumnCount(); c++){
             	                        if((((String)model.getColumnName(c)).startsWith("Input")) && !input){
             	                            out.write("Input: ");
             	                            input = true;
@@ -760,7 +760,7 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             	                            out.write("Result: ");
             	                        }
             	                        String value = (String)model.getValueAt(r, c);
-            	                        
+
             	                        out.write(value+" ");
             	                        try {
             	                            if(end){
@@ -768,19 +768,19 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             	                            }
             	                        }
             	                        catch (IOException e) {
-            	                            
+
             	                        }
-            	                    }                          
+            	                    }
             	                }
             	                out.close();
             	            }
                             catch(IOException e){
-                                
+
                             }
                         }
-            
+
         	        });
-        	        
+
         	        frame.getContentPane().add(accept, BorderLayout.SOUTH);
         	        frame.pack();
         	        Point point = new Point(100, 50);
@@ -788,9 +788,9 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         	        frame.setVisible(true);
         	    }
         	});
-        	
+
         }
-        
+
         myPanel = panel;
 		// Set up the final view.
         Object finObject = getObject();
@@ -810,15 +810,15 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             if(getEnvironment().myTestStrings != null && getEnvironment().myTestStrings.size()>0) bp.inputField.setText((String)getEnvironment().myTestStrings.get(0));
         	JSplitPane split = SplitPaneFactory.createSplit(getEnvironment(), true,
     				0.5, bp, panel);
-          
+
         	MultiplePane mp = new MultiplePane(split);
         	getEnvironment().add(mp, getComponentTitle(), new CriticalTag() {
     		});
     		getEnvironment().setActive(mp);
         }
-		
+
 	}
-	
+
 	private int getMachineIndexBySelectedRow(JTable table){
 		InputTableModel model = (InputTableModel) table.getModel();
         int row = table.getSelectedRow();
@@ -826,11 +826,11 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
         String machineFileName = (String)model.getValueAt(row, 0);
         return getMachineIndexByName(machineFileName);
 	}
-	
+
 	public int getMachineIndexByName(String machineFileName){
 	        ArrayList machines = getEnvironment().myObjects;
 	        if(machines == null) return -1;
-	        for(int k = 0; k < machines.size(); k++){            
+	        for(int k = 0; k < machines.size(); k++){
 	            Object current = machines.get(k);
 	            if(current instanceof Automaton){
 	            	Automaton cur = (Automaton)current;
@@ -844,18 +844,18 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 	            		return k;
 	                }
 	            }
-	            
+
 	        }
 	        return -1;
 	}
-	
+
 	public void viewAutomaton(JTableExtender table){
 		InputTableModel model = (InputTableModel) table.getModel();
-		 if(model.isMultiple){        	 			
+		 if(model.isMultiple){
 	         int row = table.getSelectedRow();
 	         if(row < 0) return;
-	         String machineFileName = (String)model.getValueAt(row, 0);           
-	         updateView(machineFileName, (String)model.getValueAt(row, 1), table); 
+	         String machineFileName = (String)model.getValueAt(row, 0);
+	         updateView(machineFileName, (String)model.getValueAt(row, 1), table);
 		 }
        else if(this.getEnvironment().getObject() instanceof Grammar){
        updateView(((Grammar)this.getEnvironment().getObject()).getFileName(), (String)model.getValueAt(table.getSelectedRow(), 1), table);
@@ -863,22 +863,22 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
        else if(this.getEnvironment().getObject() instanceof Automaton){
        updateView(((Automaton)this.getEnvironment().getObject()).getFileName(), (String)model.getValueAt(table.getSelectedRow(), 1), table);
    }
-		
+
 	}
-	
+
 	/**
 	 * Handles the creation of the multiple input pane.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */
 	public void actionPerformed(ActionEvent e) {
-		performAction((Component)e.getSource());		
+		performAction((Component)e.getSource());
 	}
 
 	/**
 	 * @param machineFileName
-     * 
+     *
      */
     protected void updateView(String machineFileName, String input, JTableExtender table) {
         ArrayList machines = this.getEnvironment().myObjects;
@@ -890,52 +890,52 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
             	Automaton cur = null;
             	if(spot != -1) cur = (Automaton)machines.get(spot);
             	else cur = (Automaton)this.getEnvironment().getObject();
-                
+
                     AutomatonPane newAP = new AutomatonPane(cur);
                     newAP.addMouseListener(new ArrowDisplayOnlyTool(newAP, newAP.getDrawer()));
                     JSplitPane split = SplitPaneFactory.createSplit(getEnvironment(), true,
                             0.5, newAP, myPanel);
                     MultiplePane mp = new MultiplePane(split);
-                    
+
                     EnvironmentFrame frame = Universe.frameForEnvironment(getEnvironment());
                     String newTitle = cur.getFileName();
                     if(newTitle != "") frame.setTitle(newTitle);
                     getEnvironment().remove(getEnvironment().getActive());
-     
-                    
+
+
                     getEnvironment().add(mp, getComponentTitle(), new CriticalTag() {
                     });
                     getEnvironment().setActive(mp);
-                
+
             }
             else if(current instanceof Grammar && (table.getSelectedRow() < (table.getRowCount()-1))){
             	int spot = this.getMachineIndexBySelectedRow(table);
             	Grammar cur = null;
             	if(spot != -1) cur = (Grammar)machines.get(spot);
             	else cur = (Grammar)this.getEnvironment().getObject();
-                
+
 	                BruteParsePane bp = new BruteParsePane((GrammarEnvironment)getEnvironment(), cur, null);
 	                int column = 1;
 	                if(spot == -1) column = 0;
 	               bp.inputField.setText((String)table.getModel().getValueAt(table.getSelectedRow(), column));
-	               //bp.inputField.setEnabled(false); 
-                   bp.inputField.setEditable(false);              
+	               //bp.inputField.setEnabled(false);
+                   bp.inputField.setEditable(false);
 	                JSplitPane split = SplitPaneFactory.createSplit(getEnvironment(), true,
 	                        0.5, bp, myPanel);
 	                MultiplePane mp = new MultiplePane(split);
 	                getEnvironment().add(mp, getComponentTitle(), new CriticalTag() {
 	                });
-	                
+
 	                EnvironmentFrame frame = Universe.frameForEnvironment(getEnvironment());
 	                String newTitle = cur.getFileName();
                     if(newTitle != "") frame.setTitle(newTitle);
 	                getEnvironment().remove(getEnvironment().getActive());
-	 
-	                
+
+
 	                getEnvironment().add(mp, getComponentTitle(), new CriticalTag() {
 	                });
 	                getEnvironment().setActive(mp);
-	            
+
             }
     }
 
@@ -952,9 +952,9 @@ public class MultipleSimulateAction extends NoInteractionSimulateAction {
 		public JSplitPane mySplit = null;
 	}
 	protected JTable table = null;
-    
+
 	private static String[] RESULT = { "Accept", "Reject", "Cancelled" };
-    
+
     protected JPanel myPanel = null;
 
 	private static Color[] RESULT_COLOR = { Color.green, Color.red, Color.black };

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
 /**
  * This is the action used for the stepwise simulation of data without closure,
  * that is, without lambda transitions being automatically traversed.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class SimulateNoClosureAction extends SimulateAction {
 	/**
 	 * Instantiates a new <CODE>SimulateNoClosureAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -58,7 +58,7 @@ public class SimulateNoClosureAction extends SimulateAction {
 
 	/**
 	 * Returns the simulator for this automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get the simulator for
 	 * @return a simulator for this automaton
@@ -72,7 +72,7 @@ public class SimulateNoClosureAction extends SimulateAction {
 
 	/**
 	 * This particular action may only be applied to finite state automata.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for applicability
 	 * @return <CODE>true</CODE> if the passed in object is a finite state

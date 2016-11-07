@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,14 +26,14 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This determines if two FSAs accept the same language.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSAEqualityChecker {
 	/**
 	 * Checks if two FSAs accept the same language.
-	 * 
+	 *
 	 * @param fsa1
 	 *            the first finite state automaton
 	 * @param fsa2

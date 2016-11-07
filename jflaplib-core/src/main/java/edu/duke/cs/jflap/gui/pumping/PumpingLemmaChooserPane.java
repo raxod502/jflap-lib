@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,11 +33,11 @@ import javax.swing.*;
 /**
  * A <code>PumpingLemmaChooserPane</code> is the intermediate pane that allows
  * the user to select which pumping lemma they wish to see.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class PumpingLemmaChooserPane extends JPanel 
+public class PumpingLemmaChooserPane extends JPanel
 {
     /**
      * The list of puming lemmas to choose from.
@@ -51,13 +51,13 @@ public class PumpingLemmaChooserPane extends JPanel
      * Radio Buttons that determine who goes first.
      */
     JRadioButton humanButton, computerButton;
-    
+
     /**
      * Constructs a <code>PumpingLemmaChooserPane</code> associated with a
      * {@link edu.duke.cs.jflap.gui.pumping.PumpingLemmaChooser} and an
      * {@link edu.duke.cs.jflap.gui.environment.Environment}.
-     * 
-     * @param plc the associated <code>PumpingLemmaChooser</code> 
+     *
+     * @param plc the associated <code>PumpingLemmaChooser</code>
      * @param env the associated <code>Environment</code>
      */
     public PumpingLemmaChooserPane(PumpingLemmaChooser plc, Environment env)
@@ -67,7 +67,7 @@ public class PumpingLemmaChooserPane extends JPanel
         myEnvironment = env;
         init();
     }
-    
+
     /**
      * @see edu.duke.cs.jflap.file.xml.RegPumpingLemmaTransducer#fromDOM(Document)
      */
@@ -75,7 +75,7 @@ public class PumpingLemmaChooserPane extends JPanel
     {
         return myEnvironment;
     }
-    
+
     /**
      * Initializes the chooser pane.
      */
@@ -89,19 +89,19 @@ public class PumpingLemmaChooserPane extends JPanel
             listPanel.add(addPumpingLemma(i));
         add(listPanel, BorderLayout.CENTER);
     }
-    
+
     /**
      * Initiates the panel where the user, through radio buttons, decides whether
      * he/she or the computer will go first.
      */
-    private JPanel initRadioButtonPanel(){    	
+    private JPanel initRadioButtonPanel(){
     	ButtonGroup group = new ButtonGroup();
     	JPanel buttonPanel;
     	buttonPanel = new JPanel(new BorderLayout());
     	buttonPanel.setBorder(BorderFactory.createTitledBorder("First choose who makes the first move."));
-    	
+
     	humanButton = new JRadioButton("You go first");
-    	computerButton = new JRadioButton("Computer goes first");    	
+    	computerButton = new JRadioButton("Computer goes first");
     	group.add(humanButton);
     	group.add(computerButton);
     	humanButton.setSelected(true);
@@ -109,11 +109,11 @@ public class PumpingLemmaChooserPane extends JPanel
     	buttonPanel.add(computerButton, BorderLayout.CENTER);
     	return buttonPanel;
     }
-    
+
     /**
-     * Creates a panel for the pumping lemma at index <code>i</code> in the 
+     * Creates a panel for the pumping lemma at index <code>i</code> in the
      * pumping lemma chooser.
-     * 
+     *
      * @param i the position of the pumping lemma we wish to add
      * @return a <code>JPanel</code> representing the pumping lemma
      */
@@ -121,7 +121,7 @@ public class PumpingLemmaChooserPane extends JPanel
     {
         PumpingLemma lemma = myChooser.get(i);
         JPanel pane = new JPanel(new BorderLayout());
-        JEditorPane ep = new JEditorPane("text/html", "<html><body align=center><b><i>L</i> = {" + 
+        JEditorPane ep = new JEditorPane("text/html", "<html><body align=center><b><i>L</i> = {" +
                 lemma.getHTMLTitle() + "}</b></body></html>");
         ep.setBackground(this.getBackground());
         ep.setDisabledTextColor(Color.BLACK);
@@ -132,15 +132,15 @@ public class PumpingLemmaChooserPane extends JPanel
 
         pane.add(button, BorderLayout.EAST);
         pane.setBorder(BorderFactory.createEtchedBorder());
-        
+
         return pane;
     }
-    
+
     /**
      * A <code>PumpingLemmaChooseButton</code> is a <code>JButton</code>
      * that opens a {@link PumpingLemmaInputPane} for its associated
      * {@link edu.duke.cs.jflap.pumping.PumpingLemma}.
-     * 
+     *
      * @author Jinghui Lim
      *
      */
@@ -155,11 +155,11 @@ public class PumpingLemmaChooserPane extends JPanel
          */
         private PumpingLemma myLemma;
         private int myIndex;
-        
+
         /**
          * Constructs a <code>PumpingLemmaChooseButton</code> that opens
          * a pumping lemma in the environment when it is clicked.
-         *  
+         *
          * @param pl the pumping lemma it should open
          * @param env the environment it should open the pumping lemma in
          */
@@ -169,7 +169,7 @@ public class PumpingLemmaChooserPane extends JPanel
             myEnvironment = env;
             myLemma = pl;
             myIndex = index;
-            
+
             this.addActionListener(new ActionListener()
                 {
                     public void actionPerformed(ActionEvent e)
@@ -182,7 +182,7 @@ public class PumpingLemmaChooserPane extends JPanel
                         		pane = new HumanRegPumpingLemmaInputPane((RegularPumpingLemma)myLemma);
                         	else if(myLemma instanceof ContextFreePumpingLemma)
                         		pane = new HumanCFPumpingLemmaInputPane((ContextFreePumpingLemma)myLemma);
-                        }                        
+                        }
                         else if (computerButton.isSelected()) {
                         	if(myLemma instanceof RegularPumpingLemma)
                         		pane = new CompRegPumpingLemmaInputPane((RegularPumpingLemma)myLemma);

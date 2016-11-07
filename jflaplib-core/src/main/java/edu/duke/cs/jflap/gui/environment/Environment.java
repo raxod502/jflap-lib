@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -41,10 +41,10 @@ import javax.swing.event.ChangeListener;
  * instance has, at minimum some sort of component whereby this structure can be
  * edited. The <CODE>Environment</CODE> instance keeps track of and displays
  * these various components.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.environment.EnvironmentFrame
  * @see edu.duke.cs.jflap.gui.environment.tag
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -56,7 +56,7 @@ public abstract class Environment extends JPanel {
 	 * assumed to have no native file to which to save the object. One should
 	 * use the <CODE>setFile</CODE> object if this environment should have
 	 * one.
-	 * 
+	 *
 	 * @param object
 	 *            assumed to be some sort of object that this environment holds;
 	 *            subclasses may provide more stringent requirements for this
@@ -71,7 +71,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Returns the main object for this environment. This is the object that was
 	 * passed in for the constructor.
-	 * 
+	 *
 	 * @return the main object for this environment
 	 */
 	public Serializable getObject() {
@@ -80,7 +80,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Adds a file change listener to this environment.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -90,7 +90,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Removes a file change listener from this environment.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -100,7 +100,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Distributes the given file change event among all file change listeners.
-	 * 
+	 *
 	 * @param event
 	 *            the file change event to distribute
 	 */
@@ -115,7 +115,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Returns the file that this <CODE>Environment</CODE> has loaded itself
 	 * from.
-	 * 
+	 *
 	 * @return the file object that is owned by this environment as the place to
 	 *         store the serializable object, or <CODE>null</CODE> if this
 	 *         environment currently has no file
@@ -127,7 +127,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Sets the file owned by this <CODE>Environment</CODE> as the default
 	 * location to save the object.
-	 * 
+	 *
 	 * @param file
 	 *            the new file for the environment
 	 */
@@ -138,7 +138,7 @@ public abstract class Environment extends JPanel {
 	}
 
 
-    public void setMultipleObjects(ArrayList objects) {     
+    public void setMultipleObjects(ArrayList objects) {
         this.myObjects = objects;
     }
 
@@ -146,7 +146,7 @@ public abstract class Environment extends JPanel {
 	 * Sets the encoder to use when writing this environment's file. This should
 	 * be set when the file is ever written, or when a file is read and the
 	 * format it was read in has a corresponding encoder.
-	 * 
+	 *
 	 * @param encoder
 	 *            the encoder for this
 	 */
@@ -156,7 +156,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Gets the encoder to be used when saving this file.
-	 * 
+	 *
 	 * @return the encoder to use to save this file, or <CODE>null</CODE> if
 	 *         no encoder has been chosen yet
 	 */
@@ -184,7 +184,7 @@ public abstract class Environment extends JPanel {
 	 * Adds a new component to the environment. Presumably this added component
 	 * has some relevance to the current automaton or grammar held by the
 	 * environment, though this is not strictly required.
-	 * 
+	 *
 	 * @param component
 	 *            the component to add, which should be unique for this
 	 *            environment
@@ -215,7 +215,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Returns if a particular component is part of this environment, as through
 	 * addition through one of the <CODE>add</CODE> methods
-	 * 
+	 *
 	 * @param component
 	 *            the component to check for membership in this environment
 	 * @see #add
@@ -227,7 +227,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Deactivates or activates editor tagged objects in this environment.
-	 * 
+	 *
 	 * @param enabled
 	 *            <CODE>true</CODE> if editor tagged objects should be
 	 *            enabled, <CODE>false</CODE> if editor tagged objects should
@@ -246,7 +246,7 @@ public abstract class Environment extends JPanel {
 	 * add method, except without that tag field, which is assumed to be a tag
 	 * object with no other tagness ascribed to it (i.e. a generic tag). That
 	 * is, the component is assumed to have an empty tag.
-	 * 
+	 *
 	 * @param component
 	 *            the component to add, which should be unique for this
 	 *            environment
@@ -262,7 +262,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Programmatically sets the currently active component in this environment.
-	 * 
+	 *
 	 * @param component
 	 *            the component to make active
 	 * @see #getActive
@@ -275,7 +275,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Returns the currently active component in this environment.
-	 * 
+	 *
 	 * @return the currently active component in this environment
 	 * @see #setActive
 	 */
@@ -285,7 +285,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Returns whether or not the component is enabled, that is, selectable.
-	 * 
+	 *
 	 * @param component
 	 *            the component to check for enabledness
 	 * @return <CODE>true</CODE> if the given component is enabled, <CODE>false</CODE>
@@ -297,7 +297,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Sets whether or not a component is enabled.
-	 * 
+	 *
 	 * @param component
 	 *            the component to change the enabledness
 	 * @param enabled
@@ -313,7 +313,7 @@ public abstract class Environment extends JPanel {
 	 * Adds a change listener to this object. The listener will receive events
 	 * whenever the active component changes, or when components are made
 	 * enabled or disabled, or when components are added or removed.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -323,7 +323,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Removes a change listener from this object.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -335,7 +335,7 @@ public abstract class Environment extends JPanel {
 	 * Distributes a change event to all listeners.
 	 */
 	protected void distributeChangeEvent() {
-		
+
 		ChangeEvent e = new ChangeEvent(this);
 		Iterator it = (new HashSet(changeListeners)).iterator();
 		while (it.hasNext())
@@ -344,7 +344,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Removes a component from this environment.
-	 * 
+	 *
 	 * @param component
 	 *            the component to remove
 	 */
@@ -366,7 +366,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Returns the tag for a given component, provided this tag is in the
 	 * component.
-	 * 
+	 *
 	 * @param component
 	 *            the component to get the tag for
 	 * @return the tag for the component
@@ -377,7 +377,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Returns an array containing all components.
-	 * 
+	 *
 	 * @return an array containing all components.
 	 */
 	public Component[] getComponents() {
@@ -389,7 +389,7 @@ public abstract class Environment extends JPanel {
 
 	/**
 	 * Returns an array whose components and tags satisfy the given satisfier.
-	 * 
+	 *
 	 * @param satisfier
 	 *            the satisfier all components and their tags must satisfy
 	 * @return an array containing all those components who, along with their
@@ -409,7 +409,7 @@ public abstract class Environment extends JPanel {
 	 * Detects if there are any components in this environment that satisfy the
 	 * given satisfier. This method works in time linear in the number of
 	 * components in this environment.
-	 * 
+	 *
 	 * @param satisfier
 	 *            the satisfier to check components and their tags against
 	 * @return <CODE>true</CODE> if the satisfier has managed to match at
@@ -428,7 +428,7 @@ public abstract class Environment extends JPanel {
 	/**
 	 * Returns if this environment dirty. An environment is called dirty if the
 	 * object it holds has been modified since the last save.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the environment is dirty, <CODE>false</CODE>
 	 *         otherwise
 	 */
@@ -451,12 +451,12 @@ public abstract class Environment extends JPanel {
 	public void clearDirty() {
 		dirty = false;
 	}
-	
+
 	public void setNewMainObject(Serializable obj){
 		theMainObject = obj;
-	
+
 	}
-	
+
 	public void resizeSplit(){
 		//super.setSize(width, height);
 		if(myObjects != null && this.tabbed != null){
@@ -468,10 +468,10 @@ public abstract class Environment extends JPanel {
 				}
 			}
 		}
-		
+
 	}
-	
-	
+
+
     /**For Testing multiple objects*/
     public ArrayList myObjects;
     public ArrayList myTestStrings;

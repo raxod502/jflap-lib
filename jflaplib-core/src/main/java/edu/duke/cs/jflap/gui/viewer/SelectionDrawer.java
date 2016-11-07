@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import javax.swing.event.ChangeListener;
 /**
  * An extension of the <CODE>AutomatonDrawer</CODE> that allows the selection
  * (i.e. highlighting) of states.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class SelectionDrawer extends AutomatonDrawer {
 	/**
 	 * Instantiates a new selection drawer with no states selected.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to select
 	 */
@@ -54,7 +54,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 	/**
 	 * Listens for changes in the states of the automaton. In the event that one
 	 * has it checks the selected states.
-	 * 
+	 *
 	 * @param event
 	 *            the state event
 	 */
@@ -67,7 +67,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 	/**
 	 * If a state is selected, draw it somewhat darker than the others. If it is
 	 * not, then simply use the regular means for drawing a state.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw on
 	 * @param state
@@ -87,7 +87,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 	/**
 	 * Draws the transitions normally, then draws the highlight for the selected
 	 * transitions.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
@@ -107,7 +107,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Adds a state to the selected states.
-	 * 
+	 *
 	 * @param state
 	 *            the state to add
 	 */
@@ -129,7 +129,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Removes the state from the selected states.
-	 * 
+	 *
 	 * @param state
 	 *            the state to remove
 	 */
@@ -142,7 +142,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Returns the number of selected states.
-	 * 
+	 *
 	 * @return the number of selected states
 	 */
 	public int numberSelected() {
@@ -151,7 +151,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Returns an array of the selected states.
-	 * 
+	 *
 	 * @return an array of the selected states
 	 */
 	public State[] getSelected() {
@@ -160,7 +160,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Determines if a particular state is selected.
-	 * 
+	 *
 	 * @param state
 	 *            the state to check for "selectedness"
 	 * @return <CODE>true</CODE> if the state is selected, <CODE>false</CODE>
@@ -183,7 +183,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Retrieves the set of selected states.
-	 * 
+	 *
 	 * @return the set of selected states
 	 */
 	protected Set selected() {
@@ -192,7 +192,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Returns the set of selected transitions.
-	 * 
+	 *
 	 * @return the set of selected transitions
 	 */
 	protected Set selectedTransitions() {
@@ -201,7 +201,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Adds a transition to the selected transitions.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to add
 	 */
@@ -217,7 +217,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Removes the transition from the selected transitions.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to set as unselected
 	 */
@@ -230,7 +230,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Returns the number of selected transitions.
-	 * 
+	 *
 	 * @return the number of selected transitions
 	 */
 	public int numberSelectedTransitions() {
@@ -239,7 +239,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Returns an array of the selected transitions.
-	 * 
+	 *
 	 * @return an array of the selected transitions
 	 */
 	public Transition[] getSelectedTransitions() {
@@ -248,7 +248,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Determines if a particular transition is selected.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to check for "selectedness"
 	 * @return <CODE>true</CODE> if the transition is selected, <CODE>false</CODE>
@@ -269,7 +269,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 	/**
 	 * Adds a change listener to this object that listens to changes in what is
 	 * selected in this selection drawer.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to add
 	 */
@@ -279,7 +279,7 @@ public class SelectionDrawer extends AutomatonDrawer {
 
 	/**
 	 * Removes a change listener from this object.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */

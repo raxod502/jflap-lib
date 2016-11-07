@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -47,7 +47,7 @@ import edu.duke.cs.jflap.automata.fsa.Minimizer;
  * drawing of the unminimized automaton and minimization tree. This does not
  * handle the building of the minimized automata, however, which is handled by
  * {@link edu.duke.cs.jflap.gui.minimize.BuilderController}.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -65,7 +65,7 @@ class MinimizeController {
 
 	/**
 	 * This method should be called whenever a state has the mouse down over it.
-	 * 
+	 *
 	 * @param state
 	 *            the state that was under the mouse
 	 * @param event
@@ -82,7 +82,7 @@ class MinimizeController {
 
 	/**
 	 * This method should be called whenever a node is clicked.
-	 * 
+	 *
 	 * @param node
 	 *            the node that was under the mouse
 	 * @param event
@@ -219,7 +219,7 @@ class MinimizeController {
 
 	/**
 	 * Splits the node on a terminal.
-	 * 
+	 *
 	 * @param node
 	 *            the node to split
 	 * @return <CODE>true</CODE> if the node was able to be split, <CODE>false</CODE>
@@ -273,7 +273,7 @@ class MinimizeController {
 
 	/**
 	 * This method should be called whenever a node has the mouse pressed on it.
-	 * 
+	 *
 	 * @param node
 	 *            the node that was under the mouse
 	 * @param event
@@ -286,7 +286,7 @@ class MinimizeController {
 
 	/**
 	 * Possibly add or remove a state from a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node in question
 	 * @param state
@@ -343,7 +343,7 @@ class MinimizeController {
 
 	/**
 	 * Splits a node on its terminal.
-	 * 
+	 *
 	 * @param node
 	 *            the node to split, which must already have a terminal on it
 	 *            that can split this group
@@ -364,7 +364,7 @@ class MinimizeController {
 	/**
 	 * This does the splitting of a state for you, asking for a terminal if
 	 * necessary.
-	 * 
+	 *
 	 * @param node
 	 *            the node to split
 	 */
@@ -387,7 +387,7 @@ class MinimizeController {
 	/**
 	 * This does the splitting of a state for you, providing on its own a
 	 * terminal if necessary.
-	 * 
+	 *
 	 * @param node
 	 *            the node to split
 	 */
@@ -409,7 +409,7 @@ class MinimizeController {
 
 	/**
 	 * This does the splitting of all states in a tree for you.
-	 * 
+	 *
 	 * @param root
 	 *            the root of the subtree to split completely
 	 */
@@ -439,7 +439,7 @@ class MinimizeController {
 	/**
 	 * Changes the selection of states in the state drawer to be those states in
 	 * the given node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the states from
 	 */
@@ -455,7 +455,7 @@ class MinimizeController {
 
 	/**
 	 * This method destroys all children of a particular node.
-	 * 
+	 *
 	 * @param node
 	 *            the node whose children must be destroyed
 	 * @return the array of children removed
@@ -472,7 +472,7 @@ class MinimizeController {
 
 	/**
 	 * This method returns the tree this controller, eh, controls.
-	 * 
+	 *
 	 * @return the default tree model
 	 */
 	private DefaultTreeModel getTree() {
@@ -481,7 +481,7 @@ class MinimizeController {
 
 	/**
 	 * Returns the automaton that this controller is helping to minimize.
-	 * 
+	 *
 	 * @return the automaton
 	 */
 	private FiniteStateAutomaton getAutomaton() {
@@ -497,7 +497,7 @@ class MinimizeController {
 
 	/**
 	 * Adds a empty child to a node.
-	 * 
+	 *
 	 * @param parent
 	 *            the node to add a child to
 	 * @return the node that was created, or <CODE>null</CODE> if the node
@@ -514,7 +514,7 @@ class MinimizeController {
 
 	/**
 	 * Adds a child to a node with the given group.
-	 * 
+	 *
 	 * @param parent
 	 *            the node to add a child to
 	 * @param group
@@ -533,7 +533,7 @@ class MinimizeController {
 
 	/**
 	 * Adds an array of children to a node.
-	 * 
+	 *
 	 * @param parent
 	 *            the node to add children to
 	 * @param children
@@ -549,7 +549,7 @@ class MinimizeController {
 
 	/**
 	 * Removes a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to remove
 	 */
@@ -582,7 +582,7 @@ class MinimizeController {
 	 * and if the partitions are correct for that terminal. The user will be
 	 * presented with dialogs to indicate whatever condition was not met, or, if
 	 * they are met, that the node is correct.
-	 * 
+	 *
 	 * @param node
 	 *            the node to check
 	 * @return <CODE>true</CODE> if it is correct, <CODE>false</CODE> if it
@@ -643,7 +643,7 @@ class MinimizeController {
 
 	/**
 	 * Check if we're able to expand some node at this time.
-	 * 
+	 *
 	 * @param node
 	 *            the node we may expand
 	 * @return <CODE>true</CODE> if we may expand the node, <CODE>false</CODE>
@@ -667,7 +667,7 @@ class MinimizeController {
 	 * This should be called if we're seeking to modify the partitions of a
 	 * group in some way. In the event that we cannot, and error message is
 	 * displayed.
-	 * 
+	 *
 	 * @param parent
 	 *            the node that holds the group we're modifying partitions of,
 	 *            or <CODE>null</CODE> if the child in question is the root of
@@ -695,7 +695,7 @@ class MinimizeController {
 	 * Determines if we are finished with building the tree or not. All leaves
 	 * will be examined. If the tree is not finished, a dialog box will be
 	 * popped up saying which group can be expanded further.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the tree is done, <CODE>false</CODE> if
 	 *         it is not
 	 */

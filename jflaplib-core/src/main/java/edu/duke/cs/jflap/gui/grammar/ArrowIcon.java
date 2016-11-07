@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import javax.swing.Icon;
 
 /**
  * This is an icon that draws a simple arrow pointing to the right.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ArrowIcon implements Icon {
 	/**
 	 * Instantiates a new <CODE>ArrowIcon</CODE>.
-	 * 
+	 *
 	 * @param width
 	 *            the width of this icon
 	 * @param height
@@ -47,7 +47,7 @@ public class ArrowIcon implements Icon {
 
 	/**
 	 * Returns the icon's height.
-	 * 
+	 *
 	 * @return the icon's height
 	 */
 	public int getIconHeight() {
@@ -56,7 +56,7 @@ public class ArrowIcon implements Icon {
 
 	/**
 	 * Returns the icon's width.
-	 * 
+	 *
 	 * @return the icon's width
 	 */
 	public int getIconWidth() {

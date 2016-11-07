@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import javax.swing.KeyStroke;
 
 /**
  * Redo time.
- * 
+ *
  * @author Henry Qin
  */
 
@@ -45,7 +45,7 @@ public class RedoTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -54,7 +54,7 @@ public class RedoTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the delete tool icon
 	 */
 	protected Icon getIcon() {
@@ -64,7 +64,7 @@ public class RedoTool extends Tool {
 
 	/**
 	 * Returns the key stroke to switch to this tool, the D key.
-	 * 
+	 *
 	 * @return the key stroke to switch to this tool
 	 */
 	public KeyStroke getKey() {
@@ -75,7 +75,7 @@ public class RedoTool extends Tool {
 	 * When the user clicks, we delete either the state or, if no state, the
 	 * transition found at this point. If there's nothing at this point, nothing
 	 * happens.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

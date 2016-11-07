@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.HashSet;
 /**
  * The Grammar checker object can be used to check certain properties of grammar
  * objects.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -41,7 +41,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>grammar</CODE> is a regular grammar (i.e. if it
 	 * is either a right or left linear grammar).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return true if <CODE>grammar</CODE> is a regular grammar.
@@ -55,7 +55,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>grammar</CODE> is a right-linear grammar (i.e.
 	 * all productions are of the form A->xB or A->x).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return true if <CODE>grammar</CODE> is a right-linear grammar.
@@ -73,7 +73,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>grammar</CODE> is a left-linear grammar (i.e. all
 	 * productions are of the form A->Bx or A->x).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return true if <CODE>grammar</CODE> is a left-linear grammar.
@@ -91,7 +91,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>grammar</CODE> is a context-free grammar (i.e.
 	 * all productions are of the form A->x).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @return true if <CODE>grammar</CODE> is a context-free grammar.
@@ -109,7 +109,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>variable</CODE> is in any production, either on
 	 * the right or left hand side of the production, of <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable.
 	 * @return true if <CODE>variable</CODE> is in any production of <CODE>grammar</CODE>.
@@ -130,7 +130,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>terminal</CODE> is in any production, either on
 	 * the right or left hand side of the production, of <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal.
 	 * @return true if <CODE>terminal</CODE> is in any production in <CODE>grammar</CODE>.
@@ -150,7 +150,7 @@ public class GrammarChecker {
 
 	/**
 	 * Returns all productions in <CODE>grammar</CODE> whose lhs is <CODE>variable</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -174,7 +174,7 @@ public class GrammarChecker {
 	 * Returns all productions in <CODE>grammar</CODE> that have <CODE>variable</CODE>
 	 * as the only character on the left hand side and that are not unit
 	 * productions.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -200,7 +200,7 @@ public class GrammarChecker {
 	/**
 	 * Returns true if <CODE>production</CODE>, or an identical production,
 	 * is already in <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param grammar
@@ -221,7 +221,7 @@ public class GrammarChecker {
 	/**
 	 * Returns all productions in <CODE>grammar</CODE> that have <CODE>variable</CODE>
 	 * in them, either on the rhs or lhs.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -246,7 +246,7 @@ public class GrammarChecker {
 	/**
 	 * Returns all productions in <CODE>grammar</CODE> that have <CODE>variable</CODE>
 	 * on the right hand side.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -269,7 +269,7 @@ public class GrammarChecker {
 	/**
 	 * Returns a list of those variables which are unresolved, i.e., which
 	 * appears in the right hand side but do not appear in the left hand side.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to check
 	 * @return an array of the unresolved variables

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,9 +24,9 @@ package edu.duke.cs.jflap.automata;
  * A node object is a data structure used in graph algorithms. It stores a State
  * object and a color. This object is used to find the unreachable states in an
  * automaton.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.State
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -41,7 +41,7 @@ public class Node {
 
 	/**
 	 * Creates a Node object with <CODE>state</CODE> and no color.
-	 * 
+	 *
 	 * @param state
 	 *            the state contained by the Node object
 	 */
@@ -52,7 +52,7 @@ public class Node {
 
 	/**
 	 * Creates a Node object with <CODE>state</CODE> and <CODE>color</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state contained by the Node object
 	 * @param color
@@ -65,7 +65,7 @@ public class Node {
 
 	/**
 	 * Returns the state contained by the Node object.
-	 * 
+	 *
 	 * @return the state contained by the Node object.
 	 */
 	public State getState() {
@@ -74,7 +74,7 @@ public class Node {
 
 	/**
 	 * Returns the color of the Node object.
-	 * 
+	 *
 	 * @return the color of the Node object.
 	 */
 	public String getColor() {
@@ -104,7 +104,7 @@ public class Node {
 
 	/**
 	 * Returns true if the Node is white.
-	 * 
+	 *
 	 * @return true if the Node is white.
 	 */
 	public boolean isWhite() {
@@ -115,7 +115,7 @@ public class Node {
 
 	/**
 	 * Returns true if the Node is grey.
-	 * 
+	 *
 	 * @return true if the Node is grey.
 	 */
 	public boolean isGrey() {
@@ -126,7 +126,7 @@ public class Node {
 
 	/**
 	 * Returns true if the Node is black.
-	 * 
+	 *
 	 * @return true if the Node is black.
 	 */
 	public boolean isBlack() {
@@ -138,7 +138,7 @@ public class Node {
 	/**
 	 * Returns a string representation of the Node object, returning a string
 	 * representation of its state and color.
-	 * 
+	 *
 	 * @return a string representation of the Node object.
 	 */
 	public String toString() {

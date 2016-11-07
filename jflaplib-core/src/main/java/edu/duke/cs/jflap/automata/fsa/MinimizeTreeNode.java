@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import edu.duke.cs.jflap.automata.State;
  * identically to Default Mutable Tree Nodes. You can insert them into
  * DefaultTreeModels, etc. This particular node is used in the tree of
  * distinguishable groups created during the DFA minimize operation.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -39,7 +39,7 @@ public class MinimizeTreeNode extends DefaultMutableTreeNode {
 	/**
 	 * Creates a new <CODE>MinimizeTreeNode</CODE> with <CODE>userObject</CODE>
 	 * as its user object and the empty string as its terminal.
-	 * 
+	 *
 	 * @param userObject
 	 *            the node's user object
 	 */
@@ -51,7 +51,7 @@ public class MinimizeTreeNode extends DefaultMutableTreeNode {
 	/**
 	 * Creates a new <CODE>MinimizeTreeNode</CODE> with <CODE>userObject</CODE>
 	 * as its user object and <CODE>terminal</CODE> as its terminal.
-	 * 
+	 *
 	 * @param userObject
 	 *            the node's user object
 	 * @param terminal
@@ -64,7 +64,7 @@ public class MinimizeTreeNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Sets the node's terminal field to <CODE>terminal</CODE>.
-	 * 
+	 *
 	 * @param terminal
 	 *            the node's terminal
 	 */
@@ -74,7 +74,7 @@ public class MinimizeTreeNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns the node's terminal field
-	 * 
+	 *
 	 * @return the node's terminal field
 	 */
 	public String getTerminal() {
@@ -83,7 +83,7 @@ public class MinimizeTreeNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns the states on this node.
-	 * 
+	 *
 	 * @return the array of states for this group
 	 */
 	public State[] getStates() {

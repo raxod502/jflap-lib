@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,7 +33,7 @@ import edu.duke.cs.jflap.gui.environment.Environment;
  * JSplitPane's behavior in such a way as actually MADE SENSE this would be
  * unnecessary, but apparently the designers of the split pane came from the
  * shallow end of the gene pool, so here we are.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -47,7 +47,7 @@ public class SplitPaneFactory {
 
 	/**
 	 * Comes up with a new split pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that this split pane will be added to; note
 	 *            that the pane is not added at this time

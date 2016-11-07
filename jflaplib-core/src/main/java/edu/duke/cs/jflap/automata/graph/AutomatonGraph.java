@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import java.awt.geom.Point2D;
  * graph vertices are moved around, to synchronize the locations of the
  * automaton states to the positions of the graph nodes, thus making graph
  * layout algorithms simpler to apply.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class AutomatonGraph extends Graph {
 	/**
 	 * Constructures a graph using an automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to build the graph from
 	 */

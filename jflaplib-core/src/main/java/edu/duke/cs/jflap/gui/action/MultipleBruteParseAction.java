@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import java.awt.event.ActionEvent;
 
 /**
  * This action creates a new brute force parser for the grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class MultipleBruteParseAction extends GrammarAction {
 	/**
 	 * Instantiates a new <CODE>BruteParseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -54,7 +54,7 @@ public class MultipleBruteParseAction extends GrammarAction {
 	public void actionPerformed(ActionEvent e) {
 		performAction((Component)e.getSource());
 	}
-	
+
 	public void performAction(Component source){
 		Grammar g = environment.getGrammar(UnrestrictedGrammar.class);
 		if (g == null)

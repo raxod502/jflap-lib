@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,20 +27,20 @@ import edu.duke.cs.jflap.automata.Transition;
 /**
  * This event is given to listeners of an automaton interested in events when a
  * transition on an automaton is added, removed, or changed.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.Automaton
  * @see edu.duke.cs.jflap.automata.Transition
  * @see edu.duke.cs.jflap.automata.Automaton#addTransition
  * @see edu.duke.cs.jflap.automata.Automaton#removeTransition
  * @see edu.duke.cs.jflap.automata.event.AutomataTransitionListener
- * 
+ *
  * @author Thomas Finley
  */
 
 public class AutomataTransitionEvent extends EventObject {
 	/**
 	 * Instantiates a new <CODE>AutomataStateEvent</CODE>.
-	 * 
+	 *
 	 * @param auto
 	 *            the <CODE>Automaton</CODE> that generated the event
 	 * @param transition
@@ -62,7 +62,7 @@ public class AutomataTransitionEvent extends EventObject {
 
 	/**
 	 * Returns the <CODE>Automaton</CODE> that generated this event.
-	 * 
+	 *
 	 * @return the <CODE>Automaton</CODE> that generated this event
 	 */
 	public Automaton getAutomaton() {
@@ -71,7 +71,7 @@ public class AutomataTransitionEvent extends EventObject {
 
 	/**
 	 * Returns the <CODE>Transition</CODE> that was added/removed.
-	 * 
+	 *
 	 * @return the <CODE>Transition</CODE> that was added/removed
 	 */
 	public Transition getTransition() {
@@ -80,7 +80,7 @@ public class AutomataTransitionEvent extends EventObject {
 
 	/**
 	 * Returns if this was an add.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event indicates the addition of a
 	 *         transition, <CODE>false</CODE> otherwise
 	 */
@@ -90,7 +90,7 @@ public class AutomataTransitionEvent extends EventObject {
 
 	/**
 	 * Returns if this was a delete.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this event indicates the removal of a
 	 *         transition, <CODE>false</CODE> otherwise
 	 */
@@ -100,7 +100,7 @@ public class AutomataTransitionEvent extends EventObject {
 
 	/**
 	 * Returns if this was a simple change in a property of the transition.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the properties of this transition were
 	 *         changed, <CODE>false</CODE> otherwise
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,7 +45,7 @@ import edu.duke.cs.jflap.gui.environment.Universe;
 public class SaveGraphUtility{
 
         public static void saveGraph(Component apane, JComponent c, String description,  String format){
-           
+
            if (apane instanceof EditorPane){
                apane = ((EditorPane)apane).getAutomatonPane();
            }
@@ -56,12 +56,12 @@ public class SaveGraphUtility{
            BufferedImage bimg = new BufferedImage(canvasimage.getWidth(null), canvasimage.getHeight(null), BufferedImage.TYPE_INT_RGB);
            Graphics2D g = bimg.createGraphics();
            g.drawImage(canvasimage, null, null);
-           
+
 
 
            Universe.CHOOSER.resetChoosableFileFilters();
            Universe.CHOOSER.setAcceptAllFileFilterUsed(false);
-        
+
            FileFilter spec = new FileNameExtensionFilter(description, format.split(","));
 
            Universe.CHOOSER.addChoosableFileFilter(spec);
@@ -78,19 +78,19 @@ public class SaveGraphUtility{
 
                     if (file.exists()) {
                         int confirm = JOptionPane.showConfirmDialog(Universe.CHOOSER, "File exists. Shall I overwrite?", "FILE OVERWRITE ATTEMPTED", JOptionPane.YES_NO_OPTION);
-                        if (confirm == JOptionPane.NO_OPTION){ 
+                        if (confirm == JOptionPane.NO_OPTION){
                             result = Universe.CHOOSER.showSaveDialog(c);
                             continue;
                         }
                     }
-                
-             try  
+
+             try
              {
                     ImageIO.write(bimg, format.split(",")[0], file);
                     return;
-              } 
-             catch (IOException ioe)  
-             {  
+              }
+             catch (IOException ioe)
+             {
                     JOptionPane.showMessageDialog(c,
                     "Save failed with error:\n"+ioe.getMessage(),
                     "Save failed", JOptionPane.ERROR_MESSAGE);
@@ -101,7 +101,7 @@ public class SaveGraphUtility{
 
 }
 /**
-  
+
 * Java 6 has this, but not previous versions of java, so I'm writing it here.
 
 * @author Henry
@@ -112,7 +112,7 @@ class FileNameExtensionFilter extends FileFilter{
     String myDescription;
     public FileNameExtensionFilter(String description, String... formats){
         myDescription = description;
-        myAcceptedFormats = formats; 
+        myAcceptedFormats = formats;
     }
 
     public boolean accept(File f){

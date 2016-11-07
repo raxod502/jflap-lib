@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,22 +23,22 @@ import edu.duke.cs.jflap.pumping.LemmaMath;
 import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
 
 /**
- * The regular pumping lemma for <i>L</i> = 
+ * The regular pumping lemma for <i>L</i> =
  * {<i>bba(ba)<sup>n</sup>a<sup>n-1</sup></i>}.
- * 
+ *
  * @author Chris Morgan
  */
-public class BBABAnAn extends RegularPumpingLemma {		
+public class BBABAnAn extends RegularPumpingLemma {
 
-	public String getHTMLTitle() 
+	public String getHTMLTitle()
     {
         return "<i>bba(ba)<sup>n</sup>a<sup>n-1</sup></i>";
     }
 
-	public String getTitle() 
+	public String getTitle()
 	{
 		return "bba(ba)^n a^(n-1)";
-	}	
+	}
 
 	public void setDescription()
     {
@@ -48,43 +48,43 @@ public class BBABAnAn extends RegularPumpingLemma {
 			"segment is possible to pump, meaning any possible generated string is not in the language.  " +
 			"Thus, the language is not regular.";
     }
-	
-	public void chooseI() 
+
+	public void chooseI()
 	{
 		i = LemmaMath.flipCoin();
 	}
-	
+
 	public void chooseDecomposition()
 	{
 		setDecomposition(new int[]{1, 2});
 	}
 
-	protected void chooseW() 
+	protected void chooseW()
 	{
 		w = "bba" + pumpString("ba", m) + pumpString("a", m-1);
 	}
-	
-	protected void setRange() 
+
+	protected void setRange()
 	{
 		myRange = new int[] {5, 10};
 	}
-	
-	public boolean isInLang(String s) 
-	{		
+
+	public boolean isInLang(String s)
+	{
     	if (!s.startsWith("bba"))
 			return false;
-    	
+
     	String temp = s.substring(3);
-		int n = 0;		
+		int n = 0;
 		while (temp.startsWith("ba")) {
 			temp = temp.substring(2);
 			n++;
-		}		
+		}
 		while (temp.startsWith("a")) {
 			temp = temp.substring(1);
 			n--;
 		}
-			
+
 		if (n==1 && temp.length()==0)
     		return true;
 		return false;

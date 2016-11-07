@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.*;
 /**
  * This class contains operations to contain that all states have numeric IDs
  * from 0 up. This will change the ID numbers of the states.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -34,7 +34,7 @@ public class StateRenamer {
 	 * Renames the states for an automaton, by changing all the ID numbers so
 	 * that all the ID numbers go from 0 up without interruption in the numeric
 	 * sequence. This will modify the automaton passed in.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton to change the IDs of the states
 	 */

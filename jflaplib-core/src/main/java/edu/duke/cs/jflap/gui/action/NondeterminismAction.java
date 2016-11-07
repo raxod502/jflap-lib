@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,14 +39,14 @@ import edu.duke.cs.jflap.automata.State;
 
 /**
  * This is the action used to highlight nondeterministic states.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class NondeterminismAction extends AutomatonAction {
 	/**
 	 * Instantiates a new <CODE>NondeterminismAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -77,7 +77,7 @@ public class NondeterminismAction extends AutomatonAction {
 
 	/**
 	 * This action is only applicable to automaton objects.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for being an automaton
 	 * @return <CODE>true</CODE> if this object is an instance of a subclass

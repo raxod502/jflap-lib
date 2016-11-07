@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import javax.swing.JOptionPane;
 
 /**
  * This controller handles user actions for the parsing of a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LLParseDerivationController {
 	/**
 	 * Instantiates a new parse derivation controller.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param environment
@@ -69,7 +69,7 @@ public class LLParseDerivationController {
 	/**
 	 * If the current step has not been completed, this method will report back
 	 * to the user what remains to be done.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the current step is finished, <CODE>false</CODE>
 	 *         plus some user output if the current step is unfinished
 	 */
@@ -253,7 +253,7 @@ public class LLParseDerivationController {
 
 	/**
 	 * Checks the grammar for LL1ness.
-	 * 
+	 *
 	 * @return if the grammar is LL1
 	 */
 	public boolean isLL1() {
@@ -262,7 +262,7 @@ public class LLParseDerivationController {
 
 	/**
 	 * Moves the controller to the next step of the building of the parse table.
-	 * 
+	 *
 	 * @return if the controller could be advanced to the next step
 	 */
 	public boolean nextStep() {

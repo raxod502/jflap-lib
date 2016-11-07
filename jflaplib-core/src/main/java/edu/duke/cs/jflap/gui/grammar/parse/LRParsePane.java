@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import javax.swing.*;
 
 /**
  * This is a parse pane for LR grammars.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LRParsePane extends ParsePane {
 	/**
 	 * Instantiaes a new LR parse pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 * @param grammar
@@ -55,7 +55,7 @@ public class LRParsePane extends ParsePane {
 
 	/**
 	 * Inits a parse table.
-	 * 
+	 *
 	 * @return a table to hold the parse table
 	 */
 	protected JTable initParseTable() {
@@ -65,7 +65,7 @@ public class LRParsePane extends ParsePane {
 
 	/**
 	 * This method is called when there is new input to parse.
-	 * 
+	 *
 	 * @param string
 	 *            a new input string
 	 */

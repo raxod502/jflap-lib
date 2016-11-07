@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import edu.duke.cs.jflap.automata.*;
  * object with additional fields for the input string and the tape contents. The
  * current state of the automaton and the tape contents, are the only necessary
  * data for the simulation of a 1-tape Turing machine.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class TMConfiguration extends Configuration implements Cloneable {
 	/**
 	 * Instantiates a new TMConfiguration.
-	 * 
+	 *
 	 * @param state
 	 *            the state the automaton is currently in
 	 * @param parent
@@ -50,7 +50,7 @@ public class TMConfiguration extends Configuration implements Cloneable {
 
 	/**
 	 * Returns the tapes.
-	 * 
+	 *
 	 * @return the tapes
 	 */
 	public Tape[] getTapes() {
@@ -61,7 +61,7 @@ public class TMConfiguration extends Configuration implements Cloneable {
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular configuration object, with the
 	 * additional fields tacked on.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Configuration#toString
 	 * @return a string representation of this object.
 	 */
@@ -78,9 +78,9 @@ public class TMConfiguration extends Configuration implements Cloneable {
 
 	/**
 	 * Returns <CODE>true</CODE> if this configuration is an accepting
-	 * configuration, based on the chosen criteria. Currently, we look at accept by halting and accept by final state. 
+	 * configuration, based on the chosen criteria. Currently, we look at accept by halting and accept by final state.
      //MERLIN MERLIN MERLIN MERLIN MERLIN//
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this configuration is accepting, <CODE>false</CODE>
 	 *         otherwise
 	 */
@@ -92,8 +92,8 @@ public class TMConfiguration extends Configuration implements Cloneable {
         return false;
 
 	}
-    
-   /* 
+
+   /*
     private boolean isFinalStateInAutomaton(Automaton auto, State state){
         State[] finals = auto.getFinalStates();
         for(int m = 0; m < finals.length; m++){
@@ -108,7 +108,7 @@ public class TMConfiguration extends Configuration implements Cloneable {
 	 * Compares two TM configurations for equality. Two configurations are equal
 	 * if the tapes are equal, and if they arose from the same configuration and
 	 * are at the same state.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration to test for equality
 	 * @return <CODE>true</CODE> if the configurations are equal, <CODE>false</CODE>
@@ -134,7 +134,7 @@ public class TMConfiguration extends Configuration implements Cloneable {
 
 	/**
 	 * Returns a hash code for this configuration.
-	 * 
+	 *
 	 * @return a hash code for this configuration
 	 */
 	public int hashCode() {

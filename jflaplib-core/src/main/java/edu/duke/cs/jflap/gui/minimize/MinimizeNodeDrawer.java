@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,9 +34,9 @@ import edu.duke.cs.jflap.automata.State;
 /**
  * The <CODE>MinimizeNodeDrawer</CODE> is used to draw <CODE>MinimizeTreeNode</CODE>
  * objects.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -44,7 +44,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 	/**
 	 * This draws a node. The fill color is the color of the graphics object
 	 * before this method was called.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw the node on
 	 * @param node
@@ -71,7 +71,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Returns the state list of the node as a string.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the state list for
 	 * @return a string of the states IDs of the node
@@ -93,7 +93,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Sets a label to appear above a node for a particular node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to set the label for
 	 * @param label
@@ -109,7 +109,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Returns the label for a particular node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the label for
 	 * @return the label for a particular node, or <CODE>null</CODE> if there
@@ -121,7 +121,7 @@ public class MinimizeNodeDrawer extends DefaultNodeDrawer {
 
 	/**
 	 * Draws a string in a box centered at the given coordinates.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param string

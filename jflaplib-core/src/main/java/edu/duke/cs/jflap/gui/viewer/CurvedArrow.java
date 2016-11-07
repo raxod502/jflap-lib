@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import edu.duke.cs.jflap.automata.Transition;
 /**
  * This is a simple class for storing and drawing a curved line with possible
  * arrow heads on it.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CurvedArrow {
 	/**
 	 * Instantiates a <CODE>CurvedArrow</CODE> object.
-	 * 
+	 *
 	 * @param x1
 	 *            the x coordinate of the start point
 	 * @param y1
@@ -67,7 +67,7 @@ public class CurvedArrow {
 
 	/**
 	 * Instantiates a <CODE>CurvedArrow</CODE> object.
-	 * 
+	 *
 	 * @param start
 	 *            the start point
 	 * @param end
@@ -88,7 +88,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the start point.
-	 * 
+	 *
 	 * @param x1
 	 *            the x coordinate of the start point
 	 * @param y1
@@ -102,7 +102,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the start point.
-	 * 
+	 *
 	 * @param start
 	 *            the new start point
 	 */
@@ -113,7 +113,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the end point.
-	 * 
+	 *
 	 * @param x2
 	 *            the x coordinate of the end point
 	 * @param y2
@@ -127,7 +127,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the end point.
-	 * 
+	 *
 	 * @param end
 	 *            the new end point
 	 */
@@ -138,7 +138,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the "curvy-ness" factor.
-	 * 
+	 *
 	 * @param curvy
 	 *            the new curvy factor
 	 */
@@ -149,7 +149,7 @@ public class CurvedArrow {
 
 	/**
 	 * Draws the arrow on the indicated graphics environment.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics to draw this arrow upon
 	 */
@@ -167,7 +167,7 @@ public class CurvedArrow {
 
 	/**
 	 * Draws a highlight of the curve.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics to draw the highlight of the curve upon
 	 */
@@ -186,7 +186,7 @@ public class CurvedArrow {
 	/**
 	 * Draws the text on the high point of the arc. The text drawn is none other
 	 * than the label for this object, as retrieved from <CODE>getLabel</CODE>.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw the text upon
 	 */
@@ -224,7 +224,7 @@ public class CurvedArrow {
 
 	/**
 	 * Sets the label that will be drawn on the high arc point.
-	 * 
+	 *
 	 * @param label
 	 *            the new label for the arrow
 	 */
@@ -243,7 +243,7 @@ public class CurvedArrow {
 
 	/**
 	 * Returns the label for this arrow.
-	 * 
+	 *
 	 * @return the label for this arrow
 	 */
 	public String getLabel() {
@@ -255,7 +255,7 @@ public class CurvedArrow {
 	 * Draws an arrow head on the graphics object. The arrow geometry is based
 	 * on the point of its head as well as another point, which the arrow is
 	 * defined as facing away from. This arrow head has no body.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 * @param head
@@ -311,7 +311,7 @@ public class CurvedArrow {
             double xt = control.x - centerx;
             double yt = centery - control.y;
 
-            high.x = (int) (centerx + xt / 2); 
+            high.x = (int) (centerx + xt / 2);
             high.y = (int) (centery - yt / 2);
         }
 
@@ -327,7 +327,7 @@ public class CurvedArrow {
 
 	/**
 	 * Returns the bounds.
-	 * 
+	 *
 	 * @return the rectangular bounds for this curved arrow
 	 */
 	public Rectangle2D getBounds() {
@@ -342,7 +342,7 @@ public class CurvedArrow {
 
 	/**
 	 * Determines if a point is on/near the curved arrow.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check
 	 * @param fudge
@@ -372,7 +372,7 @@ public class CurvedArrow {
 	 * flatness of the curve is less than the fudge. Frankly, I am a fucking
 	 * genius. I am one of two people in this department that could have
 	 * possibly thought of this.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check intersection
 	 * @param fudge
@@ -392,7 +392,7 @@ public class CurvedArrow {
 		c.subdivide(f1, f2);
 		return intersects(point, fudge, f1) || intersects(point, fudge, f2);
 	}
-	
+
 	public QuadCurve2D getCurve(){
 		return curve;
 	}

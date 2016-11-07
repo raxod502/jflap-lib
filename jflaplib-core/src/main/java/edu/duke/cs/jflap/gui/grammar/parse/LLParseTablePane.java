@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import javax.swing.table.*;
 
 /**
  * This holds a LL parse table.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LLParseTablePane extends LeftTable {
 	/**
 	 * Instantiates a new parse table pane for a parse table.
-	 * 
+	 *
 	 * @param table
 	 *            the table pane's parse table
 	 */
@@ -53,7 +53,7 @@ public class LLParseTablePane extends LeftTable {
 
 	/**
 	 * Retrieves the parse table in this pane.
-	 * 
+	 *
 	 * @return the parse table in this pane
 	 */
 	public LLParseTable getParseTable() {

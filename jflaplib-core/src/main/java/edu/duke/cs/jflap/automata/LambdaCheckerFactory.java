@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.automata;
 /**
  * This lambda checker factory returns a lambda transition checker for the type
  * of automaton passed in.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -31,7 +31,7 @@ public class LambdaCheckerFactory {
 	/**
 	 * Returns the lambda transition checker for the type of automaton that
 	 * <CODE>automaton</CODE> is.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get the checker for
 	 * @return the lambda transition checker for the type of automaton that

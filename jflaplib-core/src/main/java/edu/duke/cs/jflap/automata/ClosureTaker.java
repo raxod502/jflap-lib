@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.*;
 /**
  * The closure taker object can be used to take the closure of states in an
  * automaton.
- * 
+ *
  * @author Ryan Cavalcante, Henry Qin
  */
 
@@ -41,7 +41,7 @@ public class ClosureTaker {
 	 * Returns the closure of <CODE>state</CODE>, that is, all states
 	 * reachable from <CODE>state</CODE> without changing any internal state
 	 * (e.g. stack, tape, input) via lambda transitions.
-	 * 
+	 *
 	 * @param state
 	 *            the state whose closure is being taken.
 	 * @param automaton

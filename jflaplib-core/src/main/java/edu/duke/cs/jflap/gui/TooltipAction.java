@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import javax.swing.AbstractAction;
 /**
  * This is a subclass of abstract action that allows one to set the tooltip text
  * from the constructor.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -37,7 +37,7 @@ public abstract class TooltipAction extends AbstractAction {
 
 	/**
 	 * Sets the tool tip description.
-	 * 
+	 *
 	 * @param tip
 	 *            the new tool tip
 	 */
@@ -53,7 +53,7 @@ public abstract class TooltipAction extends AbstractAction {
 
 	/**
 	 * Gets the tool tip description.
-	 * 
+	 *
 	 * @return the tool tip for this action
 	 */
 	public String getTip() {

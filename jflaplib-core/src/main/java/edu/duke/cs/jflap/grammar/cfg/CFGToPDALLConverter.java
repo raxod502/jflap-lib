@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,7 +39,7 @@ import edu.duke.cs.jflap.automata.pda.PDATransition;
  * in the grammar. You must of course add each Transition returned by this call
  * to your pushdown automaton. When you have done this for each production in
  * your grammar, the equivalent PDA will be complete.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -54,7 +54,7 @@ public class CFGToPDALLConverter extends GrammarToAutomatonConverter {
 	/**
 	 * Returns the transition created by converting <CODE>production</CODE> to
 	 * its equivalent transition.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return the equivalent transition.
@@ -73,7 +73,7 @@ public class CFGToPDALLConverter extends GrammarToAutomatonConverter {
 	 * states--an initial state, an intermediate state, and a final state. It
 	 * also adds transitions connecting the three states, and transitions for
 	 * each terminal in <CODE>grammar</CODE>
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar being converted.
 	 * @param automaton

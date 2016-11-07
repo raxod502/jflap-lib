@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.util.*;
  * given finite state automaton. The method of determining the alphabet for
  * automaton involves examining all transitions in the automaton and adding each
  * new character on a transition label to the alphabet.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -43,7 +43,7 @@ public class FSAAlphabetRetriever extends AlphabetRetriever {
 	/**
 	 * Returns the alphabet of <CODE>automaton</CODE> by analyzing all
 	 * transitions and their labels.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return the alphabet, in a string[].

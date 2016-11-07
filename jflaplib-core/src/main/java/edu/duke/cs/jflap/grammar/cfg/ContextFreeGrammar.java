@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import edu.duke.cs.jflap.grammar.*;
  * The context free grammar object is a representation of a context free
  * grammar. This object is a data structure of sorts, maintaining the data
  * pertinent to the definition of a context free grammar.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -43,7 +43,7 @@ public class ContextFreeGrammar extends Grammar {
 	/**
 	 * Throws an exception if the production is unrestricted on the left hand
 	 * side.
-	 * 
+	 *
 	 * @param production
 	 *            the production to check
 	 * @throws IllegalArgumentException

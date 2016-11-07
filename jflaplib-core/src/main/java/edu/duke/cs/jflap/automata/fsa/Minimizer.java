@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -66,7 +66,7 @@ import edu.duke.cs.jflap.automata.UnreachableStatesDetector;
  * return a list of all transitions coming from the state. By adding all these
  * transitions to the minimum dfa, you will have successfully created the
  * minimum dfa.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -89,7 +89,7 @@ public class Minimizer {
 
 	/**
 	 * Returns a string representation of <CODE>states</CODE>
-	 * 
+	 *
 	 * @param states
 	 *            the array of State objects.
 	 * @return a string representation of <CODE>states</CODE>
@@ -108,7 +108,7 @@ public class Minimizer {
 
 	/**
 	 * Returns the terminal that <CODE>group</CODE> can be split on.
-	 * 
+	 *
 	 * @param group
 	 *            the group being split
 	 * @param automaton
@@ -129,7 +129,7 @@ public class Minimizer {
 
 	/**
 	 * Returns true if <CODE>group</CODE> is splittable on <CODE>terminal</CODE>.
-	 * 
+	 *
 	 * @param group
 	 *            the group to split
 	 * @param terminal
@@ -150,7 +150,7 @@ public class Minimizer {
 
 	/**
 	 * Returns true if <CODE>group</CODE> can be further split.
-	 * 
+	 *
 	 * @param group
 	 *            the group
 	 * @param automaton
@@ -176,7 +176,7 @@ public class Minimizer {
 	/**
 	 * Returns the array of states that represent a distinguishable group (i.e.
 	 * a group that can be further split/distinguished).
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return the array of States that represent a distinguishable group.
@@ -197,7 +197,7 @@ public class Minimizer {
 	/**
 	 * Returns an array of states that represents a group, of which <CODE>state</CODE>
 	 * is a member.
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @return an array of states that represents a group, of which <CODE>state</CODE>
@@ -222,7 +222,7 @@ public class Minimizer {
 	/**
 	 * Returns true if <CODE>state</CODE> in <CODE>automaton</CODE> has a
 	 * transition to one of the states in <CODE>group</CODE> on <CODE>terminal</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @param group
@@ -253,7 +253,7 @@ public class Minimizer {
 	/**
 	 * Returns a list of groups (State[]) that <CODE>group</CODE> goes to on
 	 * <CODE>terminal</CODE>.
-	 * 
+	 *
 	 * @param group
 	 *            the group
 	 * @param terminal
@@ -288,7 +288,7 @@ public class Minimizer {
 	/**
 	 * Returns a TreeNode object in <CODE>tree</CODE> whose user object is
 	 * <CODE>group</CODE>.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree model to search.
 	 * @param root
@@ -322,7 +322,7 @@ public class Minimizer {
 	 * Returns list of groups (as State[]) created by split of <CODE>group</CODE>
 	 * on <CODE>terminal</CODE>. Returns null if group is indistinguishable
 	 * on <CODE>terminal</CODE>.
-	 * 
+	 *
 	 * @param group
 	 *            the group to split.
 	 * @param terminal
@@ -361,7 +361,7 @@ public class Minimizer {
 	/**
 	 * Returns true if <CODE>automaton</CODE> is minimized (i.e. there are no
 	 * distinguishable groups).
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return true if <CODE>automaton</CODE> is minimized
@@ -373,7 +373,7 @@ public class Minimizer {
 
 	/**
 	 * Returns list of groups (as State[]) obtained by splitting <CODE>group</CODE>.
-	 * 
+	 *
 	 * @param group
 	 *            the group to split.
 	 * @param automaton
@@ -392,7 +392,7 @@ public class Minimizer {
 	 * Returns true if there is a transition in <CODE>transitions</CODE> with
 	 * a label equal to <CODE>terminal</CODE>. This assumes that the
 	 * transitions are actually FSATransition objects.
-	 * 
+	 *
 	 * @param transitions
 	 *            the set of transitions.
 	 * @param terminal
@@ -414,7 +414,7 @@ public class Minimizer {
 	 * Returns true if <CODE>automaton</CODE> needs a trap state. (i.e. there
 	 * is an implied trap state since there are not transitions on every letter
 	 * in the alphabet for every state in <CODE>automaton</CODE>.)
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return true if automaton needs a trap state.
@@ -438,7 +438,7 @@ public class Minimizer {
 	/**
 	 * Adds a trap state to <CODE>automaton</CODE> and all implied transitions
 	 * to that trap state. This actually alters the Automaton object itself.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */
@@ -470,7 +470,7 @@ public class Minimizer {
 	 * Returns a minimizeable automaton obtained from <CODE>automaton</CODE>
 	 * by removing all unreachable states and multiple character labels on
 	 * transitions. This does not alter <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param a
 	 *            the automaton
 	 * @return a minimizeable automaton obtained from <CODE>automaton</CODE>
@@ -500,7 +500,7 @@ public class Minimizer {
 	/**
 	 * Prints the string representation of <CODE>treeNode</CODE> to stdout
 	 * (assumes that treeNode stores a StateNode object).
-	 * 
+	 *
 	 * @param treeNode
 	 *            the node to print.
 	 */
@@ -514,7 +514,7 @@ public class Minimizer {
 	/**
 	 * Prints the string representation of <CODE>tree</CODE> rooted at <CODE>root</CODE>
 	 * to stdout. (assumes all nodes in tree contain StateNode objects).
-	 * 
+	 *
 	 * @param tree
 	 *            the tree to print.
 	 * @param root
@@ -537,7 +537,7 @@ public class Minimizer {
 	 * all states in <CODE>automaton</CODE>, and then the root split into two
 	 * children, one containing all final states in <CODE>automaton</CODE>,
 	 * the other containing all nonfinal states in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton being minimized.
 	 * @return the tree of distinguishable groups with all states in <CODE>automaton</CODE>
@@ -582,7 +582,7 @@ public class Minimizer {
 	/**
 	 * Creates tree nodes for each group of states (State[]) in <CODE>children</CODE>
 	 * and places them in <CODE>tree</CODE> under <CODE>parent</CODE>.
-	 * 
+	 *
 	 * @param children
 	 *            the list of groups that were obtained by splitting the group
 	 *            represented by parent
@@ -608,7 +608,7 @@ public class Minimizer {
 	/**
 	 * Returns the tree model of the process of distinguishing groups of states
 	 * in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return the tree model of the process of distinguishing groups of states
@@ -638,7 +638,7 @@ public class Minimizer {
 	/**
 	 * Returns true if <CODE>states</CODE> contains a state that is a final
 	 * state in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states.
 	 * @param automaton
@@ -657,7 +657,7 @@ public class Minimizer {
 	/**
 	 * Returns true if <CODE>states</CODE> contains the initial state of
 	 * <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states.
 	 * @param automaton
@@ -676,7 +676,7 @@ public class Minimizer {
 
 	/**
 	 * Maps <CODE>state</CODE> to <CODE>states</CODE>
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @param group
@@ -688,7 +688,7 @@ public class Minimizer {
 
 	/**
 	 * Returns the group (State[]) mapped to <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state
 	 * @return the group (State[]) mapped to <CODE>state</CODE>.
@@ -700,7 +700,7 @@ public class Minimizer {
 	/**
 	 * Creates states in <CODE>minDfa</CODE> for each group at a leaf in
 	 * <CODE>tree</CODE>.
-	 * 
+	 *
 	 * @param dfa
 	 *            the dfa being minimized
 	 * @param minDfa
@@ -734,7 +734,7 @@ public class Minimizer {
 
 	/**
 	 * Returns the state from <CODE>minDfa</CODE> that is mapped to <CODE>group</CODE>
-	 * 
+	 *
 	 * @param group
 	 *            the group of states
 	 * @param minDfa
@@ -754,7 +754,7 @@ public class Minimizer {
 	/**
 	 * Returns a list of all transitions from <CODE>state</CODE> in <CODE>minDfa</CODE>,
 	 * based on <CODE>dfa</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state in the minimized dfa.
 	 * @param minDfa
@@ -786,7 +786,7 @@ public class Minimizer {
 	/**
 	 * Returns a list of State[] objects that are contained in the leaves of
 	 * <CODE>tree</CODE>
-	 * 
+	 *
 	 * @param tree
 	 *            the tree
 	 * @param root
@@ -813,7 +813,7 @@ public class Minimizer {
 
 	/**
 	 * Returns true if <CODE>states</CODE> contains the trap state
-	 * 
+	 *
 	 * @param states
 	 *            the states.
 	 * @return true if <CODE>states</CODE> contains the trap state
@@ -829,7 +829,7 @@ public class Minimizer {
 	/**
 	 * Returns the minimized version of <CODE>automaton</CODE>, for which
 	 * <CODE>tree</CODE> is the tree of distinguishable groups.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton being minimized
 	 * @param tree

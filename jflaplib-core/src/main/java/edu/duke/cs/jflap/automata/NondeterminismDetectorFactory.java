@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import edu.duke.cs.jflap.automata.turing.TMNondeterminismDetector;
  * The <CODE>NondeterminismDetectorFactory</CODE> is a factory class for
  * returning a <CODE>NondeterminismDetector</CODE> based on the automaton that
  * is passed in.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class NondeterminismDetectorFactory {
 	/**
 	 * Returns the nondeterminism detector for this type of automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get the nondeterminism detector for
 	 * @return the appropriate automaton simulator for this automaton, or <CODE>null</CODE>

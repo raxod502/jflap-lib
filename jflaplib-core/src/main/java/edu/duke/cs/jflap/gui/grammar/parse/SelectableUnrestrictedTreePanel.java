@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,11 +33,11 @@ import javax.swing.tree.TreeNode;
  * This class allows user to select items in the tree Panel.
  * This class was intended to be used with UserControlParsePane,
  * however we decided to not to use it.
- * 
- * However, this class is still called from UserControlParsePane for drawing. 
- * 
- * Could be useful in the future. 
- * 
+ *
+ * However, this class is still called from UserControlParsePane for drawing.
+ *
+ * Could be useful in the future.
+ *
  * @author Kyung Min (Jason) Lee
  *
  */
@@ -45,22 +45,22 @@ public class SelectableUnrestrictedTreePanel extends UnrestrictedTreePanel{
 
 	private boolean myClicked=false;
 	private Point2D myClickedNodePoint;
-	
+
 	private Color myColor;
 	private static final Color CLICKED_COLOR=new Color(100,120,120);
 
 	/**
-	 * Constructor for SelectableUnrestrictedTreePanel 
+	 * Constructor for SelectableUnrestrictedTreePanel
 	 * @param pane pane that is going to contain this tree panel
 	 */
 	public SelectableUnrestrictedTreePanel(BruteParsePane pane) {
 		super(pane);
 		myColor=super.INNER;
 	}
-	
+
 	/**
 	 * Returns the node at a particular point.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check for nodeness
 	 * @return the treenode at a particular point, or <CODE>null</CODE> if
@@ -85,24 +85,24 @@ public class SelectableUnrestrictedTreePanel extends UnrestrictedTreePanel{
 		}
 		return null;
 	}
-	
+
 	public Point2D getPointofSelectedNode()
 	{
 		if (myClicked)
 			return myClickedNodePoint;
 		return null;
-			
+
 	}
-	
-	
+
+
 	/**
 	 * Sets the answer to this tree panel.
-	 * 
+	 *
 	 * @param answer
 	 *            the end result of a parse tree derivation, or <CODE>null</CODE>
 	 *            if no answer should be displayed
 	 */
-	
+
 	public void setAnswer(ParseNode answer) {
 		if (answer==null)
 		{
@@ -112,21 +112,21 @@ public class SelectableUnrestrictedTreePanel extends UnrestrictedTreePanel{
 		super.setAnswer(answer);
 		for (int i=1; i<solutionParseNodes.length; i++)
 		{
-			for (int j=0; j<solutionParseNodes[i].getSubstitutions().length; j++) 
+			for (int j=0; j<solutionParseNodes[i].getSubstitutions().length; j++)
 				next();
 		}
 	}
 
 	public void paintNode(Graphics2D g, UnrestrictedTreeNode node, Point2D p) {
 	//	System.out.println("node out : "+node.getText());
-		
+
 		g.setColor(node.lowest == top.length - 1 ? LEAF : INNER);
 		if (node.getText().toUpperCase().equals(node.getText()) && !node.getText().equals(""))
 			g.setColor(INNER);
-		
-		
-		
-		
+
+
+
+
 	/*	else
 		{
 		//	System.out.println("node : "+node.getText());
@@ -135,7 +135,7 @@ public class SelectableUnrestrictedTreePanel extends UnrestrictedTreePanel{
 				g.setColor(INNER);
 		}
 		//System.out.println("node out : "+node.getText());
-		
+
 		if (node.getText().equals("("))
 			myPrev=false;
 		if (node.getText().equals(")"))
@@ -145,6 +145,6 @@ public class SelectableUnrestrictedTreePanel extends UnrestrictedTreePanel{
 		nodeDrawer.draw(g, node);
 		g.translate(-p.getX(), -p.getY());
 	}
-	
+
 	//private boolean myPrev=true;
 }

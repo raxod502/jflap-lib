@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,7 +33,7 @@ import java.awt.*;
 /**
  * The <CODE>GrammarInputPane</CODE> is a pane that is used for the input and
  * graphical display of a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -49,7 +49,7 @@ public class GrammarInputPane extends JPanel {
 	/**
 	 * Instantiates a <CODE>GrammarInputPane</CODE> that holds and displays
 	 * the indicated grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to display
 	 */
@@ -62,7 +62,7 @@ public class GrammarInputPane extends JPanel {
 			initView();
 	}
 
-	
+
 	private void initLargerView()
 	{
 		table = new GrammarTable(model);
@@ -121,7 +121,7 @@ public class GrammarInputPane extends JPanel {
 	/**
 	 * Returns the grammar that has been defined through this <CODE>GrammarInputPane</CODE>.
 	 * This method returns a grammar of the type <CODE>ContextFreeGrammar</CODE>.
-	 * 
+	 *
 	 * @return the grammar defined by this input pane, or <CODE>null</CODE> if
 	 *         an error occurred
 	 */
@@ -132,7 +132,7 @@ public class GrammarInputPane extends JPanel {
 	/**
 	 * Returns the grammar that has been defined through this <CODE>GrammarInputPane</CODE>,
 	 * where the grammar is an instance of the class passed into this function.
-	 * 
+	 *
 	 * @param grammarClass
 	 *            the type of grammar that is passed in
 	 * @return a grammar of the variant returned by this grammar
@@ -146,7 +146,7 @@ public class GrammarInputPane extends JPanel {
 
 	/**
 	 * Returns the grammar that has been defined through this <CODE>GrammarInputPane</CODE>.
-	 * 
+	 *
 	 * @return the grammar defined by this input pane, or <CODE>null</CODE> if
 	 *         an error occurred
 	 */
@@ -156,7 +156,7 @@ public class GrammarInputPane extends JPanel {
 
 	/**
 	 * Returns the table.
-	 * 
+	 *
 	 * @return the table where the productions are edited
 	 */
 	public GrammarTable getTable() {

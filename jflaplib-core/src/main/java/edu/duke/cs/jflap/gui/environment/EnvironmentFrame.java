@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -44,7 +44,7 @@ import javax.swing.filechooser.FileFilter;
 /**
  * The <CODE>EnvironmentFrame</CODE> is the general sort of frame for holding
  * an environment.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -52,7 +52,7 @@ public class EnvironmentFrame extends JFrame {
 	/**
 	 * Instantiates a new <CODE>EnvironmentFrame</CODE>. This does not fill
 	 * the environment with anything.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that the frame is created for
 	 */
@@ -76,9 +76,9 @@ public class EnvironmentFrame extends JFrame {
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		resizeWatcher();
 	}
-	
+
 	/**
-	 * Special constructor to create grammar environment from turing converted 
+	 * Special constructor to create grammar environment from turing converted
 	 * @param environment
 	 * @param isTuring
 	 */
@@ -90,7 +90,7 @@ public class EnvironmentFrame extends JFrame {
 			}
 		});
 		this.setJMenuBar(edu.duke.cs.jflap.gui.menu.MenuBarCreator.getMenuBar(this, 0));
-		
+
 		this.getContentPane().setLayout(new BorderLayout());
 		this.getContentPane().add(environment, BorderLayout.CENTER);
 
@@ -106,14 +106,14 @@ public class EnvironmentFrame extends JFrame {
 
 	/**
 	 * Returns a simple identifying string for this frame.
-	 * 
+	 *
 	 * @return a simple string that identifies this frame
 	 */
 	public String getDescription() {
 		if (environment.getFile() == null)
 			return "<untitled" + myNumber + ">";
         else if(environment.myObjects!=null  && environment.getActive()!=null && (environment.getActive() instanceof EditorPane || environment.getActive() instanceof GrammarInputPane)){
-            return environment.getActive().getName();        
+            return environment.getActive().getName();
         }
 		else
 			return "(" + environment.getFile().getName() + ")";
@@ -137,7 +137,7 @@ public class EnvironmentFrame extends JFrame {
 
 	/**
 	 * Returns the environment for this frame.
-	 * 
+	 *
 	 * @return the environment for this frame
 	 */
 	public Environment getEnvironment() {
@@ -148,7 +148,7 @@ public class EnvironmentFrame extends JFrame {
 	 * Saves the environment's object to a file. This serializes the object
 	 * found in the environment, and then writes it to the file of the
 	 * environment.
-	 * 
+	 *
 	 * @param saveAs
 	 *            if <CODE>true</CODE> this will prompt the user with a save
 	 *            file dialog box no matter what, otherwise the user will only
@@ -172,8 +172,8 @@ public class EnvironmentFrame extends JFrame {
             file = saveAs ? null : expected;
             object = ep.getGrammar();
         }
-		
-        
+
+
 		boolean blockEdit = false;
 		if (environment.getActive() instanceof EditBlockPane) {
 			EditBlockPane newPane = (EditBlockPane) environment.getActive();
@@ -238,7 +238,7 @@ public class EnvironmentFrame extends JFrame {
 				if (result != JFileChooser.APPROVE_OPTION)
 					return false;
 				file = Universe.CHOOSER.getSelectedFile();
-                if(file != null){                   
+                if(file != null){
 //                  Get the suggested file name.
                     String filename = file.getName();
                     codec = (Codec) Universe.CHOOSER.getFileFilter();
@@ -249,7 +249,7 @@ public class EnvironmentFrame extends JFrame {
 				else{
                     JOptionPane.showMessageDialog(null, "JFLAP could not determine the selected file name.  Try again.", "Error", JOptionPane.ERROR_MESSAGE);
                     file = null;
-				    continue;             
+				    continue;
                 }
 			}
 			badname = false;
@@ -290,7 +290,7 @@ public class EnvironmentFrame extends JFrame {
 
 	/**
 	 * Attempts to close an environment frame.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if the window was successfully closed, <CODE>false</CODE>
 	 *         if the window could not be closed at this time (probably user
 	 *         intervention)
@@ -318,7 +318,7 @@ public class EnvironmentFrame extends JFrame {
 		Universe.unregisterFrame(this);
 		return true;
 	}
-	
+
 	public void resizeWatcher(){
 		 this.addComponentListener(new java.awt.event.ComponentAdapter()
 	                {
@@ -334,7 +334,7 @@ public class EnvironmentFrame extends JFrame {
 
 	/**
 	 * Returns the string that describes this frame.
-	 * 
+	 *
 	 * @return the string that describes this frame
 	 */
 	public String toString() {

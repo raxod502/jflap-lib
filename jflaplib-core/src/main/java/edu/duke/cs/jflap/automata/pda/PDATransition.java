@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,16 +28,16 @@ import edu.duke.cs.jflap.automata.State;
  * A <CODE>PDATransition</CODE> is a <CODE>Transition</CODE> object with
  * additional fields for the label (input to read), the string to pop off the
  * stack, and the string to push on the stack.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.pda.PushdownAutomaton
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class PDATransition extends Transition {
 	/**
 	 * Instantiates a new <CODE>PDATransition</CODE> object.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition comes from
 	 * @param to
@@ -60,7 +60,7 @@ public class PDATransition extends Transition {
 
 	/**
 	 * Returns a copy of this transition with new from and to states.
-	 * 
+	 *
 	 * @param from
 	 *            the new from state for the returned transition
 	 * @param to
@@ -83,7 +83,7 @@ public class PDATransition extends Transition {
 	/**
 	 * Sets the input to read portion of the transition label for this
 	 * transition.
-	 * 
+	 *
 	 * @param inputToRead
 	 *            the input to read portion of the transition label.
 	 */
@@ -106,7 +106,7 @@ public class PDATransition extends Transition {
 	/**
 	 * Sets the string to pop from stack portion of the transition label for
 	 * this transition.
-	 * 
+	 *
 	 * @param stringToPop
 	 *            the string to pop from the stack.
 	 */
@@ -134,7 +134,7 @@ public class PDATransition extends Transition {
 	/**
 	 * Sets the string to push on to the stack portion of the transition label
 	 * for this transition.
-	 * 
+	 *
 	 * @param stringToPush
 	 *            the string to push on to the stack.
 	 */
@@ -152,7 +152,7 @@ public class PDATransition extends Transition {
 
 	/**
 	 * Returns the description for this transition.
-	 * 
+	 *
 	 * @return the description, in this case, the input to read, the string to
 	 *         pop off the stack, and the string to push on the stack.
 	 */
@@ -171,7 +171,7 @@ public class PDATransition extends Transition {
 
 	/**
 	 * Returns the hashcode for this transition.
-	 * 
+	 *
 	 * @return the hashcode for this transition
 	 */
 	public int hashCode() {
@@ -181,7 +181,7 @@ public class PDATransition extends Transition {
 
 	/**
 	 * Tests this transition against another object for equality.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for equality
 	 * @return <CODE>true</CODE> if this transition equals the passed in
@@ -203,7 +203,7 @@ public class PDATransition extends Transition {
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular transition object, with the
 	 * additional fields tacked on.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Transition#toString
 	 * @return a string representation of this object
 	 */

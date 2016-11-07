@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import java.awt.event.MouseEvent;
 /**
  * This extension of the arrow tool does not allow the editing of an automaton
  * aside from the moving about of states.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ArrowNontransitionTool extends ArrowTool {
 	/**
 	 * Instantiates a new <CODE>ArrowNontransitionTool</CODE>.
-	 * 
+	 *
 	 * @param view
 	 *            the view the automaton is drawn in
 	 * @param drawer
@@ -47,7 +47,7 @@ public class ArrowNontransitionTool extends ArrowTool {
 
 	/**
 	 * On a mouse click, this simply returns,
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

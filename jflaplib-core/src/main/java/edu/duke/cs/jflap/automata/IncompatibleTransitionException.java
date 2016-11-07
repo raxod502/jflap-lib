@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.automata;
 /**
  * This class is an exception that is thrown in the event an incompatible <CODE>Transition</CODE>
  * object is assigned to an automaton.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.Automaton
  * @see edu.duke.cs.jflap.automata.Transition
  * @see edu.duke.cs.jflap.automata.Automaton#getTransitionClass

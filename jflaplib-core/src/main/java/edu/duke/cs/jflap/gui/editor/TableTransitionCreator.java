@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -46,14 +46,14 @@ import edu.duke.cs.jflap.automata.turing.Tape;
 /**
  * This allows the user to create transition creators that have tables directly
  * in the editing window with a minimum of effort.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class TableTransitionCreator extends TransitionCreator {
 	/**
 	 * Instantiates a transition creator.
-	 * 
+	 *
 	 * @param parent
 	 *            the automaton pane the automaton is drawn in
 	 */
@@ -64,7 +64,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 
 	/**
 	 * Creates a fresh new transition between two states.
-	 * 
+	 *
 	 * @param from
 	 *            the from state for the new transition
 	 * @param to
@@ -74,7 +74,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 
 	/**
 	 * Instantiates a new table model based on the given transition.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to create a table model for
 	 */
@@ -84,7 +84,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 	 * Instantiates a new table view based on the given transition. This method
 	 * uses the {@link #createModel} method. This default method simply sticks
 	 * the model in a table, and sets some visual constants.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to create a table for
 	 */
@@ -127,7 +127,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 	/**
 	 * Given a table model instantiated earlier and a transition, return a
 	 * transition with the changes in the model.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to modify
 	 * @param model
@@ -139,7 +139,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 
 	/**
 	 * Stops the editing.
-	 * 
+	 *
 	 * @param cancel
 	 *            if this was a cancel
 	 */
@@ -183,7 +183,7 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 
 	/**
 	 * Begins the process of creating a transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -192,17 +192,17 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 	public Transition createTransition(State from, State to) {
 		Transition t = initTransition(from, to);
 		editTransition(t, null);
-		
+
 		//can you say "ugly hack?"
 //		editTransition(t, new Point((from.getPoint().x+to.getPoint().x)/2, (from.getPoint().y+to.getPoint().y)/2));
-		
+
 		return null;
 	}
 
 	/**
 	 * Edits a transition. This implementation will create an editing view from
 	 * the {@link #createModel} and {@link #createTable} methods.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to edit
 	 * @param point
@@ -246,21 +246,21 @@ public abstract class TableTransitionCreator extends TransitionCreator {
 			public void componentShown(ComponentEvent e) {
 			}
 		});
-		
-		
+
+
 		editingTable.setLocation(tablePoint);
 		editingTable.setSize(tableDimensions);
-		
+
 //		editingTable.editCellAt(0, 0);
-		
+
 		editingTable.setCellSelectionEnabled(true);
 		editingTable.changeSelection(0, 0, false, false);
 		editingTable.requestFocus();
-		
+
 //		EDebug.print("Focus has been requested");
-//	    EDebug.print("hasFocus? "+editingTable.hasFocus());	
+//	    EDebug.print("hasFocus? "+editingTable.hasFocus());
 //	    EDebug.print(getParent().getClass().getName());
-		
+
 		getParent().repaint();
 	}
 

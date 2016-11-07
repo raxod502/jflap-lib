@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,9 +25,9 @@ import edu.duke.cs.jflap.grammar.Grammar;
 /**
  * The <CODE>ImmutableGrammarTableModel</CODE> is a grammar table model that
  * cannot be changed.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.Production
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -41,7 +41,7 @@ public class ImmutableGrammarTableModel extends GrammarTableModel {
 
 	/**
 	 * Instantiates a <CODE>GrammarTableModel</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to have for the grammar table model initialized to
 	 */
@@ -51,7 +51,7 @@ public class ImmutableGrammarTableModel extends GrammarTableModel {
 
 	/**
 	 * No cell is editable in this model.
-	 * 
+	 *
 	 * @param row
 	 *            the index for the row
 	 * @param column

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.awt.geom.Rectangle2D;
  * A graph data structure. The idea behind the graph data structure is that a
  * vertex is just some sort of data structure whose type is not important, and
  * associated with a point. There is therefore no explicit node structure.
- * 
+ *
  * @author Thomas Finley
  */
 

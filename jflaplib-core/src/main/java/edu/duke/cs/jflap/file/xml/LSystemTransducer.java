@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import org.w3c.dom.*;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.grammar.lsystem.LSystem} objects.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LSystemTransducer extends AbstractTransducer {
 	/**
 	 * Returns the type this transducer recognizes, "lsystem".
-	 * 
+	 *
 	 * @return the string "lsystem"
 	 */
 	public String getType() {
@@ -44,7 +44,7 @@ public class LSystemTransducer extends AbstractTransducer {
 
 	/**
 	 * Given a list of objects, this converts it to a space delimited string.
-	 * 
+	 *
 	 * @param list
 	 *            the list to convert to a string
 	 * @return a string containing the elements of the list
@@ -65,7 +65,7 @@ public class LSystemTransducer extends AbstractTransducer {
 	/**
 	 * Returns the productions representing the rewriting rules for a given
 	 * node.
-	 * 
+	 *
 	 * @param node
 	 *            the node the encapsulates a production
 	 */
@@ -85,7 +85,7 @@ public class LSystemTransducer extends AbstractTransducer {
 
 	/**
 	 * Returns an element that encodes a given rewriting rule.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the element in
 	 * @param lsystem
@@ -108,7 +108,7 @@ public class LSystemTransducer extends AbstractTransducer {
 
 	/**
 	 * Reads the axiom from the DOM and returns it as a string.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to read the axiom from
 	 * @return the string that contains the axiom
@@ -126,7 +126,7 @@ public class LSystemTransducer extends AbstractTransducer {
 
 	/**
 	 * Reads the rewriting rules from the DOM and returns it as a grammar.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to read rewriting rules from
 	 * @return the grammar that holds these results
@@ -146,7 +146,7 @@ public class LSystemTransducer extends AbstractTransducer {
 	/**
 	 * Reads the parameters from the DOM document and returns it as a map from
 	 * parameter names to values.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to read parameters from
 	 * @return the mapping of parameter names to values
@@ -171,7 +171,7 @@ public class LSystemTransducer extends AbstractTransducer {
 	/**
 	 * Given a document, this will return the corresponding L-system encoded in
 	 * the DOM document.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to convert
 	 * @return the {@link edu.duke.cs.jflap.grammar.lsystem.LSystem} instance
@@ -186,7 +186,7 @@ public class LSystemTransducer extends AbstractTransducer {
 	/**
 	 * Given a JFLAP L-system, this will return the corresponding DOM encoding
 	 * of the structure.
-	 * 
+	 *
 	 * @param structure
 	 *            the JFLAP L-system to encode
 	 * @return a DOM document instance

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,7 +38,7 @@ import edu.duke.cs.jflap.debug.EDebug;
 /**
  * The <CODE>GrammarTable</CODE> is a simple extension to the <CODE>JTable</CODE>
  * that standardizes how grammar tables look.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -53,7 +53,7 @@ public class GrammarTable extends HighlightTable {
 
 	/**
 	 * Instantiates a <CODE>GrammarTable</CODE> with a given table model.
-	 * 
+	 *
 	 * @param model
 	 *            the table model for the new grammar table
 	 */
@@ -64,7 +64,7 @@ public class GrammarTable extends HighlightTable {
 
 	/**
 	 * Handles the highlighting of a particular row.
-	 * 
+	 *
 	 * @param row
 	 *            the row to highlight
 	 */
@@ -104,7 +104,7 @@ public class GrammarTable extends HighlightTable {
 
 	/**
 	 * Returns the model for this grammar table.
-	 * 
+	 *
 	 * @return the grammar table model for this table
 	 */
 	public GrammarTableModel getGrammarModel() {
@@ -114,7 +114,7 @@ public class GrammarTable extends HighlightTable {
 	/**
 	 * Returns the grammar that has been defined through this <CODE>GrammarTable</CODE>,
 	 * where the grammar is an instance of the class passed into this function.
-	 * 
+	 *
 	 * @param grammarClass
 	 *            the type of grammar that is passed in
 	 * @return a grammar of the variant returned by this grammar, or <CODE>null</CODE>

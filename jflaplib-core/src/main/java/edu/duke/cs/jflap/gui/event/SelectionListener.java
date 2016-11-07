@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.EventListener;
 /**
  * A <CODE>SelectionListener</CODE> is an interface for objects that want to
  * listen to <CODE>SelectionEvent</CODE>s.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.event.SelectionEvent
  * @author Thomas Finley
  */
@@ -33,7 +33,7 @@ import java.util.EventListener;
 public interface SelectionListener extends EventListener {
 	/**
 	 * This method is called when a selection in an object is changed.
-	 * 
+	 *
 	 * @param event
 	 *            the selection event
 	 */

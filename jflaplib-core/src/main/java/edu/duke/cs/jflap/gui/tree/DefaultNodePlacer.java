@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.tree.TreeNode;
 /**
  * A <CODE>DefaultNodePlacer</CODE> places the nodes in a tree in a rather
  * simple "top down" pattern.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -41,7 +41,7 @@ public class DefaultNodePlacer implements NodePlacer {
 	 * objects to <CODE>Dimension2D</CODE> points. This placer works according
 	 * to a rather simple algorithm that places all nodes at a particular depth
 	 * in a tree at regular intervals.
-	 * 
+	 *
 	 * @param tree
 	 *            the tree model
 	 * @param drawer
@@ -61,7 +61,7 @@ public class DefaultNodePlacer implements NodePlacer {
 	/**
 	 * Recursively sets the points of the tree going the <CODE>nodeToPoint</CODE>
 	 * structure as it goes.
-	 * 
+	 *
 	 * @param node
 	 *            the current node in the tree
 	 * @param depth

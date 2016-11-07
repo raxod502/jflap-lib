@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,16 +28,16 @@ import edu.duke.cs.jflap.automata.State;
  * An <CODE>FSATransition</CODE> is a <CODE>Transition</CODE> object with an
  * additional field for the label, which determines if the machine should move
  * on this transition.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSATransition extends Transition {
 	/**
 	 * Instantiates a new <CODE>FSATransition</CODE> object.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition comes from
 	 * @param to
@@ -54,7 +54,7 @@ public class FSATransition extends Transition {
 
 	/**
 	 * Produces a copy of this transition with new from and to states.
-	 * 
+	 *
 	 * @param from
 	 *            the new from state
 	 * @param to
@@ -74,7 +74,7 @@ public class FSATransition extends Transition {
 
 	/**
 	 * Sets the label for this transition.
-	 * 
+	 *
 	 * @param label
 	 *            the new label for this transition
 	 * @throws IllegalArgumentException
@@ -87,7 +87,7 @@ public class FSATransition extends Transition {
 
 	/**
 	 * Returns the description for this transition.
-	 * 
+	 *
 	 * @return the description, in this case, simply the label
 	 */
 	public String getDescription() {
@@ -101,7 +101,7 @@ public class FSATransition extends Transition {
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular transition object, with the label
 	 * tacked on.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Transition#toString
 	 * @return a string representation of this object
 	 */
@@ -111,7 +111,7 @@ public class FSATransition extends Transition {
 
 	/**
 	 * Returns if this transition equals another object.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test against
 	 * @return <CODE>true</CODE> if the two are equal, <CODE>false</CODE>
@@ -128,7 +128,7 @@ public class FSATransition extends Transition {
 
 	/**
 	 * Returns the hash code for this transition.
-	 * 
+	 *
 	 * @return the hash code for this transition
 	 */
 	public int hashCode() {

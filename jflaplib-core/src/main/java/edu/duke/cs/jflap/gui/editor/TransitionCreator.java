@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import javax.swing.JOptionPane;
  * A <CODE>TransitionCreator</CODE> object is used to present a graphical
  * environment for the creation and editing of transitions for insertion into
  * automata.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -46,7 +46,7 @@ public abstract class TransitionCreator {
 
 	/**
 	 * Returns the automaton.
-	 * 
+	 *
 	 * @return the automaton
 	 */
 	protected Automaton getAutomaton() {
@@ -55,7 +55,7 @@ public abstract class TransitionCreator {
 
 	/**
 	 * Begins the process of creating a transition and returns it.
-	 * 
+	 *
 	 * @param from
 	 *            the state the transition will go from
 	 * @param to
@@ -66,7 +66,7 @@ public abstract class TransitionCreator {
 	/**
 	 * Edits a given transition. Ideally this should use the same interface as
 	 * that given by <CODE>createTransition</CODE>.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to edit
 	 * @return <CODE>false</CODE> if the user decided to edit a transition
@@ -76,7 +76,7 @@ public abstract class TransitionCreator {
 	/**
 	 * This is a static method used to return a transition creator for the sort
 	 * of automaton that is being edited.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton for which there will be created a compatible
 	 *            transition creator
@@ -107,7 +107,7 @@ public abstract class TransitionCreator {
 	/**
 	 * Edits the transition at the particular point. By default, this envokes
 	 * the pointless method.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to edit
 	 * @param point
@@ -119,7 +119,7 @@ public abstract class TransitionCreator {
 
 	/**
 	 * Returns the parent component of this transition creator.
-	 * 
+	 *
 	 * @return the parent component of this transition creator
 	 */
 	public AutomatonPane getParent() {
@@ -129,7 +129,7 @@ public abstract class TransitionCreator {
 	/**
 	 * Reports an error to the user through a dialog box based on an illegal
 	 * argument exception.
-	 * 
+	 *
 	 * @param e
 	 *            the illegal argument exception
 	 */

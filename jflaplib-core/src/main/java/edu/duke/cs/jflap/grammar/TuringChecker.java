@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ public final class TuringChecker {
 
 	private static final String[] LHS_DEFAULT={"S", "S", "S"};
 	private static final String[] RHS_DEFAULT={"V(==)S", "SV(==)", "T"};
-	
+
 	/**
 	 * Checks whether loaded grammar is Turing Converted Grammar or not.
 	 * @param object
@@ -41,7 +41,7 @@ public final class TuringChecker {
 		if (object instanceof Grammar)
 		{
 			Grammar g=(Grammar) object;
-		
+
 			Production[] p=g.getProductions();
 			//check first 3 productions to make sure this grammar is from conversion
 			int count=0;
@@ -60,11 +60,11 @@ public final class TuringChecker {
 				return true;
 			else
 				return false;
-			
+
 		}
 
 		return false;
 	}
 
-	
+
 }

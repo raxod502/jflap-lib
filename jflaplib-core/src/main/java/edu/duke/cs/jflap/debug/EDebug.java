@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 
 public class EDebug {
 	private static final Logger logger = LoggerFactory.getLogger(EDebug.class);
-	
+
 	public static boolean setFind = false;
 	private static String getFileName(){
 		return Thread.currentThread().getStackTrace()[3].getClassName();

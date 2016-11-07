@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,14 +34,14 @@ import javax.swing.JOptionPane;
 
 /**
  * This is an action to build an LL(1) parse table for a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LLParseTableAction extends GrammarAction {
 	/**
 	 * Instantiates a new <CODE>GrammarOutputAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

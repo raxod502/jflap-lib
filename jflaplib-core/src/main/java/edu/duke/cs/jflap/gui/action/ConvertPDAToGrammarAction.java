@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -47,14 +47,14 @@ import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
 
 /**
  * This action handles the conversion of an PDA to a context free grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConvertPDAToGrammarAction extends ConvertAutomatonToGrammarAction {
 	/**
 	 * Instantiates a new <CODE>ConvertFSAToGrammarAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment
 	 */
@@ -130,7 +130,7 @@ public class ConvertPDAToGrammarAction extends ConvertAutomatonToGrammarAction {
 
 	/**
 	 * This object is only applicable to pushdown automatons.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test
 	 * @return <CODE>true</CODE> if the object is a pushdown automaton, <CODE>false</CODE>
@@ -142,7 +142,7 @@ public class ConvertPDAToGrammarAction extends ConvertAutomatonToGrammarAction {
 
 	/**
 	 * Initializes the convert controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table

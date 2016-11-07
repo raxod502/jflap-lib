@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,23 +33,23 @@ import org.slf4j.LoggerFactory;
  * This class will store the states between actions, that we may undo them.
  * Since there should be one set of states per active window, this class should be instantiated
  * within the AutomatonFrame class.
- * 
+ *
  * Let's use it statically for now (testing / prototype), so we don't have to change environment frame to instantiate it.
  * @author Henry Qin
  *
  */
 public class UndoKeeper {
     private final Logger logger = LoggerFactory.getLogger(UndoKeeper.class);
-    	
-    private Automaton myMaster;	
-    
+
+    private Automaton myMaster;
+
     private Deque<Automaton> myDeck;
     private Deque<Automaton> myBackDeck;
 
     //private final int DEFAULT_NUM = 50;
 
     private int numUndo;
-    
+
     public UndoKeeper(Automaton master){
     	myMaster = master;
     	myDeck = new LinkedList<Automaton>();
@@ -60,21 +60,21 @@ public class UndoKeeper {
     public void setNumUndo(int nn){
         numUndo = nn;
     }
-	
+
 	public boolean sensitive = false;
 	private boolean wait = false;
-	
+
     public void setWait(){
     	wait = true;
     }
-	
+
     public void saveStatus(){
 //        EDebug.print("I have been called upon");
         if (wait){
         	wait = false;
         	return;
         }
-    	
+
 //        EDebug.print("\nFirst place");
 //        for (int i = 0; i < myDeck.size(); i++)
 //            EDebug.print(((LinkedList)myDeck).get(i).hashCode());
@@ -83,7 +83,7 @@ public class UndoKeeper {
 //            EDebug.print("The top of deck hash is " + myDeck.peek().hashCode());
 
         myDeck.push((Automaton)myMaster.clone()); //push on head
-    	    
+
 //        EDebug.print("The master that is getting pushed on has hascode = " + myMaster.hashCode());
 
         logger.debug("saveStatus()");
@@ -93,7 +93,7 @@ public class UndoKeeper {
 //            EDebug.print(((LinkedList)myDeck).get(i).hashCode());
 //
 //        EDebug.print("\n");
-        
+
 
         if (myDeck.size() >= 2)
         {
@@ -101,11 +101,11 @@ public class UndoKeeper {
         	Automaton second = myDeck.pop();
 //            EDebug.print("The first is " + first.hashCode() + "While the second is " + second.hashCode());
         	if (first.hashCode() == second.hashCode()){
-        	    myDeck.push(first);	
+        	    myDeck.push(first);
         	}
         	else{
-        	    myDeck.push(second);	
-        	    myDeck.push(first);	
+        	    myDeck.push(second);
+        	    myDeck.push(first);
                 myBackDeck.clear();
         	}
         }
@@ -122,19 +122,19 @@ public class UndoKeeper {
     public void restoreStatus(){
 //        EDebug.print("I am mucking with that data structure.");
     	if (myDeck.size() == 0) return;
-    	
+
     	Automaton p = null;
         while (myDeck.size() > 0 && (p = myDeck.pop()).hashCode() == myMaster.hashCode());
-        
-        
-        
+
+
+
 //        EDebug.print("Master's hash is " + myMaster.hashCode());
 //        EDebug.print("Top hash is " + p.hashCode());
-        
+
         if (myDeck.size() == 0 && p.hashCode() == myMaster.hashCode()) return;
-        	
-        
-    	
+
+
+
 		sensitive = true;
         myBackDeck.push((Automaton) myMaster.clone());
 

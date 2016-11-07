@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import java.awt.Color;
  * like "torn tape," for objects that need to express a potentially very large
  * structure in a very small amount of space. These objects are here referred to
  * often as "torn". I've nouned torn, like I just verbed noun.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class Torn {
 	 * tape" sort of structure. The point <CODE>(x,y)</CODE> will be the upper
 	 * left corner of the torn tape, the structure will be completely enclosed
 	 * in the bounds <CODE>(x,y,x+width,x+height)</CODE>.
-	 * 
+	 *
 	 * @param width
 	 *            the width of the torn tape
 	 * @param x
@@ -81,7 +81,7 @@ public class Torn {
 	 * whatever part of the tape is NOT torn. If both ends are torn, the string
 	 * is aligned in the center. If neither end is torn, the string is left
 	 * aligned.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics context to paint in
 	 * @param string

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import edu.duke.cs.jflap.automata.Configuration;
 
 /**
  * This is a toggle button that displays a configuration inside of it.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -37,7 +37,7 @@ public class ConfigurationButton extends JToggleButton {
 	/**
 	 * Instantiates a configuration button with a configuration with the default
 	 * setting of the state being labeled as NORMAL.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to set the configuration button for
 	 */
@@ -47,7 +47,7 @@ public class ConfigurationButton extends JToggleButton {
 
 	/**
 	 * Instantiates a configuration button with a configuration and its state.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to set the configuration button for
 	 * @param state
@@ -78,7 +78,7 @@ public class ConfigurationButton extends JToggleButton {
 
 	/**
 	 * Sets the state of this configuration button.
-	 * 
+	 *
 	 * @param state
 	 *            the new state, for example, <CODE>NORMAL</CODE>
 	 */
@@ -96,7 +96,7 @@ public class ConfigurationButton extends JToggleButton {
 
 	/**
 	 * Returns the configuration represented by this configuration button.
-	 * 
+	 *
 	 * @return the configuration represented by this configuration button
 	 */
 	public Configuration getConfiguration() {
@@ -105,7 +105,7 @@ public class ConfigurationButton extends JToggleButton {
 
 	/**
 	 * Paints this component.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to paint this component to
 	 */

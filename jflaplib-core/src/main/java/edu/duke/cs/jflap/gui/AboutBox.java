@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import java.awt.event.*;
 
 /**
  * The <TT>AboutBox</TT> is the about box for JFLAP.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class AboutBox extends JWindow {
 	/**
 	 * Instantiates a new <TT>AboutBox</TT>.
-	 * 
+	 *
 	 * @param owner
 	 *            the owner of this about box
 	 */
@@ -57,7 +57,7 @@ public class AboutBox extends JWindow {
 
 	/**
 	 * Returns a label with the appropriate string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to display
 	 * @return a properly created JLabel visible on this frame

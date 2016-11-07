@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 /**
  * This is a cell renderer that displays a specified character if the
  * quantity to display is the empty string.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -39,7 +39,7 @@ public class LambdaCellRenderer extends DefaultTableCellRenderer {
 	 * Instantiates a new lambda cell renderer with the specified string to
 	 * substitute for the empty string in the event that we display the empty
 	 * string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to display in lieu of the empty string
 	 */
@@ -58,7 +58,7 @@ public class LambdaCellRenderer extends DefaultTableCellRenderer {
 
 	/**
 	 * Returns the string this renderer substitutes for the empty string.
-	 * 
+	 *
 	 * @return the string displayed in lieu of the empty string
 	 */
 	public final String getEmpty() {

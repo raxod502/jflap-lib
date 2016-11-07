@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,9 +26,9 @@ import java.util.*;
 
 /**
  * The <CODE>TMTransition</CODE> is a transition for a Turing machine.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.turing.TuringMachine
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -36,10 +36,10 @@ public class TMTransition extends Transition {
 
 	//added for turing to grammar conversion
 	private int tapes;
-	
+
 	/**
 	 * Produces a one tape Turing transition.
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition comes from
 	 * @param to
@@ -61,7 +61,7 @@ public class TMTransition extends Transition {
 	/**
 	 * Produces a Turing transition. The number of tapes for this Turing machine
 	 * transition is inferred from the number of elements in the arrays
-	 * 
+	 *
 	 * @param from
 	 *            the state this transition comes from
 	 * @param to
@@ -101,7 +101,7 @@ public class TMTransition extends Transition {
 			setDirection(directionArray[i], i);
 		}
 	}
-	
+
 	/**
 	 * Gets the number of tapes in the Turing Machine.
 	 * @return tapes number of tapes in machine.
@@ -110,10 +110,10 @@ public class TMTransition extends Transition {
 	{
 		return tapes;
 	}
-	
+
 	/**
 	 * Produces a copy of this transition with new from and to states.
-	 * 
+	 *
 	 * @param from
 	 *            the new from state
 	 * @param to
@@ -128,25 +128,25 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Returns the input to read for the given tape.
-	 * 
+	 *
 	 * @param tape
 	 *            the tape index to retrieve
 	 */
 	public String getRead(int tape) {
 		return (String) toRead.get(tape);
 	}
-	
+
 	public void setRead(int tape, String symbol) {
 		toRead.set(tape, symbol);
 	}
-	
+
 	public void setWrite(int tape, String symbol) {
 		toWrite.set(tape, symbol);
 	}
 
 	/**
 	 * Sets the input to read for a given tape.
-	 * 
+	 *
 	 * @param stringToRead
 	 *            the input to read for a given tape
 	 * @param tape
@@ -164,7 +164,7 @@ public class TMTransition extends Transition {
 					"Read string must have exactly one character!");
 
 		}
-        if (stringToRead.indexOf("}") != -1 && stringToRead.indexOf("!") != -1) 
+        if (stringToRead.indexOf("}") != -1 && stringToRead.indexOf("!") != -1)
             throw new IllegalArgumentException(
                     "Read string cannot cannot mix variable assignment in the NOT (!) operator.");
 		toRead.set(tape, stringToRead);
@@ -173,7 +173,7 @@ public class TMTransition extends Transition {
 	/**
 	 * Returns the string to write to tape portion of the transition label for
 	 * this transition.
-	 * 
+	 *
 	 * @param tape
 	 *            the tape to return the
 	 */
@@ -183,7 +183,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Sets the string to write to tape for the given tape.
-	 * 
+	 *
 	 * @param stringToWrite
 	 *            the string to write to tape
 	 * @param tape
@@ -200,7 +200,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Returns the direction to move the tape head for one of the tapes.
-	 * 
+	 *
 	 * @param tape
 	 *            the tape index which this direction will affect
 	 * @return the transition's direction for this tape
@@ -211,7 +211,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Sets the direction to move the read/write tape head.
-	 * 
+	 *
 	 * @param newDirection
 	 *            the new direction to move the tape head
 	 * @param tape
@@ -227,7 +227,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Returns the number of tapes this Turing machine transition acts on.
-	 * 
+	 *
 	 * @return the number of tapes
 	 */
 	public int tapes() {
@@ -236,7 +236,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Returns the description for this transition.
-	 * 
+	 *
 	 * @return the description, in this case, the input to read from the tape,
 	 *         the string to write to the tape, and the direction to move the
 	 *         read/write tape head for each tape
@@ -262,7 +262,7 @@ public class TMTransition extends Transition {
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular transition object, with the
 	 * additional fields tacked on.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Transition#toString
 	 * @return a string representation of this object
 	 */
@@ -272,7 +272,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Returns the hashcode for this transition.
-	 * 
+	 *
 	 * @return the hashcode for this transition
 	 */
 	public int hashCode() {
@@ -283,7 +283,7 @@ public class TMTransition extends Transition {
 
 	/**
 	 * Tests this transition against another object for equality.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for equality
 	 * @return <CODE>true</CODE> if this transition equals the passed in

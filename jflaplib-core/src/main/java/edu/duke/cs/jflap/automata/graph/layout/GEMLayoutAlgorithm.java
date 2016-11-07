@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,36 +37,36 @@ import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
  * Mehldau in their 1994 paper. At present the rotation detection is not built
  * in, as forcing speedier convergence is totally unnecessary for our limited
  * applications.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GEMLayoutAlgorithm extends LayoutAlgorithm {
-	
+
 	/**
 	 * Default constructor.
 	 */
 	public GEMLayoutAlgorithm() {
 		super();
 	}
-	
+
 	/**
 	 * Constructor allowing the user to customize certain values.  The <code>vertexDim</code>
 	 * is not used in this algorithm, but it is here so the superclass constructor can
 	 * be used and for the <code>LayoutAlgorithmFactory</code>.
-	 * 
-	 * @param pSize 
+	 *
+	 * @param pSize
 	 *     value for <code>size</code>.
-	 * @param vDim 
+	 * @param vDim
 	 *     value for <code>vertexDim</code>.
-	 * @param vBuffer 
+	 * @param vBuffer
 	 *     value for <code>vertexBuffer</code>.
 	 */
 	public GEMLayoutAlgorithm(Dimension pSize, Dimension vDim, double vBuffer) {
 		super(pSize, vDim, vBuffer);
 	}
 
-	
+
 	public void layout(Graph graph, Set isovertices) {
 		if (isovertices == null)
 			isovertices = EMPTY_SET;
@@ -179,7 +179,7 @@ public class GEMLayoutAlgorithm extends LayoutAlgorithm {
 			/*
 			 * if ((i+1) % (vArray.length - isovertices.size()) == 0)
 			 * component.paintImmediately(component.getBounds());
-			 */						
+			 */
 		}
 
 		//Finally, shift all points onto the screen.
@@ -201,11 +201,11 @@ public class GEMLayoutAlgorithm extends LayoutAlgorithm {
 
 		double skew = 0.0;
 	}
-	
+
 	private static final double Tmax = 256.0, Tmin = 3.0;
 
 	private static final double OPTIMAL_EDGE_LENGTH = 100.0,
-			GRAVITATIONAL_CONSTANT = 1.0 / 16.0;		
+			GRAVITATIONAL_CONSTANT = 1.0 / 16.0;
 	/*
 	 * private static final double alphaO
 	 */

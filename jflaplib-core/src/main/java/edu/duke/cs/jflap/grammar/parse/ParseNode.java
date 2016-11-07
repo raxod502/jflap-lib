@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,19 +30,19 @@ import java.util.Arrays;
  * that were substitute in to achieve this, and the position of those
  * substitutions.
  * <P>
- * 
+ *
  * For example, if the string "aACBb" were to derive "axxCyyb" based on the
  * rules "A->xx" and "B->yy", then the rules used array would hold those two
  * rules, and the substitution array would be {1,3} for the positions in the
  * original string that the substitutions happened in.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ParseNode extends DefaultMutableTreeNode {
 	/**
 	 * Instantiates a new parse node.
-	 * 
+	 *
 	 * @param derivation
 	 *            the derivation of this rule
 	 * @param productions
@@ -63,7 +63,7 @@ public class ParseNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Instantiates a parse node based on an existing node.
-	 * 
+	 *
 	 * @param node
 	 *            the parse node to copy
 	 */
@@ -73,7 +73,7 @@ public class ParseNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns the derivation string.
-	 * 
+	 *
 	 * @return the derivation string
 	 */
 	public String getDerivation() {
@@ -83,7 +83,7 @@ public class ParseNode extends DefaultMutableTreeNode {
 	/**
 	 * Returns the productions array for this node. For performance reasons this
 	 * array could not be copied, and so must not be modified.
-	 * 
+	 *
 	 * @return the productions that were substituted in to achieve the
 	 *         derivation
 	 */
@@ -94,7 +94,7 @@ public class ParseNode extends DefaultMutableTreeNode {
 	/**
 	 * Returns the substitution positions. For performance reasons this array
 	 * could not be copied, and so must not be modified.
-	 * 
+	 *
 	 * @return the positions for the substitutions of the productions in the
 	 *         parent derivation that led to this current derivation
 	 */
@@ -104,7 +104,7 @@ public class ParseNode extends DefaultMutableTreeNode {
 
 	/**
 	 * Returns a string representation of those object.
-	 * 
+	 *
 	 * @return a string representation of those object
 	 */
 	public String toString() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,28 +40,28 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
  * of multiple inputs for simulation in an automaton. It has columns for each of
  * the inputs, each of the outputs (when run on a Turing machine and the user
  * wants to treat it as a transducer), and the final result.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class InputTableModel extends GrowableTableModel {
 	/**
 	 * This instantiates an <CODE>InputTableModel</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that we're inputting stuff for
 	 */
 	public InputTableModel(Automaton automaton, int add) {
 		super(2 * inputsForMachine(automaton)+1+add);
 	}
-	
+
 	public InputTableModel(Grammar gram, int add) {
 		super(2 * 1 + 1+add);
 	}
 
 	/**
 	 * This instantiates a copy of the <CODE>InputTableModel</CODE>.
-	 * 
+	 *
 	 * @param model
 	 *            the model to copy
 	 */
@@ -71,7 +71,7 @@ public class InputTableModel extends GrowableTableModel {
 
 	/**
 	 * This instantiates an <CODE>InputTableModel</CODE>.
-	 * 
+	 *
 	 * @param columns
 	 *            the number of columns for this input table model
 	 */
@@ -87,7 +87,7 @@ public class InputTableModel extends GrowableTableModel {
 		Arrays.fill(nr, "");
 		return nr;
 	}
-	
+
 
 	/**
 	 * This returns the name of the columns. In the input table model, each of
@@ -98,21 +98,21 @@ public class InputTableModel extends GrowableTableModel {
 	 * "Input". There are as many output columns as input columns, and are
 	 * numbered in a similar fashion except with the prefix "Output" instead of
 	 * "Input". The last column is always reserved for the result.
-	 * 
+	 *
 	 * @param column
 	 *            the number of the column to get the name for
 	 * @return the name of the column
 	 */
-	public String getColumnName(int column) {  
+	public String getColumnName(int column) {
         int count = getColumnCount();
 		if (column == count - 1)
 			return "Result";
-        int offset = 0;	
+        int offset = 0;
 		if(isMultiple){
             offset = 1;
             if(column == 0) return "File";
         }
-		
+
 		String word = "";
 		if(column <= (getInputCount()-1+offset) && column >= (offset)){
 			word = "Input";
@@ -132,7 +132,7 @@ public class InputTableModel extends GrowableTableModel {
 	 * of the input. The second index of the array is the particular input,
 	 * which will be a single element array for most machines but an <i>n</i>
 	 * element array for an <i>n</i>-tape Turing machine.
-	 * 
+	 *
 	 * @return an array of inputs, the first index corresponds directly to the
 	 *         row, the second to the column
 	 */
@@ -151,7 +151,7 @@ public class InputTableModel extends GrowableTableModel {
 	 * This returns if a cell is editable. In this model, a cell is editable if
 	 * it's anything other than the last column, which is where the results are
 	 * reported.
-	 * 
+	 *
 	 * @param row
 	 *            the row to check for editableness
 	 * @param column
@@ -160,13 +160,13 @@ public class InputTableModel extends GrowableTableModel {
 	 *         other than the last column; in that instance this returns <CODE>false</CODE>
 	 */
 	public boolean isCellEditable(int row, int column) {
-        if(isMultiple) return (column < getInputCount() && column > 0); 
+        if(isMultiple) return (column < getInputCount() && column > 0);
 		return column < getInputCount();
 	}
 
 	/**
 	 * Returns the number of inputs needed for this type of automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to pass in
 	 * @return the number of input strings needed for this automaton; e.g., n
@@ -179,7 +179,7 @@ public class InputTableModel extends GrowableTableModel {
 
 	/**
 	 * This returns the number of inputs this table model supports.
-	 * 
+	 *
 	 * @return the number of inputs for this table model
 	 */
 	public int getInputCount() {
@@ -196,13 +196,13 @@ public class InputTableModel extends GrowableTableModel {
 	 * again. In the event that there are multiple models active, this method
 	 * returns the last table model that was modified. If there have been no
 	 * applicable table models cached yet, then a blank table model is created.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to get a model for
 	 * @return a copy of the model that was last edited with the correct number
 	 *         of inputs for this automaton
 	 */
-	public static InputTableModel getModel(Automaton automaton, boolean multipleFile) {        
+	public static InputTableModel getModel(Automaton automaton, boolean multipleFile) {
 		InputTableModel model = (InputTableModel) INPUTS_TO_MODELS
 				.get(new Integer(inputsForMachine(automaton)));
 		if (model != null && (model.isMultiple == multipleFile)) {
@@ -219,11 +219,11 @@ public class InputTableModel extends GrowableTableModel {
 		model.addTableModelListener(LISTENER);
         if(multipleFile){
             model.isMultiple = true;
-            
+
         }
 		return model;
 	}
-	public static InputTableModel getModel(Grammar gram, boolean multipleFile) {        
+	public static InputTableModel getModel(Grammar gram, boolean multipleFile) {
 		InputTableModel model = (InputTableModel) INPUTS_TO_MODELS
 				.get(new Integer(1));
 		if (model != null) {
@@ -239,7 +239,7 @@ public class InputTableModel extends GrowableTableModel {
 		model.addTableModelListener(LISTENER);
         if(multipleFile){
             model.isMultiple = true;
-            
+
         }
 		return model;
 	}
@@ -248,7 +248,7 @@ public class InputTableModel extends GrowableTableModel {
 	 * Sets the result string for a particular row. If you wanted to clear a row
 	 * of all results, you would call this function <CODE>setResult(row, "",
 	 * null)</CODE>.
-	 * 
+	 *
 	 * @param row
 	 *            the row to set the result of
 	 * @param result
@@ -266,7 +266,7 @@ public class InputTableModel extends GrowableTableModel {
         	TMConfiguration c = (TMConfiguration) config;
 			Tape[] tapes = c.getTapes();
 			outNum = tapes.length;
-			if (config.isAccept()) {				
+			if (config.isAccept()) {
 				for (int i = 0; i < tapes.length; i++) {
 					String put = tapes[i].getOutput();
 					if(comparison!=null){
@@ -276,22 +276,22 @@ public class InputTableModel extends GrowableTableModel {
 							if(!result.endsWith(")")) result = result+"(Reject)";
 							if(!put.endsWith(")")) put = put + "("+expected+")";
 						}
-						
+
 					}
-					setValueAt(put, row, halfway + i);		
+					setValueAt(put, row, halfway + i);
 				}
 			}
-			else{				
+			else{
 				for (int i = 0; i < halfway; i++){
 					String put = "";
                     if(comparison!=null){
     					String expected = ((String)comparison.get(index+i));
     					if(!((String)comparison.get(index+outNum)).toLowerCase().startsWith("r")){
-    						if(!result.endsWith(")")) result = result+"(Accept)";						
+    						if(!result.endsWith(")")) result = result+"(Accept)";
     						put = put + "("+expected+")";
     					}
                     }
-					setValueAt(put, row, halfway + i);				
+					setValueAt(put, row, halfway + i);
 				}
 			}
 		} else{
@@ -311,11 +311,11 @@ public class InputTableModel extends GrowableTableModel {
                 }
             }
             else if(comparison !=null && config == null){
-                
+
             }
-			
+
 		}
-		
+
 		// Finally, set the result.
 		setValueAt(result, row, getColumnCount() - 1);
 		// Store the accepting configuration at this entry.
@@ -338,7 +338,7 @@ public class InputTableModel extends GrowableTableModel {
 	/**
 	 * Returns the configuration associated with a row. The configuration would
 	 * have been input via the {@link #setResult} method.
-	 * 
+	 *
 	 * @param row
 	 *            the row for which we want the associated accepting
 	 *            configuration
@@ -361,7 +361,7 @@ public class InputTableModel extends GrowableTableModel {
 			INPUTS_TO_MODELS.put(inputs, model);
 		}
 	};
-    
+
     public boolean isMultiple = false;
 
 	/**

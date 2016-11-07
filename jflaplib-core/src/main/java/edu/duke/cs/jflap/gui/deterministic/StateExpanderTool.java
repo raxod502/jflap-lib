@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,7 +34,7 @@ import edu.duke.cs.jflap.automata.State;
 
 /**
  * This is a tool that expands a state completely.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -50,7 +50,7 @@ public class StateExpanderTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -59,7 +59,7 @@ public class StateExpanderTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the state tool icon
 	 */
 	protected Icon getIcon() {
@@ -69,7 +69,7 @@ public class StateExpanderTool extends Tool {
 
 	/**
 	 * When the user clicks, one creates a state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -82,7 +82,7 @@ public class StateExpanderTool extends Tool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, S.
-	 * 
+	 *
 	 * @return the keystroke for this tool
 	 */
 	public KeyStroke getKey() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.tree.TreeNode;
 
 /**
  * This tree drawer allows the selection of nodes.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 	/**
 	 * Instantiates a new <CODE>SelectTreeDrawer</CODE> with the default
 	 * colors.
-	 * 
+	 *
 	 * @param tree
 	 *            the model to draw
 	 */
@@ -49,7 +49,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 	/**
 	 * Instantiates a new <CODE>SelectTreeDrawer</CODE> with some deselected
 	 * and selected colors.
-	 * 
+	 *
 	 * @param tree
 	 *            the model to draw
 	 * @param deselected
@@ -65,7 +65,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 
 	/**
 	 * Determines if a node is selected.
-	 * 
+	 *
 	 * @param node
 	 *            the node to check for selectedness
 	 * @return <CODE>true</CODE> if the node is selected, <CODE>false</CODE>
@@ -77,7 +77,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 
 	/**
 	 * Sets the selectedness of a node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to select or deselect
 	 * @param select
@@ -92,7 +92,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 
 	/**
 	 * Returns an array containing the list of all selected nodes.
-	 * 
+	 *
 	 * @return an array containing the list of all selected nodes
 	 */
 	public TreeNode[] getSelected() {
@@ -115,7 +115,7 @@ public class SelectTreeDrawer extends DefaultTreeDrawer {
 
 	/**
 	 * This method returns the color for a particular node.
-	 * 
+	 *
 	 * @param node
 	 *            the node to color
 	 * @return the color for this node, which will be either the selected color

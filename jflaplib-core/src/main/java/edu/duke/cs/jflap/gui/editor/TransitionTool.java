@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import edu.duke.cs.jflap.automata.State;
 
 /**
  * A tool that handles the creation of transitions.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TransitionTool extends Tool {
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -60,7 +60,7 @@ public class TransitionTool extends Tool {
 	/**
 	 * Instantiates a new transition tool. The transition creator is obtained
 	 * from whatever is returned from the transition creator factory.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.editor.TransitionCreator#creatorForAutomaton
 	 */
 	public TransitionTool(AutomatonPane view, AutomatonDrawer drawer) {
@@ -71,7 +71,7 @@ public class TransitionTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -80,7 +80,7 @@ public class TransitionTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the transition tool icon
 	 */
 	protected Icon getIcon() {
@@ -91,7 +91,7 @@ public class TransitionTool extends Tool {
 	/**
 	 * When the user presses the mouse, we detect if there is a state here. If
 	 * there is, then this may be the start of a transition.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -107,7 +107,7 @@ public class TransitionTool extends Tool {
 	/**
 	 * When the mouse is dragged someplace, updates the "hover" point so the
 	 * line from the state to the mouse can be drawn.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -121,7 +121,7 @@ public class TransitionTool extends Tool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -140,7 +140,7 @@ public class TransitionTool extends Tool {
 	/**
 	 * Draws the line from the first clicked state to the drag point, if indeed
 	 * we are even in a drag.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics object to draw upon
 	 */
@@ -157,7 +157,7 @@ public class TransitionTool extends Tool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, the T key.
-	 * 
+	 *
 	 * @return the keystroke to switch to this tool
 	 */
 	public KeyStroke getKey() {

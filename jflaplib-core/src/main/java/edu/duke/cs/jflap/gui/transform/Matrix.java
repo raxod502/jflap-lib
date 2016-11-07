@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,7 +27,7 @@ import java.io.Serializable;
  * This is an affine transform matrix rather like the <CODE>AffineTransform</CODE>
  * of <CODE>jawa.awt.geom</CODE> fame, but for three dimensions. This type of
  * matrix does not support shearing or scaling.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -54,7 +54,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Instantiates a copy of the passed in matrix.
-	 * 
+	 *
 	 * @param m
 	 *            the matrix to copy
 	 */
@@ -66,7 +66,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Returns a copy of this object.
-	 * 
+	 *
 	 * @return a copy of this matrix
 	 */
 	public Object clone() {
@@ -75,7 +75,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Returns the entry at the given entry.
-	 * 
+	 *
 	 * @param row
 	 *            the row index, must be 0 through 3
 	 * @param column
@@ -91,7 +91,7 @@ public class Matrix implements Cloneable, Serializable {
 	 * matrix, and store the result in this matrix. If <I>A</I> is this matrix
 	 * and <I>B</I> is the matrix passed in as a parameter, then this is
 	 * similar to <I>A = BA</I>.
-	 * 
+	 *
 	 * @param matrix
 	 *            the matrix to premultiply
 	 */
@@ -116,7 +116,7 @@ public class Matrix implements Cloneable, Serializable {
 	 * matrix, and store the result in this matrix. If <I>B</I> is this matrix
 	 * and <I>A</I> is the matrix passed in as a parameter, then this is
 	 * similar to <I>B = BA</I>.
-	 * 
+	 *
 	 * @param matrix
 	 *            the matrix to premultiply
 	 */
@@ -135,7 +135,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Turns the current matrix about the X-axis.
-	 * 
+	 *
 	 * @param angle
 	 *            the angle to turn
 	 */
@@ -157,7 +157,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Turns the current matrix about the Y-axis.
-	 * 
+	 *
 	 * @param angle
 	 *            the angle to turn
 	 */
@@ -179,7 +179,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Turns the current matrix about the Z-axis.
-	 * 
+	 *
 	 * @param angle
 	 *            the angle to turn
 	 */
@@ -214,7 +214,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Returns the point (the x and y coordinates) of the transformed origin.
-	 * 
+	 *
 	 * @param point
 	 *            the point to store the location in
 	 * @return either the point passed in or, if that point was null, a newly
@@ -230,7 +230,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Returns the x, y, and z coordinates of the transformed origin.
-	 * 
+	 *
 	 * @param array
 	 *            the array of three entries which will hold, in order, the <I>x</I>,
 	 *            <I>y</I>, and <I>z</I> coordinates, or null if you wish a
@@ -256,7 +256,7 @@ public class Matrix implements Cloneable, Serializable {
 
 	/**
 	 * Returns a string representation of this matrix.
-	 * 
+	 *
 	 * @return a string representation of this matrix
 	 */
 	public final String toString() {

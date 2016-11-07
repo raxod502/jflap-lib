@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,14 +24,14 @@ import java.util.EventObject;
 
 /**
  * This event should be distributed when a regular expression object changes.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ExpressionChangeEvent extends EventObject {
 	/**
 	 * Instantiates a change event.
-	 * 
+	 *
 	 * @param expression
 	 *            the expression object that was changed
 	 * @param old
@@ -45,7 +45,7 @@ public class ExpressionChangeEvent extends EventObject {
 
 	/**
 	 * Returns the regular expression that was changed.
-	 * 
+	 *
 	 * @return the regular expression that was changed
 	 */
 	public RegularExpression getExpression() {
@@ -54,7 +54,7 @@ public class ExpressionChangeEvent extends EventObject {
 
 	/**
 	 * Returns the old string representation of the expression.
-	 * 
+	 *
 	 * @return the old string representation of the expression
 	 */
 	public String getOld() {

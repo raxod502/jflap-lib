@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,9 +33,9 @@ import javax.swing.Icon;
  * to the right, and the third and last column is the right hand side of the
  * production. Each row corresponds to a production, or to nothing if what is in
  * the table is not properly a production.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.Production
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -49,7 +49,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * Instantiates a <CODE>GrammarTableModel</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to have for the grammar table model initialized to
 	 */
@@ -62,7 +62,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * This adds a production to the grammar table model.
-	 * 
+	 *
 	 * @param production
 	 *            the production to add to the data
 	 * @return the row number where the production was added
@@ -76,7 +76,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * This adds a production to the grammar table model at a specified index.
-	 * 
+	 *
 	 * @param production
 	 *            the production to add to the data
 	 * @param row
@@ -93,7 +93,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * Returns an empty string for each name.
-	 * 
+	 *
 	 * @param column
 	 *            the index of the column
 	 * @return the empty string
@@ -104,7 +104,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * Returns the production at a row.
-	 * 
+	 *
 	 * @param row
 	 *            the row to get the production for
 	 * @return the production at this row, or <CODE>null</CODE> if what is
@@ -122,7 +122,7 @@ public class GrammarTableModel extends GrowableTableModel {
 	 * not have a valid production, it is skipped. In this way, index <CODE>i</CODE>
 	 * of the array does not necessarily correspond to row <CODE>i</CODE> of
 	 * the model.
-	 * 
+	 *
 	 * @return an array of the productions
 	 */
 	public Production[] getProductions() {
@@ -137,7 +137,7 @@ public class GrammarTableModel extends GrowableTableModel {
 
 	/**
 	 * Everything in the table model is editable except for the middle arrow.
-	 * 
+	 *
 	 * @param row
 	 *            the index for the row
 	 * @param column
@@ -152,7 +152,7 @@ public class GrammarTableModel extends GrowableTableModel {
 	/**
 	 * Initializes a row. For this particular object, a row is two strings
 	 * surrounding an icon.
-	 * 
+	 *
 	 * @param row
 	 *            the row we're initializing, which is ignored
 	 * @return an array containing the column entries for this new row
@@ -165,7 +165,7 @@ public class GrammarTableModel extends GrowableTableModel {
 	/**
 	 * Returns the class of each column, which is a string for both the right
 	 * and left hand sides, and an icon for the middle.
-	 * 
+	 *
 	 * @param column
 	 *            the column to get the class for
 	 */
@@ -177,7 +177,7 @@ public class GrammarTableModel extends GrowableTableModel {
 	 * Returns the object at a particular location in the model. This is
 	 * overridden to see that the arrow does not display itself in the last
 	 * column.
-	 * 
+	 *
 	 * @param row
 	 *            the row of the object to retrieve
 	 * @param column

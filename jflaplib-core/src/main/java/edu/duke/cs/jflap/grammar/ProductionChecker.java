@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.grammar;
 /**
  * The Production checker object can be used to check certain properties of
  * production objects.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -38,7 +38,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>production</CODE> is linear (i.e. either right or
 	 * left linear).
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return true if <CODE>production</CODE> is linear.
@@ -52,7 +52,7 @@ public class ProductionChecker {
 
 	/**
 	 * Returns true if <CODE>production</CODE> is right linear.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if <CODE>production</CODE> is right linear.
@@ -66,7 +66,7 @@ public class ProductionChecker {
 
 	/**
 	 * Returns true if <CODE>production</CODE> is left linear.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if <CODE>production</CODE> is left linear.
@@ -81,7 +81,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>production</CODE> is a production of the form
 	 * A->Bx where x is a series of 0 or more terminals
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return true if <CODE>production</CODE> is a production of the form
@@ -108,7 +108,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>production</CODE> is a production of the form
 	 * A->xB where x is a series of 0 or more terminals
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return true if <CODE>production</CODE> is a production of the form
@@ -135,7 +135,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>production</CODE> is a production of the form
 	 * A->x where x is a series of 0 or more terminals.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return true if <CODE>production</CODE> is a production of the form
@@ -154,7 +154,7 @@ public class ProductionChecker {
 
 	/**
 	 * Returns true if <CODE>production</CODE> is a unit production.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if <CODE>production</CODE> is a unit production.
@@ -172,7 +172,7 @@ public class ProductionChecker {
 
 	/**
 	 * Returns true if <CODE>production</CODE> is a lambda production.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if <CODE>production</CODE> is a lambda production.
@@ -190,7 +190,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if the left hand side of <CODE>production</CODE> is a
 	 * single variable.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if the left hand side of <CODE>production</CODE> is a
@@ -208,7 +208,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>variable</CODE> is in the production, either on
 	 * the right or left hand side of the production.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable.
 	 * @param production
@@ -228,7 +228,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>terminal</CODE> is in the production, either on
 	 * the right or left hand side of the production.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal.
 	 * @param production
@@ -247,7 +247,7 @@ public class ProductionChecker {
 
 	/**
 	 * Returns true if there are 1 or more terminals on the rhs of <CODE>productions</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @return true if there are 1 or more terminals on the rhs of <CODE>productions</CODE>.
@@ -265,7 +265,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>ch</CODE> is a variable. A variable is determined
 	 * to be any uppercase character.
-	 * 
+	 *
 	 * @param ch
 	 *            the character being checked.
 	 * @return true if <CODE>ch</CODE> is a variable.
@@ -277,7 +277,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>ch</CODE> is a terminal. A terminal is determined
 	 * to be any lowercase character.
-	 * 
+	 *
 	 * @param ch
 	 *            the character being checked.
 	 * @return true if <CODE>ch</CODE> is a terminal.
@@ -289,7 +289,7 @@ public class ProductionChecker {
 	/**
 	 * Returns true if <CODE>variable</CODE> is on the right hand side of
 	 * <CODE>production</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param variable

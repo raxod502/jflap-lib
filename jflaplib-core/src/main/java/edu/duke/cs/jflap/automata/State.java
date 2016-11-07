@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 /**
  * This class represents a single state in an automaton. This class is intended
  * to act as nothing more than a simple placeholder.
- * 
+ *
  * @author Thomas Finley
  * @version 1.0
  */
@@ -38,7 +38,7 @@ import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 public class State implements Serializable {
 	/**
 	 * Instantiates a new state.
-	 * 
+	 *
 	 * @param id
 	 *            the state id, used for generating
 	 * @param point
@@ -56,7 +56,7 @@ public class State implements Serializable {
 
 	/**
 	 * Returns the point this state is centered on in the canvas.
-	 * 
+	 *
 	 * @see #setPoint(Point)
 	 * @return the point this state is centered on in the canvas
 	 */
@@ -70,7 +70,7 @@ public class State implements Serializable {
 
 	/**
 	 * Returns the automaton that this state belongs to.
-	 * 
+	 *
 	 * @return the automaton that this state belongs to
 	 */
 	public Automaton getAutomaton() {
@@ -79,7 +79,7 @@ public class State implements Serializable {
 
 	/**
 	 * Sets the point for this state.
-	 * 
+	 *
 	 * @param point
 	 *            the point this state is moving to
 	 * @see #getPoint()
@@ -92,12 +92,12 @@ public class State implements Serializable {
 						new AutomataStateEvent(getAutomaton(), this, false,
 								true, false));
 	}
-	
+
 
 
 	/**
 	 * Returns the state ID for this state.
-	 * 
+	 *
 	 * @return the ID of the state
 	 */
 	public int getID() {
@@ -106,7 +106,7 @@ public class State implements Serializable {
 
 	/**
 	 * Sets the ID for this state.
-	 * 
+	 *
 	 * @param id
 	 *            the new ID for this state.
 	 */
@@ -136,7 +136,7 @@ public class State implements Serializable {
 	/**
 	 * Sets the name for this state. A parameter of <CODE>null</CODE> will
 	 * reset this to the default.
-	 * 
+	 *
 	 * @param name
 	 *            the new name for the state
 	 */
@@ -151,7 +151,7 @@ public class State implements Serializable {
 	/**
 	 * Returns the simple "name" for this state. By default this will simply be
 	 * "qd", where d is the ID number.
-	 * 
+	 *
 	 * @return the name for this state
 	 */
 	public String getName() {
@@ -177,7 +177,7 @@ public class State implements Serializable {
 
 	/**
 	 * Sets the "label" for a state, an optional description for the state.
-	 * 
+	 *
 	 * @param label
 	 *            the new descriptive label, or <CODE>null</CODE> if the user
 	 *            wishes to specify that there is no label
@@ -201,7 +201,7 @@ public class State implements Serializable {
 
 	/**
 	 * Returns the label for the state.
-	 * 
+	 *
 	 * @return the descriptive label of the state, or <CODE>null</CODE> if
 	 *         this state has no label
 	 */
@@ -212,7 +212,7 @@ public class State implements Serializable {
 	/**
 	 * Returns the label for the state, broken across newlines if there are
 	 * newlines in it.
-	 * 
+	 *
 	 * @return an array of all label elements, or an empty array if this state
 	 *         has no labels
 	 */
@@ -250,7 +250,7 @@ public class State implements Serializable {
 
 //	/**
 //	 * Returns the Automaton that the block represents.
-//	 * 
+//	 *
 //	 * @return the name of the block
 //	 */
 //	public String getInternalName() {
@@ -260,26 +260,26 @@ public class State implements Serializable {
 
 //	/**
 //	 * Sets the Automaton the block represents.
-//	 * 
+//	 *
 //	 * @param auto the name of the block
 //	 */
 //	public void setInternalName(String auto) {
 //		internalName = auto;
 //	}
-	
+
     public int specialHash(){
-    	
-         return point.hashCode() 
-         + (myNote == null? -1 : myNote.specialHash()) 
-         + (getLabel() == null ? -1 
+
+         return point.hashCode()
+         + (myNote == null? -1 : myNote.specialHash())
+         + (getLabel() == null ? -1
         		 : getLabel().hashCode());
     }
-	
-	
+
+
 	public void setNote(Note note){
 		myNote = note;
 	}
-	
+
 	private Note myNote;
 
 	String internalName = null;
@@ -304,19 +304,19 @@ public class State implements Serializable {
 
 	/** If there are multiple labels, return those. */
 	private String[] labels = new String[0];
-	
+
 //	/** If the state has a parent block, this is it.  It is null if there is no parent block. */
 //	private State parentBlock = null;
-	
+
 //	/** If it is the final state in the block, this is <CODE>true</CODE>*/
 //	private boolean finalStateInBlock = false;
-	
+
 	private boolean selected = false;
 
 	public void setSelect(boolean select) {
 		selected = select;
 	}
-	
+
 	public boolean isSelected(){
 		return selected;
 	}

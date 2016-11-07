@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import java.util.*;
 /**
  * This controls the conversion of a finite state automaton to a regular
  * grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSAConvertController extends ConvertController {
 	/**
 	 * Instantiates a <CODE>FSAConvertController</CODE> for an automaton.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -65,7 +65,7 @@ public class FSAConvertController extends ConvertController {
 	/**
 	 * Returns the productions for a particular state. This method will only be
 	 * called once.
-	 * 
+	 *
 	 * @param state
 	 *            the state to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -82,7 +82,7 @@ public class FSAConvertController extends ConvertController {
 	/**
 	 * Returns the productions for a particular transition. This method will
 	 * only be called once.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to get the productions for
 	 * @return an array containing the productions that correspond to a
@@ -95,7 +95,7 @@ public class FSAConvertController extends ConvertController {
 
 	/**
 	 * Returns the grammar that's the result of this conversion.
-	 * 
+	 *
 	 * @return the grammar that's the result of this conversion
 	 */
 	protected Grammar getGrammar() {

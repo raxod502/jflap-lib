@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import edu.duke.cs.jflap.automata.Automaton;
 
 /**
  * The <CODE>FrameFactory</CODE> is a factory for creating environment frames.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FrameFactory {
 	/**
 	 * This creates an environment frame for a new item.
-	 * 
+	 *
 	 * @param object
 	 *            the object that we are to edit
 	 * @return the environment frame for this new item, or <CODE>null</CODE>
@@ -60,7 +60,7 @@ public class FrameFactory {
 		// Make sure that the size of the frame is above a certain
 		// threshold.
 		int width = 600, height = 400;
-        
+
         /*
          * If it is a pumping lemma, make the window bigger.
          */
@@ -74,7 +74,7 @@ public class FrameFactory {
             width = 800;
             height = 780;
         }
-        
+
 		width = Math.max(width, frame.getSize().width);
 		height = Math.max(height, frame.getSize().height);
 		frame.setSize(new Dimension(width, height));
@@ -82,7 +82,7 @@ public class FrameFactory {
 
 		return frame;
 	}
-    
+
 	/**
 	 * Special method to deal with Grammar converted from Turing Machine
 	 * @param object
@@ -104,7 +104,7 @@ public class FrameFactory {
 		// Make sure that the size of the frame is above a certain
 		// threshold.
 		int width = 600, height = 400;
-        
+
         /*
          * If it is a pumping lemma, make the window bigger.
          */
@@ -118,7 +118,7 @@ public class FrameFactory {
             width = 800;
             height = 780;
         }
-        
+
 		width = Math.max(width, frame.getSize().width);
 		height = Math.max(height, frame.getSize().height);
 		frame.setSize(new Dimension(width, height));
@@ -126,10 +126,10 @@ public class FrameFactory {
 
 		return frame;
 	}
-	
+
     public static EnvironmentFrame createFrame(Serializable object, boolean multiple) {
         EnvironmentFrame frame = createFrame(object);
-        
+
 
         return frame;
     }

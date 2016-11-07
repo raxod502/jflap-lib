@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import edu.duke.cs.jflap.regular.Discretizer;
 /**
  * The regular expression to FSA controller moderates the conversion of a
  * regular expression to an FSA controller.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class REToFSAController {
 	/**
 	 * Instantiates a new controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the RE to FSA converter pane
 	 * @param automaton
@@ -62,7 +62,7 @@ public class REToFSAController {
 	/**
 	 * This will return the action that are necessary for a given subexpression.
 	 * If this method returns 0, that indicates that no action is required.
-	 * 
+	 *
 	 * @param expression
 	 *            the expression to check for actions that may be required
 	 */
@@ -86,7 +86,7 @@ public class REToFSAController {
 	 * Given a transition to replace, and a list of the strings the transition
 	 * is being broken into, modify the automaton so that that transition is
 	 * replaced with a sequence of transitions each corresponding to the array.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to replace
 	 * @param exps
@@ -132,7 +132,7 @@ public class REToFSAController {
 
 	/**
 	 * Called when a transition is selected with the deexpressionifier tool.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition that was clicked
 	 */
@@ -187,7 +187,7 @@ public class REToFSAController {
 
 	/**
 	 * Creates a lambda-transition between two states.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -269,7 +269,7 @@ public class REToFSAController {
 	/**
 	 * Called when the transition tool is used to create a transition between
 	 * two states.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to

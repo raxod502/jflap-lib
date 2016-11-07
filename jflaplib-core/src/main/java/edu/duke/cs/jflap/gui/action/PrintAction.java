@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,14 +40,14 @@ import javax.swing.KeyStroke;
 /**
  * This action handles printing. It will attempt to print the currently active
  * component in the environment.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class PrintAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>PrintAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 */
 	public PrintAction(Environment environment) {
@@ -59,7 +59,7 @@ public class PrintAction extends RestrictedAction {
 
 	/**
 	 * This will begin printing.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */

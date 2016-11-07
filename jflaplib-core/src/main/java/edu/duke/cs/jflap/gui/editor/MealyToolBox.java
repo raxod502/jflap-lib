@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,15 +27,15 @@ import java.util.List;
 
 /**
  * This is a special <code>ToolBox</code> for Mealy machines
- * that loads the <code>MealyArrowTool</code> instead of the 
+ * that loads the <code>MealyArrowTool</code> instead of the
  * default <code> ArrowTool</code>.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.mealy.MealyMachine
  * @see MealyArrowTool
  * @author Jinghui Lim
- * 
+ *
  */
-public class MealyToolBox implements ToolBox 
+public class MealyToolBox implements ToolBox
 {
     /**
      * Returns a list of tools for Mealy machines, similar to
@@ -43,13 +43,13 @@ public class MealyToolBox implements ToolBox
      * <code>MealyArrowTool</code>, <code>StateTool</code>
      * <code>TransitionTool</code>, and <code>DeleteTool</code>
      * in that order.
-     * 
+     *
      * @param view the component that the automaton will be drawn in
      * @param drawer the drawer that will draw the automaton in the
      * view
      * @return a list of <CODE>Tool</CODE> objects.
      */
-    public List tools(AutomatonPane view, AutomatonDrawer drawer) 
+    public List tools(AutomatonPane view, AutomatonDrawer drawer)
     {
         List list = new java.util.ArrayList();
         list.add(new MealyArrowTool(view, drawer));

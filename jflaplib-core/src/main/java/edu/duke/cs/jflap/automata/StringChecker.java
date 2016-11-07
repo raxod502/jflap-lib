@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.automata;
 /**
  * The StringChecker class is useful for determining whether a string has
  * certain characteristics.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -37,7 +37,7 @@ public class StringChecker {
 	/**
 	 * Determines if all characters in a string are alphanumeric, i.e., are
 	 * either digits or numbers.
-	 * 
+	 *
 	 * @param string
 	 *            the string to check
 	 * @return <CODE>true</CODE> if all characters in the string are

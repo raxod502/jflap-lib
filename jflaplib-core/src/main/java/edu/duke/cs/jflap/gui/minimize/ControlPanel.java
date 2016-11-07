@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,14 +34,14 @@ import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
 /**
  * The <CODE>ControlPanel</CODE> contains buttons whose actions call methods
  * on the minimize controller.
- * 
+ *
  * @author Thomas Finley
  */
 
 class ControlPanel extends JToolBar {
 	/**
 	 * Instantiates a new <CODE>ControlPanel</CODE>.
-	 * 
+	 *
 	 * @param treeDrawer
 	 *            the tree drawer to get selected nodes from
 	 * @param controller
@@ -57,7 +57,7 @@ class ControlPanel extends JToolBar {
 
 	/**
 	 * Returns the selected node in the tree drawer.
-	 * 
+	 *
 	 * @return the selected node, or <CODE>null</CODE> if no or multiple nodes
 	 *         are selected
 	 */

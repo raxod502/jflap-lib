@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,14 +38,14 @@ import javax.swing.tree.*;
 /**
  * The <CODE>MinimizePane</CODE> is a view created to minimize a DFA using
  * some minimizing tree structure.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class MinimizePane extends JPanel {
 	/**
 	 * Instantiates a <CODE>MinimizePane</CODE>.
-	 * 
+	 *
 	 * @param dfa
 	 *            a DFA to minimize
 	 * @param environment
@@ -135,7 +135,7 @@ public class MinimizePane extends JPanel {
 	 * minimized automaton. This should be called once the tree is completed and
 	 * the user has elected to move on to the building of the minimized
 	 * automaton.
-	 * 
+	 *
 	 * @param dfa
 	 *            the finite state automaton we're minimizing
 	 * @param tree
@@ -200,7 +200,7 @@ public class MinimizePane extends JPanel {
 	private class ArrowMinimizeTool extends edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool {
 		/**
 		 * Instantiates a new <CODE>ArrowMinimizeTool</CODE>.
-		 * 
+		 *
 		 * @param view
 		 *            the view the automaton is drawn in
 		 * @param drawer
@@ -212,7 +212,7 @@ public class MinimizePane extends JPanel {
 
 		/**
 		 * On a mouse click, this simply returns,
-		 * 
+		 *
 		 * @param event
 		 *            the mouse event
 		 */

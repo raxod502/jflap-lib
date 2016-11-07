@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,18 +25,18 @@ import edu.duke.cs.jflap.pumping.*;
 /**
  * The context-free pumping lemma for <i>L</i> =
  * {<i>ww</i> : <i>w</i> &#8712; {<i>a</i>, <i>b</i>}*}.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
-public class WW extends ContextFreePumpingLemma 
+public class WW extends ContextFreePumpingLemma
 {
-    public String getTitle() 
+    public String getTitle()
     {
         return "ww : w element_of {ab}*";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
         return "<i>ww</i> : <i>w</i> " + ELEMENT_OF + " " + AB_STAR;
     }
@@ -53,18 +53,18 @@ public class WW extends ContextFreePumpingLemma
     			"resulting in an inequality that prevents the decomposition from working.  Thus, this language is " +
     			"not context-free.";
     }
-    
-    protected void chooseW() 
+
+    protected void chooseW()
     {
-        w = pumpString("a", getM()) + pumpString("b", getM()) + 
+        w = pumpString("a", getM()) + pumpString("b", getM()) +
             pumpString("a", getM()) + pumpString("b", getM());
     }
 
-    public void chooseDecomposition() 
-    {       	
+    public void chooseDecomposition()
+    {
     	int x, half;
     	half = w.length()/2;
-    	String first, last;    	
+    	String first, last;
     	//If possible, just set the first characters in the w strings.
     	if (m > half) {
     		setDecomposition(new int[] {0, 1, half-1, 1});
@@ -85,25 +85,25 @@ public class WW extends ContextFreePumpingLemma
     	//If none will always win, choose a random one.
     	super.chooseDecomposition();
     }
-    
-    public void chooseI() 
+
+    public void chooseI()
     {
         i = 0;
     }
-    
+
     protected void setRange()
     {
         myRange = new int[]{3, 6};
     }
 
-    protected void addCases() 
+    protected void addCases()
     {
         /*
          * v is string of a's and y is string of a's
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") == -1)
@@ -111,14 +111,14 @@ public class WW extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
-                    return new int[]{0, 1, 0, 1};                    
+                    return new int[]{0, 1, 0, 1};
                 }
             });
         /*
@@ -126,20 +126,20 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 &&
-                        y.indexOf("a") > -1 && y.indexOf("b") > -1 && 
+                        y.indexOf("a") > -1 && y.indexOf("b") > -1 &&
                         y.indexOf("a") < y.indexOf("b"))
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s followed by \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{1, 1, 0, m-1};
@@ -150,19 +150,19 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
-                    if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && 
+                    if(v.indexOf("a") > -1 && v.indexOf("b") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m - 1, 1, 0, 1};
@@ -173,21 +173,21 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") > -1 &&
                         v.indexOf("a") < v.indexOf("b") &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1)
-                        
+
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s followed by \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m - 1, 2, 0, 1};
@@ -198,7 +198,7 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1)
@@ -206,11 +206,11 @@ public class WW extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m, 1, 0, 1};
@@ -221,16 +221,16 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 &&
-                        y.indexOf("a") > -1 && y.indexOf("b") > -1 && 
+                        y.indexOf("a") > -1 && y.indexOf("b") > -1 &&
                         y.indexOf("a") > y.indexOf("b"))
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s followed by \"a\"s";
                 }
@@ -245,7 +245,7 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") == -1)
@@ -253,7 +253,7 @@ public class WW extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"a\"s";
                 }
@@ -268,42 +268,42 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
-                    if(v.indexOf("a") > -1 && v.indexOf("b") > -1 && 
+                    if(v.indexOf("a") > -1 && v.indexOf("b") > -1 &&
                         v.indexOf("a") > v.indexOf("b") &&
                         y.indexOf("a") > -1 && y.indexOf("b") > -1 )
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s followed by \"a\"s and y is a string of \"a\"s";
                 }
-                        
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m - 1, 2, 0, 1};
                 }
-            });        
+            });
         /*
          * v is an empty string and y is a non-empty string
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() == 0 && y.length() > 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is an empty string and y is a non-empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 0, 1, 1};
@@ -314,39 +314,39 @@ public class WW extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() > 0 && y.length() == 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a non-empty string and y is an empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 1, 0, 0};
                 }
             });
-    }        
-    
+    }
+
     public boolean isInLang(String s)
-    {    	  		    	
+    {
     	int a, b;
     	char[] list = new char[]{'a','b'};
     	if (LemmaMath.otherCharactersFound(s, list))
     		return false;
-    	
+
     	String first, last;
     	int halfSize = s.length() / 2;
     	first = s.substring(0, halfSize);
     	last = s.substring(halfSize);
     	if (first.equals(last))
     		return true;
-    	
+
         return false;
     }
 }

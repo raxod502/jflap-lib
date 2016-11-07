@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import edu.duke.cs.jflap.grammar.UnboundGrammar;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.grammar.Grammar} objects.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GrammarTransducer extends AbstractTransducer {
 	/**
 	 * Returns the type this transducer recognizes, "grammar".
-	 * 
+	 *
 	 * @return the string "grammar"
 	 */
 	public String getType() {
@@ -49,7 +49,7 @@ public class GrammarTransducer extends AbstractTransducer {
 
 	/**
 	 * Returns a production for a given node.
-	 * 
+	 *
 	 * @param node
 	 *            the node the encapsulates a production
 	 */
@@ -66,7 +66,7 @@ public class GrammarTransducer extends AbstractTransducer {
 
 	/**
 	 * Returns an element that encodes a given production.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the element in
 	 * @param production
@@ -86,7 +86,7 @@ public class GrammarTransducer extends AbstractTransducer {
 	/**
 	 * Given a document, this will return the corresponding grammar encoded in
 	 * the DOM document.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to convert
 	 * @return the {@link edu.duke.cs.jflap.grammar.Grammar} instance
@@ -105,7 +105,7 @@ public class GrammarTransducer extends AbstractTransducer {
 	/**
 	 * Given a JFLAP grammar, this will return the corresponding DOM encoding of
 	 * the structure.
-	 * 
+	 *
 	 * @param structure
 	 *            the JFLAP grammar to encode
 	 * @return a DOM document instance

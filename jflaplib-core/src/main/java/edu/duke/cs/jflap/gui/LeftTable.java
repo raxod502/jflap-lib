@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.table.TableModel;
  * This table is specifically for those tables where the leftmost column is an
  * identifier for the row, i.e., it should not truly be considered data of the
  * table.
- * 
+ *
  * @author Thomas Finley
  */
 

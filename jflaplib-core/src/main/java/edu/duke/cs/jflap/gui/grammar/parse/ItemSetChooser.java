@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import javax.swing.*;
 
 /**
  * This allows a user to specify sets of items.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ItemSetChooser {
 	/**
 	 * Instantiates a new item set chooser for a grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to create the item set chooser for
 	 */
@@ -115,7 +115,7 @@ public class ItemSetChooser {
 
 	/**
 	 * This will bring up a dialog box allowing a user to specify item sets.
-	 * 
+	 *
 	 * @param items
 	 *            the target item set in the event that the user is being asked
 	 *            to give some information that is already known, or <CODE>null</CODE>
@@ -155,7 +155,7 @@ public class ItemSetChooser {
 
 	/**
 	 * This method should be called when an item should be added.
-	 * 
+	 *
 	 * @param item
 	 *            the item that was selected for addition
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import java.util.*;
  * This is a registry of the codec, both {@link Encoder} and {@link Decoder}
  * objects. It helps in the selection of a codec for structures, and imposes an
  * order of what codecs should be tried.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CodecRegistry {
 	/**
 	 * Adds a codec to the registry.
-	 * 
+	 *
 	 * @param codec
 	 *            the codec to add
 	 */
@@ -45,7 +45,7 @@ public class CodecRegistry {
 
 	/**
 	 * Add a {@link Encoder} to the registry.
-	 * 
+	 *
 	 * @param encoder
 	 *            the encoder to add
 	 */
@@ -55,7 +55,7 @@ public class CodecRegistry {
 
 	/**
 	 * Add a {@link Decoder} to the registry.
-	 * 
+	 *
 	 * @param decoder
 	 *            the decoder to add
 	 */
@@ -67,7 +67,7 @@ public class CodecRegistry {
 	 * Returns a list of encoders that could encode a structure. The encoders
 	 * are returned in the order they were placed in the registry with the
 	 * {@link #add} method.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure the encoders should be able to possibly encode,
 	 *            or <CODE>null</CODE> if all encoders should be returned
@@ -90,7 +90,7 @@ public class CodecRegistry {
 	 * Returns a list of decoders. All decoders are returned. The decoders are
 	 * returned in the order they were placed in the registry with the
 	 * {@link #add} method.
-	 * 
+	 *
 	 * @return the immutable list of decoders
 	 */
 	public List getDecoders() {

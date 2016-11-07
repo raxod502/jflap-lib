@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -42,22 +42,22 @@ public class AutomatonSizeSlider extends JSlider{
     static final int AUTOMATON_SIZE_MAX = 800;
     static final int AUTOMATON_SIZE_INIT = 220;
     static final String AUTOMATON_SIZE_TITLE = "Automaton Size";
-    
+
 	/** The view we receive events from. */
 	private AutomatonPane view;
 
 	/** The drawer of the automaton */
 	private AutomatonDrawer drawer;
-	
+
 	private double currentScale = 1;
-	
+
 	/**
 	 * Constructs the AutomatonSizeSlider
 	 * @param view
 	 * @param drawer
 	 */
 	public AutomatonSizeSlider(AutomatonPane view, AutomatonDrawer drawer) {
-		super(AUTOMATON_SIZE_MIN, AUTOMATON_SIZE_MAX, AUTOMATON_SIZE_INIT); 
+		super(AUTOMATON_SIZE_MIN, AUTOMATON_SIZE_MAX, AUTOMATON_SIZE_INIT);
 		this.view = view;
 		this.drawer = drawer;
 	    this.addChangeListener(new SliderListener());

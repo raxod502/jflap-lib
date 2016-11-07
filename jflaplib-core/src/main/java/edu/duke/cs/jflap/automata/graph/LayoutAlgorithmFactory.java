@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,18 +25,18 @@ import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.graph.layout.*;
 
 /**
- * This class allows the user to fetch a new <code>LayoutAlgorithm</code>, either a random one or a 
+ * This class allows the user to fetch a new <code>LayoutAlgorithm</code>, either a random one or a
  * specific one.  It also allows the user to fetch a particular <code>AutomatonGraph</code> that
  * corresponds to a given <code>LayoutAlgorithm</code>.
- * 
+ *
  * @author Chris Morgan
  */
 public class LayoutAlgorithmFactory {
 	/**
-	 * Value that represents the number of <code>LayoutAlgorithms</code> of which this factory currently has 
+	 * Value that represents the number of <code>LayoutAlgorithms</code> of which this factory currently has
 	 * knowledge.  Used to generate a random <code>LayoutAlgorithm</code>, so if changed, one should make
-	 * sure all integers from 0 to <i>NUM_ALGORITHMS</i>-1 are numerical identifiers for 
-	 * <code>LayoutAlgorithms</code>. 
+	 * sure all integers from 0 to <i>NUM_ALGORITHMS</i>-1 are numerical identifiers for
+	 * <code>LayoutAlgorithms</code>.
 	 */
 	private static final int NUM_ALGORITHMS = 7;
 	/**
@@ -66,7 +66,7 @@ public class LayoutAlgorithmFactory {
 	/**
 	 * Numerical identifier for a <code>TreeLayoutAlgorithm</code> instance with a degree tree.
 	 */
-	public static final int TREE_DEGREE = 5;	
+	public static final int TREE_DEGREE = 5;
 	/**
 	 * Numerical identifier for a <code>TwoCircleLayoutAlgorithm</code> instance.
 	 */
@@ -75,18 +75,18 @@ public class LayoutAlgorithmFactory {
 	/**
 	 * Returns a random <code>LayoutAlgorithm</code> among those defined.  Should not be mistaken for an
 	 * algorithm always creating a <code>RandomLayoutAlgorithm</code> instance.
-	 * 
+	 *
 	 * @return A random <code>LayoutAlgorithm</code> among those defined.
 	 */
 	public static LayoutAlgorithm getRandomLayoutAlgorithm() {
 		Random random = new Random();
 		return getLayoutAlgorithm(Math.abs(random.nextInt() % NUM_ALGORITHMS));
 	}
-	
+
 	/**
-	 * Returns a random <code>LayoutAlgorithm</code> among those defined.  Should not be mistaken for an 
+	 * Returns a random <code>LayoutAlgorithm</code> among those defined.  Should not be mistaken for an
 	 * algorithm always creating a <code>RandomLayoutAlgorithm</code> instance.
-	 * 
+	 *
 	 * @param pSize value for <code>size</code>.
 	 * @param vDim value for <code>vertexDim</code>.
 	 * @param vBuffer value for <code>vertexBuffer</code>.
@@ -96,20 +96,20 @@ public class LayoutAlgorithmFactory {
 		Random random = new Random();
 		return getLayoutAlgorithm(Math.abs(random.nextInt() % NUM_ALGORITHMS), pSize, vDim, vBuffer);
 	}
-	
+
 	/**
 	 * Returns a <code>LayoutAlgorithm</code> corresponding to the numerical identifier given.
-	 * 
+	 *
 	 * @param algorithm a numerical identifier for the specific layout algorithm that should be generated.
 	 * @return A layout algorithm corresponding to the <code>algorithm</code> value.
 	 */
-	public static LayoutAlgorithm getLayoutAlgorithm(int algorithm) {	
+	public static LayoutAlgorithm getLayoutAlgorithm(int algorithm) {
 		switch (algorithm) {
 		    case RANDOM_CHOICE: return getRandomLayoutAlgorithm();
 		    case CIRCLE: return new CircleLayoutAlgorithm();
 			case GEM: return new GEMLayoutAlgorithm();
 			case RANDOM: return new RandomLayoutAlgorithm();
-			case SPIRAL: return new SpiralLayoutAlgorithm();			
+			case SPIRAL: return new SpiralLayoutAlgorithm();
 			case TREE_DEGREE: return new TreeLayoutAlgorithm(false);
 			case TREE_HIERARCHY: return new TreeLayoutAlgorithm(true);
 			case TWO_CIRCLE: return new TwoCircleLayoutAlgorithm();
@@ -122,10 +122,10 @@ public class LayoutAlgorithmFactory {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Returns a <code>LayoutAlgorithm</code> corresponding to the numerical identifier given.
-	 * 
+	 *
 	 * @param algorithm a numerical identifier for the specific layout algorithm that should be generated.
 	 * @param pSize value for <code>size</code>.
 	 * @param vDim value for <code>vertexDim</code>.
@@ -142,23 +142,23 @@ public class LayoutAlgorithmFactory {
 			case TREE_DEGREE: return new TreeLayoutAlgorithm(pSize, vDim, vBuffer, false);
 			case TREE_HIERARCHY: return new TreeLayoutAlgorithm(pSize, vDim, vBuffer, true);
 			case TWO_CIRCLE: return new TwoCircleLayoutAlgorithm(pSize, vDim, vBuffer);
-			case VertexMover.NEGATIVE_SLOPE_DIAGONAL: 
+			case VertexMover.NEGATIVE_SLOPE_DIAGONAL:
 					return new VertexMover(pSize, vDim, vBuffer, VertexMover.NEGATIVE_SLOPE_DIAGONAL);
-			case VertexMover.POSITIVE_SLOPE_DIAGONAL: 
+			case VertexMover.POSITIVE_SLOPE_DIAGONAL:
 					return new VertexMover(pSize, vDim, vBuffer, VertexMover.POSITIVE_SLOPE_DIAGONAL);
 			case VertexMover.ROTATE: return new VertexMover(pSize, vDim, vBuffer, VertexMover.ROTATE);
-			case VertexMover.HORIZONTAL_CENTER: 
+			case VertexMover.HORIZONTAL_CENTER:
 					return new VertexMover(pSize, vDim, vBuffer, VertexMover.HORIZONTAL_CENTER);
-			case VertexMover.VERTICAL_CENTER: 
+			case VertexMover.VERTICAL_CENTER:
 					return new VertexMover(pSize, vDim, vBuffer, VertexMover.VERTICAL_CENTER);
 			case VertexMover.FILL: return new VertexMover(pSize, vDim, vBuffer, VertexMover.FILL);
 		}
-		return null;		 
+		return null;
 	}
-	
+
 	/**
 	 * Returns the correct <code>AutomatonGraph</code> that corresponds with this layout algorithm.
-	 * 
+	 *
 	 * @param algorithm a numerical identifier for the specific layout algorithm which will use
 	 * the graph.
 	 * @param automaton the automaton that will be used to generate the graph.

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ package edu.duke.cs.jflap.grammar;
  * productions can be added to it. Since we may no longer depend on the first
  * production being restricted, the start variable is assumed to be S until the
  * grammar is told otherwise.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class UnboundGrammar extends Grammar {
 	/**
 	 * Every production is all right except those with lambda in the left hand
 	 * side of the production.
-	 * 
+	 *
 	 * @param production
 	 *            the production to check
 	 * @throws IllegalArgumentException

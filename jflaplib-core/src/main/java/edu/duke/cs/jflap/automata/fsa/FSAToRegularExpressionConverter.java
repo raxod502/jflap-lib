@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -56,7 +56,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * getExpressionFromGTG, or you can do that work yourself by calling getII,
  * getIJ, getJJ, and getJI to get the expressions on the four arcs in your
  * two-state generalized transition graph, and then calling getFinalExpression.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -72,7 +72,7 @@ public class FSAToRegularExpressionConverter {
 	 * Returns true if <CODE>automaton</CODE> can be converted to a regular
 	 * expression (i.e. it has a unique initial and final state and it is a
 	 * finite state automaton, and the initial state is not the final state).
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to convert
 	 * @return true if <CODE>automaton</CODE> can be converted to a regular
@@ -95,7 +95,7 @@ public static boolean isConvertable(Automaton automaton) {
 
 	/**
 	 * Returns true if there are more removable states in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return true if there are more removable states in <CODE>automaton</CODE>.
@@ -112,7 +112,7 @@ public static boolean areRemovableStates(Automaton automaton) {
 	/**
 	 * Returns true if <CODE>state</CODE> is a removable state (i.e. it is not
 	 * the unique initial or final state).
-	 * 
+	 *
 	 * @param state
 	 *            the state to remove.
 	 * @param automaton
@@ -132,7 +132,7 @@ public static boolean isRemovable(State state, Automaton automaton) {
 	 * Returns a Transition object that represents the transition between the
 	 * states with ID's <CODE>p</CODE> and <CODE>q</CODE>, with <CODE>expression</CODE>
 	 * as the transition label.
-	 * 
+	 *
 	 * @param p
 	 *            the ID of the from state.
 	 * @param q
@@ -157,7 +157,7 @@ public static Transition getTransitionForExpression(int p, int q,
 	/**
 	 * Returns the expression on the transition between <CODE>fromState</CODE>
 	 * and <CODE>toState</CODE> in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param fromState
 	 *            the from state
 	 * @param toState
@@ -179,7 +179,7 @@ public static String getExpressionBetweenStates(State fromState, State toState,
 	 * Returns the expression obtained from evaluating the following equation:
 	 * r(pq) = r(pq) + r(pk)r(kk)*r(kq), where p, q, and k represent the IDs of
 	 * states in <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param p
 	 *            the from state
 	 * @param q
@@ -214,7 +214,7 @@ public static String getExpression(int p, int q, int k, Automaton automaton) {
 	/**
 	 * Returns the expression that represents <CODE>r1</CODE> concatenated
 	 * with <CODE>r2</CODE>. (essentialy just the two strings concatenated).
-	 * 
+	 *
 	 * @param r1
 	 *            the first part of the expression.
 	 * @param r2
@@ -239,7 +239,7 @@ public static String concatenate(String r1, String r2) {
 
 	/**
 	 * Returns the expression that represents <CODE>r1</CODE> kleene-starred.
-	 * 
+	 *
 	 * @param r1
 	 *            the expression being kleene-starred.
 	 * @return the expression that represents <CODE>r1</CODE> kleene-starred.
@@ -258,7 +258,7 @@ public static String star(String r1) {
 
 	/**
 	 * Returns the string that represents <CODE>r1</CODE> or'ed with <CODE>r2</CODE>.
-	 * 
+	 *
 	 * @param r1
 	 *            the first expression
 	 * @param r2
@@ -284,7 +284,7 @@ public static String or(String r1, String r2) {
 	/**
 	 * Completely reconstructs <CODE>automaton</CODE>, removing all
 	 * transitions and <CODE>state</CODE> and adding all transitions in <CODE>transitions</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state to remove.
 	 * @param transitions
@@ -309,7 +309,7 @@ public static void removeState(State state, Transition[] transitions,
 	/**
 	 * Returns a list of all transitions for <CODE>automaton</CODE> created by
 	 * removing <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state to remove.
 	 * @param automaton
@@ -343,7 +343,7 @@ public static Transition[] getTransitionsForRemoveState(State state,
 	/**
 	 * Adds a new transition to <CODE>automaton</CODE> between <CODE>fromState</CODE>
 	 * and </CODE>toState</CODE> on the symbol for the empty set.
-	 * 
+	 *
 	 * @param fromState
 	 *            the from state for the transition
 	 * @param toState
@@ -365,7 +365,7 @@ public static FSATransition addTransitionOnEmptySet(State fromState,
 	 * between <CODE>fromState</CODE> and <CODE>toState</CODE> labeled with
 	 * a regular expression that represents the labels of all the removed
 	 * transitions Or'ed together (e.g. a + (b*c) + (d+e)).
-	 * 
+	 *
 	 * @param fromState
 	 *            the from state for <CODE>transitions</CODE> and for the
 	 *            newly created transition.
@@ -395,7 +395,7 @@ public static FSATransition combineToSingleTransition(State fromState,
 	/**
 	 * Makes all final states in <CODE>automaton</CODE> non-final, adding
 	 * transitions from these states to a newly created final state on lambda.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 */
@@ -421,7 +421,7 @@ public static void getSingleFinalState(Automaton automaton) {
 	 * into a single transition by or'ing the labels of all the transitions. If
 	 * there is no transition between two states, it creates a transition and
 	 * labels it with the empty set character (EMPTY).
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */
@@ -447,7 +447,7 @@ public static void convertToSimpleAutomaton(Automaton automaton) {
 	/**
 	 * Converts <CODE>automaton</CODE> into a generalized transition graph
 	 * with only two states, a unique initial state, and a unique final state.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 */
@@ -469,7 +469,7 @@ public static void convertToGTG(Automaton automaton) {
 	/**
 	 * Returns true if <CODE>word</CODE> is one character long and it is a
 	 * letter.
-	 * 
+	 *
 	 * @param word
 	 *            the word
 	 * @return true if <CODE>word</CODE> is one character long and it is a
@@ -485,7 +485,7 @@ public static boolean isSingleCharacter(String word) {
 	/**
 	 * Returns true if <CODE>word</CODE> needs parens. (i.e. it is an '+' (OR)
 	 * expression)
-	 * 
+	 *
 	 * @param word
 	 *            the word.
 	 * @return true if <CODE>word</CODE> needs parens. (i.e. it is an '+' (OR)
@@ -503,7 +503,7 @@ public static boolean needsParens(String word) {
 	/**
 	 * Returns a string of <CODE>word</CODE> surrounded by parentheses. i.e. (<word>),
 	 * unless it is unnecessary.
-	 * 
+	 *
 	 * @param word
 	 *            the word.
 	 * @return a string of <CODE>word</CODE> surrounded by parentheses.
@@ -514,7 +514,7 @@ public static String addParen(String word) {
 
 	/**
 	 * Returns a non-unicoded version of <CODE>word</CODE> for debug purposes.
-	 * 
+	 *
 	 * @param word
 	 *            the expression to output
 	 * @return a non-unicoded version of <CODE>word</CODE> for debug purposes.
@@ -530,7 +530,7 @@ public static String getExp(String word) {
 	/**
 	 * Returns the expression for the values of ii, ij, jj, and ji determined
 	 * from the GTG with a unique initial and final state.
-	 * 
+	 *
 	 * @param ii
 	 *            the expression on the loop off the initial state
 	 * @param ij
@@ -557,7 +557,7 @@ public static String getFinalExpression(String ii, String ij, String jj, String 
 
 	/**
 	 * Returns the expression on the loop off the initial state of <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            a generalized transition graph with only two states, a unique
 	 *            initial and final state.
@@ -571,7 +571,7 @@ public static String getII(Automaton automaton) {
 	/**
 	 * Returns the expression on the arc from the initial state to the final
 	 * state of <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            a generalized transition graph with only two states, a unique
 	 *            initial and final state.
@@ -587,7 +587,7 @@ public static String getIJ(Automaton automaton) {
 
 	/**
 	 * Returns the expression on the loop off the final state of <CODE>automaton</CODE>
-	 * 
+	 *
 	 * @param automaton
 	 *            a generalized transition graph with only two states, a unique
 	 *            initial and final state.
@@ -602,7 +602,7 @@ public static String getJJ(Automaton automaton) {
 	/**
 	 * Returns the expression on the arc from the final state to the initial
 	 * state of <CODE>automaton</CODE>
-	 * 
+	 *
 	 * @param automaton
 	 *            a generalized transition graph with only two states, a unique
 	 *            initial and final state.
@@ -622,7 +622,7 @@ public static String getJI(Automaton automaton) {
 	 * the expression r = (r(ii)*r(ij)r(jj)*r(ji))*r(ii)*r(ij)r(jj)*. where
 	 * r(ij) represents the expression on the transition between state i (the
 	 * initial state) and state j (the final state)
-	 * 
+	 *
 	 * @param automaton
 	 *            the generalized transition graph with two states (a unique
 	 *            initial and final state).
@@ -640,7 +640,7 @@ public static String getExpressionFromGTG(Automaton automaton) {
 
 	/**
 	 * Returns the regular expression that represents <CODE>automaton</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton
 	 * @return the regular expression that represents <CODE>automaton</CODE>.

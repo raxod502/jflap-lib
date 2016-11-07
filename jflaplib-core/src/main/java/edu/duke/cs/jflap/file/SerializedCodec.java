@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * This is the codec for reading and writing JFLAP structures as serialized
  * objects.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -35,7 +35,7 @@ public class SerializedCodec extends Codec {
 	 * Instantiates a new serialized codec. Serialization as a saving method is
 	 * now deprecated. The new method is XML, so when opening a file with a
 	 * serialized codec the corresponding encoder is actually a {@link XMLCodec}.
-	 * 
+	 *
 	 * @param xmlcodec
 	 *            the xml codec as the corresponding encoder for this codec
 	 */
@@ -48,7 +48,7 @@ public class SerializedCodec extends Codec {
 	 * file. This method should always return a structure, or throw a
 	 * {@link ParseException} in the event of failure with a message detailing
 	 * the nature of why the decoder failed.
-	 * 
+	 *
 	 * @param file
 	 *            the file to decode into a structure
 	 * @param parameters
@@ -78,7 +78,7 @@ public class SerializedCodec extends Codec {
 	/**
 	 * Given a structure, this will attempt to write the structure as a
 	 * serialized object to a file.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to encode
 	 * @param file
@@ -109,7 +109,7 @@ public class SerializedCodec extends Codec {
 	 * should not perform a detailed check of the structure, since the user will
 	 * have no idea why it will not be encoded correctly if the {@link #encode}
 	 * method does not throw a {@link ParseException}.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to check
 	 * @return if the structure, perhaps with minor changes, could possibly be
@@ -121,7 +121,7 @@ public class SerializedCodec extends Codec {
 
 	/**
 	 * Returns the description of this codec.
-	 * 
+	 *
 	 * @return the description of this codec
 	 */
 	public String getDescription() {
@@ -130,7 +130,7 @@ public class SerializedCodec extends Codec {
 
 	/**
 	 * Returns an instance of a corresponding encoder, the {@link XMLCodec}.
-	 * 
+	 *
 	 * @return the {@link XMLCodec}
 	 */
 	public Encoder correspondingEncoder() {

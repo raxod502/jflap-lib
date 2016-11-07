@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -46,14 +46,14 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This action handles the conversion of an FSA to a regular grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConvertFSAToGrammarAction extends ConvertAutomatonToGrammarAction {
 	/**
 	 * Instantiates a new <CODE>ConvertFSAToGrammarAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment
 	 */
@@ -114,7 +114,7 @@ public class ConvertFSAToGrammarAction extends ConvertAutomatonToGrammarAction {
 
 	/**
 	 * Initializes the convert controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the convert pane that holds the automaton pane and the grammar
 	 *            table
@@ -135,7 +135,7 @@ public class ConvertFSAToGrammarAction extends ConvertAutomatonToGrammarAction {
 
 	/**
 	 * This action is applicable only to <CODE>FiniteStateAutomaton</CODE>s.
-	 * 
+	 *
 	 * @param object
 	 *            the object to check for applicability
 	 * @return <CODE>true</CODE> if the object is an FSA, <CODE>false</CODE>

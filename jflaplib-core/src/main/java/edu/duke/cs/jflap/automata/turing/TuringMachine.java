@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -44,7 +44,7 @@ import javax.swing.JButton;
  * a Turing machine, possibly with multiple tapes.
  *
  * We also redefine equals(), and clone(), as well as become() to deal with Building Blocks, so that we don't have to deal with them in Automaton.
- * 
+ *
  * @author Thomas Finley, Henry Qin
  */
 
@@ -60,7 +60,7 @@ public class TuringMachine extends Automaton {
 	/**
 	 * Creates a Turing machine with a variable number of tapes, no states, and
 	 * no transitions.
-	 * 
+	 *
 	 * @param tapes
 	 *            the number of tapes for the Turing machine
 	 */
@@ -72,7 +72,7 @@ public class TuringMachine extends Automaton {
 	/**
 	 * Returns the class of <CODE>Transition</CODE> this automaton must
 	 * accept.
-	 * 
+	 *
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.tm.TMTransition</CODE>
 	 */
 	protected Class getTransitionClass() {
@@ -81,7 +81,7 @@ public class TuringMachine extends Automaton {
 
 	/**
 	 * Adds a transition to this Turing machine.
-	 * 
+	 *
 	 * @param t
 	 *            the transition to add
 	 * @throws IllegalArgumentException
@@ -104,7 +104,7 @@ public class TuringMachine extends Automaton {
 
 	/**
 	 * Returns the number of tapes this Turing machine uses.
-	 * 
+	 *
 	 * @return the number of tapes this Turing machine uses
 	 */
 	public int tapes() {
@@ -115,7 +115,7 @@ public class TuringMachine extends Automaton {
 	 * Creates a TMState, inserts it in this automaton, and returns that state.
 	 * The ID for the state is set appropriately.
      * This method was once Final in Automaton, but it must be overriden here, because TMStates are not like standard states.
-	 * 
+	 *
 	 * @param point
 	 *            the point to put the state at
 	 */
@@ -133,14 +133,14 @@ public class TuringMachine extends Automaton {
 		a.setEnvironmentFrame(this.getEnvironmentFrame());
 
 		HashMap<TMState, TMState> map = new HashMap<TMState, TMState>(); // Old states to new states.
-        for (Object o:  states){ 
+        for (Object o:  states){
 
 //            System.out.println(o.getClass().getName());
 
             TMState tms = (TMState)o;
             TMState ntms = new TMState(tms);//I could write a clone for that TM too, I suppose, but there's nothing wrong with a nice C++ style copy constructor
 			ntms.setAutomaton(a); //recognize thine new master, after the convenience of the copy constructor, lest there be great many bugs.
-            
+
 			ntms.setLabel(tms.getLabel());
 			ntms.setName(tms.getName());
 
@@ -156,7 +156,7 @@ public class TuringMachine extends Automaton {
         }
 		a.setInitialState((TMState) map.get((TMState) getInitialState()));
 
-        for (Object o:  states){ 
+        for (Object o:  states){
             TMState tms = (TMState)o;
 			Transition[] ts = getTransitionsFromState(tms);
 			TMState from =  map.get(tms);
@@ -178,7 +178,7 @@ public class TuringMachine extends Automaton {
 	/**
 	 * Creates a state, inserts it in this automaton, and returns that state.
 	 * The ID for the state is set appropriately.
-	 * 
+	 *
 	 * @param point
 	 *            the point to put the state at
 	 */
@@ -193,7 +193,7 @@ public class TuringMachine extends Automaton {
 		OpenAction.setOpenOrRead(false);
 		return getAutomatonFromFile(i, point);
 	}
-  
+
   /**
    * Reads the automaton in from a file.
    */
@@ -204,7 +204,7 @@ public class TuringMachine extends Automaton {
 		if (lastFile == null || OpenAction.isOpened() == false) {
 			return null;
 		}
-        
+
 //		block = putBlockContentsInAutomaton(block, serial, lastFile.getName(),
 //				this);
         assert serial instanceof TuringMachine;
@@ -212,7 +212,7 @@ public class TuringMachine extends Automaton {
 
         tm.setEnvironmentFrame(this.getEnvironmentFrame());
         block.setInternalName(lastFile.getName());
-        
+
         //MERLIN MERLIN MERLIN MERLIN MERLIN//
 
         block.setInnerTM(tm);
@@ -258,7 +258,7 @@ public class TuringMachine extends Automaton {
 	public static void become(TuringMachine dest, TuringMachine src){
         logger.debug("Calling the real become");
 		System.out.println("Calling the real become");
-		
+
 		dest.clear();
 		// Copy over the states.
 		HashMap<TMState, TMState> map = new HashMap<TMState, TMState>(); // Old states to new states.
@@ -273,7 +273,7 @@ public class TuringMachine extends Automaton {
 			nstate.setName(state.getName());
 			map.put(state, nstate);
 			dest.addState(nstate);
-            
+
 		}
 		// Set special states.
         for (Object o: src.finalStates){
@@ -283,7 +283,7 @@ public class TuringMachine extends Automaton {
 		dest.setInitialState((TMState) map.get((TMState) src.getInitialState()));
 
 		// Copy over the transitions.
-        for (Object o: src.states){ 
+        for (Object o: src.states){
             TMState tms = (TMState)o;
 			Transition[] ts = src.getTransitionsFromState(tms);
 			TMState from =  map.get(tms);
@@ -299,7 +299,7 @@ public class TuringMachine extends Automaton {
 
         }
 		for(int k = 0; k < src.getNotes().size(); k++){
-			Note curNote = (Note)src.getNotes().get(k);		
+			Note curNote = (Note)src.getNotes().get(k);
 			dest.addNote(new Note(curNote.getAutoPoint(), curNote.getText()));
             ((Note)dest.getNotes().get(k)).initializeForView(curNote.getView());
 		}
@@ -311,14 +311,14 @@ public class TuringMachine extends Automaton {
         Map<String, TuringMachine> ret = new HashMap<String, TuringMachine>();
         for (TMState s: (Collection<TMState>) states) //that's right, EVERY state in TM has an inner Auto, even if that inner auto might be empty.
             ret.put(s.getInternalName(), s.getInnerTM());
-         
+
         return ret;
     }
 
     public void setParent(TMState tms){
         parent = tms;
     }
-    public TMState getParent(){ 
+    public TMState getParent(){
         return parent;
     }
 

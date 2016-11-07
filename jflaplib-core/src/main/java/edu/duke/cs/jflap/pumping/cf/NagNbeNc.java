@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,27 +23,27 @@ package edu.duke.cs.jflap.pumping.cf;
 import edu.duke.cs.jflap.pumping.*;
 
 /**
- * The context-free pumping lemma for <i>L</i> = {<i>w</i> &#8712; 
- * {<i>a</i>, <i>b</i>, <i>c</i>}* : <i>n<sub>a</sub></i> (<i>w</i>) 
+ * The context-free pumping lemma for <i>L</i> = {<i>w</i> &#8712;
+ * {<i>a</i>, <i>b</i>, <i>c</i>}* : <i>n<sub>a</sub></i> (<i>w</i>)
  * &#62; <i>n<sub>b</sub></i> (<i>w</i>) = <i>n<sub>c</sub></i> (<i>w</i>)}.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
-public class NagNbeNc extends ContextFreePumpingLemma 
+public class NagNbeNc extends ContextFreePumpingLemma
 {
-    public String getTitle() 
+    public String getTitle()
     {
         return "w element_of {abc}* : na(w) > nb(w) = nc(w)";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
         return "<i>w</i> " + ELEMENT_OF + " {<i>a</i>, <i>b</i>, <i>c</i>}* :" +
-        " <i>n<sub>a</sub></i> (<i>w</i>) " + GREATER_THAN + 
+        " <i>n<sub>a</sub></i> (<i>w</i>) " + GREATER_THAN +
         " <i>n<sub>b</sub></i> (<i>w</i>) = <i>n<sub>c</sub></i> (<i>w</i>)";
     }
-    
+
     public void setDescription()
     {
     	partitionIsValid = false;
@@ -54,12 +54,12 @@ public class NagNbeNc extends ContextFreePumpingLemma
     			"meaning there is no valid decomposition.  Thus, this language is not context-free.";
     }
 
-    protected void chooseW() 
+    protected void chooseW()
     {
         w = pumpString("a", getM() + 1) + pumpString("b", getM()) + pumpString("c", getM());
     }
-    
-    public void chooseDecomposition() 
+
+    public void chooseDecomposition()
     {
     	int a, b;
     	a = LemmaMath.countInstances(w, 'a');
@@ -70,27 +70,27 @@ public class NagNbeNc extends ContextFreePumpingLemma
     		super.chooseDecomposition();
     }
 
-    public void chooseI() 
+    public void chooseI()
     {
         if(getV().indexOf("a") == -1 && getY().indexOf("a") == -1)
             i = 2;
         else
             i = 0;
     }
-    
+
     protected void setRange()
     {
         myRange = new int[]{3, 7};
     }
 
-    protected void addCases() 
+    protected void addCases()
     {
         /*
          * v is a string of a's and y is a string of a's
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") == -1 && y.indexOf("c") == -1)
@@ -98,14 +98,14 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
-                    return new int[]{0, 1, 0, 1};                    
+                    return new int[]{0, 1, 0, 1};
                 }
             });
         /*
@@ -113,7 +113,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") > -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -121,11 +121,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"a\"s followed by \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m - 1, 1, 0, 2};
@@ -136,7 +136,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") == -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -144,11 +144,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m, 1, 0, 1};
@@ -159,7 +159,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") > -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -167,11 +167,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"a\"s followed by \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m, 2, 0, 1};
@@ -182,7 +182,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") == -1)
@@ -190,11 +190,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{m + 1, 1, 0, 1};
@@ -205,7 +205,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") > -1 && y.indexOf("c") > -1)
@@ -213,11 +213,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"b\"s followed by \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m - 1, 1, 0, 2};
@@ -228,7 +228,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") == -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -236,11 +236,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 1, 0, 1};
@@ -251,7 +251,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") > -1 && v.indexOf("c") > -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -259,11 +259,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"b\"s followed by \"c\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 2, 0, 1};
@@ -274,7 +274,7 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.indexOf("a") == -1 && v.indexOf("b") == -1 && v.indexOf("c") > -1 &&
                         y.indexOf("a") == -1 && y.indexOf("b") == -1 && y.indexOf("c") > -1)
@@ -282,11 +282,11 @@ public class NagNbeNc extends ContextFreePumpingLemma
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a string of \"c\"s and y is a string of \"c\"s";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m + 1, 1, 0, 1};
@@ -297,18 +297,18 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() == 0 && y.length() > 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is an empty string and y is a non-empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 0, 1, 1};
@@ -319,32 +319,32 @@ public class NagNbeNc extends ContextFreePumpingLemma
          */
         myAllCases.add(new Case()
             {
-                public boolean isCase(String v, String y) 
+                public boolean isCase(String v, String y)
                 {
                     if(v.length() > 0 && y.length() == 0)
                         return true;
                     return false;
                 }
 
-                public String description() 
+                public String description()
                 {
                     return "v is a non-empty string and y is an empty string";
                 }
-                
+
                 public int[] getPreset()
                 {
                     return new int[]{2 * m, 1, 0, 0};
                 }
             });
     }
-    
+
     public boolean isInLang(String s)
     {
     	int a, b, c;
     	char[] list = new char[]{'a','b','c'};
     	if (LemmaMath.otherCharactersFound(s, list))
     		return false;
-    	
+
     	a = LemmaMath.countInstances(s, 'a');
     	b = LemmaMath.countInstances(s, 'b');
     	c = LemmaMath.countInstances(s, 'c');

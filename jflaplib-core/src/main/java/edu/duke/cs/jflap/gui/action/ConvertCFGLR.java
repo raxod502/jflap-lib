@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,14 +37,14 @@ import javax.swing.JOptionPane;
 /**
  * This is the action that initiates the conversion of a context free grammar to
  * a PDA using LR conversion.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class ConvertCFGLR extends GrammarAction {
 	/**
 	 * Instantiates a new <CODE>GrammarOutputAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

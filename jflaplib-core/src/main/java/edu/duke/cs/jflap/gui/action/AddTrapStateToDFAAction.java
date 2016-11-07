@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,7 +39,7 @@ import edu.duke.cs.jflap.automata.Transition;
  *
  */
 public class AddTrapStateToDFAAction extends FSAAction{
-	
+
 
 	/** The automaton. */
 	private Automaton automaton;
@@ -47,16 +47,16 @@ public class AddTrapStateToDFAAction extends FSAAction{
 	/** The environment. */
 	private AutomatonEnvironment environment;
 
-	
+
 	/**
 	 * Instantiates a new <CODE>MinimizeTreeAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that the tree will be shown for
 	 * @param environment
 	 *            the environment object that we shall add our simulator pane to
 	 */
-	public AddTrapStateToDFAAction(AutomatonEnvironment environment) 
+	public AddTrapStateToDFAAction(AutomatonEnvironment environment)
 	{
 		super("Add Trap State to DFA", null);
 		this.environment = environment;
@@ -64,10 +64,10 @@ public class AddTrapStateToDFAAction extends FSAAction{
 
 	}
 
-	
+
 	/**
 	 * Puts the DFA form in another window.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */
@@ -89,7 +89,7 @@ public class AddTrapStateToDFAAction extends FSAAction{
 		{
 			JOptionPane.showMessageDialog(Universe
 					.frameForEnvironment(environment), "DFA is complete. No need for the Trap State");
-			
+
 			return;
 		}
 		AddTrapStatePane trapPane = new AddTrapStatePane(environment);
@@ -97,7 +97,7 @@ public class AddTrapStateToDFAAction extends FSAAction{
 		});
 		environment.setActive(trapPane);
 	}
-	
+
 	/**
 	 * Check if DFA already has trap state and complete
 	 * @return True if DFA already has a trap state and complete

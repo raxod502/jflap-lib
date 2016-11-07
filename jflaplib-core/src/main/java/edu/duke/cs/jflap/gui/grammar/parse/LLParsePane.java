@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,14 +28,14 @@ import edu.duke.cs.jflap.gui.tree.*;
 
 /**
  * This is a parse pane for LL grammars.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LLParsePane extends ParsePane {
 	/**
 	 * Instantiaes a new LL parse pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 * @param grammar
@@ -56,7 +56,7 @@ public class LLParsePane extends ParsePane {
 
 	/**
 	 * Inits a parse table.
-	 * 
+	 *
 	 * @return a table to hold the parse table
 	 */
 	protected JTable initParseTable() {
@@ -66,7 +66,7 @@ public class LLParsePane extends ParsePane {
 
 	/**
 	 * This method is called when there is new input to parse.
-	 * 
+	 *
 	 * @param string
 	 *            a new input string
 	 */
@@ -85,7 +85,7 @@ public class LLParsePane extends ParsePane {
 	/**
 	 * Inits a new tree panel. This overriding adds a selection node drawer so
 	 * certain nodes can be highlighted.
-	 * 
+	 *
 	 * @return a new display for the parse tree
 	 */
 	protected JComponent initTreePanel() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import edu.duke.cs.jflap.automata.*;
  * object with an additional field for the input string. The current state of
  * the automaton and the unprocessed input are the only necessary data for the
  * simulation of an FSA.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class FSAConfiguration extends Configuration {
 	/**
 	 * Instantiates a new FSAConfiguration.
-	 * 
+	 *
 	 * @param state
 	 *            the state the automaton is currently in.
 	 * @param parent
@@ -61,7 +61,7 @@ public class FSAConfiguration extends Configuration {
 
 	/**
 	 * Returns the unprocessed input.
-	 * 
+	 *
 	 * @return the unprocessed input.
 	 */
 	public String getUnprocessedInput() {
@@ -70,7 +70,7 @@ public class FSAConfiguration extends Configuration {
 
 	/**
 	 * Changes the unprocessed input.
-	 * 
+	 *
 	 * @param input
 	 *            the string that will represent the unprocessed input of the
 	 *            FSA.
@@ -81,7 +81,7 @@ public class FSAConfiguration extends Configuration {
 
 	/**
 	 * Returns a string representation of this object.
-	 * 
+	 *
 	 * @return a string representation of this object.
 	 */
 	public String toString() {
@@ -92,7 +92,7 @@ public class FSAConfiguration extends Configuration {
 	 * Returns <CODE>true</CODE> if this configuration is an accepting
 	 * configuration, which in this case means that there is no more input and
 	 * our state is an accept state.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this configuration is accepting, <CODE>false</CODE>
 	 *         otherwise
 	 */
@@ -108,7 +108,7 @@ public class FSAConfiguration extends Configuration {
 	 * Checks for equality. Two FSAConfigurations are equal if they have the
 	 * same unprocessed input, and satisfy the .equals() test of the base <CODE>Configuration</CODE>
 	 * class.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Configuration#equals
 	 * @param configuration
 	 *            the configuration to check against this one for equality
@@ -129,7 +129,7 @@ public class FSAConfiguration extends Configuration {
 
 	/**
 	 * Returns a hashcode for this object.
-	 * 
+	 *
 	 * @return a hashcode for this object
 	 */
 	public int hashCode() {

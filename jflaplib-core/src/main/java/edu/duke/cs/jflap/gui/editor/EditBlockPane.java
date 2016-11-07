@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,14 +27,14 @@ import edu.duke.cs.jflap.automata.State;
 /**
  * This is a view that holds a tool bar and the canvas where the automaton is
  * displayed.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class EditBlockPane extends EditorPane {
 	/**
 	 * Instantiates a new editor pane for the given automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to create the editor pane for
 	 */
@@ -49,7 +49,7 @@ public class EditBlockPane extends EditorPane {
 	public State getBlock() {
 		return myBlock;
 	}
-	
+
 	public void setOldBlock(State state) {
 		myOldBlock = state;
 	}

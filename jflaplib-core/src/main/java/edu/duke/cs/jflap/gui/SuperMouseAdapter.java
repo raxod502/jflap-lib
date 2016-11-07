@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -21,11 +21,11 @@
 /*---------------------------------------------------------------------------
  File:				gui/SuperMouseAdapter.java
  Package:			JAWAA Editor Version 1.0
- Author:				Thomas Finley 
+ Author:				Thomas Finley
  Date:				August 2001
  --------------------------------------------------------------------------*/
 
-/*---------------------------------------------------------------------------    
+/*---------------------------------------------------------------------------
  -- JAWAA Editor 1.0 --
 
  Copyright information:
@@ -62,7 +62,7 @@ import java.awt.event.*;
  * subclass of two classes. This is a convinience class so that when we want to
  * have something that is clickable or dragable or something, we don't have to
  * define all the methods when we just want to do, say, two things.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -71,7 +71,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when a mouse button is clicked on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -80,7 +80,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when the mouse enters a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -89,7 +89,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when the mouse exits a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -98,7 +98,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when a mouse button is held down on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -107,7 +107,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when a mouse button is released on a component.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -116,7 +116,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when a mouse is dragged over this component with a button down.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */
@@ -125,7 +125,7 @@ public abstract class SuperMouseAdapter implements MouseListener,
 
 	/**
 	 * Invoked when a mouse is moved over this component with no buttons down.
-	 * 
+	 *
 	 * @param event
 	 *            the MouseEvent to process
 	 */

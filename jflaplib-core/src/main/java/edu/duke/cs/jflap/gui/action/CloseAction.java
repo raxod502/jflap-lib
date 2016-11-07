@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,14 +40,14 @@ import edu.duke.cs.jflap.automata.State;
  * environment. It automatically detects changes in the activation of panes in
  * the environment, and changes its enabledness whether or not a pane in the
  * environment is permanent (i.e. should not be closed).
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CloseAction extends RestrictedAction {
 	/**
 	 * Instantiates a <CODE>CloseAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment to handle the closing for
 	 */
@@ -66,7 +66,7 @@ public class CloseAction extends RestrictedAction {
 
 	/**
 	 * Handles the closing on the environment.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */
@@ -95,7 +95,7 @@ public class CloseAction extends RestrictedAction {
 	 */
 	private void checkEnabled() {
 		Tag tag = environment.getTag(environment.getActive());
-		
+
 		if(environment.tabbed.getTabCount() == 1){
 			setEnabled(false);
 		}

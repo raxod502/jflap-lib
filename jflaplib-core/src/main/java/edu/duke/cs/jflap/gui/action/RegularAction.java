@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import edu.duke.cs.jflap.regular.RegularExpression;
  * real change from the <CODE>RestrictedAction</CODE> is that by default the
  * <CODE>.isAcceptable</CODE> method now only returns true if the object is an
  * instance of <CODE>RegularExpression</CODE>.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class RegularAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>RegularAction</CODE>.
-	 * 
+	 *
 	 * @param string
 	 *            a string description
 	 * @param icon
@@ -57,7 +57,7 @@ public abstract class RegularAction extends RestrictedAction {
 	 * Given an object, determine if this automaton action is able to be applied
 	 * to that object based on its class. By default, this method returns <CODE>true</CODE>
 	 * if this object is an instance of <CODE>Automaton</CODE>.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for "applicability"
 	 * @return <CODE>true</CODE> if this action should be available to an
@@ -69,7 +69,7 @@ public abstract class RegularAction extends RestrictedAction {
 
 	/**
 	 * Returns the environment associated with this action
-	 * 
+	 *
 	 * @return the environment for this action
 	 */
 	protected RegularEnvironment getEnvironment() {
@@ -78,7 +78,7 @@ public abstract class RegularAction extends RestrictedAction {
 
 	/**
 	 * Returns expression for this action's environment.
-	 * 
+	 *
 	 * @return the expression for this action's environment
 	 */
 	protected RegularExpression getExpression() {

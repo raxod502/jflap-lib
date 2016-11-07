@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,7 +31,7 @@ import org.w3c.dom.*;
 /**
  * This is an abstract implementation of a transducer that implements very
  * common methods that will be used by many documents.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -42,7 +42,7 @@ public abstract class AbstractTransducer implements Transducer {
 	 * Returns a new DOM document instance. This will have the structure tags
 	 * with the type instantiated, and the processing instruction signifying
 	 * that this is an XML document, but nothing else.
-	 * 
+	 *
 	 * @return a new document
 	 */
 	protected Document newEmptyDocument() {
@@ -68,7 +68,7 @@ public abstract class AbstractTransducer implements Transducer {
 
 	/**
 	 * Given an node, returns the child text node of this element.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the text node from
 	 * @return the text node that is a child of this node, or <CODE>null</CODE>
@@ -91,7 +91,7 @@ public abstract class AbstractTransducer implements Transducer {
 	 * entry in the map from A to B. If A contains no textual node, A maps to
 	 * <TT>null</TT>. If the element A appears more than once, the last
 	 * element encountered is respected.
-	 * 
+	 *
 	 * @param node
 	 *            the node to get the map for
 	 * @return the map from children element names to their textual contents
@@ -112,7 +112,7 @@ public abstract class AbstractTransducer implements Transducer {
 
 	/**
 	 * Convenience function for creating comments.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document we're creating the comment in
 	 * @param comment
@@ -125,7 +125,7 @@ public abstract class AbstractTransducer implements Transducer {
 
 	/**
 	 * Convenience function for creating elements.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document we're creating the element in
 	 * @param tagname
@@ -149,7 +149,7 @@ public abstract class AbstractTransducer implements Transducer {
         tagname = tagname.replaceAll(">", "");
         tagname = tagname.replaceAll(" ", "");
 
-        
+
       //  System.out.println("TAG NAME = "+tagname);
 		Element element = document.createElement(tagname);
 		// Set the attributes.

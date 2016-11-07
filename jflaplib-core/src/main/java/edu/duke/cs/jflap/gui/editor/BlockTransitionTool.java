@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,7 +37,7 @@ import edu.duke.cs.jflap.automata.State;
 public class BlockTransitionTool extends TransitionTool {
 	/**
 	 * The constructor to create a Block Transition Tool
-	 * 
+	 *
 	 * @param view The view we are drawing the automaton in
 	 * @param drawer The automaton drawer itself
 	 * @param creator the creator we are using to draw the transitions.
@@ -50,17 +50,17 @@ public class BlockTransitionTool extends TransitionTool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, the T key.
-	 * 
+	 *
 	 * @return the keystroke to switch to this tool
 	 */
 	public KeyStroke getKey() {
 		return KeyStroke.getKeyStroke('T');
 	}
-	
+
 	/**
 	 * Instantiates a new BlockTransition tool. The transition creator is
 	 * obtained from whatever is returned from the transition creator factory.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.editor.TransitionCreator#creatorForAutomaton
 	 */
 	public BlockTransitionTool(AutomatonPane view, AutomatonDrawer drawer) {
@@ -72,7 +72,7 @@ public class BlockTransitionTool extends TransitionTool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 */
 	public void mouseReleased(MouseEvent event) {
 		// Did we even start at a state?
@@ -92,7 +92,7 @@ public class BlockTransitionTool extends TransitionTool {
 
 	/**
 	 * Gets the tool tip.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -101,7 +101,7 @@ public class BlockTransitionTool extends TransitionTool {
 
 	/**
 	 * Returns the icon - used to draw the button in the toolbar.
-	 * 
+	 *
 	 * @return the transition tool icon
 	 */
 	protected Icon getIcon() {

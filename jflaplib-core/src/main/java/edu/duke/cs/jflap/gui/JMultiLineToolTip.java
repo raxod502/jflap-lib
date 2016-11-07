@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -111,7 +111,7 @@ class MultiLineToolTipUI extends BasicToolTipUI {
 
 	public void paint(Graphics g, JComponent c) {
 		Dimension size = c.getSize();
-        
+
         if (textArea == null) return;
 
 		textArea.setBackground(c.getBackground());

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -44,14 +44,14 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * This is the creator of transitions in turing machines.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TMTransitionCreator extends TableTransitionCreator {
 	/**
 	 * Instantiates a new <CODE>TMTransitionCreator</CODE>.
-	 * 
+	 *
 	 * @param parent
 	 *            the parent of whatever dialogs/windows get brought up by this
 	 *            creator
@@ -63,7 +63,7 @@ public class TMTransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Initializes a new empty transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -78,7 +78,7 @@ public class TMTransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Initializes a new empty transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -106,7 +106,7 @@ public class TMTransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Given a transition, returns the arrays the editing table model needs.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to build the arrays for
 	 * @return the arrays for the editing table model
@@ -127,7 +127,7 @@ public class TMTransitionCreator extends TableTransitionCreator {
 
 	/**
 	 * Creates a new table model.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition to create the model for
 	 * @return a table model for the transition

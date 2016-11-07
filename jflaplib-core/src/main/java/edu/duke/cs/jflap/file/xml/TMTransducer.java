@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -40,14 +40,14 @@ import edu.duke.cs.jflap.file.DataException;
 /**
  * This is the transducer for encoding and decoding
  * {@link edu.duke.cs.jflap.automata.turing.TuringMachine} objects.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TMTransducer extends AutomatonTransducer {
 	/**
 	 * Creates and returns an empty Turing machine.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document that is being read
 	 * @return an empty Turing machine
@@ -71,7 +71,7 @@ public class TMTransducer extends AutomatonTransducer {
 
 	/**
 	 * Creates and returns a transition consistent with this node.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -127,7 +127,7 @@ public class TMTransducer extends AutomatonTransducer {
 					contained = "";
 				// Set the right text.
 				array[tape - 1] = contained;
-				
+
 				if (isBlock){
 					for (int j = 0; j < writeStrings.length; j++) {
 						writeStrings[i] = "~";
@@ -151,7 +151,7 @@ public class TMTransducer extends AutomatonTransducer {
 	/**
 	 * Produces a DOM element that encodes a given transition. This adds the
 	 * strings to read, write, and move for each tape.
-	 * 
+	 *
 	 * @param document
 	 *            the document to create the state in
 	 * @param transition
@@ -184,14 +184,14 @@ public class TMTransducer extends AutomatonTransducer {
 					write));
 			te.appendChild(createElement(document, TRANSITION_MOVE_NAME, attr,
 					t.getDirection(i)));
-		
+
 		}
 		return te;
 	}
 
 	/**
 	 * Returns the type string for this transducer, "pda".
-	 * 
+	 *
 	 * @return the string "pda"
 	 */
 	public String getType() {
@@ -204,7 +204,7 @@ public class TMTransducer extends AutomatonTransducer {
 	 * {@link edu.duke.cs.jflap.file.xml.AutomatonTransducer#toDOM} to produce the DOM, and also
 	 * adds a "tapes" tag containing the number of tapes if the number of tapes
 	 * is not 1.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure, which should be a turing machine
 	 */
@@ -238,6 +238,6 @@ public class TMTransducer extends AutomatonTransducer {
 
 	/** The tag name for the move string transition elements. */
 	public static final String TRANSITION_MOVE_NAME = "move";
-	
+
 	public static final String IS_BLOCK = "block";
 }

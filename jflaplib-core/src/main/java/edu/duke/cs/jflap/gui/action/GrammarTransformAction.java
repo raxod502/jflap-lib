@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -42,14 +42,14 @@ import javax.swing.JOptionPane;
 
 /**
  * This is an action to transform a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GrammarTransformAction extends GrammarAction {
 	/**
 	 * Instantiates a new <CODE>GrammarTransformAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -78,7 +78,7 @@ public class GrammarTransformAction extends GrammarAction {
 					"WARNING : The start variable derives lambda.\n"
 							+ "New Grammar will not produce lambda String.",
 					"Start Derives Lambda", JOptionPane.ERROR_MESSAGE);
-		} 
+		}
 		if (lambdaDerivers.size() > 0) {
 			LambdaPane lp = new LambdaPane(env, g);
 			env.add(lp, "Lambda Removal", new CriticalTag() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import edu.duke.cs.jflap.regular.RegularExpression;
 /**
  * This object monitors and guides the user actions in the conversion of an FSA
  * to a regular expression.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FSAToREController {
 	/**
 	 * Instantiates a new <CODE>FSAToREController</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that is in the process of being converted
 	 * @param drawer
@@ -150,7 +150,7 @@ public class FSAToREController {
 	 * possible ordered pairs of states have at most one transition from the
 	 * first to the second. This method just counts the number of <CODE>(from,to)</CODE>
 	 * pairs with more than one transition between them
-	 * 
+	 *
 	 * @return the number of collapses needed
 	 */
 	protected int collapsesNeeded() {
@@ -167,7 +167,7 @@ public class FSAToREController {
 	/**
 	 * For the creation of empty transitions between states, this counts the
 	 * number of empty transitions needed.
-	 * 
+	 *
 	 * @return the number of empty transitions needed
 	 */
 	protected int emptyNeeded() {
@@ -187,7 +187,7 @@ public class FSAToREController {
 	 * state only. If this is such an event, the state will be created, made
 	 * final, all other final states will be made nonfinal, and selected, and
 	 * the machine will move to the next phase.
-	 * 
+	 *
 	 * @param point
 	 *            the point that the state creation tool was clicked at
 	 * @return the state that was created, or <CODE>null</CODE> if it is not
@@ -219,7 +219,7 @@ public class FSAToREController {
 	 * themselves already. Otherwise, this action should not be undertaken.
 	 * These transition creations do not require any user input since in either
 	 * case, what must go in the label is clear.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -272,7 +272,7 @@ public class FSAToREController {
 	/**
 	 * This takes all the transitions from one state to another, and combines
 	 * them into a single transition.
-	 * 
+	 *
 	 * @param from
 	 *            the from state
 	 * @param to
@@ -306,7 +306,7 @@ public class FSAToREController {
 	/**
 	 * This takes a state, and prepares to remove it. Note that this does not
 	 * actually remove the state, but notifies the user of what will appear.
-	 * 
+	 *
 	 * @param state
 	 *            the state that was selected for removal
 	 * @return <CODE>false</CODE> if this state cannot be removed because it
@@ -368,7 +368,7 @@ public class FSAToREController {
 	/**
 	 * If a transition is selected in the transition window, this method is told
 	 * about it.
-	 * 
+	 *
 	 * @param transition
 	 *            the transition that was selected, or <CODE>null</CODE> if
 	 *            less or more than one transition is selected

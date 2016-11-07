@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,7 +36,7 @@ import javax.swing.text.html.HTMLDocument;
  * The <TT>WebFrame</TT> class provides a simple method for poping up a
  * miniature web browser that has only back, forward, and home buttons, and no
  * URL entry form.
- * 
+ *
  * @author Justin Cross
  * @author Thomas Finley
  */
@@ -51,7 +51,7 @@ public class WebFrame extends JFrame {
 	/**
 	 * This constructs a new <TT>WebFrame</TT> that initializes its display to
 	 * the location shown.
-	 * 
+	 *
 	 * @param myHtmlFile
 	 *            the URL to load, either in the form of a web page (starting
 	 *            with `http') or some sort of file (starting, I suppose,
@@ -84,7 +84,7 @@ public class WebFrame extends JFrame {
 
 	/**
 	 * Goes to a particular page.
-	 * 
+	 *
 	 * @param url
 	 *            the url to go to
 	 */
@@ -98,7 +98,7 @@ public class WebFrame extends JFrame {
 
 	/**
 	 * Returns the toolbar for browsing this help display.
-	 * 
+	 *
 	 * @return the toolbar for browsing this help display
 	 */
 	private JToolBar getToolBar() {
@@ -117,7 +117,7 @@ public class WebFrame extends JFrame {
 
 	/**
 	 * Makes a web browser button with the specified attributes.
-	 * 
+	 *
 	 * @param label
 	 *            the label on the button
 	 * @param iconName
@@ -179,7 +179,7 @@ public class WebFrame extends JFrame {
 
 	/**
 	 * Sets the display of the browser to the URL.
-	 * 
+	 *
 	 * @param url
 	 *            the name of the url
 	 */
@@ -199,7 +199,7 @@ public class WebFrame extends JFrame {
 
 	/**
 	 * Sets the display of the browser to the url
-	 * 
+	 *
 	 * @param url
 	 *            the name of the url
 	 */
@@ -220,7 +220,7 @@ public class WebFrame extends JFrame {
 	/**
 	 * Go to a completely new page, clearing all visited history past this
 	 * point.
-	 * 
+	 *
 	 * @param url
 	 *            the new url to go to
 	 */

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,7 +24,7 @@ import java.util.Random;
 /**
  * This class encapsulates many static computational methods used by the pumping
  * lemmas that do not necessarily need to be in the PumpingLemma class.
- * 
+ *
  * @author Chris Morgan & Jinghui Lim
  */
 public class LemmaMath {
@@ -37,7 +37,7 @@ public class LemmaMath {
      * Returns 0 with probability 0.5 and 2 with probability 0.5.
      * This should be used to randomize whether a pumping lemma is
      * pumped 0 or 2 times when both will give a contradiction.
-     * 
+     *
      * @return 0 with probability 0.5 and 2 with probability 0.5
      */
     public static int flipCoin()
@@ -47,21 +47,21 @@ public class LemmaMath {
         else
             return 2;
     }
-    
+
     /**
      * Returns a random integer between min & max (both inclusive).
-     * 
+     *
      * @return a random integer between min & max (both inclusive).
      */
     public static int fetchRandInt(int min, int max){
     	return RAND_GENERATOR.nextInt(max-min+1) + min;
     }
-    
+
     /**
      * Counts the number of times the character 'c' appears in s.  Used
      * for subclasses to determine if a particular string is a valid instance
      * of the language
-     * 
+     *
      * @return # of instances of c in s
      */
     public static int countInstances(String s, char c){
@@ -71,20 +71,20 @@ public class LemmaMath {
     			count++;
     	return count;
     }
-	
+
     /**
      * Checks to see if there is a "mixture" of intertwined characters.  A
      * mixture is defined as when all alike characters in a given string are not
      * adjacent to each other as a block.  For example, the strings "aaabbbccc" and
      *  "abcc" would not be mixtures, but the strings "aaabbbaa", "ababa", and
-     *  "aaaccbbbc" would be, because not all a's, b's and c's therein form unique 
-     *  blocks of that character.  This also performs the function of 
+     *  "aaaccbbbc" would be, because not all a's, b's and c's therein form unique
+     *  blocks of that character.  This also performs the function of
      *  otherCharactersFound()
-     *  
-     *  @param c 
+     *
+     *  @param c
      *  	the list of unique characters in the string, in the order the first
-     *  	instances of them should be encountered 
-     * 
+     *  	instances of them should be encountered
+     *
      * @return whether this string is a "mixture"
      */
     public static boolean isMixture(String s, char[] c){
@@ -95,14 +95,14 @@ public class LemmaMath {
     			while (cIndex < c.length && s.charAt(i) != c[cIndex])
     			   cIndex++;
     			if (cIndex == c.length)
-    				return true;    			
+    				return true;
     		}
-    	}    	   	    	    	    	
+    	}
     	return false;
     }
-    
+
     /**
-     * Checks to see whether there are any other characters in the string besides 
+     * Checks to see whether there are any other characters in the string besides
      * those in the char[].
      */
     public static boolean otherCharactersFound(String s, char[] c){
@@ -117,10 +117,10 @@ public class LemmaMath {
     	}
     	return false;
     }
-    
+
     /**
      * Factorial method.
-     * 
+     *
      * @param n number to obtain the factorial value of
      * @return n factorial
      */
@@ -130,12 +130,12 @@ public class LemmaMath {
         else
             return n * factorial(n - 1);
     }
-    
+
     /**
      * Checks to see whether n is a factorial.
-     * 
+     *
      * @return whether n is a factorial.
-     */    
+     */
     public static boolean isFactorial(int n) {
     	int i, j;
     	i=1;  j=1;
@@ -143,9 +143,9 @@ public class LemmaMath {
     		if (i==n)
     			return true;
     		j++;
-    		i = i*j;    		
-    	} 
-    	while (i<=n);    	
+    		i = i*j;
+    	}
+    	while (i<=n);
     	return false;
     }
 }

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,14 +45,14 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * @author Andrew
- * 
+ *
  * TODO To change the template for this generated type comment go to Window -
  * Preferences - Java - Code Style - Code Templates
  */
 public class BuildingBlockSimulateAction extends SimulateAction {
 	/**
 	 * Instantiates a new <CODE>NoInteractionSimulateAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -99,7 +99,7 @@ public class BuildingBlockSimulateAction extends SimulateAction {
 	 * Given initial configurations, the simulator, and the automaton, takes any
 	 * further action that may be necessary. In the case of stepwise operation,
 	 * which is the default, an additional tab is added to the environment
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton input is simulated on
 	 * @param simulator
@@ -126,7 +126,7 @@ public class BuildingBlockSimulateAction extends SimulateAction {
 
 	/**
 	 * This particular action may only be applied to finite state automata.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for applicability
 	 * @return <CODE>true</CODE> if the passed in object is a finite state

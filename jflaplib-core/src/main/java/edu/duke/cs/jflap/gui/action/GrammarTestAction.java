@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import java.awt.event.ActionEvent;
 
 /**
  * This is a simple test action for grammars.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GrammarTestAction extends GrammarAction {
 	/**
 	 * Instantiates a new <CODE>GrammarOutputAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

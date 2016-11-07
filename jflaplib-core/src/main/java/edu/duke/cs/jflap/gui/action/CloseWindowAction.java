@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import javax.swing.KeyStroke;
 /**
  * The <CODE>CloseWindowAction</CODE> invokes the close method on the <CODE>EnvironmentFrame</CODE>
  * to which they belong.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class CloseWindowAction extends RestrictedAction {
 	/**
 	 * Instantiates a <CODE>CloseWindowAction</CODE>.
-	 * 
+	 *
 	 * @param frame
 	 *            the <CODE>EnvironmentFrame</CODE> to dismiss when an action
 	 *            is registered

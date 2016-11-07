@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ import java.util.*;
  * grammars, including regular and context-free grammars. This object simply
  * maintains a structure that holds and maintains the data pertinent to the
  * definition of a grammar.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -49,12 +49,12 @@ public abstract class Grammar implements Serializable, Cloneable {
 		myTerminals = new HashSet();
 		myStartVariable = null;
 	}
-	
+
 	public abstract boolean isConverted();
-	
+
 	/**
 	 * Returns a copy of the Grammar object.
-	 * 
+	 *
 	 * @return a copy of the Grammar object.
 	 */
 	public Object clone() {
@@ -96,7 +96,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Changes the start variable to <CODE>variable</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the new start variable.
 	 */
@@ -106,7 +106,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Returns the start variable.
-	 * 
+	 *
 	 * @return the start variable.
 	 */
 	public String getStartVariable() {
@@ -117,7 +117,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	 * Returns true if <CODE>production</CODE> is a valid production for the
 	 * grammar. This method by default calls <CODE>checkProduction</CODE> and
 	 * returns true if and only if the method did not throw an exception.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return <CODE>true</CODE> if the production is fine, <CODE>false</CODE>
@@ -138,7 +138,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	 * do nothing. This method will be called when a production is added, and
 	 * may be called by outsiders wishing to check a production without adding
 	 * it to a grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @throws IllegalArgumentException
@@ -148,7 +148,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Adds <CODE>production</CODE> to the set of productions in the grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production to be added.
 	 * @throws IllegalArgumentException
@@ -186,7 +186,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	/**
 	 * Adds <CODE>productions</CODE> to grammar by calling addProduction for
 	 * each production in array.
-	 * 
+	 *
 	 * @param productions
 	 *            the set of productions to add to grammar
 	 */
@@ -199,7 +199,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	/**
 	 * Removes <CODE>production</CODE> from the set of productions in the
 	 * grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production to remove.
 	 */
@@ -233,7 +233,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Returns all productions in the grammar.
-	 * 
+	 *
 	 * @return all productions in the grammar.
 	 */
 	public Production[] getProductions() {
@@ -242,7 +242,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Adds <CODE>terminal</CODE> to the set of terminals in the grammar.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal to add.
 	 */
@@ -252,7 +252,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Removes <CODE>terminal</CODE> from the set of terminals in the grammar.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal to remove.
 	 */
@@ -262,7 +262,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Returns all terminals in the grammar.
-	 * 
+	 *
 	 * @return all terminals in the grammar.
 	 */
 	public String[] getTerminals() {
@@ -271,7 +271,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Adds <CODE>variable</CODE> to the set of variables in the grammar.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable to add.
 	 */
@@ -281,7 +281,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Removes <CODE>variable</CODE> from the set of variables of the grammar.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable to remove.
 	 */
@@ -291,7 +291,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 	/**
 	 * Returns all variables in the grammar.
-	 * 
+	 *
 	 * @return all variables in the grammar.
 	 */
 	public String[] getVariables() {
@@ -301,7 +301,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	/**
 	 * Returns true if <CODE>production</CODE> is in the set of productions of
 	 * the grammar.
-	 * 
+	 *
 	 * @param production
 	 *            the production.
 	 * @return true if <CODE>production</CODE> is in the set of productions of
@@ -314,7 +314,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	/**
 	 * Returns true if <CODE>terminal</CODE> is in the set of terminals in the
 	 * grammar.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal.
 	 * @return true if <CODE>terminal</CODE> is in the set of terminals in the
@@ -327,7 +327,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	/**
 	 * Returns true if <CODE>variable</CODE> is in the set of variables in the
 	 * grammar.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable.
 	 * @return true if <CODE>variable</CODE> is in the set of variables in the
@@ -341,7 +341,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 	 * Returns a string representation of the grammar object, listing the four
 	 * parts of the definition of a grammar: the set of variables, the set of
 	 * terminals, the start variable, and the set of production rules.
-	 * 
+	 *
 	 * @return a string representation of the grammar object.
 	 */
 	public String toString() {
@@ -382,7 +382,7 @@ public abstract class Grammar implements Serializable, Cloneable {
 
 		return buffer.toString();
 	}
-	
+
 	/**
 	 * Changes the environment frame this automaton is in.
 	 * @param frame the environment frame
@@ -397,22 +397,22 @@ public abstract class Grammar implements Serializable, Cloneable {
 	public EnvironmentFrame getEnvironmentFrame() {
 		return myEnvFrame;
 	}
-    
+
     public void setFilePath(String name){
         fileName = name;
     }
-    
+
     public String getFileName(){
         int last = fileName.lastIndexOf("\\");
         if(last == -1) last = fileName.lastIndexOf("/");
-        
+
         return fileName.substring(last+1);
     }
-    
+
     public String getFilePath(){
         int last = fileName.lastIndexOf("\\");
         if(last == -1) last = fileName.lastIndexOf("/");
-        
+
         return fileName.substring(0, last+1);
     }
 

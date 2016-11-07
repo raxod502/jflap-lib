@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,14 +37,14 @@ import javax.swing.event.*;
 
 /**
  * This is the pane where the removal of unit productions takes place.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class UnitPane extends JPanel {
 	/**
 	 * Instantiates a new unit removing pane.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment this pane will belong to
 	 * @param grammar
@@ -135,7 +135,7 @@ public class UnitPane extends JPanel {
 
 	/**
 	 * Initializes a table for the grammar.
-	 * 
+	 *
 	 * @return a table to display the grammar
 	 */
 	private GrammarTable initGrammarTable() {

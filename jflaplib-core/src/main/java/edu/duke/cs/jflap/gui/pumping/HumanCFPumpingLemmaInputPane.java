@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -64,18 +64,18 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         super(l, "<i>L</i> = {" + l.getHTMLTitle() + "} Context-Free Pumping Lemma");
     }
 
-    
+
     protected void addDecompPanelGameFeatures(JPanel n){
     	decompButtonTitle = new String("Set uvxyz");
     	n.setMaximumSize(new Dimension(MAX_SIZE.width, 9*MAX_SIZE.height/20));
         n.setPreferredSize(new Dimension(MAX_SIZE.width, 9*MAX_SIZE.height/20));
-    	
+
         myUPanel = new SliderPanel("u", this);
         sliderPanel.add(myUPanel);
 
         myVPanel = new SliderPanel("v", this);
         sliderPanel.add(myVPanel);
-        n.setBorder(BorderFactory.createTitledBorder("3. Select decomposition of w into uvxyz.")); 
+        n.setBorder(BorderFactory.createTitledBorder("3. Select decomposition of w into uvxyz."));
     }
 
     /**
@@ -87,8 +87,8 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
     {
     	/*int m = Integer.parseInt(myMDisplay.getText());
     	reset();
-    	myMDisplay.setText(Integer.toString(m));*/    	        
-    	
+    	myMDisplay.setText(Integer.toString(m));*/
+
         String s = myLemma.getW();
         myWDisplay.setText(s);
 
@@ -113,7 +113,7 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         leftPanel.revalidate();
     }
 
-    
+
     protected void resetDecompPanel()
     {
         myUPanel.reset();
@@ -124,7 +124,7 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         myZLength.setText("");
         updateTable();
     }
-    
+
     /**
      * Resets the various fields of <i>u</i>, <i>v</i>, <i>x</i>, <i>y</i>,
      * and <i>z</i>, the display for <i>i</i> and the pumped string, and
@@ -211,7 +211,7 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         }
     }
 
-    
+
     public void setDecomposition(int[] decomposition)
     {
         int u = decomposition[0];
@@ -225,14 +225,14 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         myYPanel.setVal(u + v + x + y);
 
         myLemma.setDecomposition(decomposition);
-    }    
-    
+    }
+
     /**
      * Calculates <i>i</i> and the string <i>uv<sup>i</sup>xy<sup>i</sup>z</i>.
      * based on the user's decomposition of <i>uvxyz</i>.
      */
     protected void setI()
-    {    	
+    {
         int[] d = new int[]{myUPanel.getVal(), myVPanel.getVal() - myUPanel.getVal(),
                 myXPanel.getVal() - myVPanel.getVal(), myYPanel.getVal() - myXPanel.getVal(),
                 myLemma.getW().length() - myYPanel.getVal()};
@@ -290,9 +290,9 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
          * If it hasn't, no point doing the rest.
          * If it has, then go on and load m and w.
          */
-        if(pl.getM() == -1)        	
+        if(pl.getM() == -1)
             return;
-        
+
         myMDisplay.setText("" + pl.getM());
         myWDisplay.setText(pl.getW());
 
@@ -322,12 +322,12 @@ public class HumanCFPumpingLemmaInputPane extends HumanFirstPane
         myYPanel.setText(pl.getW());
         myYPanel.setSliderMax(pl.getW().length());
 
-        setDecomposition(decomposition, pl.getI());        
+        setDecomposition(decomposition, pl.getI());
         if (myCases != null) {
         	myCases.setDecomposition(decomposition);
         	myCases.setListButtonEnabled(true);
-        }                
-        updateTable();        
+        }
+        updateTable();
         stages[2].setVisible(true);
     	stages[3].setVisible(true);
         /*

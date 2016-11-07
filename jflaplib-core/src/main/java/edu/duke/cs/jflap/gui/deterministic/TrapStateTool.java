@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import java.awt.event.MouseEvent;
 import edu.duke.cs.jflap.automata.State;
 
 /**
- * Aids in creating new trap state 
+ * Aids in creating new trap state
  * @author Kyung Min (Jason) Lee
  *
  */
@@ -40,10 +40,10 @@ public class TrapStateTool extends StateTool {
 
 	/** The controller object. */
 	private AddTrapStateController myController;
-	
+
 	/**
 	 * Instantiates a new trap state tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view that the automaton is drawn in
 	 * @param drawer
@@ -59,7 +59,7 @@ public class TrapStateTool extends StateTool {
 
 	/**
 	 * When the user clicks, one creates a state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -71,7 +71,7 @@ public class TrapStateTool extends StateTool {
 
 	/**
 	 * When the user drags, one moves the created state.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

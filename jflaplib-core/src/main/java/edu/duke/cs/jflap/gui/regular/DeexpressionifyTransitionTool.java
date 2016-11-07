@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,16 +37,16 @@ import edu.duke.cs.jflap.automata.fsa.FSATransition;
  * A tool that handles the conversion of multiple transitions to one transition
  * for the FSA to regular expression conversion. This simply calls the
  * {@link FSAToREController#transitionCollapse} method.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.regular.FSAToREController#transitionCreate
- * 
+ *
  * @author Thomas Finley
  */
 
 public class DeexpressionifyTransitionTool extends Tool {
 	/**
 	 * Instantiates a new transition tool.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -62,7 +62,7 @@ public class DeexpressionifyTransitionTool extends Tool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {
@@ -71,7 +71,7 @@ public class DeexpressionifyTransitionTool extends Tool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the state tool icon
 	 */
 	protected Icon getIcon() {
@@ -81,7 +81,7 @@ public class DeexpressionifyTransitionTool extends Tool {
 
 	/**
 	 * Returns the keystroke to switch to this tool, C.
-	 * 
+	 *
 	 * @return the keystroke for this tool
 	 */
 	public KeyStroke getKey() {
@@ -91,7 +91,7 @@ public class DeexpressionifyTransitionTool extends Tool {
 	/**
 	 * When we press the mouse, the convert controller should be told that
 	 * transitions are done.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */

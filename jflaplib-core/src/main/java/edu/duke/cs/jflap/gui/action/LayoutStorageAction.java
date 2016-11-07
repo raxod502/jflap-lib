@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
  * Action that allows for the current automaton layout to be saved and possibly restored later.
  * This action itself will save the current layout of the automaton, and an action stored inside
  * this action will restore the automaton's saved layout.
- * 
+ *
  * @author Chris Morgan
  */
 public class LayoutStorageAction extends AutomatonAction {
@@ -46,10 +46,10 @@ public class LayoutStorageAction extends AutomatonAction {
 	 * graph.
 	 */
 	private AutomatonAction restoreAction;
-	
+
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @param saveString the title of this action.
 	 * @param restoreString the title of the action that restores the saved layout.
 	 * @param automaton the automaton whose layout will be saved or restored.
@@ -59,21 +59,21 @@ public class LayoutStorageAction extends AutomatonAction {
 		automaton = a;
 		restoreAction = new AutomatonAction(restoreString, null) {
 			public void actionPerformed(ActionEvent e) {
-				graph.moveAutomatonStates();				
+				graph.moveAutomatonStates();
 			}
 		};
-		restoreAction.setEnabled(false);			
+		restoreAction.setEnabled(false);
 	}
-	
+
 	/**
 	 * Fetches the action used to restore the saved layout.
-	 * 
+	 *
 	 * @return the action used to restore the saved layout.
 	 */
 	public AutomatonAction getRestoreAction() {
 		return restoreAction;
-	}		
-	
+	}
+
 	public void actionPerformed(ActionEvent e) {
 		graph = new AutomatonGraph(automaton);
 		restoreAction.setEnabled(true);

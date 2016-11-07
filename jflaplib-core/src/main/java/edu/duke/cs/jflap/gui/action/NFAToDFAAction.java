@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This is a simple action for showing the DFA form of an NFA.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class NFAToDFAAction extends FSAAction {
 	/**
 	 * Instantiates a new <CODE>NFAToDFAAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -59,7 +59,7 @@ public class NFAToDFAAction extends FSAAction {
 
 	/**
 	 * Puts the DFA form in another window.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */

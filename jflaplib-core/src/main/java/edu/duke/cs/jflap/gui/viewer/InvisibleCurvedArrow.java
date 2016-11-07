@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import edu.duke.cs.jflap.automata.Transition;
  * An invisible curved arrow is a curved arrow where the actual line and arrow
  * are not displayed, only the label. This is used for transitions where there
  * are multiple transitions from one state to another.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class InvisibleCurvedArrow extends CurvedArrow {
 	/**
 	 * Instantiates an <CODE>InvisibleCurvedArrow</CODE> object.
-	 * 
+	 *
 	 * @param x1
 	 *            the x coordinate of the start point
 	 * @param y1
@@ -56,7 +56,7 @@ public class InvisibleCurvedArrow extends CurvedArrow {
 
 	/**
 	 * Instantiates an <CODE>InvisibleCurvedArrow</CODE> object.
-	 * 
+	 *
 	 * @param start
 	 *            the start point
 	 * @param end
@@ -71,7 +71,7 @@ public class InvisibleCurvedArrow extends CurvedArrow {
 
 	/**
 	 * Draws the arrow on the indicated graphics environment.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics to draw this arrow upon
 	 */
@@ -83,7 +83,7 @@ public class InvisibleCurvedArrow extends CurvedArrow {
 
 	/**
 	 * Draws a highlight of the curve. This will only highlight the label.
-	 * 
+	 *
 	 * @param g
 	 *            the graphics to draw the highlight of the curve upon
 	 */
@@ -100,7 +100,7 @@ public class InvisibleCurvedArrow extends CurvedArrow {
 
 	/**
 	 * Returns the bounds.
-	 * 
+	 *
 	 * @return the rectangular bounds for this curved arrow
 	 */
 	public Rectangle2D getBounds() {
@@ -112,7 +112,7 @@ public class InvisibleCurvedArrow extends CurvedArrow {
 	/**
 	 * Determines if a point is on/near the curved arrow. Since here the arrow
 	 * is not displayed, only points on the label are identified.
-	 * 
+	 *
 	 * @param point
 	 *            the point to check
 	 * @param fudge

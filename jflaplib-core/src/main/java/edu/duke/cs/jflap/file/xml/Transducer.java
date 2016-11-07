@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -28,7 +28,7 @@ import org.w3c.dom.Document;
  * This is an interface for objects that serve as a go between from DOM to a
  * JFLAP object representing a structure (such as an automaton or grammar), and
  * back again.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -36,7 +36,7 @@ public interface Transducer {
 	/**
 	 * Given a document, this will return the corresponding JFLAP structure
 	 * encoded in the DOM document.
-	 * 
+	 *
 	 * @param document
 	 *            the DOM document to decode
 	 * @return a serializable object, as all JFLAP structures are encoded in
@@ -50,7 +50,7 @@ public interface Transducer {
 	/**
 	 * Given a JFLAP structure, this will return the corresponding DOM encoding
 	 * of the structure.
-	 * 
+	 *
 	 * @param structure
 	 *            the JFLAP structure to encode
 	 * @return a DOM document instance
@@ -60,7 +60,7 @@ public interface Transducer {
 	/**
 	 * Returns the string encoding of the type this transducer decodes and
 	 * encodes.
-	 * 
+	 *
 	 * @return the type this transducer recognizes
 	 */
 	public String getType();

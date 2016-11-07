@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -59,7 +59,7 @@ import java.util.Set;
  * getLamdaProductionlessGrammar, or you can build it step by step by calling
  * getProductionsToAddForProduction for each production in the original grammar
  * and adding all returned productions to the new grammar.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -80,7 +80,7 @@ public class LambdaProductionRemover {
 
 	/**
 	 * Adds <CODE>variable</CODE> to <CODE>lambdaSet</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the string to add to set
 	 * @param lambdaSet
@@ -95,7 +95,7 @@ public class LambdaProductionRemover {
 	 * Returns true if there is a production in <CODE>grammar</CODE> with
 	 * <CODE>variable</CODE> on the left hand side and lambda on the right
 	 * hand side.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -121,7 +121,7 @@ public class LambdaProductionRemover {
 	 * Returns true if there are more variables in <CODE>grammar</CODE> that
 	 * are not already in <CODE>lambdaSet</CODE> but belong there because they
 	 * have lambda productions (e.g. A->lambda)
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -144,7 +144,7 @@ public class LambdaProductionRemover {
 	 * from <CODE>grammar</CODE> that has a lambda production (i.e. a
 	 * production with the variable on the left hand side and lambda on the
 	 * right hand side.)
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -169,7 +169,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Adds all variables in <CODE>grammar</CODE> that have lambda transitions
 	 * to <CODE>lambdaSet</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -187,7 +187,7 @@ public class LambdaProductionRemover {
 
 	/**
 	 * Returns true if <CODE>variable</CODE> is in <CODE>lambdaSet</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param lambdaSet
@@ -203,7 +203,7 @@ public class LambdaProductionRemover {
 	 * production (i.e. it is a production that goes either directly to lambda,
 	 * or to a series of variables that all have lambda productions, or that
 	 * themselves could be reducable to lambda productions).
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param lambdaSet
@@ -232,7 +232,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns true if either <CODE>variable</CODE> in <CODE>grammar</CODE>
 	 * has a lambda production or a production that is reducable to lambda.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -264,7 +264,7 @@ public class LambdaProductionRemover {
 	 * belong in the lambda set. This includes variables that have lambda
 	 * productions and variables that have productions that are reducable to
 	 * lambda.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -286,7 +286,7 @@ public class LambdaProductionRemover {
 	 * Returns a variable that is not already in <CODE>lambdaSet</CODE> but
 	 * belongs there (i.e. a variable that has either a lambda production or a
 	 * production that is reducable to lambda).
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar.
 	 * @param lambdaSet
@@ -310,7 +310,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns the set of all variables in <CODE>grammar</CODE> that either
 	 * have lambda productions or productions that are reducable to lambda.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return the set of all variables in <CODE>grammar</CODE> that either
@@ -336,7 +336,7 @@ public class LambdaProductionRemover {
 	 * production where different variables go to lambda. (e.g. if the
 	 * production is S->AB and both A and B are in lambdaSet, then this would
 	 * return S->AB, S->A, and S->B).
-	 * 
+	 *
 	 * @param production
 	 *            the production to replace
 	 * @param lambdaSet
@@ -388,7 +388,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns all productions created by replacing each production in <CODE>grammar</CODE>
 	 * based on the variables in <CODE>lambdaSet</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -413,7 +413,7 @@ public class LambdaProductionRemover {
 
 	/**
 	 * Returns all non lambda productions in <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return all non lambda productions in <CODE>grammar</CODE>.
@@ -432,7 +432,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns a grammar equivalent to <CODE>grammar</CODE> that has no lambda
 	 * productions.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param lambdaSet
@@ -447,7 +447,7 @@ public class LambdaProductionRemover {
 
 	/**
 	 * Returns true if <CODE>ch</CODE> is a character in <CODE>comb</CODE>.
-	 * 
+	 *
 	 * @param ch
 	 *            the character
 	 * @param comb
@@ -469,7 +469,7 @@ public class LambdaProductionRemover {
 	 * that all other variables on the right hand side of <CODE>production</CODE>
 	 * should be. therefore, if production was S->aABC, this function would
 	 * return S->aAB).
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param comb
@@ -501,7 +501,7 @@ public class LambdaProductionRemover {
 	 * indicated by <CODE>binary</CODE>. (e.g. if variables was the set
 	 * "A,B,C", in that order, and binary was 011, this function would return
 	 * "BC" since there is a one at index 1 and 2).
-	 * 
+	 *
 	 * @param binary
 	 *            a binary number whose length is the same as the length of
 	 *            <CODE>variables</CODE>
@@ -524,7 +524,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns a binary number equivalent to <CODE>binaryNum</CODE> padded
 	 * with enough zeros to make it a string of length <CODE>length</CODE>.
-	 * 
+	 *
 	 * @param binaryNum
 	 *            the number to pad with zeros
 	 * @param length
@@ -543,7 +543,7 @@ public class LambdaProductionRemover {
 	/**
 	 * Returns a list of binary numbers (as strings) that encode all possible
 	 * permutations of <CODE>variables</CODE>
-	 * 
+	 *
 	 * @param variables
 	 *            the set of variables
 	 * @return a list of binary numbers (as strings) that encode all possible

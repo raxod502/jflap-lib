@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -41,7 +41,7 @@ import edu.duke.cs.jflap.automata.mealy.MooreMachine;
  * The <CODE>NewAction</CODE> handles when the user decides to create some new
  * environment, that is, some sort of new automaton, or grammar, or regular
  * expression, or some other such editable object.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -57,14 +57,14 @@ public class NewAction extends RestrictedAction {
 
 	/**
 	 * Shows the new machine dialog box.
-	 * 
+	 *
 	 * @param event
 	 *            the action event
 	 */
 	public void actionPerformed(ActionEvent event) {
 		showNew();
 	}
-	
+
 	/**
 	 * Dispose of environment dialog
 	 * by Moti Ben-Ari
@@ -94,7 +94,7 @@ public class NewAction extends RestrictedAction {
 	/**
 	 * Called once a type of editable object is choosen. The editable object is
 	 * passed in, the dialog is hidden, and the window is created.
-	 * 
+	 *
 	 * @param object
 	 *            the object that we are to edit
 	 */
@@ -181,7 +181,7 @@ public class NewAction extends RestrictedAction {
 				}
 			});
 			getContentPane().add(button);
-            
+
             button = new JButton("Mealy Machine");
             button.addActionListener(new ActionListener()
                 {
@@ -270,7 +270,7 @@ public class NewAction extends RestrictedAction {
 				}
 			});
 			getContentPane().add(button);
-            
+
             button = new JButton("Regular Pumping Lemma");
             button.addActionListener(new ActionListener()
                 {
@@ -280,7 +280,7 @@ public class NewAction extends RestrictedAction {
                     }
                 });
             getContentPane().add(button);
-            
+
             button = new JButton("Context-Free Pumping Lemma");
             button.addActionListener(new ActionListener()
                 {

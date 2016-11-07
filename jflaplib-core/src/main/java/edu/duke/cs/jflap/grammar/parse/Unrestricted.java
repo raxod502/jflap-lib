@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.*;
  * This class is a utility class for determining some facts about unrestricted
  * grammars. As structures equivalent in power to Turing machines, a brute force
  * parse of an unrestricted grammar may, in some situations, not be recognized.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -43,7 +43,7 @@ public class Unrestricted {
 	/**
 	 * Given a string and a smaller set, this returns the minimum length that
 	 * the string can derive as indicated by the smaller set.
-	 * 
+	 *
 	 * @param string
 	 *            the string to get the "smaller"
 	 * @param smaller
@@ -59,7 +59,7 @@ public class Unrestricted {
 
 	/**
 	 * Counts the number of characters in a given string.
-	 * 
+	 *
 	 * @param s
 	 *            the string
 	 * @param c
@@ -81,7 +81,7 @@ public class Unrestricted {
 	 * the symbol <I>b</I> and <I>c</I> where <I>babca - aa</I> is a rule.
 	 * <I>a</I> is not included because there are <I>a</I> terminals in the
 	 * result.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to find the "small" symbols for
 	 */
@@ -115,7 +115,7 @@ public class Unrestricted {
 
 	/**
 	 * Returns if a grammar is truly unrestricted.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to test
 	 * @return if a grammar is unrestricted
@@ -131,7 +131,7 @@ public class Unrestricted {
 	/**
 	 * Given an unrestricted grammar, this will return an unrestricted grammar
 	 * with fewer productions that accepts the same language.
-	 * 
+	 *
 	 * @param grammar
 	 *            the input grammar
 	 * @return a grammar with productions some subset of the original grammar,

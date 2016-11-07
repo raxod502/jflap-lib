@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,16 +39,16 @@ import org.xml.sax.SAXException;
 
 /**
  * This is the class that starts JFLAP.
- * 
+ *
  * @author Thomas Finley
  * @author Moti Ben-Ari
  * @modified by Kyung Min (Jason) Lee
  */
 
 public class Main {
-	
+
 	private static boolean dontQuit;  // Don't quit when Quit selected
-	
+
 	public static boolean getDontQuit() {
 		return dontQuit;
 	}
@@ -57,13 +57,13 @@ public class Main {
 	 * line arguments, this will attempt to open them as JFLAP files. If there
 	 * are no arguments, this will call on {@link edu.duke.cs.jflap.gui.action.NewAction#showNew}
 	 * to display a choice for a new structure.
-	 * 
+	 *
 	 * @param args
 	 *            the command line arguments, which may hold files to open
 	 */
 	public static void main(String[] args, boolean dont) {
 
-        
+
 
 		dontQuit=dont;
 		// Make sure we're not some old version.
@@ -80,7 +80,7 @@ public class Main {
 		} catch (SecurityException e) {
 			// Eh, that shouldn't happen.
 		}
-		
+
 		// Set the AWT exception handler. This may not work in future
 		// Java versions.
 		try {
@@ -94,7 +94,7 @@ public class Main {
 			System.err.println("Warning: could not set the "
 					+ "AWT exception handler.");
 		}
-		
+
 		// Apple is stupid.
 		try {
 			// Well, Apple WAS stupid...
@@ -115,9 +115,9 @@ public class Main {
 		NewAction.showNew();
 		if (args.length > 0) {
 			if(args[0].equals("text")){
-				
+
 			}
-			
+
 			for (int i = 0; i < args.length; i++) {
 				Codec[] codecs = (Codec[]) Universe.CODEC_REGISTRY
 				.getDecoders().toArray(new Codec[0]);
@@ -128,10 +128,10 @@ public class Main {
 							+ e.getMessage());
 				}
 			}
-		}		
+		}
 		loadPreferences();
 	}
-	
+
 	/**
 	 * This method loads from the preferences file, if one exists.
 	 */
@@ -156,18 +156,18 @@ public class Main {
 				builder = factory.newDocumentBuilder(); Document doc;
 				try {
 					doc = builder.parse(file);
-					
+
 					//Set the empty string constant
 					Node parent = doc.getDocumentElement()
 					   .getElementsByTagName(current.EMPTY_STRING_NAME).item(0);
 					if (parent!=null) {
 						String empty = parent.getTextContent();
-						if(empty.equals(current.lambdaText)) 
+						if(empty.equals(current.lambdaText))
 							current.setEmptyString(current.lambda);
-						else if(empty.equals(current.epsilonText)) 
+						else if(empty.equals(current.epsilonText))
 							current.setEmptyString(current.epsilon);
 					}
-					
+
 					//Then set the Turing final state constant
 					parent = doc.getDocumentElement()
 					   .getElementsByTagName(current.TURING_FINAL_NAME).item(0);
@@ -211,7 +211,7 @@ public class Main {
                         else
 							current.setAllowStay(false);
 					}
-                    
+
                     //Now set the Undo amount
 					parent = doc.getDocumentElement()
 					   .getElementsByTagName(current.UNDO_AMOUNT_NAME).item(0);
@@ -226,12 +226,12 @@ public class Main {
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}				
+				}
 			} catch (ParserConfigurationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-		}		
+
+		}
 	}
 }

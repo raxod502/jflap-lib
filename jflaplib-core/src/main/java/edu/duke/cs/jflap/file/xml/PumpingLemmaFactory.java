@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,11 +25,11 @@ import edu.duke.cs.jflap.pumping.reg.*;
 import edu.duke.cs.jflap.pumping.cf.*;
 
 /**
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class PumpingLemmaFactory 
+public class PumpingLemmaFactory
 {
     public static PumpingLemma createPumpingLemma(String type, String name)
     {
@@ -49,7 +49,7 @@ public class PumpingLemmaFactory
                 return new NaNb();
             else if(name.equals(new Palindrome().getTitle()))
                 return new Palindrome();
-            
+
             else if (name.equals(new BBABAnAn().getTitle()))
             	return new BBABAnAn();
             else if (name.equals(new B5W().getTitle()))
@@ -61,8 +61,8 @@ public class PumpingLemmaFactory
             else if (name.equals(new AB2n().getTitle()))
             	return new AB2n();
             else if (name.equals(new B5Wmod().getTitle()))
-            	return new B5Wmod();            
-            else    // this should not happen 
+            	return new B5Wmod();
+            else    // this should not happen
                 return null;
         }
         else if(type.equals(CFPumpingLemmaTransducer.TYPE))
@@ -81,7 +81,7 @@ public class PumpingLemmaFactory
                 return new NaNbNc();
             else if(name.equals(new WW().getTitle()))
                 return new WW();
-            
+
             else if (name.equals(new WW1WrEquals().getTitle()))
             	return new WW1WrEquals();
             else if (name.equals(new W1BnW2().getTitle()))
@@ -93,7 +93,7 @@ public class PumpingLemmaFactory
             else if (name.equals(new AkBnCnDj().getTitle()))
             	return new AkBnCnDj();
             else if (name.equals(new W1VVrW2().getTitle()))
-            	return new W1VVrW2();  
+            	return new W1VVrW2();
             else    // this shouldn't happen
                 return null;
         }

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -51,7 +51,7 @@ import edu.duke.cs.jflap.automata.turing.TuringMachine;
 /**
 * The <CODE>TestTuringAction</CODE> is an action to load a structure from a file,
 * and create a new environment with that object.
-* 
+*
 * @author Stephen Reading
 */
 
@@ -63,19 +63,19 @@ public class TestAction extends  RestrictedAction{
      */
     public TestAction() {
         //super("Test Turing Machines", null);
-        super("Batch Test", null);       
+        super("Batch Test", null);
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_A,
                 MAIN_MENU_MASK));
         this.fileChooser = Universe.CHOOSER;
     }
-    
+
     public TestAction(String name, int key){
-    	super(name, null);       
+    	super(name, null);
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(key,
                 MAIN_MENU_MASK));
         this.fileChooser = Universe.CHOOSER;
     }
-    
+
     class inputFilter extends javax.swing.filechooser.FileFilter {
         public boolean accept(File file) {
             String filename = file.getName();
@@ -85,7 +85,7 @@ public class TestAction extends  RestrictedAction{
             return "*.txt";
         }
     }
-    
+
     public ArrayList chooseFile(Component source, boolean fromPerformAction){
     	 File tempFile = fileChooser.getCurrentDirectory();
          fileChooser.setCurrentDirectory(tempFile.getParentFile());
@@ -101,20 +101,20 @@ public class TestAction extends  RestrictedAction{
          if (result != JFileChooser.APPROVE_OPTION)
              return null;
          File[] files = fileChooser.getSelectedFiles();
-         
+
 //         Serializable last;   // Local variable is never read, Jinghui commenting it out.
-         
+
          for(int k = 0; k < files.length; k++){
-             File file = files[k];        
-             if(!file.getAbsolutePath().endsWith(".jff")) { 
+             File file = files[k];
+             if(!file.getAbsolutePath().endsWith(".jff")) {
                  JOptionPane.showMessageDialog(source, "One of the files does not end in .jff", "Read Error",
                          JOptionPane.ERROR_MESSAGE);
                  return null;
              }
              try {
-                 if(k==0) openFile(file, codecs, fromPerformAction);   
-                 else openFile(file, codecs, false); 
-                
+                 if(k==0) openFile(file, codecs, fromPerformAction);
+                 else openFile(file, codecs, false);
+
              } catch (ParseException e) {
                  JOptionPane.showMessageDialog(source, e.getMessage(), "Read Error",
                          JOptionPane.ERROR_MESSAGE);
@@ -123,22 +123,22 @@ public class TestAction extends  RestrictedAction{
                          JOptionPane.ERROR_MESSAGE);
              }
          }
-         
+
          if(files == null) return null;
-     	
-         
+
+
          myEnvFrame.getEnvironment().setMultipleObjects(myObjects);
-         
-         
+
+
          return myObjects;
     }
-    
+
     public boolean checkRightType(Environment env, Component source){
     	if(env.myObjects.size() == 0) return false;
     	 Object first = env.myObjects.get(0);
          int firstType = findType(first);
          for(int i = 0; i < env.myObjects.size(); i++){
-         	int curType = findType(env.myObjects.get(i));     
+         	int curType = findType(env.myObjects.get(i));
          	if(curType == 0){
          		JOptionPane.showMessageDialog(source, "This feature only works with Finite Automata, Pushdown Automata, and Turing Machines", "Error",
                      JOptionPane.ERROR_MESSAGE);
@@ -152,7 +152,7 @@ public class TestAction extends  RestrictedAction{
          }
          return true;
     }
-    
+
     public void performAction(Component source){
     	ArrayList files = null;
     	boolean sameType = false;
@@ -183,20 +183,20 @@ public class TestAction extends  RestrictedAction{
             if(files == null)
                 return;
     	}
-    
+
     	  fileChooser.setDialogTitle("Choose file of strings to test on machines");
           fileChooser.setFileFilter(new inputFilter());
         int result = fileChooser.showOpenDialog(source);
         //open text file of inputs and outputs
-      
-        
+
+
         ArrayList testStrings = new ArrayList();
         ArrayList transStrings = new ArrayList();
         if (result != JFileChooser.APPROVE_OPTION){
         }
         else{
-	        File textFile = fileChooser.getSelectedFile();  
-	        try {                  
+	        File textFile = fileChooser.getSelectedFile();
+	        try {
 	            BufferedReader in = new BufferedReader(new FileReader(textFile));
 	            String str;
 	            String[] strings;
@@ -218,7 +218,7 @@ public class TestAction extends  RestrictedAction{
                         transStrings.add("~");
                         continue;
                     }
-	            	if(strings.length > (k+1+numberInputs)){            		
+	            	if(strings.length > (k+1+numberInputs)){
 	            		transStrings.add(strings[k+numberInputs]);
 	            	}
 	            	else transStrings.add("~");
@@ -229,7 +229,7 @@ public class TestAction extends  RestrictedAction{
 	            }
 	            else transStrings.add("accept");
 	        }
-	       
+
 	        in.close();
 	    } catch (IOException e) {
 	    	}
@@ -237,9 +237,9 @@ public class TestAction extends  RestrictedAction{
         myEnvFrame.getEnvironment().myTestStrings = testStrings;
         myEnvFrame.getEnvironment().myTransducerStrings = transStrings;
     	displayMultipleRunPane(myEnvFrame.getEnvironment(), myObjects.get(0));
-   
+
     }
-    
+
 
     public void actionPerformed(ActionEvent event) {
         Component source = null;
@@ -251,9 +251,9 @@ public class TestAction extends  RestrictedAction{
         }
         performAction(source);
     }
-    
+
     private int findType(Object auto){
-    	int type = 0;      
+    	int type = 0;
         if(auto instanceof TuringMachine) type = 1;
         else if(auto instanceof PushdownAutomaton) type = 2;
         else if(auto instanceof FiniteStateAutomaton) type = 3;
@@ -266,12 +266,12 @@ public class TestAction extends  RestrictedAction{
     		BatchMultipleSimulateAction act = new BatchMultipleSimulateAction((Automaton)obj,env);
 			act.performAction(env);
     	}
-		
+
     	else if(obj instanceof TuringMachine){
     		MultipleOutputSimulateAction act = new MultipleOutputSimulateAction((Automaton)obj,env);
     		act.performAction(env);
     	}
-    	
+
     	else if(obj instanceof PushdownAutomaton){
     		MultipleSimulateAction act = new MultipleSimulateAction((Automaton)obj,env);
     		act.performAction(env);
@@ -284,7 +284,7 @@ public class TestAction extends  RestrictedAction{
 
 	public static Environment openFile(File file, Codec[] codecs, boolean makeFrame) {
         ParseException p = null;
-        
+
         for (int i = 0; i < codecs.length; i++) {
             try {
 //                System.out.println("openFile(File, Codec[], boolean) called");
@@ -307,7 +307,7 @@ public class TestAction extends  RestrictedAction{
                         e.printStackTrace();
                     }
                 }
-                myObjects.add(object); 
+                myObjects.add(object);
                 if(makeFrame){
                 	myEnvFrame = FrameFactory.createFrame(object);
                     if (myEnvFrame == null)
@@ -323,7 +323,7 @@ public class TestAction extends  RestrictedAction{
                 else if(object instanceof Grammar){
                 	((Grammar) object).setEnvironmentFrame(myEnvFrame);
                 }
-                
+
             } catch (ParseException e) {
                 p = e;
             }
@@ -333,7 +333,7 @@ public class TestAction extends  RestrictedAction{
             p = new ParseException("No format could read the file!");
         throw p;
     }
-    
+
     public static ArrayList myObjects = new ArrayList();
     public static EnvironmentFrame myEnvFrame;
 

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,17 +30,17 @@ public class JTableExtender extends JTable{
 		super(model);
 		myMultSimAct = mult;
 	}
-	
+
 	public JTableExtender(TableModel model, BatchMultipleSimulateAction mult){
 		super(model);
 		myMultSimAct = mult;
 	}
-	
-	
+
+
 	public void changeSelection (int row, int column, boolean toggle, boolean extend) {
 		 super.changeSelection (row, column, toggle, extend);
 		 myMultSimAct.viewAutomaton(this);
 		 }
-	
+
 	private MultipleSimulateAction myMultSimAct;
 }

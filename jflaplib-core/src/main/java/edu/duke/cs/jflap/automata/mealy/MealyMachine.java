@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,11 +25,11 @@ import edu.duke.cs.jflap.automata.Automaton;
 /**
  * This subclass of <code>Automaton</code> is specifically for
  * a definition of a Mealy machine.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class MealyMachine extends Automaton 
+public class MealyMachine extends Automaton
 {
     /**
      * Creates a Mealy machine with no states or transitions.
@@ -39,11 +39,11 @@ public class MealyMachine extends Automaton
     {
         super();
     }
-    
+
     /**
      * Returns the class of <code>Transition</code> this automaton
      * must accept.
-     * 
+     *
      * @return the <code>Class</code> object for the <code>
      * MealyTransition</code>
      */

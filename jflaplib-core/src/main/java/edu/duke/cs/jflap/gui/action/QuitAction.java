@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.KeyStroke;
 
 /**
  * This action handles quitting.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -54,13 +54,13 @@ public class QuitAction extends RestrictedAction {
 		for (int i = 0; i < frames.length; i++)
 			if (!frames[i].close())
 				return;
-		
+
 		//modified by Moti Ben-Ari
 		if (edu.duke.cs.jflap.gui.Main.getDontQuit())
 			NewAction.closeNew();
 		else
 			System.exit(0);
-		
+
 	}
 
 	/**

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,12 +45,12 @@ import java.util.TreeSet;
  * A <CODE>Renderer</CODE> object allows a client to create an image of a
  * string of symbols generated, presumably, from an <CODE>LSystem</CODE>.
  * <P>
- * 
+ *
  * The following symbols have significance:
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.lsystem.Expander
  * @see edu.duke.cs.jflap.grammar.lsystem.LSystem
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -94,7 +94,7 @@ public class Renderer {
 
 	/**
 	 * Returns the command handler for a symbol.
-	 * 
+	 *
 	 * @param symbol
 	 *            the symbol
 	 * @return the command handler for that symbol, or <CODE>null</CODE> if no
@@ -108,7 +108,7 @@ public class Renderer {
 
 	/**
 	 * Returns the progress in the current rendering.
-	 * 
+	 *
 	 * @return the number of symbols processed, the max value of which is twice
 	 *         the number of symbols passed into the <CODE>render</CODE>
 	 *         method
@@ -120,7 +120,7 @@ public class Renderer {
 	/**
 	 * Does an assignment from a key to a value, calling the handler as well as
 	 * setting the value in the turtle.
-	 * 
+	 *
 	 * @param key
 	 *            the key
 	 * @param value
@@ -147,7 +147,7 @@ public class Renderer {
 	 * Given a list of symbols and a dictionary of parameters, this will render
 	 * a representation of those symbols to either a graphics, or a returned
 	 * image.
-	 * 
+	 *
 	 * @param symbols
 	 *            a list of symbols
 	 * @param parameters
@@ -324,7 +324,7 @@ public class Renderer {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	private final void capLinePath() {
 		g.draw(linePath); // Dump the path to the graphics...
@@ -399,7 +399,7 @@ public class Renderer {
 	protected class CommandHandler {
 		/**
 		 * Handles the command.
-		 * 
+		 *
 		 * @param symbol
 		 *            an optional argument to the handler, but may be <CODE>null</CODE>
 		 */

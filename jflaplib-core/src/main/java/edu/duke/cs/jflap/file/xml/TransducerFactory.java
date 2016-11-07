@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.util.*;
 
 /**
  * Maps either a DOM or a object to the appropriate transducer.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -35,7 +35,7 @@ public class TransducerFactory {
 	 * Given a DOM document, this will return an appropriate instance of a
 	 * transducer for the type of document. Note that the type of the structure
 	 * should be specified with in the "type" tags.
-	 * 
+	 *
 	 * @param document
 	 *            the document to get the transducer for
 	 * @return the correct transducer for this document
@@ -79,7 +79,7 @@ public class TransducerFactory {
 	 * superclass of D, and this factory has transducers for A and C, instances
 	 * of A and B will get A transducers, and instances of C and D will get C
 	 * transducers.
-	 * 
+	 *
 	 * @param structure
 	 *            the structure to get the transducer for
 	 * @return the correct transducer for this structure
@@ -105,7 +105,7 @@ public class TransducerFactory {
 	 * Turns an object into a transducer. If the passed in object is of type
 	 * <TT>java.lang.Class</TT>, a new instance is returned. If the passed in
 	 * is a {@link edu.duke.cs.jflap.file.Transducer}, the argument is cast and returned.
-	 * 
+	 *
 	 * @param object
 	 *            should be either a class or a transducer
 	 * @return an instance of a transducer appropriate for the passed in
@@ -133,7 +133,7 @@ public class TransducerFactory {
 	/**
 	 * Creates a correspondence between type tags, structure classes, and a
 	 * transducer class.
-	 * 
+	 *
 	 * @param type
 	 *            the type tag, or <CODE>null</CODE> if <CODE>transducer</CODE>
 	 *            is in fact an instance and the transducer type should be

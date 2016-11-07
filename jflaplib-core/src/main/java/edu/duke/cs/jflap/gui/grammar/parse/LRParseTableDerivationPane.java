@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import javax.swing.*;
 
 /**
  * This is the view for the derivation of a LR parse table from a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LRParseTableDerivationPane extends JPanel {
 	/**
 	 * Instantiates a new derivation pane for a grammar environment.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */
@@ -113,7 +113,7 @@ public class LRParseTableDerivationPane extends JPanel {
 
 	/**
 	 * Creates an editor pane for the DFA.
-	 * 
+	 *
 	 * @param panel
 	 *            a panel that will hold the editor pane
 	 * @return the editor pane
@@ -152,7 +152,7 @@ public class LRParseTableDerivationPane extends JPanel {
 
 	/**
 	 * Sets the LR parse table.
-	 * 
+	 *
 	 * @param table
 	 *            the parse table to put in
 	 */
@@ -167,14 +167,14 @@ public class LRParseTableDerivationPane extends JPanel {
 
 	/**
 	 * Returns the table view for the parse table.
-	 * 
+	 *
 	 * @return the view for the parse table, or <CODE>null</CODE> if the parse
 	 *         table has not been set yet
 	 */
 	LRParseTableChooserPane getParseTableView() {
 		return tableView;
 	}
-    
+
     public Grammar getAugmentedGrammar(){
         return augmentedGrammar;
     }

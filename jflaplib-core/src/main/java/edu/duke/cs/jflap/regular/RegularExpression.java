@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -26,7 +26,7 @@ import java.lang.ref.Reference;
 
 /**
  * This object encapsulates a regular expression.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Instantiates a regular expression from the given string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to treat as a regular expression
 	 */
@@ -50,7 +50,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Instantiates a regular expression from another regular expression.
-	 * 
+	 *
 	 * @param expression
 	 *            the expression to copy
 	 */
@@ -60,7 +60,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Returns the expression as a string.
-	 * 
+	 *
 	 * @return the expression as a string
 	 */
 	public String asString() {
@@ -78,7 +78,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Returns the string representiation of the object.
-	 * 
+	 *
 	 * @return the regular expression as string
 	 */
 	public String toString() {
@@ -87,7 +87,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Checks if the parentheses are balanced in a string.
-	 * 
+	 *
 	 * @param string
 	 *            the string to check
 	 * @return if the parentheses are balanced
@@ -107,7 +107,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Changes the regular expression.
-	 * 
+	 *
 	 * @param string
 	 *            the string to change the regular expression to
 	 */
@@ -125,7 +125,7 @@ public class RegularExpression implements Serializable {
 	/**
 	 * Changes the regular expression based on a reference. The reference will
 	 * only be resolved later, when the information is requested.
-	 * 
+	 *
 	 * @param ref
 	 *            the reference to a string to change the regular expression to
 	 */
@@ -135,7 +135,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Returns the error checked string representation.
-	 * 
+	 *
 	 * @return the string version of the exception
 	 * @throws UnsupportedOperationException
 	 *             if the expression is not properly formed
@@ -187,7 +187,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Adds a listener to this object.
-	 * 
+	 *
 	 * @param listener
 	 *            the new listener
 	 */
@@ -197,7 +197,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Removes a listener from this object.
-	 * 
+	 *
 	 * @param listener
 	 *            the listener to remove
 	 */
@@ -207,7 +207,7 @@ public class RegularExpression implements Serializable {
 
 	/**
 	 * Fires an event that the expression has been changed.
-	 * 
+	 *
 	 * @param old
 	 *            the old string representation of the regular expression
 	 */
@@ -223,7 +223,7 @@ public class RegularExpression implements Serializable {
 	/**
 	 * This handles serialization so that the reference, if it exists, is
 	 * resolved to a string rather than being stored itself.
-	 * 
+	 *
 	 * @param out
 	 *            the object output stream
 	 */
@@ -238,7 +238,7 @@ public class RegularExpression implements Serializable {
 	/**
 	 * This handles deserialization so that the listener sets are reset to avoid
 	 * null pointer exceptions when one tries to add listeners to the object.
-	 * 
+	 *
 	 * @param in
 	 *            the input stream for the object
 	 */

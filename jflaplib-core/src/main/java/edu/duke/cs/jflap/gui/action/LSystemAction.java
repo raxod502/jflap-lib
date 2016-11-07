@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,16 +30,16 @@ import javax.swing.Icon;
  * controllers for operators on grammars should subclass. The only real change
  * from the <CODE>RestrictedAction</CODE> is that by default the <CODE>.isAcceptable</CODE>
  * method now only returns true if the object is an instance of <CODE>Grammar</CODE>.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.Grammar
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class LSystemAction extends RestrictedAction {
 	/**
 	 * Instantiates a new <CODE>LSystemAction</CODE>.
-	 * 
+	 *
 	 * @param env
 	 *            the environment
 	 * @param string
@@ -57,7 +57,7 @@ public abstract class LSystemAction extends RestrictedAction {
 	 * Given an object, determine if this grammar action is able to be applied
 	 * to that object based on its class. By default, this method returns <CODE>true</CODE>
 	 * if this object is an instance of <CODE>LSystem</CODE>.
-	 * 
+	 *
 	 * @param object
 	 *            the object to test for "applicability"
 	 * @return <CODE>true</CODE> if this action should be available to an
@@ -69,7 +69,7 @@ public abstract class LSystemAction extends RestrictedAction {
 
 	/**
 	 * Returns the environment.
-	 * 
+	 *
 	 * @return the L-system environment
 	 */
 	protected LSystemEnvironment getEnvironment() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,26 +23,26 @@ package edu.duke.cs.jflap.pumping.reg;
 import edu.duke.cs.jflap.pumping.*;
 
 /**
- * The regular pumping lemma for <i>L</i> = 
- * {<i>a<sup>n</sup>b<sup>k</sup>c<sup>n+k</sup></i> : 
+ * The regular pumping lemma for <i>L</i> =
+ * {<i>a<sup>n</sup>b<sup>k</sup>c<sup>n+k</sup></i> :
  * <i>n</i> &#8805; 0, <i>k</i> &#8805; 0}.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
-public class AnBkCnk extends RegularPumpingLemma 
+public class AnBkCnk extends RegularPumpingLemma
 {
-    public String getTitle() 
+    public String getTitle()
     {
         return "a^n b^k c^(n+k) : n >= 0, k >= 0";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
         return "<i>a<sup>n</sup>b<sup>k</sup>c<sup>n+k</sup></i> : <i>n</i> " +
             GREATER_OR_EQ + " 0, <i>k</i> " + GREATER_OR_EQ + " 0";
     }
-    
+
     public void setDescription()
     {
     	partitionIsValid = false;
@@ -57,28 +57,28 @@ public class AnBkCnk extends RegularPumpingLemma
         myRange = new int[]{2, 9};
     }
 
-    protected void chooseW() 
+    protected void chooseW()
     {
         w = pumpString("a", getM()) + pumpString("b", getM()) + pumpString("c", getM() * 2);
     }
-    
-    public void chooseI() 
+
+    public void chooseI()
     {
         i = LemmaMath.flipCoin();
     }
-    
+
     public boolean isInLang(String s)
     {
     	int a, b, c;
     	char[] list = new char[]{'a','b','c'};
     	if (LemmaMath.isMixture(s, list))
     		return false;
-    	
+
     	a = LemmaMath.countInstances(s, 'a');
     	b = LemmaMath.countInstances(s, 'b');
     	c = LemmaMath.countInstances(s, 'c');
     	if (a+b == c)
-    		return true;    	    	
+    		return true;
     	return false;
     }
 }

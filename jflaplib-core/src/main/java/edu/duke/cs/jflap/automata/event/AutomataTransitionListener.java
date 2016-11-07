@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.EventListener;
 /**
  * An interface that those interested in changes in transitions in an automata
  * should listen to.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.event.AutomataTransitionEvent
  * @see edu.duke.cs.jflap.automata.Automaton#addTransitionListener
  */
@@ -33,7 +33,7 @@ import java.util.EventListener;
 public interface AutomataTransitionListener extends EventListener {
 	/**
 	 * Registers with the listener that an event has occurred.
-	 * 
+	 *
 	 * @param event
 	 *            the event
 	 */

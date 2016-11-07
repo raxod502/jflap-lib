@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import edu.duke.cs.jflap.automata.Automaton;
 /**
  * This subclass of <CODE>Automaton</CODE> is specifically for a definition of
  * a regular Finite State Automaton.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -40,7 +40,7 @@ public class FiniteStateAutomaton extends Automaton {
 	/**
 	 * Returns the class of <CODE>Transition</CODE> this automaton must
 	 * accept.
-	 * 
+	 *
 	 * @return the <CODE>Class</CODE> object for <CODE>automata.fsa.FSATransition</CODE>
 	 */
 	protected Class getTransitionClass() {

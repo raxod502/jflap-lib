@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.JToolBar;
 /**
  * This is a control panel with buttons for invoking methods on a configuration
  * controller.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public class ControlPanel extends JToolBar {
 	/**
 	 * Instantiates a new <CODE>ControlPanel</CODE> for the given
 	 * configuration controller.
-	 * 
+	 *
 	 * @param controller
 	 *            the configuration controller object
 	 */
@@ -49,7 +49,7 @@ public class ControlPanel extends JToolBar {
 
 	/**
 	 * Returns the configuration controller object this panel controls.
-	 * 
+	 *
 	 * @return the configuration controller object this panel controls
 	 */
 	public ConfigurationController getController() {
@@ -83,7 +83,7 @@ public class ControlPanel extends JToolBar {
     				controller.focus();
     			}
     		});
-    
+
     		this.add(new AbstractAction("Defocus") {
     			public void actionPerformed(ActionEvent e) {
     				controller.defocus();

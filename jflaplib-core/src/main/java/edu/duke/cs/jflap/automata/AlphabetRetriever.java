@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.automata;
 /**
  * The alphabet retriever object can be used to find the alphabet for a given
  * automaton.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -37,7 +37,7 @@ public abstract class AlphabetRetriever {
 
 	/**
 	 * Returns the alphabet for <CODE>automaton</CODE> in an array of strings.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton.
 	 * @return the alphabet.

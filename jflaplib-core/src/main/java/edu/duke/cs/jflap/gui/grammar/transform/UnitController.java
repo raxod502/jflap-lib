@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import edu.duke.cs.jflap.automata.event.*;
 
 /**
  * This is the controller for the unit panel. Bleh.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class UnitController {
 	/**
 	 * This instantiates a new unit controller.
-	 * 
+	 *
 	 * @param pane
 	 *            the unit panel
 	 * @param grammar
@@ -227,7 +227,7 @@ public class UnitController {
 		while (step != FINISHED)
 			doStep();
 	}
-	
+
 	public Grammar getGrammar()
 	{
 		return pane.getGrammar();
@@ -262,7 +262,7 @@ public class UnitController {
 
 	/**
 	 * When a production is added manually by the user, this is told about it.
-	 * 
+	 *
 	 * @param production
 	 *            the production added
 	 * @param row
@@ -293,7 +293,7 @@ public class UnitController {
 	/**
 	 * When a state is clicked during the step of production modification, this
 	 * method is told about it.
-	 * 
+	 *
 	 * @param state
 	 *            the state that was clicked
 	 * @param event
@@ -325,7 +325,7 @@ public class UnitController {
 	/**
 	 * When a production is chosen to be removed, this is told about it. This
 	 * happens before the deletion occurs.
-	 * 
+	 *
 	 * @param production
 	 *            the production chosen to be removed
 	 * @param row

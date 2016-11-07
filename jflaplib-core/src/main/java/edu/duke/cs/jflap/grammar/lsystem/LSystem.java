@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,7 +29,7 @@ import java.util.*;
  * simulation of L-systems, but rather has the minimal mathematical definitions
  * required, i.e., the axiom, replacement rules, with some concession given to
  * define parameters for drawing.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -45,7 +45,7 @@ public class LSystem implements Serializable {
 
 	/**
 	 * Constructs a new L-System.
-	 * 
+	 *
 	 * @param replacements
 	 *            the grammar holding the replacement rules, where each
 	 *            production has (on the left hand side) the symbol to replace,
@@ -65,7 +65,7 @@ public class LSystem implements Serializable {
 	/**
 	 * Given a space delimited string, returns a list of the non-whitespace
 	 * tokens.
-	 * 
+	 *
 	 * @param string
 	 *            the string to take tokens from
 	 * @return a list containing all tokens of the string
@@ -80,7 +80,7 @@ public class LSystem implements Serializable {
 
 	/**
 	 * Initializes the list of rewriting rules.
-	 * 
+	 *
 	 * @param replacements
 	 *            the grammar holding the replacement rules
 	 */
@@ -118,7 +118,7 @@ public class LSystem implements Serializable {
 
 	/**
 	 * Returns the list of symbols for the axiom.
-	 * 
+	 *
 	 * @return the list of symbols for the axiom
 	 */
 	public List getAxiom() {
@@ -127,7 +127,7 @@ public class LSystem implements Serializable {
 
 	/**
 	 * Returns the array of replacements for a symbol.
-	 * 
+	 *
 	 * @param symbol
 	 *            the symbol to get the replacements for
 	 * @return an array of lists, where each list is a list of the strings; the
@@ -140,7 +140,7 @@ public class LSystem implements Serializable {
 
 	/**
 	 * Returns the symbols for which there are replacements.
-	 * 
+	 *
 	 * @return the set of symbols that have replacements in this L-system
 	 */
 	public Set getSymbolsWithReplacements() {
@@ -150,7 +150,7 @@ public class LSystem implements Serializable {
 	/**
 	 * Returns a mapping of names of parameters for the L-system to their
 	 * respective values
-	 * 
+	 *
 	 * @return the map of names of parameters to the parameters themselves
 	 */
 	public Map getValues() {
@@ -161,7 +161,7 @@ public class LSystem implements Serializable {
 	 * Returns whether the l-system is nondeterministic, i.e., if there are any
 	 * symbols that could result in an ambiguous outcome (a sort of stochiastic
 	 * thing).
-	 * 
+	 *
 	 * @return if the l-system is nondeterministic
 	 */
 	public boolean nondeterministic() {

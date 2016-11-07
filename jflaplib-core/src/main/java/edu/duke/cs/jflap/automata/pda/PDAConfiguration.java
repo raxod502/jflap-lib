@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -29,24 +29,24 @@ import edu.duke.cs.jflap.automata.State;
  * object with additional fields for the input string and the stack contents.
  * The current state of the automaton, the stack contents, and the unprocessed
  * input are the only necessary data for the simulation of a PDA.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public class PDAConfiguration extends Configuration {
-	
+
 	/** The mode of acceptance (either by final state or empty stack). */
 	protected int myAcceptance;
-	
+
 	/** The variable to represent accept by empty stack. */
 	protected static final int EMPTY_STACK = 0;
 
 	/** The variable to represent accept by final state. */
 	protected static final int FINAL_STATE = 1;
-	
+
 	/**
 	 * Instantiates a new PDAConfiguration.
-	 * 
+	 *
 	 * @param state
 	 *            the state the automaton is currently in.
 	 * @param parent
@@ -69,7 +69,7 @@ public class PDAConfiguration extends Configuration {
 
 	/**
 	 * Returns the original input.
-	 * 
+	 *
 	 * @return the original input.
 	 */
 	public String getInput() {
@@ -78,7 +78,7 @@ public class PDAConfiguration extends Configuration {
 
 	/**
 	 * Returns the unprocessed input.
-	 * 
+	 *
 	 * @return the unprocessed input.
 	 */
 	public String getUnprocessedInput() {
@@ -87,7 +87,7 @@ public class PDAConfiguration extends Configuration {
 
 	/**
 	 * Changes the unprocessed input.
-	 * 
+	 *
 	 * @param input
 	 *            the string that will represent the unprocessed input of the
 	 *            PDA.
@@ -98,7 +98,7 @@ public class PDAConfiguration extends Configuration {
 
 	/**
 	 * Returns the stack.
-	 * 
+	 *
 	 * @return the stack.
 	 */
 	public CharacterStack getStack() {
@@ -109,7 +109,7 @@ public class PDAConfiguration extends Configuration {
 	 * Returns a string representation of this object. This is the same as the
 	 * string representation for a regular configuration object, with the
 	 * additional fields tacked on.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Configuration#toString
 	 * @return a string representation of this object.
 	 */
@@ -122,7 +122,7 @@ public class PDAConfiguration extends Configuration {
 	 * Returns <CODE>true</CODE> if this configuration is an accepting
 	 * configuration, which in this case means that there is no more input and
 	 * our state is an accept state.
-	 * 
+	 *
 	 * @return <CODE>true</CODE> if this configuration is accepting, <CODE>false</CODE>
 	 *         otherwise
 	 */
@@ -147,7 +147,7 @@ public class PDAConfiguration extends Configuration {
 	 * Determines whether this configuration equals another configuration. Two
 	 * PDA configurations are equal if they have the same stack, and if they
 	 * satisfy the <CODE>Configuration.equals()</CODE> method.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.Configuration#equals
 	 * @param configuration
 	 *            the configuration to check for equality
@@ -170,7 +170,7 @@ public class PDAConfiguration extends Configuration {
 
 	/**
 	 * Returns a hash code for this configuration.
-	 * 
+	 *
 	 * @return a hash code for this configuration
 	 */
 	public int hashCode() {

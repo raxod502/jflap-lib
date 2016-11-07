@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,13 +24,13 @@ import edu.duke.cs.jflap.gui.pumping.PumpingLemmaChooser;
 
 /**
  * An environment for {@link edu.duke.cs.jflap.pumping.PumpingLemma}s.
- * 
+ *
  * @author Jinghui Lim
  *
  */
-public class PumpingLemmaEnvironment extends Environment 
+public class PumpingLemmaEnvironment extends Environment
 {
-    public PumpingLemmaEnvironment(PumpingLemmaChooser lemma) 
+    public PumpingLemmaEnvironment(PumpingLemmaChooser lemma)
     {
         super(lemma);
     }

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -36,14 +36,14 @@ import edu.duke.cs.jflap.automata.Configuration;
  * The <CODE>ConfigurationIcon</CODE> is a general sort of icon that can be
  * used to draw transitions. The <CODE>Icon</CODE> can then be added as the
  * part of any sort of object.
- * 
+ *
  * @author Thomas Finley
  */
 
 public abstract class ConfigurationIcon implements Icon {
 	/**
 	 * Instantiates a new <CODE>ConfigurationIcon</CODE>.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration that is represented
 	 */
@@ -56,7 +56,7 @@ public abstract class ConfigurationIcon implements Icon {
 	 * Returns the preferred width of the icon. Subclasses should attempt to
 	 * draw within these bounds, and can override if they'd like a bit more
 	 * space to play with.
-	 * 
+	 *
 	 * @return the default preferred width is 150 pixels
 	 */
 	public int getIconWidth() {
@@ -73,7 +73,7 @@ public abstract class ConfigurationIcon implements Icon {
 
 	/**
 	 * Returns the <CODE>Configuration</CODE> drawn by this icon.
-	 * 
+	 *
 	 * @return the <CODE>Configuration</CODE> drawn by this icon
 	 */
 	public Configuration getConfiguration() {
@@ -82,7 +82,7 @@ public abstract class ConfigurationIcon implements Icon {
 
 	/**
 	 * Paints the graphical representation of a configuration on this icon
-	 * 
+	 *
 	 * @param c
 	 *            the component this icon is drawn on
 	 * @param g
@@ -106,7 +106,7 @@ public abstract class ConfigurationIcon implements Icon {
 	 * the state has already been drawn. The areas where the state has NOT
 	 * already been drawn is defined by the static variables <CODE>RIGHT_STATE</CODE>
 	 * and <CODE>BELOW_STATE</CODE>. By default this method paints the state.
-	 * 
+	 *
 	 * @param c
 	 *            the component this icon is drawn on
 	 * @param g

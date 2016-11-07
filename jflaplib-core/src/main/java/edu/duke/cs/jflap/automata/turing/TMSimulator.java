@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -41,14 +41,14 @@ import javax.swing.JOptionPane;
 /**
  * The TM simulator progresses TM configurations on a possibly multitape Turing
  * machine.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class TMSimulator extends AutomatonSimulator {
 	/**
 	 * Creates a TM simulator for the given automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the machine to simulate
 	 * @throws IllegalArgumentException
@@ -62,12 +62,12 @@ public class TMSimulator extends AutomatonSimulator {
 							+ automaton.getClass());
 
 //       //MERLIN MERLIN MERLIN MERLIN MERLIN// //this code is only for show, it should be moved into a setting with a better UI before release//
-//        AcceptanceFilter[] choices = new  AcceptanceFilter[] {new AcceptByHaltingFilter(), new AcceptByFinalStateFilter()};      
-//        
+//        AcceptanceFilter[] choices = new  AcceptanceFilter[] {new AcceptByHaltingFilter(), new AcceptByFinalStateFilter()};
+//
 //        List<AcceptanceFilter> tlist = new ArrayList<AcceptanceFilter>();
 //        for (int i = 0; i < choices.length; i++){
 //            int res = JOptionPane.showConfirmDialog(null, "Would you like to " + choices[i].getName()+ "?", "Confirm use of this acceptance criteria", JOptionPane.YES_NO_OPTION);
-//            if (res == JOptionPane.YES_OPTION) tlist.add(choices[i]); 
+//            if (res == JOptionPane.YES_OPTION) tlist.add(choices[i]);
 //        }
 //
 //        if (tlist.size() == 0)
@@ -75,9 +75,9 @@ public class TMSimulator extends AutomatonSimulator {
 //
 //       //END MERLIN MERLIN MERLIN MERLIN MERLIN// //this code is only for show, it should be moved into a setting with a better UI before release//
 
-          
+
         List<AcceptanceFilter> tlist = new ArrayList<AcceptanceFilter>();
-        
+
         if (Universe.curProfile.getAcceptByFinalState()) tlist.add(new AcceptByFinalStateFilter());
         if (Universe.curProfile.getAcceptByHalting()) tlist.add(new AcceptByHaltingFilter());
 
@@ -92,7 +92,7 @@ public class TMSimulator extends AutomatonSimulator {
 	 * compatibility with the general definition of <CODE>AutomatonSimulator</CODE>.
 	 * One should use the version of this function that accepts an array of
 	 * inputs instead.
-	 * 
+	 *
 	 * @param input
 	 *            the input string
 	 */
@@ -108,7 +108,7 @@ public class TMSimulator extends AutomatonSimulator {
 	 * Returns a TMConfiguration object that represents the initial
 	 * configuration of the TM, before any input has been processed. This
 	 * returns an array of length one.
-	 * 
+	 *
 	 * @param inputs
 	 *            the input strings
 	 */
@@ -125,13 +125,13 @@ public class TMSimulator extends AutomatonSimulator {
 
 		return configs;
 	}
-    
-	
+
+
 
     /**
       * A vision and a dream, that another take this responsibility.
-      * 
-      * This method figures out whether a particular transition is matched by a particular array of tapes. 
+      *
+      * This method figures out whether a particular transition is matched by a particular array of tapes.
       *
       */
     private boolean matches(Tape[] tapes, TMTransition tmt){
@@ -160,7 +160,7 @@ public class TMSimulator extends AutomatonSimulator {
         //fancy features only work on single-tape machines
         char underHead = tapes[0].readChar();
         String strtoMatch = tmt.getRead(0);
-        
+
         int assignIndex = strtoMatch.indexOf('}');
         int bangIndex = strtoMatch.indexOf('!');
 
@@ -169,8 +169,8 @@ public class TMSimulator extends AutomatonSimulator {
         assert assignIndex == -1 || bangIndex == -1; //both cannot coexist
 
         if (assignIndex == -1 && bangIndex == -1){ //ordinary case
-            return underHead == strtoMatch.charAt(0) || strtoMatch.charAt(0) == '~'; 
-            
+            return underHead == strtoMatch.charAt(0) || strtoMatch.charAt(0) == '~';
+
             //watch out for recognizing a variable
         }
         else if (assignIndex != -1){
@@ -181,7 +181,7 @@ public class TMSimulator extends AutomatonSimulator {
                 if (varToChar.containsKey(characters[i])){
                     //warn the user that they are attempting something erroneous
                     //MERLIN MERLIN MERLIN MERLIN MERLIN//
-                    JOptionPane.showMessageDialog(null,"You cannot use a variable on the left side of the assignment operator!\n Please fix this and restart the simulation.", 
+                    JOptionPane.showMessageDialog(null,"You cannot use a variable on the left side of the assignment operator!\n Please fix this and restart the simulation.",
                             "Illegal Variable Location!\n"
                             ,  JOptionPane.ERROR_MESSAGE);
 
@@ -192,12 +192,12 @@ public class TMSimulator extends AutomatonSimulator {
         }
         else{
             assert bangIndex == 0;
-            return underHead != strtoMatch.charAt(1); 
+            return underHead != strtoMatch.charAt(1);
         }
-        
+
         assert false; //should never get down here
         return true;
-        
+
     }
 
     /**
@@ -223,17 +223,17 @@ public class TMSimulator extends AutomatonSimulator {
      * @return ArrayList containing the single configuration, or null if there are no valid transitions.
 	 */
 	public ArrayList stepConfiguration(Configuration config) { //one step, and will dig into building blocks if necessary
-		
+
         //MERLIN MERLIN MERLIN MERLIN MERLIN//
 
-        
+
 		ArrayList list = new ArrayList();
 		TMConfiguration configuration = (TMConfiguration) config;
 
 
 		TMState currentState = (TMState) configuration.getCurrentState(); //innerTM should never be null; because of the way we set it up in the constructor and in the restoration phase.
         TuringMachine tmp = null; //just a literally tmp, like /tmp
-        
+
         int times = 0;
         while ((tmp = currentState.getInnerTM()).getStates().length != 0){
             EDebug.print(times++);
@@ -249,7 +249,7 @@ public class TMSimulator extends AutomatonSimulator {
                     return list;
             }
         }
-        
+
         assert(tmp == currentState.getInnerTM());
         assert(tmp.getParent() == currentState);
 
@@ -261,10 +261,10 @@ outer:  while (true){
             //sort the ones with the ! symbol to be the later ones. If there are multiple !, then the choice is arbitrary.
             Arrays.sort(trans, new Comparator<Transition>(){
                     public int compare (Transition a, Transition b){ //variables are only allowed with SINGLE TAPE, and same with NOT
-                        
+
                         TMTransition tma = (TMTransition) a;
                         TMTransition tmb = (TMTransition) b;
-                        
+
                         char fa = tma.getRead(0).charAt(0);
                         char fb = tmb.getRead(0).charAt(0);
                         return (fa == '!')?(fb == '!' ? 0 : 1) : (fb == '!' ? 1 : 0);
@@ -292,9 +292,9 @@ outer:  while (true){
             else{
                 break; //halting condition
             }
-            
+
         }
-        
+
 
         if (success){ //if variables are used then they will be common to all tapes...
             if (configuration.getTapes().length > 1){
@@ -304,21 +304,21 @@ outer:  while (true){
                     tmt.getWrite(k).charAt(0));
                     configuration.getTapes()[k].moveHead(tmt.getDirection(k));
                     list.add(new TMConfiguration(tmt.getToState(), null, configuration.getTapes(), myFilters));
-                } 
+                }
             }
             else{ //only do variable assignments for the one-tape Turing machine...
 
             //do necessary variable assignments
             String st = tmt.getRead(0);
             int assignIndex = st.indexOf('}');
-            
+
             if (assignIndex != -1){
                 String s = "" + st.charAt(assignIndex+1);
                 varToChar.put(s, configuration.getTapes()[0].readChar()+"");
             }
 
             //perform the operations on the tape, and return a new TMConfiguration that represents the new position
-            configuration.getTapes()[0].writeChar(tmt.getWrite(0).charAt(0) == '~'? 
+            configuration.getTapes()[0].writeChar(tmt.getWrite(0).charAt(0) == '~'?
                     configuration.getTapes()[0].readChar():
                     (varToChar.containsKey(tmt.getWrite(0).charAt(0)+"")?
                      varToChar.get(tmt.getWrite(0).charAt(0)+"").charAt(0)
@@ -335,7 +335,7 @@ outer:  while (true){
             //well, if we get here again, and the halt flag is set already, then we know that we should return an empty list to know that we rejected.
             //MERLIN MERLIN MERLIN MERLIN MERLIN//
             if (!configuration.isHalted()){//set the halt flag and then add to the list
-                configuration.setHalted(true); 
+                configuration.setHalted(true);
                 list.add(configuration); // MIGHT need to use clone instead, but if this works, we'll just go with this.
             }
         }
@@ -345,7 +345,7 @@ outer:  while (true){
 	/**
 	 * Returns true if the simulation of the input string on the automaton left
 	 * the machine in a final state. This method does not appear to be used. It is only left here because the class from which it inherited requires it.
-	 * 
+	 *
 	 * @return true if the simulation of the input string on the automaton left
 	 *         the machine in a final state
 	 */
@@ -355,7 +355,7 @@ outer:  while (true){
 
 	/**
 	 * Runs the automaton on the input string.
-	 * 
+	 *
 	 * @param input
 	 *            the input string to be run on the automaton
 	 * @return true if the automaton accepts the input

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import javax.swing.table.*;
  * This is a table model for user definition of the first and follow sets for a
  * grammar. The first column are the variable names. The second column are the
  * first sets, the third column the follow sets.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FirstFollowModel extends AbstractTableModel {
 	/**
 	 * Instantiates a new <CODE>FirstFollowModel</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar for the first follow model, from which the
 	 *            variables are extracted for the first column
@@ -55,7 +55,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Retrives the first sets as shown in the table.
-	 * 
+	 *
 	 * @return the first sets, a map from all single symbols A in the grammar to
 	 *         the set of symbols that represent FIRST(A)
 	 */
@@ -65,7 +65,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Retrieves the follow sets as shown in the table.
-	 * 
+	 *
 	 * @return the follow sets, a map from all single variables A in the grammar
 	 *         to the set of symbols that represent FOLLOW(A)
 	 */
@@ -75,7 +75,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Set if the user can edit the first sets at this time.
-	 * 
+	 *
 	 * @param canEdit
 	 *            <CODE>true</CODE> if editing is allowed
 	 */
@@ -85,7 +85,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Set if the user can edit the follow sets at this time.
-	 * 
+	 *
 	 * @param canEdit
 	 *            <CODE>true</CODE> if editing is allowed
 	 */
@@ -95,7 +95,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * There are as many rows as there are variables.
-	 * 
+	 *
 	 * @return the number of variables
 	 */
 	public int getRowCount() {
@@ -105,7 +105,7 @@ public class FirstFollowModel extends AbstractTableModel {
 	/**
 	 * There are always three columns for the variables, the first sets, and the
 	 * follow sets.
-	 * 
+	 *
 	 * @return 3
 	 */
 	public int getColumnCount() {
@@ -114,7 +114,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Returns the name of a particular column.
-	 * 
+	 *
 	 * @param column
 	 *            the index of a column to get the name for
 	 */
@@ -124,7 +124,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Returns the value at each column.
-	 * 
+	 *
 	 * @param row
 	 *            the row to get data for
 	 * @param column
@@ -145,7 +145,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Returns if a table cell can be edited.
-	 * 
+	 *
 	 * @param row
 	 *            the row of the cell
 	 * @param column
@@ -157,7 +157,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Returns the character set at a particular location.
-	 * 
+	 *
 	 * @param row
 	 *            the row to get the set for; this will be a set for the
 	 *            variable at this row
@@ -184,7 +184,7 @@ public class FirstFollowModel extends AbstractTableModel {
 	 * and return a string with not duplicate characters. Only the first
 	 * instance of a character is preserved, and others are discarded. So, if
 	 * one were to pass in <I>abaacb</I>, this would return the string <I>abc</I>.
-	 * 
+	 *
 	 * @param s
 	 *            the string to process
 	 * @return the same string as was passed in but with duplicate characters
@@ -203,7 +203,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Sets the value at each column.
-	 * 
+	 *
 	 * @param value
 	 *            the new value
 	 * @param row
@@ -227,7 +227,7 @@ public class FirstFollowModel extends AbstractTableModel {
 
 	/**
 	 * Sets the set at a particular cell.
-	 * 
+	 *
 	 * @param set
 	 *            the set for the cell
 	 * @param row

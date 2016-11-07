@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -37,7 +37,7 @@ public class DefaultToolBox implements ToolBox {
 	 * Returns a list of tools including a <CODE>ArrowTool</CODE>, <CODE>StateTool</CODE>,
 	 * <CODE>TransitionTool</CODE> and <CODE>DeleteTool</CODE>, in that
 	 * order.
-	 * 
+	 *
 	 * @param view
 	 *            the component that the automaton will be drawn in
 	 * @param drawer

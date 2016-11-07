@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -44,11 +44,11 @@ import edu.duke.cs.jflap.automata.Configuration;
  * the simulation of input on automatons. The automaton has two major subviews:
  * a section for the drawing of the automaton, and a section for the list of
  * machine configurations.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.Automaton
  * @see edu.duke.cs.jflap.automata.Configuration
  * @see edu.duke.cs.jflap.automata.AutomatonSimulator
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -56,7 +56,7 @@ public class SimulatorPane extends JPanel {
 	/**
 	 * Instantiates a simulator pane for a given automaton, and a given input
 	 * string.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to create the simulator pane for
 	 * @param simulator
@@ -76,7 +76,7 @@ public class SimulatorPane extends JPanel {
 
 	/**
 	 * Initiates the views, or in general, sets up the GUI.
-	 * 
+	 *
 	 * @param configs
 	 *            an array of the initial configuration for this simulator
 	 * @param env

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -45,7 +45,7 @@ import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 /**
  * This is the pane that holds the tools necessary for the conversion of a
  * finite state automaton to a regular expression.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -53,7 +53,7 @@ public class ConvertPane extends JPanel {
 	/**
 	 * Creates a new conversion pane for the conversion of an automaton to a
 	 * regular expression.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that this convert pane will be a part of
 	 */

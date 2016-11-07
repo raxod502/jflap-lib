@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -55,7 +55,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns set of all useful variables in <CODE>grammar</CODE>. A grammar
 	 * is considered useful if it can derive a string.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return set of all useful variables in <CODE>grammar</CODE>. A grammar
@@ -73,7 +73,7 @@ public class UselessProductionRemover {
 
 	/**
 	 * Returns empty set.
-	 * 
+	 *
 	 * @return empty set.
 	 */
 	private static Set getNewUsefulVariableSet() {
@@ -82,7 +82,7 @@ public class UselessProductionRemover {
 
 	/**
 	 * Adds <CODE>variable</CODE> to <CODE>set</CODE>.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param set
@@ -121,7 +121,7 @@ public class UselessProductionRemover {
 	/**
 	 * Get a grammar with only those variables that derive terminals, directly
 	 * or indirectly. This is not the same as a useless production-less grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to get the reformed grammar for
 	 */
@@ -144,7 +144,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns a variable that belongs in the set of useful variables for <CODE>grammar</CODE>
 	 * that is not already in <CODE>set</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param set
@@ -166,7 +166,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns true if <CODE>set</CODE> contains a variable equivalent to
 	 * <CODE>ch</CODE>.
-	 * 
+	 *
 	 * @param ch
 	 *            the character
 	 * @param set
@@ -190,7 +190,7 @@ public class UselessProductionRemover {
 	 * Returns true if <CODE>production</CODE> can derive a string. (i.e. if
 	 * all letters on the right hand side of the production are either terminals
 	 * or useful variables (variables in <CODE>set</CODE>).
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param set
@@ -216,7 +216,7 @@ public class UselessProductionRemover {
 	 * Returns true if <CODE>production</CODE> contains only terminals and
 	 * variables in <CODE>set</CODE>, the set of useful variables. This
 	 * includes both the left and right hand side of the production.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param set
@@ -240,7 +240,7 @@ public class UselessProductionRemover {
 	 * variables, even if it is already in <CODE>set</CODE>. This function
 	 * examines all productions in <CODE>grammar</CODE> with variable on the
 	 * left hand side, and determines if any of those productions are useful.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -265,7 +265,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns true if there are more variables (i.e. other than the ones
 	 * already in the set) that belong in the set of useful variables <CODE>set</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param set
@@ -285,7 +285,7 @@ public class UselessProductionRemover {
 	 * Returns the set of all useful productions (i.e. productions that can
 	 * derive strings) in <CODE>grammar</CODE> based on the useful variables,
 	 * contained in <CODE>usefulVariableSet</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param usefulVariableSet
@@ -309,7 +309,7 @@ public class UselessProductionRemover {
 
 	/**
 	 * Returns an empty set.
-	 * 
+	 *
 	 * @return an empty set.
 	 */
 	public static Set getNewProductionWithUsefulVariableSet() {
@@ -320,7 +320,7 @@ public class UselessProductionRemover {
 	 * Returns true if <CODE>production</CODE> belongs in set of useful
 	 * productions (i.e. if <CODE>production</CODE> contains only terminals
 	 * and variables in <CODE>usefulVariableSet</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param usefulVariableSet
@@ -349,7 +349,7 @@ public class UselessProductionRemover {
 	 * Adds a state for every variable in <CODE>grammar</CODE> to <CODE>graph</CODE>,
 	 * and sets the state that represents the start variable ("S") to the
 	 * initial state.
-	 * 
+	 *
 	 * @param graph
 	 *            the variable dependency graph
 	 * @param grammar
@@ -375,7 +375,7 @@ public class UselessProductionRemover {
 	 * Returns true if <CODE>v1</CODE> is dependent on <CODE>v2</CODE>.
 	 * (i.e. if <CODE>v2</CODE> is on the right hand side of any production in
 	 * <CODE>grammar</CODE> that has <CODE>v1</CODE> on the left hand side).
-	 * 
+	 *
 	 * @param v1
 	 *            the variable on the left hand side
 	 * @param v2
@@ -403,7 +403,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns a transition between the states that represent <CODE>v1</CODE>
 	 * and <CODE>v2</CODE> in <CODE>graph</CODE>.
-	 * 
+	 *
 	 * @param v1
 	 *            a variable
 	 * @param v2
@@ -423,7 +423,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns the state in <CODE>graph</CODE> that represents <CODE>variable</CODE>
 	 * (i.e the state whose name is <CODE>variable</CODE>).
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param graph
@@ -444,7 +444,7 @@ public class UselessProductionRemover {
 
 	/**
 	 * Returns the variable dependency graph for <CODE>grammar</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return the variable dependency graph for <CODE>grammar</CODE>.
@@ -471,7 +471,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns a set of transitions that represent all the dependencies
 	 * determined by <CODE>production</CODE>.
-	 * 
+	 *
 	 * @param production
 	 *            the production
 	 * @param graph
@@ -500,7 +500,7 @@ public class UselessProductionRemover {
 	 * Returns the set of variables in <CODE>grammar</CODE> whose productions
 	 * can never be reached from the start symbol. This is determined by the
 	 * variable dependency graph <CODE>graph</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @param graph
@@ -523,7 +523,7 @@ public class UselessProductionRemover {
 	/**
 	 * Removes all productions from <CODE>grammar</CODE> that contain <CODE>variable</CODE>,
 	 * either on the left or right hand sides.
-	 * 
+	 *
 	 * @param variable
 	 *            the variable
 	 * @param grammar
@@ -543,7 +543,7 @@ public class UselessProductionRemover {
 	 * Returns a grammar with no variables that can not derive strings, by
 	 * simply creating a new grammar and adding all productions in <CODE>usefulProductionSet</CODE>
 	 * to that grammar.
-	 * 
+	 *
 	 * @param usefulProductionSet
 	 *            the set of useful productions
 	 * @return a grammar with no variables that can not derive strings, by
@@ -564,7 +564,7 @@ public class UselessProductionRemover {
 	/**
 	 * Returns a grammar, equivalent to <CODE>grammar</CODE> that contains no
 	 * useless productions.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar
 	 * @return a grammar, equivalent to <CODE>grammar</CODE> that contains no

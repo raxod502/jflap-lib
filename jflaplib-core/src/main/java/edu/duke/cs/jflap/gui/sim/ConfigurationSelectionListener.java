@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -25,7 +25,7 @@ import java.util.EventListener;
 /**
  * An interface that those interested in changes in selection of the
  * configuration pane should implement.
- * 
+ *
  * @see edu.duke.cs.jflap.gui.sim.ConfigurationSelectionEvent
  * @see edu.duke.cs.jflap.gui.sim.ConfigurationPane#addSelectionListener
  */
@@ -33,7 +33,7 @@ import java.util.EventListener;
 public interface ConfigurationSelectionListener extends EventListener {
 	/**
 	 * Registers with the listener that an event has occurred.
-	 * 
+	 *
 	 * @param event
 	 *            the event
 	 */

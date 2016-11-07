@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -46,16 +46,16 @@ public class CYKTracerTester {
 		p[7]=new Production("E","cE");
 		p[8]=new Production("D","dFA");
 		p[9]=new Production("F","e");*/
-		
+
 		p[0]=new Production("S","aSb");
 		p[1]=new Production("S","bB");
 		p[2]=new Production("B","bbB");
 		p[3]=new Production("B","");
 		p[4]=new Production("S","SS");
-		
-	
+
+
 		g.addProductions(p);
-		
+
 		ArrayList <Production> result=new ArrayList <Production>();
 		result.add(new Production("S","AD"));
 		result.add(new Production("A","a"));
@@ -66,13 +66,13 @@ public class CYKTracerTester {
 		result.add(new Production("S","b"));
 		result.add(new Production("S","b"));
 		result.add(new Production("C","b"));
-		
+
 		/*result.add(new Production("D","c"));
 		result.add(new Production("C","c"));*/
-		
-		
+
+
 		CYKTracer ct=new CYKTracer(g, result);
 		ct.traceBack();
-			
+
 	}
 }

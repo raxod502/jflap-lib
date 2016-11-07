@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -22,28 +22,28 @@ package edu.duke.cs.jflap.pumping.cf;
 import edu.duke.cs.jflap.pumping.*;
 
 /**
- * The context-free pumping lemma for <i>L</i> = 
- * {<i>w<sub>1</sub>b<sup>n</sup>w<sub>2</sub></i> : <i>n<sub>a</sub></i>(<i>w<sub>1</sub></i>) 
- * &#60; <i>n<sub>a</sub></i>(<i>w<sub>2</sub></i>),  <i>n</i> > n<sub>a</sub>(<i>w<sub>1</sub></i>), 
+ * The context-free pumping lemma for <i>L</i> =
+ * {<i>w<sub>1</sub>b<sup>n</sup>w<sub>2</sub></i> : <i>n<sub>a</sub></i>(<i>w<sub>1</sub></i>)
+ * &#60; <i>n<sub>a</sub></i>(<i>w<sub>2</sub></i>),  <i>n</i> > n<sub>a</sub>(<i>w<sub>1</sub></i>),
  * <i>w<sub>1</sub></i> & <i>w<sub>2</sub></i> &#8712; {<i>a</i>, <i>b</i>}*}.
- * 
+ *
  * @author Chris Morgan
  */
 public class W1BnW2 extends ContextFreePumpingLemma {
 
-	public String getTitle() 
+	public String getTitle()
     {
         return "w1 + b^n + w2 : na(w1) < na(w2) & na(w1) < n, w1 & w2 element_of {ab}*";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
         return "<i>w<sub>1</sub>b<sup>n</sup>w<sub>2</sub></i> : <i>n<sub>a</sub></i>" +
         	   "(<i>w<sub>1</sub></i>) " + LESS_THAN + " <i>n<sub>a</sub></i>(<i>w<sub>2</sub></i>" +
         	   "),  n<sub>a</sub>(<i>w<sub>1</sub></i>) " + LESS_THAN +" <i>n</i>, " +
         	    "<i>w<sub>1</sub></i> & <i>w<sub>2</sub></i> " + ELEMENT_OF + " " + AB_STAR;
     }
-    
+
     public void setDescription()
     {
     	partitionIsValid = false;
@@ -55,18 +55,18 @@ public class W1BnW2 extends ContextFreePumpingLemma {
     			"conditions, meaning there is no valid decomposition.  Thus, this language is not " +
     			"context-free.";
     }
-	
-	protected void addCases() 
+
+	protected void addCases()
 	{
 		// TODO Auto-generated method stub
 
-	}	
+	}
 
-	protected void chooseW() 
+	protected void chooseW()
 	{
 		w = pumpString("a", m) + pumpString("b", m+1) + pumpString("a", m+1);
 	}
-	
+
 	public void chooseDecomposition()
 	{
 		String s;
@@ -80,29 +80,29 @@ public class W1BnW2 extends ContextFreePumpingLemma {
 		super.chooseDecomposition();
 	}
 
-	public void chooseI() 
+	public void chooseI()
 	{
 		if (getU().length() < m)
 			i = 2;
 		else
 			i = 0;
 	}
-	
-	protected void setRange() 
+
+	protected void setRange()
 	{
 		myRange = new int[]{2, 10};
-	}		
+	}
 
-	public boolean isInLang(String s) 
+	public boolean isInLang(String s)
 	{
 		char[] list = new char[]{'a','b'};
     	if (LemmaMath.otherCharactersFound(s, list))
     		return false;
-		
+
 		int i, a1, a2;
 		String w1, w2, temp;
 		temp = null;
-		i = 0;	
+		i = 0;
 		while (i<s.length()) {
 			if (s.charAt(i) == 'b') {
 				temp = new String();
@@ -110,7 +110,7 @@ public class W1BnW2 extends ContextFreePumpingLemma {
 					temp = temp + 'b';
 					i++;
 				}
-								
+
 				w1 = s.substring(0, i-temp.length());
 				if (i != s.length())
 					w2 = s.substring(i);
@@ -122,7 +122,7 @@ public class W1BnW2 extends ContextFreePumpingLemma {
 					return true;
 			}
 			i++;
-		}		
+		}
 
 		return false;
 	}

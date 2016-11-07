@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -49,7 +49,7 @@ import edu.duke.cs.jflap.automata.Transition;
  * There is no map used here to allow for the user to create and label states
  * himself, without having to worry about mapping the state to the states it
  * represents.
- * 
+ *
  * @author Ryan Cavalcante
  */
 
@@ -66,7 +66,7 @@ public class NFAToDFA {
 	 * represent the initial state from <CODE>nfa</CODE> (and its closure),
 	 * and added to <CODE>dfa</CODE>. The initial state of <CODE>dfa</CODE>
 	 * is set to the returned state.
-	 * 
+	 *
 	 * @param nfa
 	 *            the nfa being converted to a dfa
 	 * @param dfa
@@ -95,7 +95,7 @@ public class NFAToDFA {
 	/**
 	 * Returns true if one or more of the states in <CODE>states</CODE> are
 	 * final.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states
 	 * @param automaton
@@ -113,7 +113,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns the State array mapped to <CODE>state</CODE>.
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @param automaton
@@ -134,7 +134,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns a string representation of <CODE>states</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the set of states.
 	 * @return a string representation of <CODE>states</CODE>.
@@ -152,7 +152,7 @@ public class NFAToDFA {
 	/**
 	 * Returns all states reachable on <CODE>terminal</CODE> from <CODE>states</CODE>,
 	 * including the closure of all reachable states.
-	 * 
+	 *
 	 * @param terminal
 	 *            the terminal (alphabet character)
 	 * @param states
@@ -188,7 +188,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns true if <CODE>states</CODE> contains <CODE>state</CODE>
-	 * 
+	 *
 	 * @param state
 	 *            the state.
 	 * @param states
@@ -206,7 +206,7 @@ public class NFAToDFA {
 	/**
 	 * Returns true if <CODE>states1</CODE> and <CODE>states2</CODE> are
 	 * identical (i.e. they contain exactly the same states, and no extras).
-	 * 
+	 *
 	 * @param states1
 	 *            a set of states
 	 * @param states2
@@ -220,18 +220,18 @@ public class NFAToDFA {
 		int len2 = states2.length;
 		if (len1 != len2)
 			return false;
-		
+
 	    Arrays.sort(states1, new Comparator<State>(){
 	    	    public int compare(State s, State t){
-	                return s.hashCode() - t.hashCode();	        	
+	                return s.hashCode() - t.hashCode();
 	    	    }
-	    }); 
+	    });
 	    Arrays.sort(states2, new Comparator<State>(){
 	    	    public int compare(State s, State t){
-	                return s.hashCode() - t.hashCode();	        	
+	                return s.hashCode() - t.hashCode();
 	    	    }
-	    }); 
-		
+	    });
+
 		for (int k = 0; k < states1.length; k++) {
 //			if (!containsState(states1[k], states2))
 //				return false;
@@ -243,7 +243,7 @@ public class NFAToDFA {
 
 	/**
 	 * Returns the State mapped to <CODE>states</CODE>.
-	 * 
+	 *
 	 * @param states
 	 *            the states
 	 * @param dfa
@@ -272,7 +272,7 @@ public class NFAToDFA {
 	 * You then create a state in <CODE>dfa</CODE> that represents all these
 	 * reachable states and add a transition to DFA connecting <CODE>state</CODE>
 	 * and this newly created state.
-	 * 
+	 *
 	 * @param state
 	 *            the state from dfa
 	 * @param nfa
@@ -328,7 +328,7 @@ public class NFAToDFA {
 	/**
 	 * Creates a state in <CODE>dfa</CODE>, labelled with the set of states
 	 * in <CODE>states</CODE>, which are all states from <CODE>nfa</CODE>.
-	 * 
+	 *
 	 * @param dfa
 	 *            the dfa. the automaton the state is added to
 	 * @param states
@@ -352,7 +352,7 @@ public class NFAToDFA {
 	/**
 	 * Returns a deterministic finite state automaton equivalent to <CODE>automaton</CODE>.
 	 * <CODE>automaton</CODE> is not at all affected by this conversion.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to convert to a dfa.
 	 * @return a deterministic finite state automaton equivalent to <CODE>automaton</CODE>.

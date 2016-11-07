@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import javax.swing.event.TableModelListener;
  * grammar. Owing to certain eccentricities of the way that the grammar is set
  * up as a non-editable object, what is passed into the environment is a <CODE>GrammarInputPane</CODE>
  * which is then used to retrieve the current grammar.
- * 
+ *
  * Unlike other environments, the object returned by the <CODE>Grammar</CODE>
  * returned by the <CODE>.getObject</CODE> method will not point to the same
  * object throughout the environment's execution.
- * 
+ *
  * @see edu.duke.cs.jflap.grammar.Grammar
  * @see edu.duke.cs.jflap.gui.grammar.GrammarInputPane
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -47,7 +47,7 @@ public class GrammarEnvironment extends Environment {
 	/**
 	 * Instantiates a new <CODE>GrammarEnvironment</CODE> with the given
 	 * <CODE>GrammarInputPane</CODE>.
-	 * 
+	 *
 	 * @param input
 	 *            the <CODE>GrammarInputPane</CODE>
 	 */
@@ -66,7 +66,7 @@ public class GrammarEnvironment extends Environment {
 	 * Returns the grammar of this <CODE>GrammarEnvironment</CODE>, which is
 	 * retrieved from the <CODE>GrammarInputPane</CODE>'s <CODE>.getGrammar</CODE>
 	 * method.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.grammar.GrammarInputPane#getGrammar
 	 * @return the <CODE>Grammar</CODE> for this environment
 	 */
@@ -76,7 +76,7 @@ public class GrammarEnvironment extends Environment {
 
 	/**
 	 * Returns the context free grammar.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.gui.grammar.GrammarInputPane#getGrammar()
 	 * @return the <CODE>ContextFreeGrammar</CODE> for this environment
 	 */
@@ -86,7 +86,7 @@ public class GrammarEnvironment extends Environment {
 
 	/**
 	 * Returns the grammar of the specified type.
-	 * 
+	 *
 	 * @param grammarClass
 	 *            specification of the type of grammar which should be returned
 	 * @see edu.duke.cs.jflap.gui.grammar.GrammarInputPane#getGrammar(Class)

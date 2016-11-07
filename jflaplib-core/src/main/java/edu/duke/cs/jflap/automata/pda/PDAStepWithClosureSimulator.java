@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -38,7 +38,7 @@ public class PDAStepWithClosureSimulator extends PDAStepByStateSimulator {
 	 * Returns a PDAConfiguration array that represents the initial
 	 * configuration of the PDA, before any input has been processed. It returns
 	 * an array of length one.
-	 * 
+	 *
 	 * @param input
 	 *            the input string.
 	 */
@@ -59,7 +59,7 @@ public class PDAStepWithClosureSimulator extends PDAStepByStateSimulator {
 	/**
 	 * Simulates one step for a particular configuration, adding all possible
 	 * configurations reachable in one step to set of possible configurations.
-	 * 
+	 *
 	 * @param config
 	 *            the configuration to simulate the one step on
 	 */

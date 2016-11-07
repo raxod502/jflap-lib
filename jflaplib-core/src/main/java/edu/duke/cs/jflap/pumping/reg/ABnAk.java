@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -23,26 +23,26 @@ package edu.duke.cs.jflap.pumping.reg;
 import edu.duke.cs.jflap.pumping.*;
 
 /**
- * The regular pumping lemma for <i>L</i> = 
+ * The regular pumping lemma for <i>L</i> =
  * {(<i>ab</i>)<i><sup>n</sup>a<sup>k</sup></i> : <i>n</i> &#62;
  *  <i>k</i>, <i>k</i> &#8805; 0}.
- * 
+ *
  * @author Jinghui Lim & Chris Morgan
  *
  */
-public class ABnAk extends RegularPumpingLemma 
+public class ABnAk extends RegularPumpingLemma
 {
-    public String getTitle() 
+    public String getTitle()
     {
         return "(ab)^n a^k : n > k, k >= 0";
     }
 
-    public String getHTMLTitle() 
+    public String getHTMLTitle()
     {
         return "(<i>ab</i>)<i><sup>n</sup>a<sup>k</sup></i> : <i>n</i> "
             + GREATER_THAN + " <i>k</i>, <i>k</i> " + GREATER_OR_EQ + " 0";
     }
-    
+
     protected void setRange()
     {
         myRange = new int[]{2, 11};
@@ -56,39 +56,39 @@ public class ABnAk extends RegularPumpingLemma
     			"\"a\"s, and/or \"b\"s.  Any multiple or combination thereof yields a string that is not in " +
     			"the language when <i>i</i> = 0, meaning this is not a regular language.";
     }
-    
-    protected void chooseW() 
+
+    protected void chooseW()
     {
         w = pumpString("ab", m + 1) + pumpString("a", m);
     }
-    
+
     public void chooseDecomposition()
     {
     	setDecomposition(new int[]{0, 2});
     }
 
-    public void chooseI() 
-    {    	
+    public void chooseI()
+    {
         i = 0;
     }
-     
+
     public boolean isInLang(String s)
     {
-    	int a, b;    	    	
+    	int a, b;
     	char[] list = new char[] {'a'};
     	String temp = s;
-    	
+
     	while (temp.startsWith("ab"))
     		temp = temp.substring(2);
     	if (temp.equals(new String("ab")))
     		return true;
     	if (LemmaMath.isMixture(temp, list))
     		return false;
-    	
+
     	a = LemmaMath.countInstances(s, 'a');
     	b = LemmaMath.countInstances(s, 'b');
     	if (a >= 2*b)
-    		return false;    	    	
+    		return false;
         return true;
     }
 }

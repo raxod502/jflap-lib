@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -24,7 +24,7 @@ import java.io.Serializable;
 
 /**
  * A character stack. Allows the pushing and popping of individual <CODE>char</CODE>s.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -38,7 +38,7 @@ public class CharacterStack implements Serializable {
 
 	/**
 	 * Instantiates a character stack that is a copy of a given character stack.
-	 * 
+	 *
 	 * @param stack
 	 *            the character stack to copy
 	 */
@@ -48,7 +48,7 @@ public class CharacterStack implements Serializable {
 
 	/**
 	 * Pushes a character.
-	 * 
+	 *
 	 * @param character
 	 *            the character to push onto the stack
 	 */
@@ -60,7 +60,7 @@ public class CharacterStack implements Serializable {
 	/**
 	 * Pushes a string onto a stack. The first character in the string is the
 	 * last pushed on the stack.
-	 * 
+	 *
 	 * @param string
 	 *            the strings characters which we push onto the stack
 	 */
@@ -79,7 +79,7 @@ public class CharacterStack implements Serializable {
 
 	/**
 	 * Returns the number of characters on this stack.
-	 * 
+	 *
 	 * @return the number of characters on this stack
 	 */
 	public int height() {
@@ -89,7 +89,7 @@ public class CharacterStack implements Serializable {
 	/**
 	 * Pops a character from this stack. This will remove that character from
 	 * the stack.
-	 * 
+	 *
 	 * @return the top character in the stack, or 0 if there is no character in
 	 *         the stack
 	 */
@@ -104,7 +104,7 @@ public class CharacterStack implements Serializable {
 	 * Pops a number of characters off the stack, and returns the result as a
 	 * string. The first character in the string is the first character popped
 	 * off the stack.
-	 * 
+	 *
 	 * @param number
 	 *            the number of elements to pop off the stack
 	 * @return a string of length <CODE>number</CODE> or <CODE>null</CODE>
@@ -122,7 +122,7 @@ public class CharacterStack implements Serializable {
 
 	/**
 	 * Returns a string representation of this object.
-	 * 
+	 *
 	 * @return a string representation of this object
 	 */
 	public String toString() {
@@ -132,7 +132,7 @@ public class CharacterStack implements Serializable {
 	/**
 	 * Predictably, two character stacks are equal if they have the same
 	 * characters in the stack in the same order, etc.
-	 * 
+	 *
 	 * @param stack
 	 *            the stack to check against for equality
 	 * @return <CODE>true</CODE> if the stacks are equal, <CODE>false</CODE>
@@ -149,7 +149,7 @@ public class CharacterStack implements Serializable {
 
 	/**
 	 * Returns a hash value for this character stack.
-	 * 
+	 *
 	 * @return a hash value for this character stack
 	 */
 	public int hashCode() {

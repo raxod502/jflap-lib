@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,14 +30,14 @@ import javax.swing.*;
 
 /**
  * This is the view for the derivation of a LL parse table from a grammar.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class LLParseTableDerivationPane extends JPanel {
 	/**
 	 * Instantiates a new derivation pane for a grammar environment.
-	 * 
+	 *
 	 * @param environment
 	 *            the grammar environment
 	 */

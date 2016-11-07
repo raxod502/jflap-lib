@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,7 +35,7 @@ import javax.swing.JPanel;
 /**
  * This is an action that will highlight all states that have
  * lambda-transitions.
- * 
+ *
  * @author Thomas Finley
  */
 
@@ -45,7 +45,7 @@ public class LambdaHighlightAction extends AutomatonAction {
 		this.automaton = automaton;
 		this.environment = environment;
 	}
-	
+
 	/**
 	 * Highlights states with lambda transitions.
 	 */

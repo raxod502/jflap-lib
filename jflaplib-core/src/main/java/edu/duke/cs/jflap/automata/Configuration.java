@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -27,16 +27,16 @@ package edu.duke.cs.jflap.automata;
  * <CODE>Configuration</CODE> object is simply a data structure that stores
  * this information, and does not do any work of progressing this configuration
  * to other configurations as a simulator would.
- * 
+ *
  * @see edu.duke.cs.jflap.automata.AutomatonSimulator
- * 
+ *
  * @author Ryan Cavalcante
  */
 
 public abstract class Configuration implements Cloneable {
 	/**
 	 * Instantiates a new configuration.
-	 * 
+	 *
 	 * @param state
 	 *            the state the automaton is currently in.
 	 */
@@ -47,7 +47,7 @@ public abstract class Configuration implements Cloneable {
 
 	/**
 	 * Returns the state the automaton is currently occupying.
-	 * 
+	 *
 	 * @return the state the automaton is currently occupying.
 	 */
 	public State getCurrentState() {
@@ -56,7 +56,7 @@ public abstract class Configuration implements Cloneable {
 
 	/**
 	 * Sets current state.
-	 * 
+	 *
 	 * @param state
 	 *            the state the automaton is currently in.
 	 */
@@ -67,7 +67,7 @@ public abstract class Configuration implements Cloneable {
 	/**
 	 * Returns a string representation of this object. The string returned is
 	 * the string representation of the current state.
-	 * 
+	 *
 	 * @return a string representation of this object
 	 */
 	public String toString() {
@@ -77,7 +77,7 @@ public abstract class Configuration implements Cloneable {
 	/**
 	 * Returns the "parent" for this configuration, that is, the configuration
 	 * that led to this configuration.
-	 * 
+	 *
 	 * @see edu.duke.cs.jflap.automata.AutomatonSimulator#stepConfiguration
 	 * @return the <CODE>Configuration</CODE> that led to this configuration,
 	 *         or <CODE>null</CODE> if this is the initial configuration
@@ -88,7 +88,7 @@ public abstract class Configuration implements Cloneable {
 
 	/**
 	 * Returns if this configuration is an accepting configuration.
-	 * 
+	 *
 	 * @return <CDOE>true</CODE> if this configuration is an accepting
 	 *         configuration, <CODE>false</CODE> otherwise
 	 */
@@ -100,7 +100,7 @@ public abstract class Configuration implements Cloneable {
 	 * same configuration" it is meant a comparison of the parents via the ==
 	 * operation rather than the <CODE>.equals()</CODE> operation, since the
 	 * latter would lead to rather lengthly traversions.
-	 * 
+	 *
 	 * @param configuration
 	 *            the configuration to test for equality
 	 */
@@ -115,7 +115,7 @@ public abstract class Configuration implements Cloneable {
 	 * Returns the base hash code for a configuration. Subclasses should
 	 * override so as not to have all configurations with the same parent
 	 * configuration and state map to the same hash entry.
-	 * 
+	 *
 	 * @return a value for hashing
 	 */
 	public int hashCode() {
@@ -137,7 +137,7 @@ public abstract class Configuration implements Cloneable {
 	public boolean getFocused() {
 		return focused;
 	}
-	
+
 	/**
 	 * Sets whether we are focused or not.
 	 * @param focus <CODE>true</CODE> if focused, false if not
@@ -161,7 +161,7 @@ public abstract class Configuration implements Cloneable {
 //	public void setAutoStack(Stack autos) {
 //		parentAutos = autos;
 //	}
-//	
+//
 //	/**
 //	 * Get the stack of blocks
 //	 * TODO: What is this?
@@ -186,8 +186,8 @@ public abstract class Configuration implements Cloneable {
 	}
 //	/** The stack of parent automatons - top of the stack is closest parent*/
 //	private Stack parentAutos = new Stack();
-	
-	
+
+
 	/** True if focused in on a block, false otherwise. */
 	private boolean focused = false;
 

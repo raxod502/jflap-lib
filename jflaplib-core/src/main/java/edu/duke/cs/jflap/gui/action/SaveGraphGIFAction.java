@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,7 +33,7 @@ import javax.swing.filechooser.FileFilter;
 /**
  * The <CODE>SaveGraphGIFAction</CODE> is an action to save the graph in window
  * to a GIF image file always using a dialog box.
- * 
+ *
  * @author Jonathan Su, Henry Qin
  */
 
@@ -41,10 +41,10 @@ public class SaveGraphGIFAction extends RestrictedAction{
 	/** The environment that this save action gets it's object from. */
 	protected Environment environment;
 	protected JMenu myMenu;
-	
+
 	/**
 	 * Instantiates a new <CODE>SaveGraphGIFAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that holds the action
 	 * @param menu
@@ -58,14 +58,14 @@ public class SaveGraphGIFAction extends RestrictedAction{
 
 	/**
 	 * Displays JFileChooser for location to save the graph canvas as gif image.
-	 * 
+	 *
 	 * @param arg0
 	 *            the action event
 	 */
 	public void actionPerformed(ActionEvent arg0)   {
            Component apane = environment.tabbed.getSelectedComponent();
            JComponent c=(JComponent)environment.getActive();
-           SaveGraphUtility.saveGraph(apane, c,"GIF files", "gif"); 
+           SaveGraphUtility.saveGraph(apane, c,"GIF files", "gif");
     }
 
 }

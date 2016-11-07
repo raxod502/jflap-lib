@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -39,11 +39,11 @@ public class TableTextSizeSlider extends JSlider{
     static final int FONT_SIZE_MAX = 600;
     static final int FONT_SIZE_INIT = 200;
     static final String TABLE_SIZE_TITLE = "Table Text Size";
-    
+
     JTable myTable;
-	
+
 	public TableTextSizeSlider(JTable table) {
-		super(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_INIT); 
+		super(FONT_SIZE_MIN, FONT_SIZE_MAX, FONT_SIZE_INIT);
 	    this.addChangeListener(new SliderListener());
 	    setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), TABLE_SIZE_TITLE));
 	    myTable = table;

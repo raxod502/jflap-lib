@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -31,14 +31,14 @@ import javax.swing.ImageIcon;
 /**
  * This is a specialized transition tool that handles the movement of gotos from
  * one set to another set.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GotoTransitionTool extends TransitionTool {
 	/**
 	 * Instantiates a new <CODE>TransitionExpanderTool</CODE>.
-	 * 
+	 *
 	 * @param view
 	 *            the view where the automaton is drawn
 	 * @param drawer
@@ -55,7 +55,7 @@ public class GotoTransitionTool extends TransitionTool {
 	/**
 	 * When we release the mouse, a transition from the start state to this
 	 * released state must be formed.
-	 * 
+	 *
 	 * @param event
 	 *            the mouse event
 	 */
@@ -71,7 +71,7 @@ public class GotoTransitionTool extends TransitionTool {
 
 	/**
 	 * Returns the tool icon.
-	 * 
+	 *
 	 * @return the group expander tool icon
 	 */
 	protected Icon getIcon() {
@@ -81,7 +81,7 @@ public class GotoTransitionTool extends TransitionTool {
 
 	/**
 	 * Gets the tool tip for this tool.
-	 * 
+	 *
 	 * @return the tool tip for this tool
 	 */
 	public String getToolTip() {

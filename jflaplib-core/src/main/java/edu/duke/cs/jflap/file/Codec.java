@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,7 +32,7 @@ public abstract class Codec extends FileFilter implements Encoder, Decoder {
 	/**
 	 * Whether the given file is accepted by the codec. This method is
 	 * implemented to, by default, always return true.
-	 * 
+	 *
 	 * @param f
 	 *            the file to check for acceptance
 	 * @return in this implementation, always <CODE>true</CODE>
@@ -46,7 +46,7 @@ public abstract class Codec extends FileFilter implements Encoder, Decoder {
 	 * is implemented in this abstract class to always return the original
 	 * filename, so subclasses that wish more desirable functionality should
 	 * override this method to, say, add a suffix for example.
-	 * 
+	 *
 	 * @param filename
 	 *            the proposed name
 	 * @param structure
@@ -60,7 +60,7 @@ public abstract class Codec extends FileFilter implements Encoder, Decoder {
 	/**
 	 * Returns an instance of a corresponding encoder. In many cases the
 	 * returned will be <CODE>this</CODE>.
-	 * 
+	 *
 	 * @return an encoder that encodes in the same format this decodes in, or
 	 *         <CODE>null</CODE> if there is no such encoder
 	 */
@@ -72,7 +72,7 @@ public abstract class Codec extends FileFilter implements Encoder, Decoder {
 	 * Returns the root of a filename that supposedly belongs to this codec. The
 	 * default implementation assumes that if a modification will happen, it
 	 * will be some suffix with a period.
-	 * 
+	 *
 	 * @param filename
 	 *            the filename, perhaps with an extension
 	 * @param structure

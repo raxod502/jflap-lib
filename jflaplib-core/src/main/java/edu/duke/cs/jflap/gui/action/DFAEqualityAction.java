@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -35,14 +35,14 @@ import edu.duke.cs.jflap.automata.graph.FSAEqualityChecker;
 
 /**
  * This tests to see if two finite state automatons accept the same language.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class DFAEqualityAction extends FSAAction {
 	/**
 	 * Instantiates a new <CODE>DFAEqualityAction</CODE>.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton that input will be simulated on
 	 * @param environment
@@ -60,7 +60,7 @@ public class DFAEqualityAction extends FSAAction {
 
 	/**
 	 * Runs a comparison with another automaton.
-	 * 
+	 *
 	 * @param e
 	 *            the action event
 	 */

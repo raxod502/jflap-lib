@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,7 +34,7 @@ public class AutomatonEnvironment extends Environment {
 	 * Instantiates an <CODE>AutomatonEnvironment</CODE> for the given
 	 * automaton. By default this method will set up an environment with an
 	 * editor pane for this automaton.
-	 * 
+	 *
 	 * @param automaton
 	 *            the automaton to set up an environment for
 	 * @see edu.duke.cs.jflap.gui.editor.EditorPane
@@ -50,31 +50,31 @@ public class AutomatonEnvironment extends Environment {
 
 	/**
 	 * Returns the automaton that this environment manages.
-	 * 
+	 *
 	 * @return the automaton that this environment manages
 	 */
 	public Automaton getAutomaton() {
 		return (Automaton) super.getObject();
 	}
-	
+
 	/*Start undo methods*/
     public UndoKeeper getUndoKeeper(){
-        return myKeeper;	
+        return myKeeper;
     }
     public void initUndoKeeper(){
         myKeeper = new UndoKeeper(getAutomaton());
     }
     public void saveStatus(){
-        myKeeper.saveStatus();	
+        myKeeper.saveStatus();
     }
     public void restoreStatus(){
-        myKeeper.restoreStatus();	
+        myKeeper.restoreStatus();
     }
-    
+
     public boolean shouldPaint(){
-        return myKeeper == null ? true: !myKeeper.sensitive;	
+        return myKeeper == null ? true: !myKeeper.sensitive;
     }
-    
+
     public void setWait(){
     	myKeeper.setWait();
     }
@@ -82,7 +82,7 @@ public class AutomatonEnvironment extends Environment {
     public void redo(){
         myKeeper.redo();
     }
-	
+
 	private UndoKeeper myKeeper;
     /*End undo methods*/
 

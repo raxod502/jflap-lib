@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -33,14 +33,14 @@ import javax.swing.table.*;
  * viewing of grammars, with an extra field for a checkbox to indicate that a
  * production has been "processed," though what exactly that means is left to
  * the context in which this component is used.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class GrammarViewer extends JTable {
 	/**
 	 * Instantiates a new <CODE>GrammarViewer</CODE>.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to display in this view
 	 */
@@ -67,7 +67,7 @@ public class GrammarViewer extends JTable {
 	/**
 	 * Returns the <CODE>Grammar</CODE> that this <CODE>GrammarViewer</CODE>
 	 * displays.
-	 * 
+	 *
 	 * @return this viewer's grammar
 	 */
 	public Grammar getGrammar() {
@@ -77,7 +77,7 @@ public class GrammarViewer extends JTable {
 	/**
 	 * Adds a selection listener to this grammar viewer. The listener will
 	 * receive events whenever the selection changes.
-	 * 
+	 *
 	 * @param listener
 	 *            the selection listener to add
 	 */
@@ -87,7 +87,7 @@ public class GrammarViewer extends JTable {
 
 	/**
 	 * Removes a selection listener from this grammar viewer.
-	 * 
+	 *
 	 * @param listener
 	 *            the selection listener to remove
 	 */
@@ -108,7 +108,7 @@ public class GrammarViewer extends JTable {
 
 	/**
 	 * Returns the currently selected productions.
-	 * 
+	 *
 	 * @return the currently selected productions
 	 */
 	public Production[] getSelected() {
@@ -122,7 +122,7 @@ public class GrammarViewer extends JTable {
 	/**
 	 * Sets the indicated production as either checked or unchecked
 	 * appropriately.
-	 * 
+	 *
 	 * @param production
 	 *            the production to set the "checkyness" for
 	 * @param checked

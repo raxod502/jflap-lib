@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import edu.duke.cs.jflap.gui.environment.Environment;
 
 /**
  * This action allows for a layout algorithm to be applied to an automaton.
- * 
+ *
  * @author Chris Morgan
  */
 public class LayoutAlgorithmAction extends AutomatonAction {
@@ -52,18 +52,18 @@ public class LayoutAlgorithmAction extends AutomatonAction {
 	 * Used to specify the specific algorithm chosen.  For the list of algorithm identifiers,
 	 * look in <code>automata.graph.LayoutAlgorithmFactory</code>.
 	 */
-	private int algorithm;		 
-	
+	private int algorithm;
+
 	/**
 	 * Constructor.
-	 * 
-	 * @param s 
+	 *
+	 * @param s
 	 *     the title of this action.
-	 * @param a 
+	 * @param a
 	 *     the automaton this action will move.
-	 * @param e 
+	 * @param e
 	 *     the environment this automaton is in.
-	 * @param algm 
+	 * @param algm
 	 *     a numerical identifier for the algorithm that will be used.  The constants
 	 *     utilized are stored in automata.graph.LayoutAlgorithmFactory.
 	 */
@@ -73,8 +73,8 @@ public class LayoutAlgorithmAction extends AutomatonAction {
 		environment = e;
 		algorithm = algm;
 	}
-	
-	public void actionPerformed(ActionEvent e) {		
+
+	public void actionPerformed(ActionEvent e) {
 		double vertexBuffer;
 		if (automaton instanceof TuringMachine)
 			vertexBuffer = 80 * ((TuringMachine) automaton).tapes();
@@ -85,9 +85,9 @@ public class LayoutAlgorithmAction extends AutomatonAction {
 		else
 			vertexBuffer = 50;
 		AutomatonGraph graph = LayoutAlgorithmFactory.getAutomatonGraph(algorithm, automaton);
-		LayoutAlgorithm layout = LayoutAlgorithmFactory.getLayoutAlgorithm(algorithm, 
+		LayoutAlgorithm layout = LayoutAlgorithmFactory.getLayoutAlgorithm(algorithm,
 				new Dimension((int) environment.getSize().getWidth() - (int)assumedUsedSpace.getWidth(),
-				(int)environment.getSize().getHeight() - (int)assumedUsedSpace.getHeight()), 
+				(int)environment.getSize().getHeight() - (int)assumedUsedSpace.getHeight()),
 				new Dimension(30, 30), vertexBuffer);
 		layout.layout(graph, null);
 		graph.moveAutomatonStates();

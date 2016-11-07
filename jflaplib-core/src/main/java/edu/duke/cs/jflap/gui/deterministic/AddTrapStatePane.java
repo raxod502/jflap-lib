@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -58,12 +58,12 @@ public class AddTrapStatePane extends JPanel{
 	 * this process.
 	 */
 	private FiniteStateAutomaton myAutomaton;
-	
+
 	/**
 	 * Constructor for creating Trap State Pane
 	 * @param environment
 	 */
-	public AddTrapStatePane(AutomatonEnvironment environment) 
+	public AddTrapStatePane(AutomatonEnvironment environment)
 	{
 		myAutomaton = (FiniteStateAutomaton) environment.getAutomaton().clone();
 		JFrame frame = Universe.frameForEnvironment(environment);
@@ -96,7 +96,7 @@ public class AddTrapStatePane extends JPanel{
 				});
 
 		JToolBar bar = ep.getToolBar();
-		
+
 		bar.addSeparator();
 		bar.add(new JButton(new AbstractAction("Do All") {
 			public void actionPerformed(ActionEvent e) {

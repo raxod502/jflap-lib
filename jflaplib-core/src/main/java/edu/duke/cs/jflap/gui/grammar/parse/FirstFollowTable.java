@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -32,14 +32,14 @@ import javax.swing.table.*;
 /**
  * This table is an table specifically for the <CODE>FirstFollowModel</CODE>
  * for handling user entry of first and follow sets.
- * 
+ *
  * @author Thomas Finley
  */
 
 public class FirstFollowTable extends LeftTable {
 	/**
 	 * Instantiates a new first follow table for a grammar.
-	 * 
+	 *
 	 * @param grammar
 	 *            the grammar to create the table
 	 */
@@ -55,7 +55,7 @@ public class FirstFollowTable extends LeftTable {
 
 	/**
 	 * Returns the first follow table model.
-	 * 
+	 *
 	 * @return the table model
 	 */
 	public FirstFollowModel getFFModel() {

@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -30,7 +30,7 @@ import javax.swing.JComponent;
 /**
  * The <CODE>SaveGraphPNGAction</CODE> is an action to save the graph in window
  * to a PNG image file always using a dialog box.
- * 
+ *
  * @author Jonathan Su
  */
 
@@ -38,10 +38,10 @@ public class SaveGraphPNGAction extends RestrictedAction{
 	/** The environment that this save action gets it's object from. */
 	protected Environment environment;
 	protected JMenu myMenu;
-	
+
 	/**
 	 * Instantiates a new <CODE>SaveGraphPNGAction</CODE>.
-	 * 
+	 *
 	 * @param environment
 	 *            the environment that holds the action
 	 */
@@ -53,7 +53,7 @@ public class SaveGraphPNGAction extends RestrictedAction{
 
 	/**
 	 * Displays JFileChooser for location to save the graph canvas as png image.
-	 * 
+	 *
 	 * @param arg0
 	 *            the action event
 	 */
@@ -61,6 +61,6 @@ public class SaveGraphPNGAction extends RestrictedAction{
 
            Component apane = environment.tabbed.getSelectedComponent();
            JComponent c=(JComponent)environment.getActive();
-           SaveGraphUtility.saveGraph(apane, c,"PNG files", "png"); 
-    }  
+           SaveGraphUtility.saveGraph(apane, c,"PNG files", "png");
+    }
 }

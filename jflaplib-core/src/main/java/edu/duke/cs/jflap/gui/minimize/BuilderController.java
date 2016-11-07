@@ -1,7 +1,7 @@
 /*
  *  JFLAP - Formal Languages and Automata Package
- * 
- * 
+ *
+ *
  *  Susan H. Rodger
  *  Computer Science Department
  *  Duke University
@@ -34,14 +34,14 @@ import edu.duke.cs.jflap.gui.environment.FrameFactory;
 /**
  * This is the class for controlling the building of the minimized automaton,
  * after the tree has been built.
- * 
+ *
  * @author Thomas Finley
  */
 
 class BuilderController {
 	/**
 	 * Instantiates a new <CODE>BuilderController</CODE>.
-	 * 
+	 *
 	 * @param dfa
 	 *            the original DFA being minimized
 	 * @param minDfa
