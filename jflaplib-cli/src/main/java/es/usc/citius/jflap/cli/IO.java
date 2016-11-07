@@ -1,7 +1,7 @@
 package es.usc.citius.jflap.cli;
 
 
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.file.XMLCodec;
 
 import java.io.File;
@@ -12,7 +12,7 @@ import java.net.URL;
 public final class IO {
     private IO(){}
 
-    public static FiniteStateAutomaton loadAutomaton(String location){
+    public static Automaton loadAutomaton(String location){
         // Check if the location is a file
         File f = new File(location);
         if (f.isFile()){
@@ -20,7 +20,7 @@ public final class IO {
         }
         // Check if it is a valid URL
         try {
-            return (FiniteStateAutomaton)new XMLCodec().decode(new URL(location).openStream());
+            return (Automaton)new XMLCodec().decode(new URL(location).openStream());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         } catch (IOException e){
@@ -30,9 +30,9 @@ public final class IO {
 
 
 
-    public static FiniteStateAutomaton loadAutomaton(File file){
+    public static Automaton loadAutomaton(File file){
         if (!file.isFile()) throw new RuntimeException(file.getAbsolutePath() + " does not exist");
-        return (FiniteStateAutomaton)new XMLCodec().decode(file, null);
+        return (Automaton)new XMLCodec().decode(file, null);
     }
 
 }

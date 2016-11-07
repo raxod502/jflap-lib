@@ -4,6 +4,7 @@ package es.usc.citius.jflap.cli;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
+import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.SimulatorFactory;
 import edu.duke.cs.jflap.automata.fsa.FSAToRegularExpressionConverter;
@@ -44,7 +45,7 @@ public class CommandLine {
 
         @Override
         public void run() {
-            FiniteStateAutomaton a = IO.loadAutomaton(file.get(0));
+            FiniteStateAutomaton a = (FiniteStateAutomaton)IO.loadAutomaton(file.get(0));
             FSAToRegularExpressionConverter.convertToSimpleAutomaton(a);
             String re = FSAToRegularExpressionConverter.convertToRegularExpression(a);
             System.out.println(re);
@@ -59,8 +60,8 @@ public class CommandLine {
 
         @Override
         public void run() {
-            FiniteStateAutomaton a1 = IO.loadAutomaton(files.get(0));
-            FiniteStateAutomaton a2 = IO.loadAutomaton(files.get(1));
+            FiniteStateAutomaton a1 = (FiniteStateAutomaton)IO.loadAutomaton(files.get(0));
+            FiniteStateAutomaton a2 = (FiniteStateAutomaton)IO.loadAutomaton(files.get(1));
             boolean equal = new FSAEqualityChecker().equals(a1, a2);
             System.out.println(equal);
         }
@@ -78,7 +79,7 @@ public class CommandLine {
             if (params.size() != 2) throw new RuntimeException("Incorrect arguments. Please provide <file> <input>");
             File file = checked(new File(params.get(0)));
             String input = params.get(1);
-            FiniteStateAutomaton automaton = IO.loadAutomaton(file);
+            Automaton automaton = IO.loadAutomaton(file);
             // Load a simulator to test the automaton
             AutomatonSimulator sim = SimulatorFactory.getSimulator(automaton);
             if (sim == null) throw new RuntimeException("Cannot load an automaton simulator for " + automaton.getClass());
