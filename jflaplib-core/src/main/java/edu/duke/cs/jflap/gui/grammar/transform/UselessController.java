@@ -20,14 +20,21 @@
 
 package edu.duke.cs.jflap.gui.grammar.transform;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.vdg.*;
-import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
+import edu.duke.cs.jflap.automata.vdg.VariableDependencyGraph;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.UselessProductionRemover;
 
-import java.awt.event.MouseEvent;
-import java.util.*;
 import javax.swing.*;
-import edu.duke.cs.jflap.automata.event.*;
+import java.awt.event.MouseEvent;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This is the controller for the useless panel. Bleh.

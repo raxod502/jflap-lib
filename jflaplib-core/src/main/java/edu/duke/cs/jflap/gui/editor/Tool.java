@@ -24,9 +24,9 @@ import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.gui.SuperMouseAdapter;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
-import java.awt.Graphics;
-import javax.swing.Icon;
-import javax.swing.KeyStroke;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * The <CODE>Tool</CODE> abstract class is a type of input adapter for the

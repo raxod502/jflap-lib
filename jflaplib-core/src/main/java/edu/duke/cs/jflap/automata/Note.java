@@ -22,16 +22,14 @@ package edu.duke.cs.jflap.automata;
 import edu.duke.cs.jflap.gui.editor.DeleteTool;
 import edu.duke.cs.jflap.gui.editor.EditorPane;
 import edu.duke.cs.jflap.gui.editor.Tool;
-import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.Color;
-import java.awt.Point;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
-import javax.swing.JTextArea;
 
 /**
  * A class that represents notes on the JFLAP canvas.

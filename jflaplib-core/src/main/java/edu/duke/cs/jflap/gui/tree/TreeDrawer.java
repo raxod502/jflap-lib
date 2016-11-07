@@ -20,9 +20,11 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
-import java.awt.Graphics2D;
-import java.awt.geom.*;
-import javax.swing.tree.*;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.geom.Dimension2D;
+import java.awt.geom.Point2D;
 
 /**
  * The <CODE>TreeDrawer</CODE> object is used to draw a <CODE>TreeModel</CODE>

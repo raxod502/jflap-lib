@@ -20,20 +20,6 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Note;
 import edu.duke.cs.jflap.automata.State;
@@ -42,7 +28,15 @@ import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 import edu.duke.cs.jflap.automata.event.AutomataStateListener;
 import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
 import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
+
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * This is the very basic class of an Automaton drawer. It has facilities to

@@ -20,9 +20,11 @@
 
 package edu.duke.cs.jflap.automata.turing;
 
-import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.State;
-import java.util.*;
+import edu.duke.cs.jflap.automata.Transition;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The <CODE>TMTransition</CODE> is a transition for a Turing machine.

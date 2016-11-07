@@ -21,12 +21,9 @@ package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.environment.Environment;
 
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JComponent;
-import javax.swing.JFileChooser;
-import javax.swing.JMenu;
 
 /**
  * The <CODE>SaveGraphJPGAction</CODE> is an action to save the graph in window

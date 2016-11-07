@@ -19,12 +19,12 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Set;
-
-import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.Production;
 
 /**
  * Similar to BruteParser abstract class, UserParser abstract class is created to deal with User Parsing

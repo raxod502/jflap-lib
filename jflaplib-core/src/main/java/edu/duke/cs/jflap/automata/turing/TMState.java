@@ -19,9 +19,10 @@
 
 package edu.duke.cs.jflap.automata.turing;
 
-import edu.duke.cs.jflap.automata.State;
-import java.awt.Point;
 import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+
+import java.awt.*;
 
 
 /**

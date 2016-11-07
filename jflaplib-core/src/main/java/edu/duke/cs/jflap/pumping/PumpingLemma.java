@@ -21,7 +21,7 @@
 package edu.duke.cs.jflap.pumping;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * A <code>PumpingLemma</code> contains the information needed

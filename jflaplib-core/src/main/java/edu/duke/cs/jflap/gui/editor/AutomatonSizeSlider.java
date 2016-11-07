@@ -19,18 +19,15 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.Note;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.Font;
-import java.util.ArrayList;
-
-import javax.swing.BorderFactory;
-import javax.swing.JSlider;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
-import edu.duke.cs.jflap.automata.Note;
+import java.awt.*;
+import java.util.ArrayList;
 
 /**
 * @author Henry Qin and Jonathan Su

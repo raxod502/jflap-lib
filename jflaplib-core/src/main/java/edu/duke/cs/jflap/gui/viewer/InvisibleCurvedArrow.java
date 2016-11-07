@@ -20,11 +20,11 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.geom.Rectangle2D;
-import java.awt.geom.Area;
 import edu.duke.cs.jflap.automata.Transition;
+
+import java.awt.*;
+import java.awt.geom.Area;
+import java.awt.geom.Rectangle2D;
 
 /**
  * An invisible curved arrow is a curved arrow where the actual line and arrow

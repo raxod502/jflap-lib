@@ -20,17 +20,6 @@
 
 package edu.duke.cs.jflap.file.xml;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Note;
 import edu.duke.cs.jflap.automata.State;
@@ -39,11 +28,20 @@ import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
 import edu.duke.cs.jflap.automata.mealy.MooreMachine;
-import edu.duke.cs.jflap.file.DataException;
 import edu.duke.cs.jflap.automata.turing.TMState;
 import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.file.DataException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
-import java.awt.Point;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This is an abstract implementation of a transducer that has methods common to

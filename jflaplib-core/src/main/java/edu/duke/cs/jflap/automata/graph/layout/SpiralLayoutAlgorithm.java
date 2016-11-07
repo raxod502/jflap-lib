@@ -19,15 +19,15 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.awt.Dimension;
+import edu.duke.cs.jflap.automata.graph.Graph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Set;
-
-import edu.duke.cs.jflap.automata.graph.Graph;
-import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 
 /**
  * This algorithm places all vertices of the graph in a spiral, while applying a little

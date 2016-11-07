@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
-import java.awt.Graphics2D;
-import java.awt.geom.Rectangle2D;
 import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
 
 /**
  * A <CODE>NodeDrawer</CODE> handles the drawing of nodes in a tree.

@@ -20,11 +20,18 @@
 
 package edu.duke.cs.jflap.gui.grammar.transform;
 
-import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.LambdaProductionRemover;
+import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
-import java.awt.event.MouseEvent;
-import java.util.*;
+
 import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This is the controller for the lambda panel.

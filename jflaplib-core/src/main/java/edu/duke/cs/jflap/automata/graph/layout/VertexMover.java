@@ -19,14 +19,14 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.awt.Dimension;
-import java.awt.geom.Point2D;
-import java.util.Set;
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
-
 import edu.duke.cs.jflap.automata.graph.Graph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * This class contains a few simple vertex movement options that do not individually need a

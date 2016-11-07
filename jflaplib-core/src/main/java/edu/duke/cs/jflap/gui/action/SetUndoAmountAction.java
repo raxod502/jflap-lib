@@ -23,9 +23,8 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JOptionPane;
 
 /**
  * The <CODE>SetUndoAmount</CODE> is an action to set the amount of Undos that are stored for automaton construction.

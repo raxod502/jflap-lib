@@ -25,12 +25,16 @@ import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.fsa.FSAToRegularExpressionConverter;
 import edu.duke.cs.jflap.automata.fsa.FSATransition;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
-import edu.duke.cs.jflap.gui.environment.*;
+import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.awt.*;
-import javax.swing.*;
 import edu.duke.cs.jflap.regular.RegularExpression;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This object monitors and guides the user actions in the conversion of an FSA

@@ -28,9 +28,8 @@ import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.grammar.parse.LLParseTableDerivationPane;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JOptionPane;
 
 /**
  * This is an action to build an LL(1) parse table for a grammar.

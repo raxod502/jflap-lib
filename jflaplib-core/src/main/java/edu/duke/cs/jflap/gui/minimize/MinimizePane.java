@@ -20,20 +20,34 @@
 
 package edu.duke.cs.jflap.gui.minimize;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.fsa.*;
-import edu.duke.cs.jflap.automata.graph.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
+import edu.duke.cs.jflap.automata.fsa.Minimizer;
+import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
 import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
-import edu.duke.cs.jflap.gui.editor.*;
+import edu.duke.cs.jflap.gui.editor.EditorPane;
+import edu.duke.cs.jflap.gui.editor.ToolBox;
+import edu.duke.cs.jflap.gui.editor.TransitionTool;
 import edu.duke.cs.jflap.gui.environment.Environment;
-import edu.duke.cs.jflap.gui.tree.*;
-import edu.duke.cs.jflap.gui.viewer.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import edu.duke.cs.jflap.gui.tree.SelectTreeDrawer;
+import edu.duke.cs.jflap.gui.tree.TreePanel;
+import edu.duke.cs.jflap.gui.tree.Trees;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
 import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The <CODE>MinimizePane</CODE> is a view created to minimize a DFA using

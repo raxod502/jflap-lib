@@ -20,8 +20,8 @@
 
 package edu.duke.cs.jflap.automata.vdg;
 
-import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 
 /**
  * A <CODE>VDGTransition</CODE> is a <CODE>Transition</CODE> object used by

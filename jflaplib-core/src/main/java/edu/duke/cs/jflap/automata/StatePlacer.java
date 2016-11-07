@@ -20,7 +20,7 @@
 
 package edu.duke.cs.jflap.automata;
 
-import java.awt.Point;
+import java.awt.*;
 
 /**
  * The state placer object can be used to determine the location (on the canvas)

@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui;
 
+import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
-import javax.swing.*;
 
 /**
  * The <CODE>ImageDisplayComponent</CODE> is a single component that displays

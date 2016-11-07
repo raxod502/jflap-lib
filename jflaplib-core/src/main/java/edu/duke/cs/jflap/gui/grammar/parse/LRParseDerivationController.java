@@ -20,20 +20,32 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.graph.*;
-import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.StatePlacer;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.fsa.FSATransition;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.parse.LRParseTable;
+import edu.duke.cs.jflap.grammar.parse.LRParseTableGenerator;
+import edu.duke.cs.jflap.grammar.parse.Operations;
 import edu.duke.cs.jflap.gui.editor.EditorPane;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.awt.Point;
-import java.util.*;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This controller handles user actions for the building of an LR grammar parse

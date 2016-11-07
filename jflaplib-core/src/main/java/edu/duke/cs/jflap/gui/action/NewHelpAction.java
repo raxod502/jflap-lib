@@ -20,8 +20,8 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-import javax.swing.JOptionPane;
 
 /**
  * The <CODE>NewHelpAction</CODE> is an extension of the <CODE>HelpAction</CODE>

@@ -23,8 +23,13 @@ package edu.duke.cs.jflap.gui.grammar.parse;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.util.*;
-import javax.swing.table.*;
+import javax.swing.table.AbstractTableModel;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * This is a table model for user definition of the first and follow sets for a

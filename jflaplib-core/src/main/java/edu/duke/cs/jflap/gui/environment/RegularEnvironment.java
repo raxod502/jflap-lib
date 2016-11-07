@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui.environment;
 
-import edu.duke.cs.jflap.regular.RegularExpression;
-import edu.duke.cs.jflap.regular.ExpressionChangeListener;
 import edu.duke.cs.jflap.regular.ExpressionChangeEvent;
+import edu.duke.cs.jflap.regular.ExpressionChangeListener;
+import edu.duke.cs.jflap.regular.RegularExpression;
 
 /**
  * This is the environment for a regular expression.

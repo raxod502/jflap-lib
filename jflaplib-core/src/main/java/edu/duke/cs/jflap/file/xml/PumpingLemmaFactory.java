@@ -20,9 +20,31 @@
 
 package edu.duke.cs.jflap.file.xml;
 
-import edu.duke.cs.jflap.pumping.*;
-import edu.duke.cs.jflap.pumping.reg.*;
-import edu.duke.cs.jflap.pumping.cf.*;
+import edu.duke.cs.jflap.pumping.PumpingLemma;
+import edu.duke.cs.jflap.pumping.cf.AiBjCk;
+import edu.duke.cs.jflap.pumping.cf.AkBnCnDj;
+import edu.duke.cs.jflap.pumping.cf.AnBjAnBj;
+import edu.duke.cs.jflap.pumping.cf.AnBnCn;
+import edu.duke.cs.jflap.pumping.cf.NaNbNc;
+import edu.duke.cs.jflap.pumping.cf.NagNbeNc;
+import edu.duke.cs.jflap.pumping.cf.W1BnW2;
+import edu.duke.cs.jflap.pumping.cf.W1CW2CW3CW4;
+import edu.duke.cs.jflap.pumping.cf.W1VVrW2;
+import edu.duke.cs.jflap.pumping.cf.WW;
+import edu.duke.cs.jflap.pumping.cf.WW1WrEquals;
+import edu.duke.cs.jflap.pumping.cf.WW1WrGrtrThanEq;
+import edu.duke.cs.jflap.pumping.reg.AB2n;
+import edu.duke.cs.jflap.pumping.reg.ABnAk;
+import edu.duke.cs.jflap.pumping.reg.AnBk;
+import edu.duke.cs.jflap.pumping.reg.AnBkCnk;
+import edu.duke.cs.jflap.pumping.reg.AnBlAk;
+import edu.duke.cs.jflap.pumping.reg.AnEven;
+import edu.duke.cs.jflap.pumping.reg.B5W;
+import edu.duke.cs.jflap.pumping.reg.B5Wmod;
+import edu.duke.cs.jflap.pumping.reg.BBABAnAn;
+import edu.duke.cs.jflap.pumping.reg.BkABnBAn;
+import edu.duke.cs.jflap.pumping.reg.NaNb;
+import edu.duke.cs.jflap.pumping.reg.Palindrome;
 
 /**
  *

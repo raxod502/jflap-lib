@@ -22,9 +22,8 @@ package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.environment.Environment;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
@@ -33,9 +32,6 @@ import java.awt.print.Paper;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
-
-import javax.swing.JComponent;
-import javax.swing.KeyStroke;
 
 /**
  * This action handles printing. It will attempt to print the currently active

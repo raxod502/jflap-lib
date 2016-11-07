@@ -20,12 +20,10 @@
 package edu.duke.cs.jflap.automata.turing;
 
 import edu.duke.cs.jflap.grammar.Production;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * Temporary tester for turing trimming algo

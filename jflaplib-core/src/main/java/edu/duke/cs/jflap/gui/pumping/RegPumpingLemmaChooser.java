@@ -20,8 +20,21 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.util.*;
-import edu.duke.cs.jflap.pumping.reg.*;
+import edu.duke.cs.jflap.pumping.reg.AB2n;
+import edu.duke.cs.jflap.pumping.reg.ABnAk;
+import edu.duke.cs.jflap.pumping.reg.AnBk;
+import edu.duke.cs.jflap.pumping.reg.AnBkCnk;
+import edu.duke.cs.jflap.pumping.reg.AnBlAk;
+import edu.duke.cs.jflap.pumping.reg.AnBn;
+import edu.duke.cs.jflap.pumping.reg.AnEven;
+import edu.duke.cs.jflap.pumping.reg.B5W;
+import edu.duke.cs.jflap.pumping.reg.B5Wmod;
+import edu.duke.cs.jflap.pumping.reg.BBABAnAn;
+import edu.duke.cs.jflap.pumping.reg.BkABnBAn;
+import edu.duke.cs.jflap.pumping.reg.NaNb;
+import edu.duke.cs.jflap.pumping.reg.Palindrome;
+
+import java.util.ArrayList;
 
 /**
  * A <code>RegPumpingLemmaChooser</code> is a <code>PumpingLemmaChooser</code>

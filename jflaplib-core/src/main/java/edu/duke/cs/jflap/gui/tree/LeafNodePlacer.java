@@ -20,11 +20,11 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
 import java.awt.geom.Point2D;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.tree.TreeModel;
-import javax.swing.tree.TreeNode;
 
 /**
  * A <CODE>LeafNodePlacer</CODE> places leaves so that they are evenly spaced

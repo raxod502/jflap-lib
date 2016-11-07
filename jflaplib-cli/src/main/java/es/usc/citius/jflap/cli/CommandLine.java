@@ -9,10 +9,12 @@ import edu.duke.cs.jflap.automata.SimulatorFactory;
 import edu.duke.cs.jflap.automata.fsa.FSAToRegularExpressionConverter;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.automata.graph.FSAEqualityChecker;
-import edu.duke.cs.jflap.file.xml.AutomatonTransducer;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class CommandLine {
 

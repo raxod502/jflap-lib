@@ -21,23 +21,20 @@
 package edu.duke.cs.jflap.automata.turing;
 
 import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Note;
-import java.awt.Point;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Collection;
-
-import java.io.Serializable;
-import java.io.File;
-
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.gui.action.OpenAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This subclass of <CODE>Automaton</CODE> is specifically for a definition of

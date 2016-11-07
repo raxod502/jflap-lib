@@ -20,15 +20,13 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
+import javax.swing.*;
 import java.awt.event.MouseEvent;
-
-import javax.swing.JOptionPane;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 
 /**
  * This is a special <code>StateTool</code> for Moore machines

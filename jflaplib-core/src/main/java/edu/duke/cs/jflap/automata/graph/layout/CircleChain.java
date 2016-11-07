@@ -19,10 +19,10 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.awt.Dimension;
-import java.awt.geom.Point2D;
-
 import edu.duke.cs.jflap.automata.graph.Graph;
+
+import java.awt.*;
+import java.awt.geom.Point2D;
 
 /**
  * A <code>VertexChain</code> that also has the ability to layout its vertices in a circle or part of a circle.

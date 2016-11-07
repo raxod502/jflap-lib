@@ -21,9 +21,10 @@
 package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.WebFrame;
-import javax.swing.KeyStroke;
+
+import javax.swing.*;
 import java.awt.event.KeyEvent;
-import java.util.*;
+import java.util.WeakHashMap;
 
 /**
  * The <CODE>HelpAction</CODE> is an abstract action that is meant to bring up

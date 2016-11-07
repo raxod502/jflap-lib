@@ -20,9 +20,10 @@
 
 package edu.duke.cs.jflap.automata.event;
 
-import java.util.EventObject;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
+
+import java.util.EventObject;
 
 /**
  * This event is given to listeners of an automaton interested in events when a

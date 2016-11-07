@@ -20,14 +20,16 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.parse.LLParseTable;
+import edu.duke.cs.jflap.grammar.parse.LLParseTableGenerator;
+import edu.duke.cs.jflap.grammar.parse.Operations;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.util.*;
-import javax.swing.AbstractAction;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This controller handles user actions for the parsing of a grammar.

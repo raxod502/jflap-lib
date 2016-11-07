@@ -27,7 +27,6 @@ import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.grammar.parse.UserControlParsePane;
 
-
 import java.awt.event.ActionEvent;
 
 /**

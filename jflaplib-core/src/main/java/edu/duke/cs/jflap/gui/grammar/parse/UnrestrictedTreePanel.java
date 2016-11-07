@@ -20,19 +20,23 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.parse.ParseNode;
 import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.gui.tree.*;
+import edu.duke.cs.jflap.gui.tree.DefaultNodeDrawer;
+import edu.duke.cs.jflap.gui.tree.TreePanel;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Graphics;
-import java.awt.RenderingHints;
-import java.awt.geom.*;
-import java.util.*;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import java.awt.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This is the special drawer for an unrestricted parse tree. Woe betide any

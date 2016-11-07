@@ -20,8 +20,13 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.reg.RegularGrammar;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,12 +36,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * The FSA to regular grammar converter can be used to convert a finite state

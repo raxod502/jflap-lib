@@ -21,13 +21,11 @@ package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.parse.ParseNode;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Iterator;
 import java.util.Map;
-
-import javax.swing.tree.TreeNode;
 
 /**
  * This class allows user to select items in the tree Panel.

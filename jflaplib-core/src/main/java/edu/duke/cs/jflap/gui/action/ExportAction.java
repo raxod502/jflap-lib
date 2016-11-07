@@ -19,17 +19,23 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.gui.environment.*;
+import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.environment.Universe;
+import org.apache.batik.dom.svg.SVGDOMImplementation;
+import org.apache.batik.svggen.SVGGeneratorContext;
+import org.apache.batik.svggen.SVGGraphics2D;
+import org.apache.batik.swing.svg.SVGFileFilter;
+import org.w3c.dom.Document;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import javax.swing.*;
-import java.io.*;
-import org.apache.batik.svggen.SVGGraphics2D;
-import org.apache.batik.svggen.SVGGeneratorContext;
-import org.apache.batik.dom.svg.SVGDOMImplementation;
-import org.apache.batik.swing.svg.SVGFileFilter;
-import org.w3c.dom.Document;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 /**
  * This action handles saving structures as a vector or raster image,

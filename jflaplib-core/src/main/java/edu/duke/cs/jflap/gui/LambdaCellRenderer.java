@@ -22,10 +22,9 @@ package edu.duke.cs.jflap.gui;
 
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.Component;
-import javax.swing.JLabel;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
+import java.awt.*;
 
 /**
  * This is a cell renderer that displays a specified character if the

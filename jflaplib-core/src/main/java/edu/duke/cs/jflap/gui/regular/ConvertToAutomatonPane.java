@@ -20,6 +20,9 @@
 
 package edu.duke.cs.jflap.gui.regular;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
 import edu.duke.cs.jflap.gui.editor.ToolBox;
 import edu.duke.cs.jflap.gui.environment.RegularEnvironment;
@@ -27,23 +30,13 @@ import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+import edu.duke.cs.jflap.regular.Discretizer;
 
-import java.awt.BorderLayout;
-import java.awt.Point;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.LinkedList;
 import java.util.List;
-
-import javax.swing.AbstractAction;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JToolBar;
-
-import edu.duke.cs.jflap.regular.Discretizer;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.fsa.FSATransition;
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This is the pane that holds the tools necessary for the conversion of a

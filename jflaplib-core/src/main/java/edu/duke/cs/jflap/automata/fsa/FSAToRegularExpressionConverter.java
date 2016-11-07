@@ -20,15 +20,14 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import edu.duke.cs.jflap.gui.environment.Universe;
-
-import java.util.ArrayList;
-
-import edu.duke.cs.jflap.regular.Discretizer;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.StatePlacer;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.gui.environment.Universe;
+import edu.duke.cs.jflap.regular.Discretizer;
+
+import java.util.ArrayList;
 
 /**
  * The fsa to regular expression converter can be used to convert a finite state

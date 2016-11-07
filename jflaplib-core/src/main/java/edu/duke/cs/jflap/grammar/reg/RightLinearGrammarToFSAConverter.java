@@ -20,18 +20,17 @@
 
 package edu.duke.cs.jflap.grammar.reg;
 
-import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.GrammarToAutomatonConverter;
-import edu.duke.cs.jflap.grammar.Production;
-import edu.duke.cs.jflap.grammar.ProductionChecker;
-
-import java.awt.Point;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.StatePlacer;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.GrammarToAutomatonConverter;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.ProductionChecker;
+
+import java.awt.*;
 
 /**
  * The right linear grammar converter can be used to convert regular grammars,

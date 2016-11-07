@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.automata.pda;
 
-import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.gui.environment.Universe;
 
 /**
  * A <CODE>PDATransition</CODE> is a <CODE>Transition</CODE> object with

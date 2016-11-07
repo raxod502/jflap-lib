@@ -24,8 +24,9 @@ import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
-import java.awt.Point;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A <CODE>TransitionCreator</CODE> object is used to present a graphical

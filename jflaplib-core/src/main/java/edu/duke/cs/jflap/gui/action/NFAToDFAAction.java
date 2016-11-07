@@ -20,16 +20,14 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.AutomatonChecker;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.gui.deterministic.ConversionPane;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JOptionPane;
-
-import edu.duke.cs.jflap.automata.AutomatonChecker;
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This is a simple action for showing the DFA form of an NFA.

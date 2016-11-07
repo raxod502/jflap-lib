@@ -20,7 +20,9 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.automata.State;
 
 /**
  * An <CODE>FSAConfiguration</CODE> object is a <CODE>Configuration</CODE>

@@ -19,14 +19,15 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.util.*;
-import java.awt.*;
-import javax.swing.*;
-
 import edu.duke.cs.jflap.automata.graph.Graph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This layout algorithm arranges vertices according to a circle algorithm.  Vertices

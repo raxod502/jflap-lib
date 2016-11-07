@@ -20,15 +20,14 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.grammar.lsystem.*;
+import edu.duke.cs.jflap.grammar.lsystem.LSystem;
 import edu.duke.cs.jflap.gui.environment.LSystemEnvironment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.lsystem.DisplayPane;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
 
 /**
  * This action creates a new L-system renderer.

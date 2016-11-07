@@ -20,11 +20,10 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
-import java.awt.Component;
-import java.awt.Graphics2D;
-
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.pda.PDAConfiguration;
+
+import java.awt.*;
 
 /**
  * This is a configuration icon for configurations related to finite state

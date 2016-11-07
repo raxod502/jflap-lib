@@ -20,6 +20,10 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.Universe;
@@ -29,20 +33,12 @@ import edu.duke.cs.jflap.gui.grammar.automata.FSAConvertController;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 import edu.duke.cs.jflap.gui.viewer.ZoomPane;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import javax.swing.border.BevelBorder;
+import java.awt.*;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.border.BevelBorder;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.fsa.FSATransition;
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * This action handles the conversion of an FSA to a regular grammar.

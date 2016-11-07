@@ -20,10 +20,16 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
-import edu.duke.cs.jflap.automata.fsa.*;
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.grammar.*;
-import java.util.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This class generates {@link edu.duke.cs.jflap.grammar.parse.LRParseTable}s. The intention is

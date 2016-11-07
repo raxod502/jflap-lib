@@ -20,14 +20,21 @@
 
 package edu.duke.cs.jflap.gui.grammar.transform;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.gui.*;
-import edu.duke.cs.jflap.gui.environment.*;
-import edu.duke.cs.jflap.gui.grammar.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import edu.duke.cs.jflap.grammar.CNFConverter;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.gui.SplitPaneFactory;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
+import edu.duke.cs.jflap.gui.grammar.GrammarTable;
+import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 /**
  * The pane for converting a grammar to Chomsky normal form.

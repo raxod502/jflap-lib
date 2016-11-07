@@ -20,7 +20,7 @@
 
 package edu.duke.cs.jflap.gui;
 
-import javax.swing.AbstractAction;
+import javax.swing.*;
 
 /**
  * This is a subclass of abstract action that allows one to set the tooltip text

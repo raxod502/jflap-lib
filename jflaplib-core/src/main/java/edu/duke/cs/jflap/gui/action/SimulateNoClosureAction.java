@@ -20,18 +20,16 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.gui.environment.Environment;
-
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
-import java.io.Serializable;
-
-import javax.swing.KeyStroke;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
+import edu.duke.cs.jflap.gui.environment.Environment;
+
+import javax.swing.*;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.io.Serializable;
 
 /**
  * This is the action used for the stepwise simulation of data without closure,

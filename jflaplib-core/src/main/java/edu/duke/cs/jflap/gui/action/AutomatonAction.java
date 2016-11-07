@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import javax.swing.Icon;
-
 import edu.duke.cs.jflap.automata.Automaton;
+
+import javax.swing.*;
 
 /**
  * The <CODE>AutomatonAction</CODE> is the general action that various

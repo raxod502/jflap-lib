@@ -25,23 +25,20 @@
  */
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.gui.environment.Environment;
-import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
-import edu.duke.cs.jflap.gui.sim.SimulatorPane;
-
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
-import java.io.Serializable;
-
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.turing.TMSimulator;
 import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
+import edu.duke.cs.jflap.gui.sim.SimulatorPane;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.io.Serializable;
 
 /**
  * @author Andrew

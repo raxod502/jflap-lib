@@ -21,7 +21,8 @@
 package edu.duke.cs.jflap.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.Grammar;
-import java.util.*;
+
+import java.util.ArrayList;
 
 /**
  * This is the brute parser for an restricted grammar. It has additional tests

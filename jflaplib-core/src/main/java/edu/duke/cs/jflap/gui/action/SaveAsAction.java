@@ -23,13 +23,11 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.Serializable;
-
-import javax.swing.JFileChooser;
-import javax.swing.KeyStroke;
 
 /**
  * The <CODE>SaveAsAction</CODE> is an action to save a serializable object

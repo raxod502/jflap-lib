@@ -21,15 +21,18 @@
 package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.parse.BruteParser;
+import edu.duke.cs.jflap.grammar.parse.BruteParserEvent;
+import edu.duke.cs.jflap.grammar.parse.BruteParserListener;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
-import edu.duke.cs.jflap.gui.tree.*;
-import java.awt.*;
-import java.awt.event.*;
+import edu.duke.cs.jflap.gui.tree.SelectNodeDrawer;
 
 import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * This is a brute force parse pane.

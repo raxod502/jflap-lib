@@ -26,13 +26,21 @@ import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
-import edu.duke.cs.jflap.gui.grammar.*;
+import edu.duke.cs.jflap.gui.grammar.GrammarTable;
+import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.util.*;
-import javax.swing.JOptionPane;
-import javax.swing.ListSelectionModel;
+
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * The <CODE>ConvertController</CODE> abstract class handles the operation to

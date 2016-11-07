@@ -20,15 +20,25 @@
 
 package edu.duke.cs.jflap.gui.grammar.transform;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.gui.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.gui.SplitPaneFactory;
+import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
-import edu.duke.cs.jflap.gui.grammar.*;
-import java.awt.*;
-import java.awt.event.*;
+import edu.duke.cs.jflap.gui.grammar.GrammarTable;
+import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
+
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * This is the pane where the removal of lambda productions takes place.

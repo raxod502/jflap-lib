@@ -20,10 +20,10 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
+import edu.duke.cs.jflap.pumping.PumpingLemma;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import edu.duke.cs.jflap.pumping.PumpingLemma;
 
 /**
  * A <code>PumpingLemmaChooser</code> holds a list of

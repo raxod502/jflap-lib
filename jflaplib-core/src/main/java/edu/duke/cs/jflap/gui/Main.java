@@ -19,23 +19,22 @@
 
 
 package edu.duke.cs.jflap.gui;
+
 import edu.duke.cs.jflap.file.Codec;
 import edu.duke.cs.jflap.file.ParseException;
 import edu.duke.cs.jflap.gui.action.NewAction;
 import edu.duke.cs.jflap.gui.action.OpenAction;
 import edu.duke.cs.jflap.gui.environment.Profile;
 import edu.duke.cs.jflap.gui.environment.Universe;
-
-import java.io.File;
-import java.io.IOException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.xml.sax.SAXException;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * This is the class that starts JFLAP.

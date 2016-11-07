@@ -20,9 +20,15 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
-import edu.duke.cs.jflap.grammar.*;
-import java.util.*;
-import javax.swing.tree.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
+import java.util.Stack;
 
 /**
  * This class does LR parsing. It is a test class only.

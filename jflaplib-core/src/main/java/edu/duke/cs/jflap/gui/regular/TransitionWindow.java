@@ -21,11 +21,12 @@
 package edu.duke.cs.jflap.gui.regular;
 
 import edu.duke.cs.jflap.automata.Transition;
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
+
 import javax.swing.*;
-import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * This shows a bunch of transitions for the step of the conversion when the

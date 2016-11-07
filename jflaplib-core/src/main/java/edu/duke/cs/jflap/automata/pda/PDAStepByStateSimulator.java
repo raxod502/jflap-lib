@@ -20,16 +20,15 @@
 
 package edu.duke.cs.jflap.automata.pda;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
-import javax.swing.JOptionPane;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * The PDA simulator object simulates the behavior of a pushdown automaton.

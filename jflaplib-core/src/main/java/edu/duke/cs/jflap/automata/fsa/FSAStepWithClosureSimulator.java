@@ -20,16 +20,15 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
-import edu.duke.cs.jflap.debug.EDebug;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.ClosureTaker;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.debug.EDebug;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * The FSA step with closure simulator object simulates the behavior of a finite

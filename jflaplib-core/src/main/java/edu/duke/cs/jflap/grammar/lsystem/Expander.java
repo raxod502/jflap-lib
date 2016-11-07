@@ -20,7 +20,13 @@
 
 package edu.duke.cs.jflap.grammar.lsystem;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * Given an L-system, this will expand the L-system, creating the vast lists of

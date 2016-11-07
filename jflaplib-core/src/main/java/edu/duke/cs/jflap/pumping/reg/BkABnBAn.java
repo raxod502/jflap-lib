@@ -19,7 +19,7 @@
 
 package edu.duke.cs.jflap.pumping.reg;
 
-import edu.duke.cs.jflap.pumping.*;
+import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
 
 /**
  * The regular pumping lemma for <i>L</i> =

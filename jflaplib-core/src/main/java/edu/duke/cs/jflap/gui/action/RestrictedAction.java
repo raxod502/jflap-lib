@@ -20,8 +20,7 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import javax.swing.AbstractAction;
-import javax.swing.Icon;
+import javax.swing.*;
 
 /**
  * The <CODE>RestrictedAction</CODE> is the general action that various

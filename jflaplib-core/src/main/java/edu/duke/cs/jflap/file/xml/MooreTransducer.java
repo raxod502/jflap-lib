@@ -20,16 +20,16 @@
 
 package edu.duke.cs.jflap.file.xml;
 
-import java.util.Map;
-
-
-import org.w3c.dom.*;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 import edu.duke.cs.jflap.automata.mealy.MooreTransition;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import java.util.Map;
 
 /**
  * This is the transducer for encoding and decoding {@link

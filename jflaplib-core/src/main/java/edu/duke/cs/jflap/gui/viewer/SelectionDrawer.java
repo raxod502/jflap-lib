@@ -20,18 +20,17 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.awt.Color;
-import java.awt.Graphics;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * An extension of the <CODE>AutomatonDrawer</CODE> that allows the selection

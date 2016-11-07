@@ -25,10 +25,8 @@ import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.regular.ConvertPane;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 /**
  * This action handles the conversion of an FSA to a regular expression.

@@ -20,7 +20,8 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
-import edu.duke.cs.jflap.gui.viewer.*;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 /**
  * This is a subclass of an <code>ArrowTool</code> for Mealy

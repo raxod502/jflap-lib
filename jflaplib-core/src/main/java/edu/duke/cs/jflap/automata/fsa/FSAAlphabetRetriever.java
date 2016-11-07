@@ -20,8 +20,11 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import edu.duke.cs.jflap.automata.*;
-import java.util.*;
+import edu.duke.cs.jflap.automata.AlphabetRetriever;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Transition;
+
+import java.util.ArrayList;
 
 /**
  * The FSA alphabet retriever object can be used to find the alphabet for a

@@ -20,13 +20,6 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import java.awt.Point;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-
-import javax.swing.tree.DefaultTreeModel;
-
 import edu.duke.cs.jflap.automata.AlphabetRetriever;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonChecker;
@@ -34,6 +27,12 @@ import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.StatePlacer;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.UnreachableStatesDetector;
+
+import javax.swing.tree.DefaultTreeModel;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * The Minimizer object can be used to minimize a deterministic finite state

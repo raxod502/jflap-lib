@@ -20,17 +20,12 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
-import edu.duke.cs.jflap.gui.viewer.StateDrawer;
-
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Point;
-
-import javax.swing.Icon;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.gui.viewer.StateDrawer;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * The <CODE>ConfigurationIcon</CODE> is a general sort of icon that can be

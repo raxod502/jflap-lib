@@ -38,11 +38,10 @@ import edu.duke.cs.jflap.gui.grammar.transform.UnitPane;
 import edu.duke.cs.jflap.gui.grammar.transform.UselessController;
 import edu.duke.cs.jflap.gui.grammar.transform.UselessPane;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Set;
-
-import javax.swing.JOptionPane;
 
 /**
  * CYK Parsing Action class

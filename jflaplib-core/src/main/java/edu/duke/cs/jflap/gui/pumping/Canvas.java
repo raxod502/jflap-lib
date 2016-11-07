@@ -21,9 +21,9 @@
 package edu.duke.cs.jflap.gui.pumping;
 
 import javax.swing.*;
-import java.util.*;
 import java.awt.*;
-import java.awt.geom.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
 
 /**
  * A <code>Canvas</code> is an area where strings, {@link edu.duke.cs.jflap.gui.pumping.Text},

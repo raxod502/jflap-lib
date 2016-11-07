@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import javax.swing.Icon;
-
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+
+import javax.swing.*;
 
 /**
  * The <CODE>FSAAction</CODE> is the general action that various controllers

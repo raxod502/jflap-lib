@@ -20,6 +20,7 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.file.Codec;
 import edu.duke.cs.jflap.file.DataException;
 import edu.duke.cs.jflap.file.ParseException;
@@ -27,20 +28,15 @@ import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.Component;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
-import javax.swing.filechooser.FileFilter;
-
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * The <CODE>OpenAction</CODE> is an action to load a structure from a file,

@@ -19,10 +19,17 @@
 
 package edu.duke.cs.jflap.automata.graph;
 
-import java.awt.Dimension;
-import java.util.Random;
 import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.graph.layout.*;
+import edu.duke.cs.jflap.automata.graph.layout.CircleLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.RandomLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.SpiralLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.TreeLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.TwoCircleLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.VertexMover;
+
+import java.awt.*;
+import java.util.Random;
 
 /**
  * This class allows the user to fetch a new <code>LayoutAlgorithm</code>, either a random one or a

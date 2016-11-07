@@ -19,13 +19,13 @@
 
 package edu.duke.cs.jflap.automata.turing;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.grammar.Production;
 
 import java.util.ArrayList;
-import java.util.*;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Converter for turing to unrestricted grammar

@@ -35,10 +35,9 @@ import edu.duke.cs.jflap.gui.grammar.transform.LambdaPane;
 import edu.duke.cs.jflap.gui.grammar.transform.UnitPane;
 import edu.duke.cs.jflap.gui.grammar.transform.UselessPane;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.Set;
-
-import javax.swing.JOptionPane;
 
 /**
  * This is an action to transform a grammar.

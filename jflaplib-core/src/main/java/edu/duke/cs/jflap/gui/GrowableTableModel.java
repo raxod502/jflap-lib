@@ -21,7 +21,10 @@
 package edu.duke.cs.jflap.gui;
 
 import javax.swing.table.AbstractTableModel;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * The <CODE>GrowableTableModel</CODE> is a table model that grows

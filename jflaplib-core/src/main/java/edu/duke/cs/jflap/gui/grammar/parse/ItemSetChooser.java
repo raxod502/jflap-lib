@@ -20,19 +20,24 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.parse.Operations;
 import edu.duke.cs.jflap.gui.SuperMouseAdapter;
 import edu.duke.cs.jflap.gui.grammar.GrammarTable;
 import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
 import edu.duke.cs.jflap.gui.grammar.ImmutableGrammarTableModel;
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.event.*;
-import java.util.*;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 /**
  * This allows a user to specify sets of items.

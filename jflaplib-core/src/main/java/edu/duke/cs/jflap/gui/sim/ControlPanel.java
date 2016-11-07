@@ -22,10 +22,8 @@ package edu.duke.cs.jflap.gui.sim;
 
 import edu.duke.cs.jflap.gui.TooltipAction;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.AbstractAction;
-import javax.swing.JToolBar;
 
 /**
  * This is a control panel with buttons for invoking methods on a configuration

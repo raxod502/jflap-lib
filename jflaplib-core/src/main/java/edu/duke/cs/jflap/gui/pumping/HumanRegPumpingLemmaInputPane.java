@@ -20,10 +20,10 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.awt.*;
-import javax.swing.*;
-
 import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This is a subclass of a <code>HumanFirstPane</code> that deals with

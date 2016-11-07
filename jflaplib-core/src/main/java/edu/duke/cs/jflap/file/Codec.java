@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.file;
 
+import javax.swing.filechooser.FileFilter;
 import java.io.File;
 import java.io.Serializable;
-import javax.swing.filechooser.FileFilter;
 
 /**
  * This object is both an encoder and decoder, and is useful as a file filter.

@@ -20,12 +20,11 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 import java.util.List;
-
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * The <CODE>DefaultToolBox</CODE> has all the tools for general editing of an

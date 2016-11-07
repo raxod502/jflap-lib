@@ -25,14 +25,18 @@ import edu.duke.cs.jflap.gui.action.MultipleSimulateAction.MultiplePane;
 import edu.duke.cs.jflap.gui.environment.tag.EditorTag;
 import edu.duke.cs.jflap.gui.environment.tag.Satisfier;
 import edu.duke.cs.jflap.gui.environment.tag.Tag;
-import java.awt.*;
-import java.io.File;
-import java.io.Serializable;
-import java.util.*;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.io.File;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The environment class is the central view that manages various "hangers on"

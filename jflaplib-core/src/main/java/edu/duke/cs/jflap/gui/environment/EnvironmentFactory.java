@@ -20,6 +20,9 @@
 
 package edu.duke.cs.jflap.gui.environment;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.mealy.MealyMachine;
+import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 import edu.duke.cs.jflap.grammar.ConvertedUnrestrictedGrammar;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.lsystem.LSystem;
@@ -32,20 +35,21 @@ import edu.duke.cs.jflap.gui.environment.tag.PermanentTag;
 import edu.duke.cs.jflap.gui.environment.tag.Tag;
 import edu.duke.cs.jflap.gui.grammar.GrammarInputPane;
 import edu.duke.cs.jflap.gui.lsystem.LSystemInputPane;
-import edu.duke.cs.jflap.gui.pumping.*;
-
-import java.io.Serializable;
-
-import javax.swing.JOptionPane;
-
+import edu.duke.cs.jflap.gui.pumping.CFPumpingLemmaChooser;
+import edu.duke.cs.jflap.gui.pumping.CompCFPumpingLemmaInputPane;
+import edu.duke.cs.jflap.gui.pumping.CompRegPumpingLemmaInputPane;
+import edu.duke.cs.jflap.gui.pumping.HumanCFPumpingLemmaInputPane;
+import edu.duke.cs.jflap.gui.pumping.HumanRegPumpingLemmaInputPane;
+import edu.duke.cs.jflap.gui.pumping.PumpingLemmaChooserPane;
+import edu.duke.cs.jflap.gui.pumping.PumpingLemmaInputPane;
+import edu.duke.cs.jflap.gui.pumping.RegPumpingLemmaChooser;
 import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
 import edu.duke.cs.jflap.pumping.PumpingLemma;
 import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
-
 import edu.duke.cs.jflap.regular.RegularExpression;
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.mealy.MealyMachine;
-import edu.duke.cs.jflap.automata.mealy.MooreMachine;
+
+import javax.swing.*;
+import java.io.Serializable;
 
 /**
  * The <CODE>EnvironmentFactory</CODE> creates environments for some

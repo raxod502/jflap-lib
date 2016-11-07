@@ -20,9 +20,8 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
 import javax.swing.tree.TreeNode;
+import java.awt.*;
 import java.util.WeakHashMap;
 
 /**

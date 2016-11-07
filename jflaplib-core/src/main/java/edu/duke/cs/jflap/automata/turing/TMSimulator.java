@@ -20,23 +20,21 @@
 
 package edu.duke.cs.jflap.automata.turing;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Comparator;
-import java.util.Arrays;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.debug.EDebug;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import edu.duke.cs.jflap.debug.EDebug;
-
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * The TM simulator progresses TM configurations on a possibly multitape Turing

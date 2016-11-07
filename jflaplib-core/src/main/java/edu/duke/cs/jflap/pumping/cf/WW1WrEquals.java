@@ -19,7 +19,8 @@
 
 package edu.duke.cs.jflap.pumping.cf;
 
-import edu.duke.cs.jflap.pumping.*;
+import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
+import edu.duke.cs.jflap.pumping.LemmaMath;
 
 /**
  * The context-free pumping lemma for <i>L</i> =

@@ -20,7 +20,8 @@
 
 package edu.duke.cs.jflap.automata.mealy;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Configuration;
 
 /**
  * The Mealy machine step by state simulator simulates the behavior

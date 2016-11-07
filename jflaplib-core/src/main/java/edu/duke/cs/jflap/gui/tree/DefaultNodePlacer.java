@@ -20,12 +20,12 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
 import java.awt.geom.Point2D;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.tree.TreeModel;
-import javax.swing.tree.TreeNode;
 
 /**
  * A <CODE>DefaultNodePlacer</CODE> places the nodes in a tree in a rather

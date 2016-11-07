@@ -21,12 +21,21 @@
 package edu.duke.cs.jflap.gui.lsystem;
 
 import edu.duke.cs.jflap.gui.transform.Matrix;
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Stroke;
-import java.awt.geom.*;
-import java.io.*;
-import java.util.*;
+
+import java.awt.*;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
+import java.io.IOException;
+import java.io.Serializable;
+import java.io.StreamTokenizer;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
 /**
  * This represents the current context for rendering strings of symbols. Aside

@@ -20,10 +20,17 @@
 
 package edu.duke.cs.jflap.gui.minimize;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
+import edu.duke.cs.jflap.automata.fsa.Minimizer;
 import edu.duke.cs.jflap.gui.tree.SelectTreeDrawer;
 import edu.duke.cs.jflap.gui.tree.Trees;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
+import javax.swing.*;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,15 +38,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
-
-import javax.swing.JOptionPane;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeNode;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
-import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
-import edu.duke.cs.jflap.automata.fsa.Minimizer;
 
 /**
  * The <CODE>MinimizeController</CODE> serves as an intermediary between the

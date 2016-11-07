@@ -24,8 +24,7 @@ import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 
 /**
  * An <CODE>EditCanvas</CODE> is an extension of <CODE>AutomatonPane</CODE>

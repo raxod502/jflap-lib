@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.automata.mealy;
 
-import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.gui.environment.Universe;
 
 /**
  * A <code>MooreTransition</code> is a special subclass of <code>

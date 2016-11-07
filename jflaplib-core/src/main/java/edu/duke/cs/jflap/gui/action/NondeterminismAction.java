@@ -20,22 +20,19 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.NondeterminismDetector;
+import edu.duke.cs.jflap.automata.NondeterminismDetectorFactory;
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.editor.ArrowDisplayOnlyTool;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.NondeterminismDetector;
-import edu.duke.cs.jflap.automata.NondeterminismDetectorFactory;
-import edu.duke.cs.jflap.automata.State;
 
 /**
  * This is the action used to highlight nondeterministic states.

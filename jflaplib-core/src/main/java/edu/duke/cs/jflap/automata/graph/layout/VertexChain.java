@@ -19,9 +19,9 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.util.ArrayList;
-
 import edu.duke.cs.jflap.automata.graph.Graph;
+
+import java.util.ArrayList;
 
 /**
  * Class that orders vertices assigned to it one-dimensionally.  The order of the vertices is changed as vertices

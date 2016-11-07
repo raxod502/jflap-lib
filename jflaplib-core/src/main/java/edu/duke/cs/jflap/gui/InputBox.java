@@ -19,18 +19,15 @@
 
 package edu.duke.cs.jflap.gui;
 
-import edu.duke.cs.jflap.gui.action.SimulateAction;
-
-import java.awt.Component;
-import java.awt.GridLayout;
-
-import javax.swing.*;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.gui.action.SimulateAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Input GUI BOX

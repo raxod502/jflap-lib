@@ -20,6 +20,17 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.Note;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.StateRenamer;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
+import edu.duke.cs.jflap.automata.turing.TMState;
+import edu.duke.cs.jflap.automata.turing.TMTransition;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.debug.EDebug;
 import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
@@ -28,34 +39,13 @@ import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.CurvedArrow;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Point;
-import java.awt.Rectangle;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
-
-import javax.swing.Icon;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
-import javax.swing.KeyStroke;
-
-import edu.duke.cs.jflap.automata.Note;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.StateRenamer;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
-import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
-import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
-import edu.duke.cs.jflap.automata.turing.TMTransition;
-import edu.duke.cs.jflap.automata.turing.TMState;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
-import edu.duke.cs.jflap.debug.EDebug;
 
 /**
  * The arrow tool is used mostly for editing existing objects.

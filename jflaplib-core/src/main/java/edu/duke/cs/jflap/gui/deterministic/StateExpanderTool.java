@@ -20,17 +20,13 @@
 
 package edu.duke.cs.jflap.gui.deterministic;
 
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.editor.Tool;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
+import javax.swing.*;
 import java.awt.event.MouseEvent;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.KeyStroke;
-
-import edu.duke.cs.jflap.automata.State;
 
 /**
  * This is a tool that expands a state completely.

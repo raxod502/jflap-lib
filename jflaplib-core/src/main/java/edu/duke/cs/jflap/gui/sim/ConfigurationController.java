@@ -20,25 +20,22 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
+import edu.duke.cs.jflap.automata.AutomatonSimulator;
+import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.automata.turing.TMConfiguration;
+import edu.duke.cs.jflap.automata.turing.TMSimulator;
+import edu.duke.cs.jflap.automata.turing.TMState;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.JOptionPane;
-import javax.swing.JSplitPane;
-
-import edu.duke.cs.jflap.automata.AutomatonSimulator;
-import edu.duke.cs.jflap.automata.Configuration;
-import edu.duke.cs.jflap.automata.turing.TMSimulator;
-import edu.duke.cs.jflap.automata.turing.TMConfiguration;
-import edu.duke.cs.jflap.automata.turing.TMState;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 
 /**

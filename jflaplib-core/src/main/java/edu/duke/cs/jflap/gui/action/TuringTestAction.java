@@ -20,11 +20,10 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.gui.environment.Environment;
 
 import java.awt.event.KeyEvent;
-
-import edu.duke.cs.jflap.automata.Automaton;
 
 /**
 * The <CODE>TestTuringAction</CODE> is an action to load a structure from a file,

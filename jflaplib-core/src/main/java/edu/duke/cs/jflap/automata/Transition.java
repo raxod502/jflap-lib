@@ -20,8 +20,8 @@
 
 package edu.duke.cs.jflap.automata;
 
+import java.awt.*;
 import java.io.Serializable;
-import java.awt.Point;
 
 /**
  * A <CODE>Transition</CODE> object is a simple abstract class representing a

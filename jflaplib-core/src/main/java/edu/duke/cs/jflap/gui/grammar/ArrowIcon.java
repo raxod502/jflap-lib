@@ -20,10 +20,8 @@
 
 package edu.duke.cs.jflap.gui.grammar;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
-import javax.swing.Icon;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This is an icon that draws a simple arrow pointing to the right.

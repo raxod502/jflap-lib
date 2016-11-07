@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.gui.environment.Universe;
 
 /**
  * An <CODE>FSATransition</CODE> is a <CODE>Transition</CODE> object with an

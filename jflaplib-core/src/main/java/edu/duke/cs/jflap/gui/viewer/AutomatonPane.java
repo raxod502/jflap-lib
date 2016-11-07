@@ -20,12 +20,16 @@ package edu.duke.cs.jflap.gui.viewer;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Note;
 import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.event.*;
+import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
+import edu.duke.cs.jflap.automata.event.AutomataStateListener;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
 import edu.duke.cs.jflap.gui.JMultiLineToolTip;
 import edu.duke.cs.jflap.gui.editor.EditorPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
@@ -33,8 +37,6 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.NoninvertibleTransformException;
 import java.util.ArrayList;
-
-import javax.swing.*;
 
 /**
  * A simple view that draws an automaton.

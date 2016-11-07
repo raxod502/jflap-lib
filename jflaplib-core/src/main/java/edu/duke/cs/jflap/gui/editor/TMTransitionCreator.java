@@ -20,27 +20,18 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
-import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
-
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.ActionMap;
-import javax.swing.DefaultCellEditor;
-import javax.swing.InputMap;
-import javax.swing.JComboBox;
-import javax.swing.JTable;
-import javax.swing.KeyStroke;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableModel;
-
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.turing.TMTransition;
 import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+
+import javax.swing.*;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableModel;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * This is the creator of transitions in turing machines.

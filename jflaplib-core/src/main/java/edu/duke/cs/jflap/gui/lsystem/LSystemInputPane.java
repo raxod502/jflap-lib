@@ -22,15 +22,24 @@ package edu.duke.cs.jflap.gui.lsystem;
 
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.UnboundGrammar;
-import edu.duke.cs.jflap.grammar.lsystem.*;
+import edu.duke.cs.jflap.grammar.lsystem.LSystem;
 import edu.duke.cs.jflap.gui.HighlightTable;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 import edu.duke.cs.jflap.gui.grammar.GrammarInputPane;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The <CODE>LSystemInputPane</CODE> is a pane used to input and display the

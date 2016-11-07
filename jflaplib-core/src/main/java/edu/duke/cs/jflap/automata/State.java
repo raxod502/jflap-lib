@@ -20,12 +20,12 @@
 
 package edu.duke.cs.jflap.automata;
 
-import java.awt.Point;
+import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
+
+import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-
-import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
 
 /**
  * This class represents a single state in an automaton. This class is intended

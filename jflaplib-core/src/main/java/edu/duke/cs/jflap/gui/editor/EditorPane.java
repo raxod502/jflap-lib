@@ -20,20 +20,15 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Note;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
-import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.util.ArrayList;
-
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.Note;
+import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * This is a view that holds a tool bar and the canvas where the automaton is

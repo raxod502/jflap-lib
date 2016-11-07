@@ -20,13 +20,21 @@
 
 package edu.duke.cs.jflap.file;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.UnboundGrammar;
-import java.io.*;
-import java.util.Map;
 import edu.duke.cs.jflap.regular.RegularExpression;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Map;
 
 /**
  * This is the codec for reading JFLAP structures in the JFLAP 3 saved file

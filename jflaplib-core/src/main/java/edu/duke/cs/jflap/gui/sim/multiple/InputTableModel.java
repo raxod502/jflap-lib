@@ -20,20 +20,20 @@
 
 package edu.duke.cs.jflap.gui.sim.multiple;
 
-import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.gui.GrowableTableModel;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Configuration;
-import edu.duke.cs.jflap.automata.turing.Tape;
 import edu.duke.cs.jflap.automata.turing.TMConfiguration;
-import javax.swing.event.TableModelListener;
-import javax.swing.event.TableModelEvent;
+import edu.duke.cs.jflap.automata.turing.Tape;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.gui.GrowableTableModel;
 
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * The <CODE>InputTableModel</CODE> is a table specifically used for the input

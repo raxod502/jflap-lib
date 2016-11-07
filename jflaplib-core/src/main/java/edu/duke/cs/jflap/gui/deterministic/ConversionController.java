@@ -20,23 +20,6 @@
 
 package edu.duke.cs.jflap.gui.deterministic;
 
-import edu.duke.cs.jflap.gui.environment.FrameFactory;
-
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.StringTokenizer;
-
-import javax.swing.JOptionPane;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
@@ -49,6 +32,20 @@ import edu.duke.cs.jflap.automata.graph.Graph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
 import edu.duke.cs.jflap.debug.EDebug;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 /**
  * This is the class that controls the conversion of an NFA to a DFA.

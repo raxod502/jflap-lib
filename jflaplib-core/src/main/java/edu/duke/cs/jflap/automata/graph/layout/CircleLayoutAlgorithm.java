@@ -19,13 +19,13 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
-import java.util.Set;
-import java.util.ArrayList;
-import java.awt.Dimension;
-import java.awt.geom.Point2D;
-
 import edu.duke.cs.jflap.automata.graph.Graph;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+
+import java.awt.*;
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * A layout algorithm that lays out groupings of vertices in circles.  Each grouping

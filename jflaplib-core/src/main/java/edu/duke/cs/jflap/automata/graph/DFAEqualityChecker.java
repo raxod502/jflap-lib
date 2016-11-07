@@ -20,9 +20,13 @@
 
 package edu.duke.cs.jflap.automata.graph;
 
-import java.util.*;
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.fsa.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This is an object that checks if two deterministic finite state automatons

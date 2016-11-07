@@ -23,7 +23,7 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.grammar.lsystem.LSystem;
 import edu.duke.cs.jflap.gui.environment.LSystemEnvironment;
 
-import javax.swing.Icon;
+import javax.swing.*;
 
 /**
  * The <CODE>GrammarAction</CODE> is the general action that various

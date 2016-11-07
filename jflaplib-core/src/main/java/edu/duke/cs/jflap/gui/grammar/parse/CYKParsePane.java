@@ -19,19 +19,6 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
-import javax.swing.JScrollPane;
-import javax.swing.JToolBar;
-
-import java.util.*;
-
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.parse.CYKParser;
@@ -42,6 +29,12 @@ import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.grammar.GrammarTable;
 import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 /**
  * CYK Parse Pane

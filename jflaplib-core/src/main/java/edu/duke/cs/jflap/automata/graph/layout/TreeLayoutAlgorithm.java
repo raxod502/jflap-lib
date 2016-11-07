@@ -19,16 +19,16 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
+import edu.duke.cs.jflap.automata.graph.AutomatonDirectedGraph;
+import edu.duke.cs.jflap.automata.graph.Graph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+
+import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Set;
-import java.awt.Dimension;
-import java.awt.geom.Point2D;
-
-import edu.duke.cs.jflap.automata.graph.Graph;
-import edu.duke.cs.jflap.automata.graph.AutomatonDirectedGraph;
-import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 
 /**
  * This algorithm will lay out the graph in a tree.

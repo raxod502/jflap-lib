@@ -20,11 +20,11 @@
 
 package edu.duke.cs.jflap.automata.mealy;
 
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.util.*;
-
-import edu.duke.cs.jflap.automata.State;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A <code>MooreMachine</code> is a special subclass of a

@@ -20,12 +20,15 @@
 
 package edu.duke.cs.jflap.file.xml;
 
+import edu.duke.cs.jflap.pumping.Case;
+import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import org.w3c.dom.*;
-
-import edu.duke.cs.jflap.pumping.*;
 
 /**
  * This is the transducer for encoding and decoding

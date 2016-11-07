@@ -22,16 +22,22 @@ package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.parse.LRParseTable;
+import edu.duke.cs.jflap.grammar.parse.Operations;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
-import edu.duke.cs.jflap.gui.editor.*;
+import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
+import edu.duke.cs.jflap.gui.editor.EditorPane;
+import edu.duke.cs.jflap.gui.editor.ToolBox;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.grammar.GrammarTable;
-import edu.duke.cs.jflap.gui.viewer.*;
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.event.MouseEvent;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDraggerPane;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
 
 /**
  * This is the view for the derivation of a LR parse table from a grammar.

@@ -20,8 +20,11 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
-import javax.swing.tree.*;
-import java.util.*;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Enumeration;
 
 /**
  * The <CODE>Trees</CODE> class contains method for doing basic calculations

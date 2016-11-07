@@ -20,8 +20,15 @@
 
 package edu.duke.cs.jflap.automata.mealy;
 
-import java.util.*;
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.AutomatonSimulator;
+import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * The Mealy machine step by state simulator simulates the behavior

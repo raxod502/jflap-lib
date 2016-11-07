@@ -20,13 +20,13 @@
 
 package edu.duke.cs.jflap.automata.pda;
 
-import java.util.ArrayList;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.ClosureTaker;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+
+import java.util.ArrayList;
 
 public class PDAStepWithClosureSimulator extends PDAStepByStateSimulator {
 

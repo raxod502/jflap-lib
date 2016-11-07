@@ -19,33 +19,8 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Point;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import javax.swing.AbstractAction;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-import javax.swing.JTable;
-import javax.swing.JToolBar;
-
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.JTableExtender;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
@@ -58,9 +33,20 @@ import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.grammar.GrammarInputPane;
 import edu.duke.cs.jflap.gui.grammar.parse.CYKParsePane;
 import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
-import edu.duke.cs.jflap.automata.Automaton;
 
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Similiar code to MultipleSimulateAction.  Once again, did not want to mess up the original code.

@@ -20,8 +20,8 @@
 
 package edu.duke.cs.jflap.automata.graph;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Set;
 

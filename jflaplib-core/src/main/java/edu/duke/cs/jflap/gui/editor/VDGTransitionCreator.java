@@ -20,10 +20,10 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
-import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.vdg.VDGTransition;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 /**
  * This is a transition creator for variable dependency graphs.

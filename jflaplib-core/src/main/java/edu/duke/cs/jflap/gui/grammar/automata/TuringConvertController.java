@@ -19,20 +19,21 @@
 
 package edu.duke.cs.jflap.gui.grammar.automata;
 
-import java.util.*;
-
-import javax.swing.JOptionPane;
-
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
+import edu.duke.cs.jflap.automata.turing.TuringToGrammarConverter;
 import edu.duke.cs.jflap.grammar.ConvertedUnrestrictedGrammar;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.UnrestrictedGrammar;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
-import edu.duke.cs.jflap.automata.turing.TuringToGrammarConverter;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 /**

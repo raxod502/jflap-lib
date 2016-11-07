@@ -22,12 +22,14 @@ package edu.duke.cs.jflap.gui.pumping;
 
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
-import edu.duke.cs.jflap.pumping.*;
-
-import java.awt.*;
-import java.awt.event.*;
+import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
+import edu.duke.cs.jflap.pumping.PumpingLemma;
+import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 /**

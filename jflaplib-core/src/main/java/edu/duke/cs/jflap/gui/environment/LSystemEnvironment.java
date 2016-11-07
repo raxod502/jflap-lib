@@ -24,6 +24,7 @@ import edu.duke.cs.jflap.grammar.lsystem.LSystem;
 import edu.duke.cs.jflap.gui.lsystem.LSystemInputEvent;
 import edu.duke.cs.jflap.gui.lsystem.LSystemInputListener;
 import edu.duke.cs.jflap.gui.lsystem.LSystemInputPane;
+
 import java.io.Serializable;
 
 /**

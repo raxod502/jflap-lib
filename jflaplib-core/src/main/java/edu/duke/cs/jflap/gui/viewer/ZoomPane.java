@@ -22,9 +22,10 @@ package edu.duke.cs.jflap.gui.viewer;
 
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
-import java.awt.Rectangle;
+
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 
 /**
  * This variant of automaton pane is meant to draw the automaton only with a

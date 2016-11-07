@@ -21,17 +21,10 @@
 package edu.duke.cs.jflap.gui.sim;
 
 import edu.duke.cs.jflap.automata.Configuration;
-import java.awt.BorderLayout;
-import java.awt.Color;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Rectangle;
-import java.util.*;
-import javax.swing.Icon;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
+import javax.swing.*;
+import java.awt.*;
+import java.util.LinkedList;
 
 /**
  * A class that epitomizes the ultimate in bad design: a fusion of model, view,

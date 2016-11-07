@@ -20,13 +20,12 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 import java.awt.event.MouseEvent;
-
-import edu.duke.cs.jflap.automata.State;
 
 /**
  * This is a subclass of a <code>MealyArrowTool</code> for Moore

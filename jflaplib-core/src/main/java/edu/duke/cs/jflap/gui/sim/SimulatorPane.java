@@ -20,24 +20,19 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.AutomatonSimulator;
+import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.editor.ArrowDisplayOnlyTool;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.AutomatonSimulator;
-import edu.duke.cs.jflap.automata.Configuration;
+import java.awt.*;
 
 /**
  * The <CODE>SimulatorPane</CODE> is the main view for the GUI front end for

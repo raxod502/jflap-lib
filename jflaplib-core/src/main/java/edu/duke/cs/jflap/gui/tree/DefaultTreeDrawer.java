@@ -20,13 +20,17 @@
 
 package edu.duke.cs.jflap.gui.tree;
 
-import java.awt.Graphics2D;
-import java.awt.Color;
-import java.awt.geom.*;
-import javax.swing.event.TreeModelListener;
 import javax.swing.event.TreeModelEvent;
-import javax.swing.tree.*;
-import java.util.*;
+import javax.swing.event.TreeModelListener;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.geom.Dimension2D;
+import java.awt.geom.Point2D;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.WeakHashMap;
 
 /**
  * The <CODE>DefaultTreeDrawer</CODE> object is used to draw a <CODE>TreeModel</CODE>

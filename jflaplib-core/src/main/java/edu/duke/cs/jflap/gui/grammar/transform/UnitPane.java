@@ -20,20 +20,35 @@
 
 package edu.duke.cs.jflap.gui.grammar.transform;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.gui.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.action.GrammarTransformAction;
-import edu.duke.cs.jflap.gui.editor.*;
+import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
+import edu.duke.cs.jflap.gui.editor.EditorPane;
+import edu.duke.cs.jflap.gui.editor.ToolBox;
+import edu.duke.cs.jflap.gui.editor.TransitionTool;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
-import edu.duke.cs.jflap.gui.grammar.*;
-import edu.duke.cs.jflap.gui.viewer.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import edu.duke.cs.jflap.gui.grammar.GrammarTable;
+import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.LinkedList;
 
 /**
  * This is the pane where the removal of unit productions takes place.

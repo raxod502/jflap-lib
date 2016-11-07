@@ -20,21 +20,20 @@
 
 package edu.duke.cs.jflap.grammar;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.UnreachableStatesDetector;
+import edu.duke.cs.jflap.automata.vdg.VDGTransition;
+import edu.duke.cs.jflap.automata.vdg.VariableDependencyGraph;
 import edu.duke.cs.jflap.grammar.cfg.ContextFreeGrammar;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.UnreachableStatesDetector;
-import edu.duke.cs.jflap.automata.vdg.VDGTransition;
-import edu.duke.cs.jflap.automata.vdg.VariableDependencyGraph;
 
 /**
  * As it stands now, the code in here is almost completely useless. Through

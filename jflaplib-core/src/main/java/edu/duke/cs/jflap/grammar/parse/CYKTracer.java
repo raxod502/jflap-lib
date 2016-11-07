@@ -38,7 +38,7 @@ import edu.duke.cs.jflap.gui.grammar.transform.UselessPane;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.*;
+import java.util.Set;
 
 /**
  * Class for converting CNF-converted productions back to their original productions

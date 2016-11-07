@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.pumping;
 
-import java.io.Serializable;
-
 import edu.duke.cs.jflap.gui.environment.Universe;
+
+import java.io.Serializable;
 
 /**
  * A <code>ContextFreePumpingLemma</code> is a <code>PumpingLemma</code> that

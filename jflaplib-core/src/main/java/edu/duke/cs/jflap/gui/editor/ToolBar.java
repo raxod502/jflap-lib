@@ -20,20 +20,16 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
-import javax.swing.*;
-
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Point;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * A tool bar for editing and manipulating an automaton.

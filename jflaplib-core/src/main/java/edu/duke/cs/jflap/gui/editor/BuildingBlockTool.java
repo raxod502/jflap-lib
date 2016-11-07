@@ -25,17 +25,14 @@
  */
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.Point;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
-
-import javax.swing.Icon;
-import javax.swing.KeyStroke;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * @author Andrew

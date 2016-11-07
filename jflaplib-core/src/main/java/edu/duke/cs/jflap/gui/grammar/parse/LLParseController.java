@@ -20,12 +20,19 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import javax.swing.tree.*;
-import edu.duke.cs.jflap.grammar.parse.*;
-import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.parse.LLParseTable;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.util.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Stack;
 
 /**
  * This is the parse controller for an LL parse pane.

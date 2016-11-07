@@ -20,12 +20,6 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.StringTokenizer;
-
 import edu.duke.cs.jflap.automata.AlphabetRetriever;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonChecker;
@@ -33,6 +27,12 @@ import edu.duke.cs.jflap.automata.ClosureTaker;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.StatePlacer;
 import edu.duke.cs.jflap.automata.Transition;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.StringTokenizer;
 
 /**
  * The NFA to DFA converter object can be used to convert a nondeterministic

@@ -20,16 +20,14 @@
 
 package edu.duke.cs.jflap.gui.environment;
 
+import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.gui.pumping.CFPumpingLemmaChooser;
 import edu.duke.cs.jflap.gui.pumping.RegPumpingLemmaChooser;
-
-import java.io.Serializable;
-import java.awt.Dimension;
-
 import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
 import edu.duke.cs.jflap.pumping.RegularPumpingLemma;
 
-import edu.duke.cs.jflap.automata.Automaton;
+import java.awt.*;
+import java.io.Serializable;
 
 /**
  * The <CODE>FrameFactory</CODE> is a factory for creating environment frames.

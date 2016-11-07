@@ -20,14 +20,13 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.mealy.MealyTransition;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.mealy.MealyTransition;
 
 /**
  * This is a transition creator for Mealy machines.

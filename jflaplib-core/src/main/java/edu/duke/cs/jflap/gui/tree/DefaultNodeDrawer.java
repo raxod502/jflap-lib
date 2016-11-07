@@ -22,12 +22,10 @@ package edu.duke.cs.jflap.gui.tree;
 
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.geom.*;
 import javax.swing.tree.TreeNode;
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * A very simple <CODE>DefaultNodeDrawer</CODE> object.

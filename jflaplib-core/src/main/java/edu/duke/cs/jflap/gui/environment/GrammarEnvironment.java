@@ -23,9 +23,10 @@ package edu.duke.cs.jflap.gui.environment;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.UnboundGrammar;
 import edu.duke.cs.jflap.gui.grammar.GrammarInputPane;
-import java.io.Serializable;
+
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
+import java.io.Serializable;
 
 /**
  * The <CODE>GrammarEnvironment</CODE> is an environment for holding a

@@ -20,17 +20,16 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-
-import edu.duke.cs.jflap.debug.EDebug;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.debug.EDebug;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * The FSA step by state simulator object simulates the behavior of a finite

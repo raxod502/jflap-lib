@@ -23,10 +23,9 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-
-import javax.swing.KeyStroke;
 
 /**
  * This action handles quitting.

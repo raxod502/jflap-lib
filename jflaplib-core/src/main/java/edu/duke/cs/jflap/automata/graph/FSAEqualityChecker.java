@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.automata.graph;
 
-import edu.duke.cs.jflap.automata.fsa.NFAToDFA;
-import edu.duke.cs.jflap.automata.fsa.Minimizer;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.fsa.Minimizer;
+import edu.duke.cs.jflap.automata.fsa.NFAToDFA;
 
 /**
  * This determines if two FSAs accept the same language.

@@ -20,17 +20,23 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.LambdaCheckerFactory;
+import edu.duke.cs.jflap.automata.LambdaTransitionChecker;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.gui.editor.ArrowDisplayOnlyTool;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
-import edu.duke.cs.jflap.gui.viewer.*;
-import java.awt.BorderLayout;
-import java.awt.event.*;
-import java.util.*;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * This is an action that will highlight all states that have

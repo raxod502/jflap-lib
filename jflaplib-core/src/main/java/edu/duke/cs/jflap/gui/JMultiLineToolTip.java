@@ -23,16 +23,10 @@
 // JMultiLineToolTip.java
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-
-import javax.swing.CellRendererPane;
-import javax.swing.JComponent;
-import javax.swing.JTextArea;
-import javax.swing.JToolTip;
+import javax.swing.*;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicToolTipUI;
+import java.awt.*;
 
 /**
  * @author Zafir Anjum

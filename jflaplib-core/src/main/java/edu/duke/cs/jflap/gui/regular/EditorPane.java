@@ -20,12 +20,18 @@
 
 package edu.duke.cs.jflap.gui.regular;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.lang.ref.*;
+import edu.duke.cs.jflap.regular.ExpressionChangeEvent;
+import edu.duke.cs.jflap.regular.ExpressionChangeListener;
+import edu.duke.cs.jflap.regular.RegularExpression;
+
 import javax.swing.*;
-import javax.swing.event.*;
-import edu.duke.cs.jflap.regular.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.lang.ref.Reference;
+import java.lang.ref.WeakReference;
 
 /**
  * The editor pane for a regular expression allows the user to change the

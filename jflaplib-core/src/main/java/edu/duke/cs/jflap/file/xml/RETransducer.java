@@ -21,9 +21,11 @@
 package edu.duke.cs.jflap.file.xml;
 
 import edu.duke.cs.jflap.file.ParseException;
+import edu.duke.cs.jflap.regular.RegularExpression;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import java.util.Map;
-import org.w3c.dom.*;
-import edu.duke.cs.jflap.regular.*;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.regular.RegularExpression} objects.

@@ -20,18 +20,15 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.UselessStatesDetector;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.graph.FSAEqualityChecker;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
-
-import edu.duke.cs.jflap.automata.UselessStatesDetector;
-import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
-import edu.duke.cs.jflap.automata.graph.FSAEqualityChecker;
 
 /**
  * This tests to see if two finite state automatons accept the same language.

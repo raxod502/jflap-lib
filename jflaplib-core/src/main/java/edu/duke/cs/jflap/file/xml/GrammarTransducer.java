@@ -20,16 +20,15 @@
 
 package edu.duke.cs.jflap.file.xml;
 
-import java.util.Map;
-
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.UnboundGrammar;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.Production;
-import edu.duke.cs.jflap.grammar.UnboundGrammar;
+import java.util.Map;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.grammar.Grammar} objects.

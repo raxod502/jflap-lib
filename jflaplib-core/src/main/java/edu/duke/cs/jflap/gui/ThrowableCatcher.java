@@ -20,9 +20,13 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.*;
-import java.io.*;
 import javax.swing.*;
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 /**
  * Handles uncaught exceptions and errors in the AWT thread. The goal of JFLAP's

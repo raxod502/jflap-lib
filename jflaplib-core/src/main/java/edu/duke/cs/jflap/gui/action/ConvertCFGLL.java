@@ -20,7 +20,8 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.automata.graph.*;
+import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 import edu.duke.cs.jflap.automata.graph.layout.GEMLayoutAlgorithm;
 import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
 import edu.duke.cs.jflap.grammar.Grammar;
@@ -30,9 +31,10 @@ import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.grammar.convert.ConvertPane;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.util.*;
-import javax.swing.JOptionPane;
+import java.util.HashMap;
 
 /**
  * This is the action that initiates the conversion of a context free grammar to

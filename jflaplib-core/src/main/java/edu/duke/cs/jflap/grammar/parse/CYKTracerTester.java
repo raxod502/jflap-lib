@@ -19,11 +19,11 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
-import java.util.ArrayList;
-
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.cfg.ContextFreeGrammar;
+
+import java.util.ArrayList;
 
 /**
  * Test Suite for CYK Tracer

@@ -20,18 +20,17 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
-import java.awt.Component;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.Configuration;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-
-import javax.swing.JPanel;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.Configuration;
 
 /**
  * The <CODE>ConfigurationPane</CODE> is the pane where the configurations are

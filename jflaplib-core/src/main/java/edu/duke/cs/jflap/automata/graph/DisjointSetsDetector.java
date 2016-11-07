@@ -20,8 +20,12 @@
 
 package edu.duke.cs.jflap.automata.graph;
 
-import edu.duke.cs.jflap.automata.*;
-import java.util.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * The disjoint sets detector can be used to determine the disjoint sets of

@@ -28,7 +28,11 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.reg.RegularGrammar;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 
 /**
  * This controls the conversion of a finite state automaton to a regular

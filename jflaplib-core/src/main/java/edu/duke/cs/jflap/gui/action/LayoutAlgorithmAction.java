@@ -19,14 +19,17 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
-import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
-import edu.duke.cs.jflap.automata.mealy.MealyMachine;
 import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.graph.*;
+import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithmFactory;
+import edu.duke.cs.jflap.automata.mealy.MealyMachine;
+import edu.duke.cs.jflap.automata.pda.PushdownAutomaton;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.gui.environment.Environment;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * This action allows for a layout algorithm to be applied to an automaton.

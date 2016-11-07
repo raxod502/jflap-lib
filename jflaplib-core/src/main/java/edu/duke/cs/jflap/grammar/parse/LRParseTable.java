@@ -20,11 +20,20 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.automata.fsa.*;
-import java.util.*;
-import java.io.Serializable;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+
 import javax.swing.table.AbstractTableModel;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.SortedSet;
+import java.util.StringTokenizer;
+import java.util.TreeSet;
 
 /**
  * The <CODE>LRParseTable</CODE> is an LR(1) parse table. It also has the

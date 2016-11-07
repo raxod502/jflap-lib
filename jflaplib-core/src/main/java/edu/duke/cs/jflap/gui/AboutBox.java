@@ -23,7 +23,8 @@ package edu.duke.cs.jflap.gui;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 // import java.applet.Applet;
 // import java.applet.AudioClip;

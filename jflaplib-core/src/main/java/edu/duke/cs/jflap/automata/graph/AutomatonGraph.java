@@ -23,7 +23,8 @@ package edu.duke.cs.jflap.automata.graph;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
-import java.awt.Point;
+
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 /**

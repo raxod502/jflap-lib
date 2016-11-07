@@ -26,8 +26,9 @@ import edu.duke.cs.jflap.grammar.cfg.ContextFreeGrammar;
 import edu.duke.cs.jflap.grammar.reg.RegularGrammar;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 
-import javax.swing.table.*;
 import javax.swing.*;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 
 /**

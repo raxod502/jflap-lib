@@ -20,12 +20,10 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JToggleButton;
 import edu.duke.cs.jflap.automata.Configuration;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This is a toggle button that displays a configuration inside of it.

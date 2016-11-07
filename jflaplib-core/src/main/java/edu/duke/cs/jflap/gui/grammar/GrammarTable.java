@@ -20,20 +20,19 @@
 
 package edu.duke.cs.jflap.gui.grammar;
 
+import edu.duke.cs.jflap.debug.EDebug;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.gui.HighlightTable;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-
 import javax.swing.*;
-import javax.swing.table.*;
-import edu.duke.cs.jflap.debug.EDebug;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
+import java.awt.*;
 
 /**
  * The <CODE>GrammarTable</CODE> is a simple extension to the <CODE>JTable</CODE>

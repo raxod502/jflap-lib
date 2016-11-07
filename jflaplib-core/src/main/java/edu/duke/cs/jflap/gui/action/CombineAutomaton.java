@@ -20,16 +20,24 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 import edu.duke.cs.jflap.automata.turing.TuringMachine;
-import edu.duke.cs.jflap.gui.environment.*;
+import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
+import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
-import java.awt.Point;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.geom.Rectangle2D;
-import java.util.*;
-import javax.swing.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This combines two automatons into a new automaton.

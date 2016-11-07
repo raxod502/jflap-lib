@@ -21,16 +21,23 @@
 package edu.duke.cs.jflap.gui.grammar.convert;
 
 import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
-import edu.duke.cs.jflap.gui.editor.*;
+import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
+import edu.duke.cs.jflap.gui.editor.EditorPane;
+import edu.duke.cs.jflap.gui.editor.ToolBox;
+import edu.duke.cs.jflap.gui.editor.TransitionTool;
 import edu.duke.cs.jflap.gui.environment.Environment;
-import edu.duke.cs.jflap.gui.viewer.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.LinkedList;
+import java.util.Map;
 
 /**
  * This is a graphical component to aid in the conversion of a context free

@@ -22,9 +22,11 @@ package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.parse.LRParseTable;
 import edu.duke.cs.jflap.gui.LeftTable;
-import java.awt.Color;
+
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import java.awt.*;
 
 /**
  * This holds a LR parse table.

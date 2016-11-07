@@ -20,12 +20,13 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Color;
-import java.util.*;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This table allows the highlighting of specific cells in a <CODE>JTable</CODE>.

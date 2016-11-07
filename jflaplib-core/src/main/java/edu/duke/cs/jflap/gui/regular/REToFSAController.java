@@ -20,17 +20,20 @@
 
 package edu.duke.cs.jflap.gui.regular;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.fsa.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.gui.environment.FrameFactory;
 import edu.duke.cs.jflap.gui.environment.Universe;
+import edu.duke.cs.jflap.regular.Discretizer;
 
-import java.awt.Point;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
-import java.util.*;
-import javax.swing.JOptionPane;
-import edu.duke.cs.jflap.regular.Discretizer;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The regular expression to FSA controller moderates the conversion of a

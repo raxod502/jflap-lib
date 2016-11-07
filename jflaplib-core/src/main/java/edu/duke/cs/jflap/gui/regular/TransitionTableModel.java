@@ -21,6 +21,7 @@
 package edu.duke.cs.jflap.gui.regular;
 
 import edu.duke.cs.jflap.automata.Transition;
+
 import javax.swing.table.AbstractTableModel;
 
 /**

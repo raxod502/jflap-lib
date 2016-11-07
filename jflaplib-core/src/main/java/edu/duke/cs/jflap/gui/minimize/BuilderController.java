@@ -20,16 +20,21 @@
 
 package edu.duke.cs.jflap.gui.minimize;
 
-import edu.duke.cs.jflap.automata.*;
-import edu.duke.cs.jflap.automata.fsa.*;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.automata.fsa.Minimizer;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
-import java.awt.Component;
-import java.util.*;
-import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
-import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
-import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import java.awt.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * This is the class for controlling the building of the minimized automaton,

@@ -19,19 +19,18 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import java.awt.event.ActionEvent;
-
-import javax.swing.JOptionPane;
-
-import java.util.*;
-import edu.duke.cs.jflap.gui.deterministic.AddTrapStatePane;
-import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
-import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonChecker;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.gui.deterministic.AddTrapStatePane;
+import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
+import edu.duke.cs.jflap.gui.environment.Universe;
+import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.util.TreeSet;
 
 /**
  * Add a trap state to existing DFA or NFA

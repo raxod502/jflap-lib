@@ -20,18 +20,14 @@
 
 package edu.duke.cs.jflap.gui.regular;
 
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.fsa.FSATransition;
 import edu.duke.cs.jflap.gui.editor.Tool;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
+import javax.swing.*;
 import java.awt.event.MouseEvent;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.KeyStroke;
-
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.fsa.FSATransition;
 
 /**
  * A tool that handles the conversion of multiple transitions to one transition

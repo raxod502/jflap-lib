@@ -27,25 +27,25 @@ import edu.duke.cs.jflap.automata.NondeterminismDetector;
 import edu.duke.cs.jflap.automata.NondeterminismDetectorFactory;
 import edu.duke.cs.jflap.automata.SimulatorFactory;
 import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.graph.AutomatonDirectedGraph;
+import edu.duke.cs.jflap.automata.mealy.MealyMachine;
+import edu.duke.cs.jflap.automata.turing.TMSimulator;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.editor.EditBlockPane;
 import edu.duke.cs.jflap.gui.environment.Environment;
 import edu.duke.cs.jflap.gui.environment.Universe;
+import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
+import edu.duke.cs.jflap.gui.sim.SimulatorPane;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import edu.duke.cs.jflap.gui.sim.SimulatorPane;
-import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
-import javax.swing.*;
-
-import java.awt.GridLayout;
-import java.awt.Component;
-import java.util.*;
-import java.io.*;
-import edu.duke.cs.jflap.automata.graph.AutomatonDirectedGraph;
-import edu.duke.cs.jflap.automata.mealy.MealyMachine;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
-import edu.duke.cs.jflap.automata.turing.TMSimulator;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /**
  * This is the action used for the stepwise simulation of data. This method can

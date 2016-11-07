@@ -27,7 +27,9 @@ import edu.duke.cs.jflap.gui.editor.EditBlockPane;
 import edu.duke.cs.jflap.gui.editor.EditorPane;
 import edu.duke.cs.jflap.gui.grammar.GrammarInputPane;
 
-import java.awt.BorderLayout;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -35,11 +37,6 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileFilter;
 
 /**
  * The <CODE>EnvironmentFrame</CODE> is the general sort of frame for holding

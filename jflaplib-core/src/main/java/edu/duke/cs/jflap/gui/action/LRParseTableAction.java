@@ -24,8 +24,9 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.gui.environment.tag.*;
-import edu.duke.cs.jflap.gui.grammar.parse.*;
+import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
+import edu.duke.cs.jflap.gui.grammar.parse.LRParseTableDerivationPane;
+
 import java.awt.event.ActionEvent;
 
 /**

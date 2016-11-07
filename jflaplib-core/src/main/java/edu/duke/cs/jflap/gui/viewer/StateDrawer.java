@@ -20,11 +20,10 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Automaton;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Color;
+import edu.duke.cs.jflap.automata.State;
+
+import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
 

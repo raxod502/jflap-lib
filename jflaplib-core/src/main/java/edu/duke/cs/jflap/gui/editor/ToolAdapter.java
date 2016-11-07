@@ -21,8 +21,9 @@
 package edu.duke.cs.jflap.gui.editor;
 
 import edu.duke.cs.jflap.gui.SuperMouseAdapter;
-import java.awt.event.*;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+
+import java.awt.event.MouseEvent;
 
 /**
  * This is a simple mouse adapter that simply forwards all mouse actions along

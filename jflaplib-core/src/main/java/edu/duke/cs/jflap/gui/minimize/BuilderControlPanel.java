@@ -22,10 +22,8 @@ package edu.duke.cs.jflap.gui.minimize;
 
 import edu.duke.cs.jflap.gui.TooltipAction;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
-
-import javax.swing.JButton;
-import javax.swing.JToolBar;
 
 /**
  * This control panel is a set of GUI elements that, when invoked, call methods

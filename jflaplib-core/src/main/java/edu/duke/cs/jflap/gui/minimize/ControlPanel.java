@@ -20,16 +20,13 @@
 
 package edu.duke.cs.jflap.gui.minimize;
 
+import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
 import edu.duke.cs.jflap.gui.TooltipAction;
 import edu.duke.cs.jflap.gui.tree.SelectTreeDrawer;
 
-import java.awt.event.ActionEvent;
-
-import javax.swing.JOptionPane;
-import javax.swing.JToolBar;
+import javax.swing.*;
 import javax.swing.tree.TreeNode;
-
-import edu.duke.cs.jflap.automata.fsa.MinimizeTreeNode;
+import java.awt.event.ActionEvent;
 
 /**
  * The <CODE>ControlPanel</CODE> contains buttons whose actions call methods

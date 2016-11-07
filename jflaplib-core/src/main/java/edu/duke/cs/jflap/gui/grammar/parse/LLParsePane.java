@@ -20,11 +20,12 @@
 
 package edu.duke.cs.jflap.gui.grammar.parse;
 
-import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.parse.LLParseTable;
+import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
+import edu.duke.cs.jflap.gui.tree.SelectNodeDrawer;
+
 import javax.swing.*;
-import edu.duke.cs.jflap.gui.tree.*;
 
 /**
  * This is a parse pane for LL grammars.

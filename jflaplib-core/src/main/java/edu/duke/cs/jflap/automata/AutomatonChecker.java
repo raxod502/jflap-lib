@@ -20,7 +20,8 @@
 
 package edu.duke.cs.jflap.automata;
 
-import edu.duke.cs.jflap.automata.fsa.*;
+import edu.duke.cs.jflap.automata.fsa.FSANondeterminismDetector;
+import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 
 /**
  * The Automaton checker can be used to determine certain properties about

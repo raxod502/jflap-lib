@@ -20,14 +20,14 @@
 
 package edu.duke.cs.jflap.grammar.cfg;
 
-import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.GrammarToAutomatonConverter;
-import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.StatePlacer;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.pda.PDATransition;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.GrammarToAutomatonConverter;
+import edu.duke.cs.jflap.grammar.Production;
 
 /**
  * The CFG to PDA (LL parsing) converter can be used to convert a context free

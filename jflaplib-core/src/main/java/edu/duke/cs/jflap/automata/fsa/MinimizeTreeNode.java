@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.automata.fsa;
 
-import javax.swing.tree.DefaultMutableTreeNode;
-
 import edu.duke.cs.jflap.automata.State;
+
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * The Minimize Tree Node object is merely a default mutable tree node with an

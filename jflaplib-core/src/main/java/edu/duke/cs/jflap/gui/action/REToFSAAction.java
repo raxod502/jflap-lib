@@ -23,8 +23,9 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.gui.environment.RegularEnvironment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
 import edu.duke.cs.jflap.gui.regular.ConvertToAutomatonPane;
-import java.awt.event.*;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 /**
  * This class initiates the conversion of a regular expression to a

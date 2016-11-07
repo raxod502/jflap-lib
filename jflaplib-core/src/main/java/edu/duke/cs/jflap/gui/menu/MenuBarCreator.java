@@ -21,23 +21,72 @@
 package edu.duke.cs.jflap.gui.menu;
 
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.io.Serializable;
-import java.io.File;
-import java.io.IOException;
-
-import java.util.jar.*;
-
-import edu.duke.cs.jflap.grammar.TuringChecker;
-import edu.duke.cs.jflap.gui.environment.Environment;
-import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
-import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
-import edu.duke.cs.jflap.gui.environment.Universe;
-import edu.duke.cs.jflap.gui.action.*;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.graph.LayoutAlgorithmFactory;
 import edu.duke.cs.jflap.automata.graph.layout.VertexMover;
+import edu.duke.cs.jflap.grammar.TuringChecker;
+import edu.duke.cs.jflap.gui.action.AboutAction;
+import edu.duke.cs.jflap.gui.action.AddTrapStateToDFAAction;
+import edu.duke.cs.jflap.gui.action.AutomatonAction;
+import edu.duke.cs.jflap.gui.action.BruteParseAction;
+import edu.duke.cs.jflap.gui.action.BuildingBlockSimulateAction;
+import edu.duke.cs.jflap.gui.action.CYKParseAction;
+import edu.duke.cs.jflap.gui.action.CloseAction;
+import edu.duke.cs.jflap.gui.action.CloseButton;
+import edu.duke.cs.jflap.gui.action.CloseWindowAction;
+import edu.duke.cs.jflap.gui.action.CombineAutomaton;
+import edu.duke.cs.jflap.gui.action.ConvertCFGLL;
+import edu.duke.cs.jflap.gui.action.ConvertCFGLR;
+import edu.duke.cs.jflap.gui.action.ConvertFSAToGrammarAction;
+import edu.duke.cs.jflap.gui.action.ConvertFSAToREAction;
+import edu.duke.cs.jflap.gui.action.ConvertPDAToGrammarAction;
+import edu.duke.cs.jflap.gui.action.ConvertRegularGrammarToFSA;
+import edu.duke.cs.jflap.gui.action.DFAEqualityAction;
+import edu.duke.cs.jflap.gui.action.GrammarTransformAction;
+import edu.duke.cs.jflap.gui.action.GrammarTypeTestAction;
+import edu.duke.cs.jflap.gui.action.LLParseTableAction;
+import edu.duke.cs.jflap.gui.action.LRParseTableAction;
+import edu.duke.cs.jflap.gui.action.LSystemDisplay;
+import edu.duke.cs.jflap.gui.action.LambdaHighlightAction;
+import edu.duke.cs.jflap.gui.action.LayoutAlgorithmAction;
+import edu.duke.cs.jflap.gui.action.LayoutStorageAction;
+import edu.duke.cs.jflap.gui.action.MinimizeTreeAction;
+import edu.duke.cs.jflap.gui.action.MultipleBruteParseAction;
+import edu.duke.cs.jflap.gui.action.MultipleCYKParseAction;
+import edu.duke.cs.jflap.gui.action.MultipleOutputSimulateAction;
+import edu.duke.cs.jflap.gui.action.MultipleSimulateAction;
+import edu.duke.cs.jflap.gui.action.NFAToDFAAction;
+import edu.duke.cs.jflap.gui.action.NewAction;
+import edu.duke.cs.jflap.gui.action.NoInteractionSimulateAction;
+import edu.duke.cs.jflap.gui.action.NondeterminismAction;
+import edu.duke.cs.jflap.gui.action.OpenAction;
+import edu.duke.cs.jflap.gui.action.OpenURLAction;
+import edu.duke.cs.jflap.gui.action.PrintAction;
+import edu.duke.cs.jflap.gui.action.QuitAction;
+import edu.duke.cs.jflap.gui.action.REToFSAAction;
+import edu.duke.cs.jflap.gui.action.RestrictedAction;
+import edu.duke.cs.jflap.gui.action.SaveAction;
+import edu.duke.cs.jflap.gui.action.SaveAsAction;
+import edu.duke.cs.jflap.gui.action.SaveGraphBMPAction;
+import edu.duke.cs.jflap.gui.action.SaveGraphGIFAction;
+import edu.duke.cs.jflap.gui.action.SaveGraphJPGAction;
+import edu.duke.cs.jflap.gui.action.SaveGraphPNGAction;
+import edu.duke.cs.jflap.gui.action.SimulateAction;
+import edu.duke.cs.jflap.gui.action.SimulateNoClosureAction;
+import edu.duke.cs.jflap.gui.action.TuringBruteParseAction;
+import edu.duke.cs.jflap.gui.action.TuringToUnrestrictGrammarAction;
+import edu.duke.cs.jflap.gui.action.UserControlParseAction;
+import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
+import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
+import edu.duke.cs.jflap.gui.environment.Universe;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.jar.JarFile;
 
 /**
  * The <CODE>MenuBarCreator</CODE> is a creator of the menu bars for the FLAP

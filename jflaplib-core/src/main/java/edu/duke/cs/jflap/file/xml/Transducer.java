@@ -21,8 +21,9 @@
 package edu.duke.cs.jflap.file.xml;
 
 import edu.duke.cs.jflap.file.ParseException;
-import java.io.Serializable;
 import org.w3c.dom.Document;
+
+import java.io.Serializable;
 
 /**
  * This is an interface for objects that serve as a go between from DOM to a

@@ -20,15 +20,14 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import java.awt.FontMetrics;
-import java.awt.Graphics2D;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.RenderingHints;
-import java.awt.geom.*;
-import java.awt.image.BufferedImage;
-
 import edu.duke.cs.jflap.automata.Transition;
+
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Area;
+import java.awt.geom.QuadCurve2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 
 /**
  * This is a simple class for storing and drawing a curved line with possible

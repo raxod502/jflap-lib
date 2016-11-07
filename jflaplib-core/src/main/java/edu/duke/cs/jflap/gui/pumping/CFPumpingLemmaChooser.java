@@ -20,7 +20,20 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import edu.duke.cs.jflap.pumping.cf.*;
+import edu.duke.cs.jflap.pumping.cf.AiBjCk;
+import edu.duke.cs.jflap.pumping.cf.AkBnCnDj;
+import edu.duke.cs.jflap.pumping.cf.AnBjAnBj;
+import edu.duke.cs.jflap.pumping.cf.AnBn;
+import edu.duke.cs.jflap.pumping.cf.AnBnCn;
+import edu.duke.cs.jflap.pumping.cf.NaNbNc;
+import edu.duke.cs.jflap.pumping.cf.NagNbeNc;
+import edu.duke.cs.jflap.pumping.cf.W1BnW2;
+import edu.duke.cs.jflap.pumping.cf.W1CW2CW3CW4;
+import edu.duke.cs.jflap.pumping.cf.W1VVrW2;
+import edu.duke.cs.jflap.pumping.cf.WW;
+import edu.duke.cs.jflap.pumping.cf.WW1WrEquals;
+import edu.duke.cs.jflap.pumping.cf.WW1WrGrtrThanEq;
+
 import java.util.ArrayList;
 
 /**

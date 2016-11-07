@@ -24,10 +24,10 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.LeftTable;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.Color;
-import java.awt.Component;
 import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import java.awt.*;
 
 /**
  * This table is an table specifically for the <CODE>FirstFollowModel</CODE>

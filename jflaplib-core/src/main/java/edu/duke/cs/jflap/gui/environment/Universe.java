@@ -20,11 +20,14 @@
 
 package edu.duke.cs.jflap.gui.environment;
 
-import edu.duke.cs.jflap.file.*;
+import edu.duke.cs.jflap.file.CodecRegistry;
+import edu.duke.cs.jflap.file.XMLCodec;
+
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-import javax.swing.JFileChooser;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * The <CODE>Universe</CODE> class serves as a large global "registry" for the

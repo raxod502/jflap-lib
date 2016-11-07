@@ -19,13 +19,12 @@
 
 package edu.duke.cs.jflap.gui.deterministic;
 
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.editor.StateTool;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 import java.awt.event.MouseEvent;
-
-import edu.duke.cs.jflap.automata.State;
 
 /**
  * Aids in creating new trap state

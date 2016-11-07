@@ -20,7 +20,9 @@
 
 package edu.duke.cs.jflap.grammar.cfg;
 
-import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.ProductionChecker;
 
 /**
  * The context free grammar object is a representation of a context free

@@ -20,10 +20,10 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.awt.BorderLayout;
-
 import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 
 /**
  * A <code>SliderPanel</code> object allows the user to choose the

@@ -21,9 +21,12 @@
 package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.parse.LRParseTable;
+
 import javax.swing.*;
-import java.util.*;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableCellRenderer;
+import java.util.SortedSet;
 
 /**
  * This is a regular LR parse table pane, except with the added ability that it

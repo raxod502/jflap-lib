@@ -21,16 +21,16 @@
 package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.gui.JTableExtender;
 import edu.duke.cs.jflap.gui.environment.Environment;
+import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
+
 import javax.swing.*;
-import javax.swing.table.*;
-import java.awt.Color;
+import javax.swing.table.TableModel;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-
-import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * This is the action used for the simulation of multiple inputs on an automaton

@@ -20,10 +20,10 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import javax.swing.JSplitPane;
 import edu.duke.cs.jflap.gui.environment.Environment;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This is a convinience factory class for doing the annoying repetitive task of

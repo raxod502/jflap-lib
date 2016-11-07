@@ -20,11 +20,10 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Color;
-
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableModel;
+import java.awt.*;
 
 /**
  * This table is specifically for those tables where the leftmost column is an

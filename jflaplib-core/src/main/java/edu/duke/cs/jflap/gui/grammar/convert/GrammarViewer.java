@@ -24,9 +24,11 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.gui.event.SelectionEvent;
 import edu.duke.cs.jflap.gui.event.SelectionListener;
+
 import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.table.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * The <CODE>GrammarViewer</CODE> is a class for the graphical non-editable

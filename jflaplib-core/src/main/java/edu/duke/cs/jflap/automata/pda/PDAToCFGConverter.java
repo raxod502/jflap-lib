@@ -20,6 +20,9 @@
 
 package edu.duke.cs.jflap.automata.pda;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.grammar.cfg.ContextFreeGrammar;
 import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
@@ -29,10 +32,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Stack;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
 
 /**
  * The PDA to context free grammar converter can be used to convert a pushdown

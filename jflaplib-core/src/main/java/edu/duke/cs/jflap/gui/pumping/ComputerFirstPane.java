@@ -19,13 +19,12 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import edu.duke.cs.jflap.pumping.PumpingLemma;
 
 import javax.swing.*;
-
-import edu.duke.cs.jflap.pumping.PumpingLemma;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * This class represents the implementation of <code>PumpingLemmaInputPane</code> wherein

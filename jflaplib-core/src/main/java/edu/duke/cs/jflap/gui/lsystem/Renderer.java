@@ -22,9 +22,7 @@ package edu.duke.cs.jflap.gui.lsystem;
 
 import edu.duke.cs.jflap.gui.transform.Matrix;
 
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.RenderingHints;
+import java.awt.*;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;

@@ -20,10 +20,8 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
+import java.awt.*;
 import java.awt.geom.GeneralPath;
-import java.awt.Graphics2D;
-import java.awt.FontMetrics;
-import java.awt.Color;
 
 /**
  * This is a rather silly factory class that returns shape objects that look

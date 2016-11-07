@@ -24,14 +24,20 @@ import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
-import edu.duke.cs.jflap.gui.grammar.*;
-import edu.duke.cs.jflap.gui.tree.*;
+import edu.duke.cs.jflap.gui.grammar.GrammarTable;
+import edu.duke.cs.jflap.gui.grammar.GrammarTableModel;
+import edu.duke.cs.jflap.gui.tree.DefaultTreeDrawer;
+import edu.duke.cs.jflap.gui.tree.LeafNodePlacer;
+import edu.duke.cs.jflap.gui.tree.TreePanel;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
-import javax.swing.table.*;
-import javax.swing.tree.*;
 
 /**
  * The parse pane is an abstract class that defines the interface common between

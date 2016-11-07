@@ -20,11 +20,15 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import edu.duke.cs.jflap.gui.environment.*;
+import edu.duke.cs.jflap.automata.mealy.MealyMachine;
+import edu.duke.cs.jflap.automata.mealy.MooreMachine;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.environment.Universe;
 import edu.duke.cs.jflap.gui.menu.MenuBarCreator;
 import edu.duke.cs.jflap.gui.pumping.CFPumpingLemmaChooser;
 import edu.duke.cs.jflap.gui.pumping.RegPumpingLemmaChooser;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,10 +36,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.Serializable;
-import javax.swing.*;
-
-import edu.duke.cs.jflap.automata.mealy.MealyMachine;
-import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 
 /**
  * The <CODE>NewAction</CODE> handles when the user decides to create some new

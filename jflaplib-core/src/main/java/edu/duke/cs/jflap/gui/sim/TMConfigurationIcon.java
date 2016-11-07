@@ -20,13 +20,11 @@
 
 package edu.duke.cs.jflap.gui.sim;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics2D;
-
 import edu.duke.cs.jflap.automata.Configuration;
 import edu.duke.cs.jflap.automata.turing.TMConfiguration;
 import edu.duke.cs.jflap.automata.turing.Tape;
+
+import java.awt.*;
 
 /**
  * This is a configuration icon for configurations related to finite state

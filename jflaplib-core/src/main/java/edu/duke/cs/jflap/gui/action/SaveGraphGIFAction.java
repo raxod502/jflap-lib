@@ -21,13 +21,11 @@ package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.environment.Environment;
 
-import java.awt.Component;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
-
-import javax.swing.JMenu;
-import javax.swing.JComponent;
-import javax.swing.filechooser.FileFilter;
 
 
 /**

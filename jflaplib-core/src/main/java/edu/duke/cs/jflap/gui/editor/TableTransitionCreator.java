@@ -20,28 +20,23 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.Transition;
+import edu.duke.cs.jflap.automata.turing.TMTransition;
+import edu.duke.cs.jflap.automata.turing.Tape;
 import edu.duke.cs.jflap.gui.LambdaCellRenderer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Point;
+import javax.swing.*;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableModel;
+import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
-import javax.swing.JTable;
-import javax.swing.KeyStroke;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableModel;
-
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.turing.TMTransition;
-import edu.duke.cs.jflap.automata.turing.Tape;
 
 /**
  * This allows the user to create transition creators that have tables directly

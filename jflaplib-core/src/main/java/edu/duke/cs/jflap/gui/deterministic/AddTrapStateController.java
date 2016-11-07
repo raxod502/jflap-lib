@@ -19,20 +19,18 @@
 
 package edu.duke.cs.jflap.gui.deterministic;
 
-import java.awt.Point;
-import java.util.*;
-
-import edu.duke.cs.jflap.gui.environment.FrameFactory;
-import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.Transition;
 import edu.duke.cs.jflap.automata.fsa.FSATransition;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
+import edu.duke.cs.jflap.gui.environment.FrameFactory;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeSet;
 
 /**
  * Controller that is responsible for creating trap state and adding necessary transitions

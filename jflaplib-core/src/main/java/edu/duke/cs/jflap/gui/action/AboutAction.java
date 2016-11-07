@@ -21,6 +21,7 @@
 package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.AboutBox;
+
 import java.awt.event.ActionEvent;
 
 /**

@@ -20,8 +20,9 @@
 
 package edu.duke.cs.jflap.grammar.parse;
 
-import javax.swing.tree.*;
 import edu.duke.cs.jflap.grammar.Production;
+
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.util.Arrays;
 
 /**

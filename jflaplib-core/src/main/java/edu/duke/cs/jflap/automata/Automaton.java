@@ -20,11 +20,19 @@
 
 package edu.duke.cs.jflap.automata;
 
+import edu.duke.cs.jflap.automata.event.AutomataNoteEvent;
+import edu.duke.cs.jflap.automata.event.AutomataNoteListener;
+import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
+import edu.duke.cs.jflap.automata.event.AutomataStateListener;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
+import edu.duke.cs.jflap.automata.mealy.MooreMachine;
 import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
+import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.awt.Color;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,18 +43,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
-import edu.duke.cs.jflap.automata.event.AutomataStateEvent;
-import edu.duke.cs.jflap.automata.event.AutomataStateListener;
-import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
-import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
-import edu.duke.cs.jflap.automata.event.AutomataNoteEvent;
-import edu.duke.cs.jflap.automata.event.AutomataNoteListener;
-import edu.duke.cs.jflap.automata.mealy.MooreMachine;
-
-import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 /**

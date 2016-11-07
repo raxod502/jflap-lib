@@ -28,10 +28,9 @@ import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.grammar.GrammarTable;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * This <CODE>ConvertPane</CODE> exists for the user to convert an automaton

@@ -20,18 +20,31 @@
 
 package edu.duke.cs.jflap.file;
 
-import edu.duke.cs.jflap.file.xml.*;
-import java.io.*;
-import java.net.URI;
-import java.util.Map;
-import javax.xml.parsers.*;
-
+import edu.duke.cs.jflap.file.xml.DOMPrettier;
+import edu.duke.cs.jflap.file.xml.Transducer;
+import edu.duke.cs.jflap.file.xml.TransducerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.*;
-import javax.xml.transform.*;
+import org.w3c.dom.Document;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Serializable;
+import java.util.Map;
 
 /**
  * This is the codec for reading and writing JFLAP structures as XML documents.

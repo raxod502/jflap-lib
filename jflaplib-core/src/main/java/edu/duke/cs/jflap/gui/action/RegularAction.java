@@ -21,10 +21,9 @@
 package edu.duke.cs.jflap.gui.action;
 
 import edu.duke.cs.jflap.gui.environment.RegularEnvironment;
-
-import javax.swing.Icon;
-
 import edu.duke.cs.jflap.regular.RegularExpression;
+
+import javax.swing.*;
 
 /**
  * The <CODE>RegularAction</CODE> is the general action that various

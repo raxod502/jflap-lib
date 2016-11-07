@@ -22,7 +22,10 @@ package edu.duke.cs.jflap.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
-import java.util.*;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This class generates {@link edu.duke.cs.jflap.grammar.parse.LLParseTable}s for grammars.

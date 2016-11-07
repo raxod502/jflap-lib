@@ -21,10 +21,20 @@
 package edu.duke.cs.jflap.file.xml;
 
 import edu.duke.cs.jflap.file.ParseException;
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.grammar.lsystem.*;
-import java.util.*;
-import org.w3c.dom.*;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.grammar.UnboundGrammar;
+import edu.duke.cs.jflap.grammar.lsystem.LSystem;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * This transducer is the codec for {@link edu.duke.cs.jflap.grammar.lsystem.LSystem} objects.

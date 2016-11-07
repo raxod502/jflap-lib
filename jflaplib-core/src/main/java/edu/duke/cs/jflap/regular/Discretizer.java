@@ -22,7 +22,7 @@ package edu.duke.cs.jflap.regular;
 
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * The discretizer contains method to split a regular expression string into

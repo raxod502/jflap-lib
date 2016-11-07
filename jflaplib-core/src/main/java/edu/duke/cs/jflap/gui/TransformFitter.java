@@ -20,7 +20,7 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.geom.AffineTransform;
 
 /**

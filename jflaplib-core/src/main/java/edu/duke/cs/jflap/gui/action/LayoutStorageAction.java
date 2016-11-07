@@ -19,10 +19,10 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import java.awt.event.ActionEvent;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.graph.AutomatonGraph;
+
+import java.awt.event.ActionEvent;
 
 /**
  * Action that allows for the current automaton layout to be saved and possibly restored later.

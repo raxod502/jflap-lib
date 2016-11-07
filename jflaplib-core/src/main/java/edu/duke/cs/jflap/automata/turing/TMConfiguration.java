@@ -20,7 +20,8 @@
 
 package edu.duke.cs.jflap.automata.turing;
 
-import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.automata.State;
 
 /**
  * A <CODE>TMConfiguration</CODE> object is a <CODE>Configuration</CODE>

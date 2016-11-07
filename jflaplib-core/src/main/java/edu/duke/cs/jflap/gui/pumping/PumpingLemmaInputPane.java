@@ -20,13 +20,14 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.awt.*;
-import java.awt.event.*;
+import edu.duke.cs.jflap.pumping.ContextFreePumpingLemma;
+import edu.duke.cs.jflap.pumping.PumpingLemma;
 
 import javax.swing.*;
 import javax.swing.text.JTextComponent;
-
-import edu.duke.cs.jflap.pumping.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * A <code>PumpingLemmaInputPane</code> is a <code>JPanel</code> that

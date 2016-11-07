@@ -20,9 +20,11 @@
 
 package edu.duke.cs.jflap.regular;
 
-import java.util.*;
 import java.io.Serializable;
 import java.lang.ref.Reference;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * This object encapsulates a regular expression.

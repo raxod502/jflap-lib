@@ -20,13 +20,12 @@
 
 package edu.duke.cs.jflap.gui.regular;
 
+import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.editor.StateTool;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
 import java.awt.event.MouseEvent;
-
-import edu.duke.cs.jflap.automata.State;
 
 /**
  * A tool that handles the creation of the final state for the FSA to regular

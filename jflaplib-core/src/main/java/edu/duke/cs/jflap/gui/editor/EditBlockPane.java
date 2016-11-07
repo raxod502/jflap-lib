@@ -20,9 +20,9 @@
 
 package edu.duke.cs.jflap.gui.editor;
 
-import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
 /**
  * This is a view that holds a tool bar and the canvas where the automaton is

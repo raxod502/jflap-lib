@@ -19,13 +19,10 @@
 
 package edu.duke.cs.jflap.gui;
 
-import java.awt.Font;
-
-import javax.swing.BorderFactory;
-import javax.swing.JSlider;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
 
 
 /**

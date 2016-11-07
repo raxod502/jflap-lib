@@ -21,12 +21,13 @@
 package edu.duke.cs.jflap.gui.grammar.parse;
 
 import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.grammar.parse.*;
+import edu.duke.cs.jflap.grammar.parse.LLParseTable;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.grammar.GrammarTable;
-import java.awt.BorderLayout;
+
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * This is the view for the derivation of a LL parse table from a grammar.

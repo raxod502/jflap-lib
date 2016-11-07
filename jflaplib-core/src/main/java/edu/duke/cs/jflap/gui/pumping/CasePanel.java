@@ -20,13 +20,18 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
+import edu.duke.cs.jflap.pumping.Case;
+import edu.duke.cs.jflap.pumping.PumpingLemma;
+
 import javax.swing.*;
-import javax.swing.table.*;
-import javax.swing.event.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumn;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import edu.duke.cs.jflap.pumping.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * A <code>CasePanel</code> manages the graphical representation of

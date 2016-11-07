@@ -23,20 +23,11 @@ package edu.duke.cs.jflap.gui.action;
 import edu.duke.cs.jflap.gui.environment.Profile;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.KeyStroke;
-
-import java.awt.BorderLayout;
-import java.awt.Point;
 
 /**
 * The <CODE>TestTuringAction</CODE> is an action to load a structure from a file,

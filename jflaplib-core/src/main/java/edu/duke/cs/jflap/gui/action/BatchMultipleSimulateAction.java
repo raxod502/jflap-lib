@@ -20,8 +20,18 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.AutomatonSimulator;
+import edu.duke.cs.jflap.automata.Configuration;
+import edu.duke.cs.jflap.automata.NondeterminismDetector;
+import edu.duke.cs.jflap.automata.NondeterminismDetectorFactory;
+import edu.duke.cs.jflap.automata.SimulatorFactory;
+import edu.duke.cs.jflap.automata.State;
+import edu.duke.cs.jflap.automata.mealy.MealyConfiguration;
+import edu.duke.cs.jflap.automata.mealy.MealyMachine;
+import edu.duke.cs.jflap.automata.turing.TMSimulator;
+import edu.duke.cs.jflap.automata.turing.TuringMachine;
 import edu.duke.cs.jflap.grammar.Grammar;
-import edu.duke.cs.jflap.automata.mealy.*;
 import edu.duke.cs.jflap.gui.JTableExtender;
 import edu.duke.cs.jflap.gui.SplitPaneFactory;
 import edu.duke.cs.jflap.gui.TableTextSizeSlider;
@@ -39,10 +49,9 @@ import edu.duke.cs.jflap.gui.sim.TraceWindow;
 import edu.duke.cs.jflap.gui.sim.multiple.InputTableModel;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Point;
+import javax.swing.*;
+import javax.swing.table.TableColumnModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -55,31 +64,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import javax.swing.AbstractAction;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-import javax.swing.JTable;
-import javax.swing.JToolBar;
-import javax.swing.KeyStroke;
-import javax.swing.table.TableColumnModel;
-
-import edu.duke.cs.jflap.automata.Automaton;
-import edu.duke.cs.jflap.automata.AutomatonSimulator;
-import edu.duke.cs.jflap.automata.Configuration;
-import edu.duke.cs.jflap.automata.NondeterminismDetector;
-import edu.duke.cs.jflap.automata.NondeterminismDetectorFactory;
-import edu.duke.cs.jflap.automata.SimulatorFactory;
-import edu.duke.cs.jflap.automata.State;
-import edu.duke.cs.jflap.automata.turing.TMSimulator;
-import edu.duke.cs.jflap.automata.turing.TuringMachine;
 
 /**
  * This is the action used for the simulation of multiple inputs on an automaton

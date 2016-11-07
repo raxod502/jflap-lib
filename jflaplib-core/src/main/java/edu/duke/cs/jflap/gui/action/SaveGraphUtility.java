@@ -19,22 +19,16 @@
 
 package edu.duke.cs.jflap.gui.action;
 
-import java.awt.Component;
-import javax.swing.JComponent;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
+import edu.duke.cs.jflap.gui.editor.EditorPane;
+import edu.duke.cs.jflap.gui.environment.Universe;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileFilter;
-
-import edu.duke.cs.jflap.gui.editor.EditorPane;
-import edu.duke.cs.jflap.gui.environment.Universe;
 
 
 

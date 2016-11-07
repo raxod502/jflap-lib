@@ -19,13 +19,12 @@
 
 package edu.duke.cs.jflap.gui.environment;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.Map;
+import edu.duke.cs.jflap.file.xml.DOMPrettier;
+import edu.duke.cs.jflap.gui.editor.TMTransitionCreator;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
-import javax.swing.JCheckBoxMenuItem;
-
+import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -38,12 +37,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import edu.duke.cs.jflap.file.xml.DOMPrettier;
-import edu.duke.cs.jflap.gui.editor.TMTransitionCreator;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.Map;
 
 public class Profile {
     public static String LAMBDA = "\u03BB";     // Jinghui Lim added stuff

@@ -20,6 +20,7 @@
 
 package edu.duke.cs.jflap.gui.action;
 
+import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.gui.TooltipAction;
 import edu.duke.cs.jflap.gui.environment.AutomatonEnvironment;
 import edu.duke.cs.jflap.gui.environment.tag.CriticalTag;
@@ -28,14 +29,10 @@ import edu.duke.cs.jflap.gui.grammar.automata.ConvertPane;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
-import javax.swing.JOptionPane;
-import javax.swing.JToolBar;
-
-import edu.duke.cs.jflap.automata.Automaton;
 
 /**
  * This class exists as the base class for the conversion of an automaton to a

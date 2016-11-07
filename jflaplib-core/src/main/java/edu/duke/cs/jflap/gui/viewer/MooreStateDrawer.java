@@ -19,14 +19,12 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.geom.Rectangle2D;
-
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.automata.mealy.MooreMachine;
+
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
 
 /**
  * This is a special subclass of a <code>StateDrawer</code> that

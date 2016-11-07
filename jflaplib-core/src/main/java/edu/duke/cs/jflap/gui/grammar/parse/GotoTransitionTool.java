@@ -24,9 +24,9 @@ import edu.duke.cs.jflap.automata.State;
 import edu.duke.cs.jflap.gui.editor.TransitionTool;
 import edu.duke.cs.jflap.gui.viewer.AutomatonDrawer;
 import edu.duke.cs.jflap.gui.viewer.AutomatonPane;
+
+import javax.swing.*;
 import java.awt.event.MouseEvent;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 
 /**
  * This is a specialized transition tool that handles the movement of gotos from

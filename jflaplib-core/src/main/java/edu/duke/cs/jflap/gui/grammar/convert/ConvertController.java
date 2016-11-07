@@ -22,12 +22,20 @@ package edu.duke.cs.jflap.gui.grammar.convert;
 
 import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.Transition;
-import edu.duke.cs.jflap.automata.event.*;
-import edu.duke.cs.jflap.grammar.*;
-import edu.duke.cs.jflap.gui.event.*;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionEvent;
+import edu.duke.cs.jflap.automata.event.AutomataTransitionListener;
+import edu.duke.cs.jflap.grammar.Grammar;
+import edu.duke.cs.jflap.grammar.Production;
+import edu.duke.cs.jflap.gui.event.SelectionEvent;
+import edu.duke.cs.jflap.gui.event.SelectionListener;
 import edu.duke.cs.jflap.gui.viewer.SelectionDrawer;
-import java.awt.Component;
-import java.util.*;
+
+import java.awt.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * A <CODE>ConvertController</CODE> object is a controller used in the

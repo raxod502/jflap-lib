@@ -20,9 +20,10 @@
 
 package edu.duke.cs.jflap.gui.pumping;
 
-import java.awt.font.*;
-import java.awt.geom.*;
 import java.awt.*;
+import java.awt.font.FontRenderContext;
+import java.awt.font.TextLayout;
+import java.awt.geom.Point2D;
 
 /**
  * A <code>Text</code> object is a <code>String</code> that contains information

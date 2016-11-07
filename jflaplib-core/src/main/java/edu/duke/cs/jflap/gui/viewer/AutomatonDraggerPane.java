@@ -20,8 +20,8 @@
 
 package edu.duke.cs.jflap.gui.viewer;
 
-import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
 import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.gui.editor.ArrowNontransitionTool;
 
 /**
  * This is the same as an automaton pane, except that it allows the user to drag

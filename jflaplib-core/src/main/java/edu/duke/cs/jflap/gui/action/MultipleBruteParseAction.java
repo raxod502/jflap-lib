@@ -26,7 +26,7 @@ import edu.duke.cs.jflap.gui.environment.EnvironmentFrame;
 import edu.duke.cs.jflap.gui.environment.GrammarEnvironment;
 import edu.duke.cs.jflap.gui.environment.Universe;
 
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**

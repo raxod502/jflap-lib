@@ -22,7 +22,7 @@ package edu.duke.cs.jflap.gui;
 import edu.duke.cs.jflap.gui.action.BatchMultipleSimulateAction;
 import edu.duke.cs.jflap.gui.action.MultipleSimulateAction;
 
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.TableModel;
 
 public class JTableExtender extends JTable{

@@ -20,17 +20,17 @@
 
 package edu.duke.cs.jflap.automata.graph.layout;
 
+import edu.duke.cs.jflap.automata.graph.Graph;
+import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
+
+import java.awt.*;
 import java.awt.geom.Point2D;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-
-import edu.duke.cs.jflap.automata.graph.Graph;
-import edu.duke.cs.jflap.automata.graph.LayoutAlgorithm;
 
 /**
  * Implements the GEM algorithm, by Arne Frick, Andreas Ludwig, and Heiko

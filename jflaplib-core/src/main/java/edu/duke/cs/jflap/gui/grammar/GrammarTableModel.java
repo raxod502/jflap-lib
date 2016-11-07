@@ -23,8 +23,9 @@ package edu.duke.cs.jflap.gui.grammar;
 import edu.duke.cs.jflap.grammar.Grammar;
 import edu.duke.cs.jflap.grammar.Production;
 import edu.duke.cs.jflap.gui.GrowableTableModel;
+
+import javax.swing.*;
 import java.util.ArrayList;
-import javax.swing.Icon;
 
 /**
  * The <CODE>GrammarTableModel</CODE> is used as a model for the input of a
