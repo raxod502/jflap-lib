@@ -43,7 +43,7 @@ public class GrammarTransducer extends AbstractTransducer {
 	 * @return the string "grammar"
 	 */
 	public String getType() {
-		return "edu/duke/cs/jflap/grammar";
+		return "grammar";
 	}
 
 	/**
