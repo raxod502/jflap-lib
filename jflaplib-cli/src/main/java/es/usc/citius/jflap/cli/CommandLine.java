@@ -4,29 +4,33 @@ package es.usc.citius.jflap.cli;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
-import edu.duke.cs.jflap.automata.Automaton;
 import edu.duke.cs.jflap.automata.AutomatonSimulator;
 import edu.duke.cs.jflap.automata.SimulatorFactory;
 import edu.duke.cs.jflap.automata.fsa.FSAToRegularExpressionConverter;
 import edu.duke.cs.jflap.automata.fsa.FiniteStateAutomaton;
 import edu.duke.cs.jflap.automata.graph.FSAEqualityChecker;
+import edu.duke.cs.jflap.file.xml.AutomatonTransducer;
+import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.gui.action.*;
+import edu.duke.cs.jflap.gui.environment.*;
+import edu.duke.cs.jflap.gui.grammar.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import java.awt.event.ActionEvent;
 
 public class CommandLine {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
 
         Cli
-                .include("run", RunInputCommand.class)
-                .andInclude("equivalent", EquivalentCommand.class)
-                .andInclude("regular", FiniteAutomatonToRE.class)
-                .showTraceOnError(false)
-                .parseAndRun(args);
+            .include("run", RunInputCommand.class)
+            .include("rungrammar", RunGrammarInputCommand.class)
+            .andInclude("equivalent", EquivalentCommand.class)
+            .andInclude("regular", FiniteAutomatonToRE.class)
+            .showTraceOnError(false)
+            .parseAndRun(args);
 
     }
 
@@ -45,7 +49,7 @@ public class CommandLine {
 
         @Override
         public void run() {
-            FiniteStateAutomaton a = (FiniteStateAutomaton)IO.loadAutomaton(file.get(0));
+            FiniteStateAutomaton a = IO.loadAutomaton(file.get(0));
             FSAToRegularExpressionConverter.convertToSimpleAutomaton(a);
             String re = FSAToRegularExpressionConverter.convertToRegularExpression(a);
             System.out.println(re);
@@ -60,8 +64,8 @@ public class CommandLine {
 
         @Override
         public void run() {
-            FiniteStateAutomaton a1 = (FiniteStateAutomaton)IO.loadAutomaton(files.get(0));
-            FiniteStateAutomaton a2 = (FiniteStateAutomaton)IO.loadAutomaton(files.get(1));
+            FiniteStateAutomaton a1 = IO.loadAutomaton(files.get(0));
+            FiniteStateAutomaton a2 = IO.loadAutomaton(files.get(1));
             boolean equal = new FSAEqualityChecker().equals(a1, a2);
             System.out.println(equal);
         }
@@ -79,13 +83,34 @@ public class CommandLine {
             if (params.size() != 2) throw new RuntimeException("Incorrect arguments. Please provide <file> <input>");
             File file = checked(new File(params.get(0)));
             String input = params.get(1);
-            Automaton automaton = IO.loadAutomaton(file);
+            FiniteStateAutomaton automaton = IO.loadAutomaton(file);
             // Load a simulator to test the automaton
             AutomatonSimulator sim = SimulatorFactory.getSimulator(automaton);
             if (sim == null) throw new RuntimeException("Cannot load an automaton simulator for " + automaton.getClass());
             // Test the automaton with an input
             boolean accept = sim.simulateInput(input);
             System.out.println(accept);
+        }
+    }
+
+    @Parameters(separators = "=", commandDescription = "Runs the JFLAP grammar on the input string")
+    public static class RunGrammarInputCommand implements Runnable {
+
+        @Parameter(description = "<file> <input>", arity = 2, required = true)
+        private List<String> params = new ArrayList<String>();
+
+        @Override
+        public void run() {
+            if (params.size() != 2) throw new RuntimeException("Incorrect arguments. Please provide <file> <input>");
+            File file = checked(new File(params.get(0)));
+            String input = params.get(1);
+            Grammar grammar = IO.loadGrammar(file);
+            // Load a simulator to test the automaton
+            GrammarInputPane inputPane = new GrammarInputPane(grammar);
+            GrammarEnvironment env = new GrammarEnvironment(inputPane);
+            GrammarAction action = new CYKParseAction(env);
+            action.actionPerformed(new ActionEvent(this, 42, "hello"));
+            System.out.println("END");
         }
     }
 

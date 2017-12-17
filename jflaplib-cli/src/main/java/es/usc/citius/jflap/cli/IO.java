@@ -1,8 +1,12 @@
 package es.usc.citius.jflap.cli;
 
 
-import edu.duke.cs.jflap.automata.Automaton;
+import edu.duke.cs.jflap.automata.*;
+import edu.duke.cs.jflap.automata.fsa.*;
 import edu.duke.cs.jflap.file.XMLCodec;
+import edu.duke.cs.jflap.grammar.*;
+import edu.duke.cs.jflap.gui.action.*;
+import edu.duke.cs.jflap.gui.grammar.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +16,7 @@ import java.net.URL;
 public final class IO {
     private IO(){}
 
-    public static Automaton loadAutomaton(String location){
+    public static FiniteStateAutomaton loadAutomaton(String location){
         // Check if the location is a file
         File f = new File(location);
         if (f.isFile()){
@@ -20,7 +24,7 @@ public final class IO {
         }
         // Check if it is a valid URL
         try {
-            return (Automaton)new XMLCodec().decode(new URL(location).openStream());
+            return (FiniteStateAutomaton)new XMLCodec().decode(new URL(location).openStream());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         } catch (IOException e){
@@ -30,9 +34,13 @@ public final class IO {
 
 
 
-    public static Automaton loadAutomaton(File file){
+    public static FiniteStateAutomaton loadAutomaton(File file){
         if (!file.isFile()) throw new RuntimeException(file.getAbsolutePath() + " does not exist");
-        return (Automaton)new XMLCodec().decode(file, null);
+        return (FiniteStateAutomaton)new XMLCodec().decode(file, null);
+    }
+
+    public static Grammar loadGrammar(File location) {
+        return (Grammar)new XMLCodec().decode(location, null);
     }
 
 }
